@@ -39,9 +39,10 @@ class EventRecorder:
 
 
 class TappedWebsocket:
-    def __init__(self, inner, recorder: EventRecorder):
+    def __init__(self, inner, recorder: EventRecorder, on_server_event=None):
         self._inner = inner
         self._recorder = recorder
+        self._on_server_event = on_server_event
 
     def __getattr__(self, name):
         return getattr(self._inner, name)
@@ -52,7 +53,10 @@ class TappedWebsocket:
 
     async def __aiter__(self):
         async for message in self._inner:
-            self._recorder.record("server", _safe_parse(message))
+            payload = _safe_parse(message)
+            self._recorder.record("server", payload)
+            if self._on_server_event:
+                self._on_server_event(payload)
             yield message
 
 
