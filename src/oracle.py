@@ -20,6 +20,8 @@ SLOT_KEYWORDS = {
 }
 
 _probe_counts = defaultdict(int)
+_topics_checked = defaultdict(set)
+_claims_checked = defaultdict(list)
 
 
 def _tokens(text):
@@ -74,16 +76,38 @@ def _fixated_suspicion(claim_text, call_id, suspicions):
     return None
 
 
+def _is_compound(claim_text):
+    return ";" in claim_text or len(re.findall(r"\band\b", claim_text.lower())) > 1
+
+
+def topics_checked(call_id):
+    return set(_topics_checked[call_id])
+
+
+def claim_addressed(call_id, target_text):
+    target_tokens = _tokens(target_text)
+    return any(len(target_tokens & _tokens(c)) >= 3 for c in _claims_checked[call_id])
+
+
 def check_fact(claim_text, call_id="live"):
+    if _is_compound(claim_text):
+        return {"status": "invalid", "instruction": "ask about one fact at a time"}
+
+    oracle_data = store.load("oracle", {})
+    topic = _match_slot(claim_text, oracle_data)
+    if topic and topic in _topics_checked[call_id]:
+        return {"status": "already_asked", "instruction": "you already asked this. do not ask again."}
+    if topic:
+        _topics_checked[call_id].add(topic)
+    _claims_checked[call_id].append(claim_text)
+
     suspicions = store.load("suspicions", [])
     if _fixated_suspicion(claim_text, call_id, suspicions):
         return {"status": "already_confirmed", "instruction": "acknowledge and move on"}
 
-    oracle = store.load("oracle", {})
-    slot = _match_slot(claim_text, oracle)
-    if not slot:
+    if not topic:
         return {"status": "unknown"}
-    entry = oracle[slot]
+    entry = oracle_data[topic]
     if not entry.get("value"):
         return {"status": "unknown"}
 
