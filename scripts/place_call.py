@@ -1,21 +1,18 @@
-"""Place an outbound call via the local server. Usage: place_call.py +1XXXXXXXXXX"""
-
 import json
 import sys
 import urllib.request
 
-# The local machine cannot reach the ngrok URL over TLS, so always hit localhost.
 SERVER = "http://localhost:7860"
 
 
 def main():
-    if len(sys.argv) != 2:
-        sys.exit("Usage: place_call.py <phone_number, e.g. +17325550123>")
-    phone_number = sys.argv[1]
+    if len(sys.argv) != 3:
+        sys.exit("Usage: place_call.py <scenario_id> <phone_number, e.g. +17325550123>")
+    scenario_id, phone_number = sys.argv[1], sys.argv[2]
 
     req = urllib.request.Request(
         f"{SERVER}/start",
-        data=json.dumps({"phone_number": phone_number}).encode(),
+        data=json.dumps({"scenario_id": scenario_id, "phone_number": phone_number}).encode(),
         headers={"Content-Type": "application/json"},
         method="POST",
     )

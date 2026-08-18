@@ -1,5 +1,3 @@
-"""Minimal speech-to-speech bot for the scaffold: asks about office hours and hangs up."""
-
 import asyncio
 
 from fastapi import WebSocket
@@ -10,6 +8,7 @@ from pipecat.processors.aggregators.llm_context import LLMContext
 from pipecat.processors.aggregators.llm_response_universal import LLMContextAggregatorPair
 from pipecat.runner.utils import parse_telephony_websocket
 from pipecat.serializers.telnyx import TelnyxFrameSerializer
+from pipecat.services.openai.realtime import events as realtime_events
 from pipecat.services.openai.realtime.llm import OpenAIRealtimeLLMService
 from pipecat.transports.websocket.fastapi import (
     FastAPIWebsocketParams,
@@ -17,50 +16,20 @@ from pipecat.transports.websocket.fastapi import (
 )
 from pipecat.workers.runner import WorkerRunner
 
-import re
+from src import config, persona, store
+from src.bot_tools import build_tools
+from src.turn_log import GoodbyeWatcher, TurnLogger
 
-from pipecat.frames.frames import Frame, TTSStoppedFrame, TTSTextFrame
-from pipecat.processors.frame_processor import FrameDirection, FrameProcessor
-
-from src import config
-
-_GOODBYE_RE = re.compile(r"\b(good\s?-?\s?bye|bye+|bye\s?now)\b", re.IGNORECASE)
-
-
-class GoodbyeWatcher(FrameProcessor):
-    """Ends the call once the bot finishes a turn in which it said goodbye.
-
-    Sits after the realtime LLM, accumulates the bot's spoken-transcript
-    TTSTextFrames per turn; when the turn ends (TTSStoppedFrame) and the text
-    matches a goodbye, invokes the callback (worker.stop_when_done -> EndFrame
-    -> serializer auto-hangup).
-    """
-
-    def __init__(self):
-        super().__init__()
-        self._turn_text = ""
-        self.on_goodbye = None
-
-    async def process_frame(self, frame: Frame, direction: FrameDirection):
-        await super().process_frame(frame, direction)
-        if isinstance(frame, TTSTextFrame):
-            self._turn_text += frame.text
-        elif isinstance(frame, TTSStoppedFrame):
-            if _GOODBYE_RE.search(self._turn_text) and self.on_goodbye:
-                logger.info(f"Bot said goodbye ({self._turn_text!r}); ending call")
-                await self.on_goodbye()
-            self._turn_text = ""
-        await self.push_frame(frame, direction)
-
-
-INSTRUCTIONS = """You are a person calling a medical office. Say hello, ask what their office hours
-are, thank them, and say goodbye. Keep it short. Speak naturally."""
+MAX_HISTORY_ITEMS = 40
 
 
 async def run_bot(websocket: WebSocket):
-    """Handle one Telnyx media-stream websocket: run the realtime agent until hangup."""
+    body = persona.decode_body(websocket)
     transport_type, call_data = await parse_telephony_websocket(websocket)
-    logger.info(f"Telephony handshake: type={transport_type} call_data={dict(call_data)}")
+    logger.info(f"Telephony handshake: type={transport_type} body={body}")
+
+    call_id = body.get("call_id", "live")
+    scenario = store.load_scenario(body["scenario_id"])
 
     serializer = TelnyxFrameSerializer(
         stream_id=call_data["stream_id"],
@@ -80,17 +49,37 @@ async def run_bot(websocket: WebSocket):
         ),
     )
 
+    turn_logger = TurnLogger(call_id)
+    tools = build_tools(call_id, turn_logger)
+
     llm = OpenAIRealtimeLLMService(
         api_key=config.OPENAI_API_KEY,
         settings=OpenAIRealtimeLLMService.Settings(
             model=config.REALTIME_MODEL,
-            system_instruction=INSTRUCTIONS,
+            system_instruction=persona.build_instructions(scenario),
+            session_properties=realtime_events.SessionProperties(
+                audio=realtime_events.AudioConfiguration(
+                    input=realtime_events.AudioInput(
+                        transcription=realtime_events.InputAudioTranscription()
+                    )
+                )
+            ),
         ),
     )
 
-    goodbye_watcher = GoodbyeWatcher()
+    history_item_ids = []
 
-    context = LLMContext()
+    @llm.event_handler("on_conversation_item_created")
+    async def on_item_created(service, item_id, item):
+        history_item_ids.append(item_id)
+        while len(history_item_ids) > MAX_HISTORY_ITEMS:
+            oldest = history_item_ids.pop(0)
+            await service.send_client_event(
+                realtime_events.ConversationItemDeleteEvent(item_id=oldest)
+            )
+
+    goodbye_watcher = GoodbyeWatcher()
+    context = LLMContext(tools=tools)
     user_aggregator, assistant_aggregator = LLMContextAggregatorPair(context)
 
     pipeline = Pipeline(
@@ -98,6 +87,7 @@ async def run_bot(websocket: WebSocket):
             transport.input(),
             user_aggregator,
             llm,
+            turn_logger,
             goodbye_watcher,
             transport.output(),
             assistant_aggregator,
@@ -106,18 +96,12 @@ async def run_bot(websocket: WebSocket):
 
     worker = PipelineWorker(
         pipeline,
-        # The OpenAI realtime service sends/receives pipeline audio verbatim and the
-        # API requires PCM16 @ 24kHz, so the pipeline runs at 24k. TelnyxFrameSerializer
-        # resamples both directions between the 8kHz PCMU wire format and this rate.
-        # (8k here == 3x-slowed audio at OpenAI: VAD never fires and the bot stays silent.)
         params=PipelineParams(
             audio_in_sample_rate=24000,
             audio_out_sample_rate=24000,
         ),
     )
 
-    # Hard call-duration cap, enforced in code. Cancelling the worker pushes a
-    # CancelFrame through the serializer, which auto-hangs-up the Telnyx call.
     async def enforce_max_duration():
         await asyncio.sleep(config.MAX_CALL_SECONDS)
         logger.warning(f"MAX_CALL_SECONDS ({config.MAX_CALL_SECONDS}) reached; ending call")
@@ -125,14 +109,10 @@ async def run_bot(websocket: WebSocket):
 
     watchdog = asyncio.create_task(enforce_max_duration())
 
-    async def end_call_on_goodbye():
+    async def end_call_backstop():
         await worker.stop_when_done()
 
-    goodbye_watcher.on_goodbye = end_call_on_goodbye
-
-    @transport.event_handler("on_client_connected")
-    async def on_client_connected(transport, client):
-        logger.info("Telnyx media stream connected")
+    goodbye_watcher.on_goodbye = end_call_backstop
 
     @transport.event_handler("on_client_disconnected")
     async def on_client_disconnected(transport, client):
