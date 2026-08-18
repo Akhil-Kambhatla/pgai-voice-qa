@@ -19,6 +19,8 @@ SLOT_KEYWORDS = {
     "holiday_schedule": ["holiday", "holidays", "labor day", "memorial day", "thanksgiving", "christmas"],
 }
 
+TRANSIENT_MARKERS = ["tonight", "right now", "at the moment", "currently", "for the night", "for the day"]
+
 _probe_counts = defaultdict(int)
 _topics_checked = defaultdict(set)
 _claims_checked = defaultdict(list)
@@ -76,7 +78,15 @@ def _fixated_suspicion(claim_text, call_id, suspicions):
     return None
 
 
+def _is_transient_status(claim_text):
+    lowered = claim_text.lower()
+    cats = _category_tokens(claim_text)
+    return any(m in lowered for m in TRANSIENT_MARKERS) and not (cats["weekday"] or cats["time"])
+
+
 def _topics_covered(claim_text, oracle_data):
+    if _is_transient_status(claim_text):
+        return set()
     lowered = claim_text.lower()
     covered = set()
     for slot, keywords in SLOT_KEYWORDS.items():
