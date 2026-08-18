@@ -256,3 +256,9 @@ rest of call-10 it is 1600, 1664 and 1728 against inputs of 1702, 1764 and 1855,
 so roughly 94 percent of each turn is served from cache. build_instructions
 already concatenates the static conversation prompt ahead of the per-scenario
 persona, which is the correct order for a stable prefix. Nothing to fix.
+
+## 31. Suppressing commentary made the bot mute (caught pre-ship)
+The response gate counted any message item as speech, so a commentary-only
+response looked like a spoken turn and suppressed the real follow-up. Found
+while implementing the phase filter, before it reached a call. Gate now ignores
+commentary when deciding whether a turn was spoken.
