@@ -150,11 +150,11 @@ def goal_completion(call_id, scenario_id):
     scenario = store.load_scenario(scenario_id)
     required = scenario.get("facts_to_elicit", [])
     tools = [json.loads(t["text"]) for t in load_jsonl(call_id, "turns.jsonl") if t["speaker"] == "tool"]
-    ended = [t for t in tools if t["name"] == "end_call" and t["result"].get("status") == "ending"]
-    refused = [t for t in tools if t["name"] == "end_call" and t["result"].get("status") == "refused"]
+    ended = [t for t in tools if t["result"].get("hangup") == "ok" or t["result"].get("status") == "ending"]
+    refused = [t for t in tools if t["result"].get("hangup") == "denied" or t["result"].get("status") == "refused"]
     blocked = [t for t in tools if t["result"].get("status") == "already_asked"]
     print(f"  required fact slots: {required}")
-    print(f"  end_call accepted: {len(ended)}   refused: {len(refused)}   already_asked blocks: {len(blocked)}")
+    print(f"  hangup accepted: {len(ended)}   denied: {len(refused)}   repeat-guard blocks: {len(blocked)}")
     print(f"  scenario goals completed before hangup: {bool(ended)}")
 
 
