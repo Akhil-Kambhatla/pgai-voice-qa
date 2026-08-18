@@ -43,7 +43,7 @@ def build_tools(call_id: str, turn_logger, scenario: dict):
             result = {
                 "status": "refused",
                 "reason": "still need: " + ", ".join(missing),
-                "instruction": "continue the conversation naturally",
+                "instruction": "continue the conversation naturally and run check_fact on each answer",
             }
             turn_logger.log_tool_call("end_call", params.arguments, result)
             await params.result_callback(result)
