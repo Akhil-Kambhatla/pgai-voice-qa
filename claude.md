@@ -97,7 +97,7 @@ silently and report once at the end.
   bot (the caller), channel 0 is the callee (the agent under test).
 - Recordings are trunk-level dual-channel with `call_sid` null and no phone numbers
   in the metadata, so a recording cannot be matched to a call by ID. Match by the
-  most recent completed recording whose start time is at or after call placement.
+  earliest completed recording whose start time is at or after call placement.
 - TeXML served on answer must be:
 
 ```xml

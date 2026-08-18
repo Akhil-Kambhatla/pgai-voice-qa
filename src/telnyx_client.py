@@ -4,8 +4,8 @@ Recording note (verified against the live API 2026-08-17): recordings on this
 account are produced at the trunk level (source "Trunking", channels=2, stereo
 mp3) with `call_sid` null and no phone numbers in the metadata, so a recording
 cannot be matched to a call by ID. `find_recording` therefore matches by time:
-the most recent completed recording whose start_time is at or after the moment
-the call was placed.
+the earliest completed recording whose start_time is at or after the moment
+the call was placed, which is necessarily that call's own recording.
 """
 
 import asyncio
@@ -92,7 +92,7 @@ async def find_recording(
             ]
             if candidates:
                 candidates.sort(key=lambda r: _parse_telnyx_time(r["start_time"]))
-                return candidates[-1]
+                return candidates[0]
 
             if asyncio.get_event_loop().time() >= deadline:
                 raise TimeoutError(
