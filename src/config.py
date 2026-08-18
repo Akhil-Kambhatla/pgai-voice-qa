@@ -19,6 +19,7 @@ _REQUIRED = [
     "MAX_CALL_SECONDS",
     "MAX_CALLS_PER_RUN",
     "REALTIME_MODEL",
+    "PLANNER_MODEL",
 ]
 
 _missing = [name for name in _REQUIRED if not os.getenv(name)]
@@ -40,6 +41,7 @@ TARGET_NUMBER = os.environ["TARGET_NUMBER"]
 MAX_CALL_SECONDS = int(os.environ["MAX_CALL_SECONDS"])
 MAX_CALLS_PER_RUN = int(os.environ["MAX_CALLS_PER_RUN"])
 REALTIME_MODEL = os.environ["REALTIME_MODEL"]
+PLANNER_MODEL = os.environ["PLANNER_MODEL"]
 
 if not PUBLIC_BASE_URL.startswith("https://"):
     sys.exit("PUBLIC_BASE_URL must be an https:// URL (the ngrok tunnel URL)")
@@ -47,5 +49,8 @@ if not PUBLIC_BASE_URL.startswith("https://"):
 # wss URL for Telnyx media streaming, derived from the public https URL.
 PUBLIC_WS_URL = "wss://" + PUBLIC_BASE_URL.removeprefix("https://")
 
-DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(PROJECT_DIR, "data")
 CALLS_DIR = os.path.join(DATA_DIR, "calls")
+SCENARIOS_DIR = os.path.join(PROJECT_DIR, "scenarios")
+PROMPTS_DIR = os.path.join(PROJECT_DIR, "src", "prompts")
