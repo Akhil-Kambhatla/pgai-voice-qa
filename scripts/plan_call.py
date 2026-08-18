@@ -16,7 +16,7 @@ def main():
     for axis, value in scenario["axes"].items():
         print(f"  {axis}: {value}")
     print(f"\npersona:\n{scenario.get('persona_block')}")
-    print(f"\nopening line: {scenario.get('opening_line')}")
+    print(f"\nopening situation: {scenario.get('opening_situation')}")
     print(f"goal: {scenario.get('goal')}")
     probe = scenario.get("primary_probe") or {}
     print(f"\nprimary probe: {probe.get('name')}")

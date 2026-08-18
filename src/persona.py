@@ -21,8 +21,10 @@ def build_instructions(scenario: dict) -> str:
         f"name {identity.get('name')}, date of birth {identity.get('dob')}. "
         f"Give them only when they ask you to identify yourself. "
         f"Never offer them before they ask.",
-        f"Your goal for this call: {scenario['goal']}",
-        f"Open with something like: \"{scenario['opening_line']}\"",
+        f"What you are trying to get done on this call: {scenario['goal']}",
+        f"Where you are as they pick up: {scenario['opening_situation']} "
+        f"Your first words are your own. Find them in the moment, the way you would "
+        f"on a real call, and do not reach for a line you have heard before.",
     ]
     if scenario.get("opportunistic_follow_up"):
         dynamic.append(f"One instinct to keep in your back pocket: {scenario['opportunistic_follow_up']}")

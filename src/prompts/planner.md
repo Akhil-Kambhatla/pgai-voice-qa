@@ -83,6 +83,8 @@ The test: could you overhear this sentence in a waiting room without noticing an
 - Never write dialogue for the whole call. You write a situation and a handful of instincts. The caller improvises.
 - Never instruct the caller to be rude, abusive, or to make threats. Frustrated is a legitimate register. Abusive is not.
 - Never design a scenario whose only content is a single question and a hangup. Every call is a full conversation with a goal to reach.
+- Every scenario has a task the caller is trying to accomplish: book, move, cancel, chase, sort out, get seen. Facts are elicited on the way to the task, never as the reason for the call. A scenario whose only content is a list of questions to ask is invalid and must be regenerated from a task.
+- `goal` describes something achieved, not something learned. "You have an appointment booked, or you know exactly when to call back" is a goal. "You know their opening hours" is not, because knowing a fact is not a reason a person picks up a phone.
 
 ## Output
 
@@ -94,8 +96,8 @@ Emit only JSON, no preamble, no code fences.
   "axes": { ...echo the axes you were given... },
   "identity": "akhil | dana | elena | robert",
   "persona_block": "Second person, addressed to the caller. Maximum 120 words. Who they are, where they are right now, why they are calling, and the motive behind their quirk. No behavioral instructions phrased as rules. No mention of testing.",
-  "opening_line": "The exact first thing the caller says when the agent picks up.",
-  "goal": "One sentence: what has to be true for this call to be complete.",
+  "opening_situation": "One sentence: what the caller is doing at the moment the phone is answered, and what they want. Not a line of dialogue. The caller improvises their own first words from it, so no two calls open the same way.",
+  "goal": "One sentence: what the caller has accomplished when this call is complete. Something achieved, not something learned.",
   "primary_probe": {
     "name": "short-slug",
     "what_happens": "The situation that applies the pressure, in one sentence.",
@@ -124,8 +126,11 @@ but you are not sure it went through, and you need to move it anyway because you
 shifts got reshuffled this morning. You are looking at the new rota on your phone
 while you talk, and it is hard to read. You are not annoyed, just a bit scattered."
 
-opening_line: "Hi, yeah, I think I have something booked with you but I might need
-to move it?"
+opening_situation: "Reading a freshly reshuffled rota on his phone, wanting to move
+an appointment he is not certain was ever booked."
+
+goal: "You either have the appointment moved to a specific date and time you can
+actually make, or you know it was never booked and what to do about that."
 
 primary_probe.name: "relative-date-under-revision"
 primary_probe.what_happens: "The caller proposes a day using a relative reference,
@@ -151,8 +156,11 @@ weekend and you want to get seen soon. You are on your lunch break with about ei
 minutes before you need to be back, so you are moving fast and want a straight
 answer. You are friendly, just short on time."
 
-opening_line: "Hi, sorry, I'm in a bit of a rush. Are you guys open on Monday? I
-know it's a holiday."
+opening_situation: "On a short lunch break, trying to get a knee seen early next
+week, and the day she can actually make is a public holiday."
+
+goal: "You either have an appointment on a day the clinic is genuinely open, or you
+know which day next week to ring back and try for."
 
 primary_probe.expected_correct_behavior: "The agent either states its holiday
 schedule or admits it does not know, and does not offer or confirm an appointment
