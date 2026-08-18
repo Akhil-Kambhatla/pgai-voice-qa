@@ -1,16 +1,27 @@
-import asyncio
 import json
 import os
 
 from loguru import logger
 from pipecat.adapters.schemas.function_schema import FunctionSchema
+from pipecat.frames.frames import EndWorkerFrame, InterruptionWorkerFrame
+from pipecat.processors.frame_processor import FrameDirection
 
 from src import config, oracle
 
+END_CALL_OVERRIDE_SECONDS = 30
 
-def build_tools(call_id: str, turn_logger):
+
+def build_tools(call_id: str, turn_logger, scenario: dict):
     observations_path = os.path.join(config.CALLS_DIR, call_id, "observations.jsonl")
     os.makedirs(os.path.dirname(observations_path), exist_ok=True)
+
+    def unmet_goals():
+        elicited = oracle.topics_checked(call_id)
+        missing = [fact for fact in scenario.get("facts_to_elicit", []) if fact not in elicited]
+        for target in scenario.get("claims_to_verify", []):
+            if not oracle.claim_addressed(call_id, target):
+                missing.append(target)
+        return missing
 
     async def handle_check_fact(params):
         claim = params.arguments.get("claim", "")
@@ -26,21 +37,28 @@ def build_tools(call_id: str, turn_logger):
 
     async def handle_end_call(params):
         reason = params.arguments.get("reason", "")
-        logger.info(f"end_call invoked: {reason}")
+        missing = unmet_goals()
+        past_override = turn_logger.elapsed_seconds() >= config.MAX_CALL_SECONDS - END_CALL_OVERRIDE_SECONDS
+        if missing and not past_override:
+            result = {
+                "status": "refused",
+                "reason": "still need: " + ", ".join(missing),
+                "instruction": "continue the conversation naturally",
+            }
+            turn_logger.log_tool_call("end_call", params.arguments, result)
+            await params.result_callback(result)
+            return
+        logger.info(f"end_call accepted: {reason}")
         turn_logger.log_tool_call("end_call", params.arguments, {"status": "ending"})
-        await params.result_callback({"status": "ending, say a brief goodbye"})
-
-        async def stop_after_goodbye():
-            await asyncio.sleep(6)
-            await params.pipeline_worker.stop_when_done()
-
-        asyncio.create_task(stop_after_goodbye())
+        await params.result_callback({"status": "ending"})
+        await params.llm.push_frame(InterruptionWorkerFrame(), FrameDirection.UPSTREAM)
+        await params.llm.push_frame(EndWorkerFrame(reason=reason), FrameDirection.UPSTREAM)
 
     return [
         FunctionSchema(
             name="check_fact",
-            description="Check something the clinic just stated about itself (hours, days, locations, providers, policies) against what you already know. Instant.",
-            properties={"claim": {"type": "string", "description": "What the clinic just stated, as close to verbatim as possible."}},
+            description="Check one single fact the clinic just stated about itself (hours, days, locations, providers, policies) against what you already know. One fact per call, never several combined. Instant.",
+            properties={"claim": {"type": "string", "description": "The one fact the clinic just stated, as close to verbatim as possible."}},
             required=["claim"],
             handler=handle_check_fact,
         ),
@@ -53,7 +71,7 @@ def build_tools(call_id: str, turn_logger):
         ),
         FunctionSchema(
             name="end_call",
-            description="Hang up the phone. Use when you have what you came for or the conversation has stalled.",
+            description="Hang up the phone. Use when you have what you came for or the conversation has stalled. If it refuses, keep the conversation going naturally.",
             properties={"reason": {"type": "string", "description": "Why the call is ending."}},
             required=["reason"],
             handler=handle_end_call,

@@ -50,7 +50,7 @@ async def run_bot(websocket: WebSocket):
     )
 
     turn_logger = TurnLogger(call_id)
-    tools = build_tools(call_id, turn_logger)
+    tools = build_tools(call_id, turn_logger, scenario)
 
     llm = OpenAIRealtimeLLMService(
         api_key=config.OPENAI_API_KEY,

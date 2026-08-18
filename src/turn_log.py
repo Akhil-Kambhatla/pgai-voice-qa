@@ -29,6 +29,9 @@ class TurnLogger(FrameProcessor):
         with open(self._path, "a") as f:
             f.write(json.dumps(line) + "\n")
 
+    def elapsed_seconds(self) -> float:
+        return time.monotonic() - self._start
+
     def log_tool_call(self, name: str, arguments, result):
         self._write("tool", json.dumps({"name": name, "arguments": dict(arguments), "result": result}))
 
