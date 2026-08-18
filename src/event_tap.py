@@ -2,8 +2,6 @@ import json
 import os
 import time
 
-from pipecat.services.openai.realtime.llm import OpenAIRealtimeLLMService
-
 from src import config
 
 AUDIO_PAYLOAD_EVENTS = {"input_audio_buffer.append", "response.output_audio.delta"}
@@ -63,14 +61,3 @@ def _safe_parse(message):
         return json.loads(message)
     except (TypeError, ValueError):
         return {"unparsed": str(message)[:500]}
-
-
-class TappedRealtimeLLMService(OpenAIRealtimeLLMService):
-    def __init__(self, *, recorder: EventRecorder, **kwargs):
-        super().__init__(**kwargs)
-        self._recorder = recorder
-
-    async def _receive_task_handler(self):
-        if self._websocket is not None and not isinstance(self._websocket, TappedWebsocket):
-            self._websocket = TappedWebsocket(self._websocket, self._recorder)
-        await super()._receive_task_handler()

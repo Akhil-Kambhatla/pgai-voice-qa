@@ -40,7 +40,7 @@ def build_tools(call_id: str, turn_logger, scenario: dict):
 
     async def handle_silent_compare(params):
         claim = params.arguments.get("claim", "")
-        result = oracle.check_fact(claim, call_id)
+        result = oracle.check_fact(claim, call_id, required_slots=required_slots)
         verdict = _verdict(result)
         turn_logger.log_tool_call("silent_compare", params.arguments, result)
         await params.result_callback(verdict)

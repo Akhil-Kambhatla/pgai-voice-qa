@@ -17,7 +17,8 @@ from pipecat.workers.runner import WorkerRunner
 
 from src import config, persona, store
 from src.bot_tools import build_tools
-from src.event_tap import EventRecorder, TappedRealtimeLLMService
+from src.event_tap import EventRecorder
+from src.realtime_llm import SingleOwnerRealtimeLLMService
 from src.turn_log import GoodbyeWatcher, TurnLogger
 
 MAX_HISTORY_ITEMS = 40
@@ -56,22 +57,26 @@ async def run_bot(websocket: WebSocket):
     instructions = persona.build_instructions(scenario)
     recorder.write_artifact("instructions.txt", instructions)
 
-    llm = TappedRealtimeLLMService(
+    llm = SingleOwnerRealtimeLLMService(
         recorder=recorder,
         api_key=config.OPENAI_API_KEY,
-        settings=TappedRealtimeLLMService.Settings(
+        settings=SingleOwnerRealtimeLLMService.Settings(
             model=config.REALTIME_MODEL,
             system_instruction=instructions,
             session_properties=realtime_events.SessionProperties(
+                tools=tools,
                 audio=realtime_events.AudioConfiguration(
                     input=realtime_events.AudioInput(
                         transcription=realtime_events.InputAudioTranscription(),
                         turn_detection=realtime_events.SemanticTurnDetection(eagerness="low"),
                     )
-                )
+                ),
             ),
         ),
     )
+
+    for tool in tools:
+        llm.register_function(tool.name, tool.handler)
 
     history_item_ids = []
 
