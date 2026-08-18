@@ -52,12 +52,16 @@ async def run_bot(websocket: WebSocket):
     turn_logger = TurnLogger(call_id)
     tools = build_tools(call_id, turn_logger, scenario)
 
+    recorder = EventRecorder(call_id)
+    instructions = persona.build_instructions(scenario)
+    recorder.write_artifact("instructions.txt", instructions)
+
     llm = TappedRealtimeLLMService(
-        recorder=EventRecorder(call_id),
+        recorder=recorder,
         api_key=config.OPENAI_API_KEY,
         settings=TappedRealtimeLLMService.Settings(
             model=config.REALTIME_MODEL,
-            system_instruction=persona.build_instructions(scenario),
+            system_instruction=instructions,
             session_properties=realtime_events.SessionProperties(
                 audio=realtime_events.AudioConfiguration(
                     input=realtime_events.AudioInput(

@@ -17,6 +17,10 @@ class EventRecorder:
         self._start = time.monotonic()
         self._elided_counts = {}
 
+    def write_artifact(self, name: str, text: str):
+        with open(os.path.join(os.path.dirname(self._path), name), "w") as f:
+            f.write(text)
+
     def record(self, source: str, payload):
         event_type = payload.get("type") if isinstance(payload, dict) else None
         if event_type in AUDIO_PAYLOAD_EVENTS:
