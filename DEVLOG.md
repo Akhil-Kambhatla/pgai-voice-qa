@@ -148,3 +148,54 @@ the two that did not. `_maybe_push_context_after_function_result` defers the
 context push until BotStoppedSpeakingFrame, so the result is held for exactly as
 long as the narration lasts. The stall is a symptom of #18, not of the tap, and
 event_tap.py was left alone.
+
+## 23. hang_up denied after the goal was already achieved
+Symptom: call-07 booked an appointment, read it back, called hang_up at 125.7s
+with "I have the appointment time and provider confirmed", and was denied for
+missing ["hours", "closed_days"]. Neither had come up, because the receptionist
+booked him directly and he never needed them.
+Cause: the gate treated facts_to_elicit as a precondition for ending the call,
+when facts are collected on the way to a task. A caller whose task finished early
+has no natural way to ask about closing time, so the gate was demanding the
+interrogation this system exists to avoid. hang_up is now granted when any one of
+these holds: every fact is collected, the scenario goal is achieved, the
+conversation has stalled, two exit nudges have already fired, or the call is
+inside the last 30 seconds. Goal achievement is judged by an LLM against the live
+turn log, because goal is free-text written by the planner and no parser handles
+arbitrary phrasings. Two prior bugs in this repo came from keyword and threshold
+heuristics, which is the evidence against trying a third. The judge fails open:
+on timeout or error it grants, because a call that cannot end is worse than one
+that ends early. Replayed against call-07's own turn log it returns false at
+60.8s and 85.7s and true from 96.1s, the moment the booking was read back.
+
+## 24. A single denial ended the exit path
+Symptom: denied once at 125.7s, never attempted again. conversation.md says to
+keep going on a denial and the bot did, but nothing brought it back to trying to
+leave.
+Cause: the denial was a dead end with no follow-up. Two changes. The payload now
+carries what the caller still wants in their own terms, {"hangup": "denied",
+"still_want": ["what time they open and close"]}, because "closed_days" is a slot
+name and means nothing to a person on a phone. And a denial now arms a 45 second
+timer: if no further hang_up is attempted, a private system item is injected into
+context naming what is left, with no forced response, so it colours the next turn
+instead of producing a line of speech. After two nudges the next attempt is
+granted regardless.
+
+## 25. The hard stop did not fail; the call was ended by hand
+events.jsonl for call-07 ends at 146.08s with exit.stream_disconnected. The call
+never reached either guard: the 210 second grant override or the 240 second
+watchdog. The operator hung up at 146s. Nothing is broken here and nothing was
+changed.
+
+## 26. Residual receptionist-voice line, and why it is not mechanism
+Symptom: "Got it, let me see what's available around that date." at 70.4s. The
+patient does not look up availability.
+Cause: not the tool result. Within response resp_EEKPFglpf4BKaQLGNb7xi the
+message item was added at 69.88s at output_index 0 and the silent_compare call at
+70.27s at output_index 1, and the result {"verdict": "none"} was not sent until
+73.00s, 2.6 seconds after the line was already spoken. The model narrated its own
+intention before calling the tool, exactly as in #18. The response gate behaved
+correctly and created no follow-up response after the result. This is residual
+model behaviour, not a mechanism defect, so conversation.md was left alone rather
+than accumulating another rule against it. Gate health on the same call: 12
+responses, 10 user turns, 10 spoken turns, one per turn.
