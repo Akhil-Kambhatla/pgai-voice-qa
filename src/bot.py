@@ -9,7 +9,6 @@ from pipecat.processors.aggregators.llm_response_universal import LLMContextAggr
 from pipecat.runner.utils import parse_telephony_websocket
 from pipecat.serializers.telnyx import TelnyxFrameSerializer
 from pipecat.services.openai.realtime import events as realtime_events
-from pipecat.services.openai.realtime.llm import OpenAIRealtimeLLMService
 from pipecat.transports.websocket.fastapi import (
     FastAPIWebsocketParams,
     FastAPIWebsocketTransport,
@@ -18,6 +17,7 @@ from pipecat.workers.runner import WorkerRunner
 
 from src import config, persona, store
 from src.bot_tools import build_tools
+from src.event_tap import EventRecorder, TappedRealtimeLLMService
 from src.turn_log import GoodbyeWatcher, TurnLogger
 
 MAX_HISTORY_ITEMS = 40
@@ -52,9 +52,10 @@ async def run_bot(websocket: WebSocket):
     turn_logger = TurnLogger(call_id)
     tools = build_tools(call_id, turn_logger, scenario)
 
-    llm = OpenAIRealtimeLLMService(
+    llm = TappedRealtimeLLMService(
+        recorder=EventRecorder(call_id),
         api_key=config.OPENAI_API_KEY,
-        settings=OpenAIRealtimeLLMService.Settings(
+        settings=TappedRealtimeLLMService.Settings(
             model=config.REALTIME_MODEL,
             system_instruction=persona.build_instructions(scenario),
             session_properties=realtime_events.SessionProperties(
