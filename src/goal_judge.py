@@ -28,10 +28,13 @@ def _transcript(turns):
     return "\n".join(lines)
 
 
-async def goal_achieved(goal: str, turns) -> tuple[bool, str]:
+GRANTING_OUTCOMES = ("goal_met", "unachievable")
+
+
+async def call_outcome(goal: str, turns) -> tuple[str, str]:
     transcript = _transcript(turns)
     if not transcript:
-        return False, "nothing said yet"
+        return "not_yet", "nothing said yet"
     user_content = f"Goal:\n{goal}\n\nTranscript so far:\n{transcript}"
     try:
         response = await asyncio.wait_for(
@@ -46,7 +49,8 @@ async def goal_achieved(goal: str, turns) -> tuple[bool, str]:
             timeout=JUDGE_TIMEOUT_SECONDS,
         )
         verdict = json.loads(response.choices[0].message.content)
-        return bool(verdict.get("achieved")), str(verdict.get("why", ""))
+        outcome = str(verdict.get("outcome", "not_yet"))
+        return outcome, str(verdict.get("why", ""))
     except Exception as error:
         logger.warning(f"goal judge failed ({error}); granting hang_up rather than trapping the call")
-        return True, "judge unavailable, failing open"
+        return "goal_met", "judge unavailable, failing open"

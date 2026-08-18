@@ -98,14 +98,14 @@ class FakeParams:
         self.results.append(type(frame).__name__)
 
 
-async def run_hangup(scenario, turn_logger, retry, judge_verdict=(False, "not done")):
+async def run_hangup(scenario, turn_logger, retry, judge_verdict=("not_yet", "not done")):
     from src import goal_judge
     from src.bot_tools import build_tools
 
     async def stub(goal, turns):
         return judge_verdict
 
-    goal_judge.goal_achieved = stub
+    goal_judge.call_outcome = stub
     tracker, params = FakeTracker(), FakeParams()
     tools = build_tools(CALL_ID, turn_logger, scenario, tracker, retry)
     await next(t for t in tools if t.name == "hang_up").handler(params)
@@ -122,11 +122,12 @@ async def test_grant_conditions():
     }
     booked = [{"speaker": "agent", "text": "Booked for August 25th at 4pm", "elapsed_seconds": 100}]
     cases = [
-        ("facts missing, goal not met", FakeLogger(10.0), FakeRetry(), (False, "no"), False, ""),
-        ("goal achieved early", FakeLogger(125.7, turns=booked), FakeRetry(), (True, "appointment booked"), True, "goal_achieved"),
-        ("conversation stalled", FakeLogger(90.0, stalled=True), FakeRetry(), (False, "no"), True, "stalled"),
-        ("nudged twice", FakeLogger(90.0), FakeRetry(exhausted=True), (False, "no"), True, "nudged_twice"),
-        ("past time override", FakeLogger(config.MAX_CALL_SECONDS - HANGUP_OVERRIDE_SECONDS + 1), FakeRetry(), (False, "no"), True, "time_override"),
+        ("facts missing, goal not met", FakeLogger(10.0), FakeRetry(), ("not_yet", "no"), False, ""),
+        ("goal achieved early", FakeLogger(125.7, turns=booked), FakeRetry(), ("goal_met", "appointment booked"), True, "goal_met"),
+        ("task refused or referred", FakeLogger(125.7, turns=booked), FakeRetry(), ("unachievable", "referred to support"), True, "unachievable"),
+        ("conversation stalled", FakeLogger(90.0, stalled=True), FakeRetry(), ("not_yet", "no"), True, "stalled"),
+        ("nudged twice", FakeLogger(90.0), FakeRetry(exhausted=True), ("not_yet", "no"), True, "nudged_twice"),
+        ("past time override", FakeLogger(config.MAX_CALL_SECONDS - HANGUP_OVERRIDE_SECONDS + 1), FakeRetry(), ("not_yet", "no"), True, "time_override"),
     ]
     for label, logger_, retry, verdict, expect_granted, expect_condition in cases:
         params, tracker, retry = await run_hangup(scenario, logger_, retry, verdict)
@@ -147,7 +148,7 @@ async def test_grant_conditions():
 
 async def test_facts_complete_skips_the_judge():
     scenario = {"facts_to_elicit": [], "claims_to_verify": [], "goal": "irrelevant"}
-    params, tracker, _ = await run_hangup(scenario, FakeLogger(10.0), FakeRetry(), (False, "no"))
+    params, tracker, _ = await run_hangup(scenario, FakeLogger(10.0), FakeRetry(), ("not_yet", "no"))
     assert params.results[0] == {"hangup": "ok"}, params.results
     assert tracker.decisions[0][1] == "facts_complete", tracker.decisions
     print("  PASS all facts collected still grants without consulting the judge")
@@ -163,22 +164,50 @@ async def test_stall_detection():
         return turn_logger
 
     progressing = logger_with([
-        "We open at nine in the morning",
-        "Doctor Kutty has Tuesday afternoon free",
-        "That slot is four fifteen exactly",
+        "We open at nine in the morning and close at five in the evening",
+        "Doctor Kutty has Tuesday afternoon free for a knee consultation",
+        "That particular slot runs four fifteen through four forty five",
     ])
     assert not progressing.stalled(), progressing.turns
     repeating = logger_with([
-        "We open at nine in the morning",
-        "Like I said we open at nine",
-        "Nine in the morning, yes",
+        "We open at nine in the morning and close at five in the evening",
+        "As I mentioned we open at nine in the morning and close at five",
+        "Nine in the morning through five in the evening, that is correct",
     ])
     assert repeating.stalled(), repeating.turns
+    short_turns = logger_with(["Sure", "Okay", "On the August of 25th"])
+    assert not short_turns.stalled(), "short turns must not be mistaken for a stall"
     print("  PASS stall fires only when the last two agent turns add nothing new")
+
+
+async def test_end_worker_frame_routes_to_an_end_frame():
+    from pipecat.frames.frames import EndFrame, EndWorkerFrame, Frame, TextFrame
+    from pipecat.processors.frame_processor import FrameDirection, FrameProcessor
+    from pipecat.tests.utils import SleepFrame, run_test
+
+    class HangUpOnCue(FrameProcessor):
+        async def process_frame(self, frame: Frame, direction: FrameDirection):
+            await super().process_frame(frame, direction)
+            if isinstance(frame, TextFrame) and frame.text == "hang up":
+                await self.push_frame(EndWorkerFrame(reason="granted"), FrameDirection.DOWNSTREAM)
+                return
+            await self.push_frame(frame, direction)
+
+    received_down, _ = await run_test(
+        HangUpOnCue(),
+        frames_to_send=[TextFrame("hang up"), SleepFrame(0.5)],
+        expected_down_frames=[EndWorkerFrame, EndFrame],
+        send_end_frame=False,
+    )
+    names = [type(f).__name__ for f in received_down]
+    print(f"  frames reaching the end of the pipeline: {names}")
+    assert "EndFrame" in names, names
+    print("  PASS EndWorkerFrame pushed downstream comes back as an EndFrame at the transport")
 
 
 async def main():
     print("=== exit path ===")
+    await test_end_worker_frame_routes_to_an_end_frame()
     await test_serializer_terminates_on_end_and_cancel()
     await test_grant_conditions()
     await test_facts_complete_skips_the_judge()

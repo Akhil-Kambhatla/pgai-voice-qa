@@ -19,7 +19,7 @@ from src.bot_tools import build_tools
 from src.call_exit import ExitTracker, HangupRetry, RecordedTelnyxSerializer
 from src.event_tap import EventRecorder
 from src.realtime_llm import SingleOwnerRealtimeLLMService
-from src.turn_log import GoodbyeWatcher, TurnLogger
+from src.turn_log import GoodbyeWatcher, TranscriptTap, TurnLogger
 
 MAX_HISTORY_ITEMS = 40
 
@@ -102,6 +102,7 @@ async def run_bot(websocket: WebSocket):
         [
             transport.input(),
             user_aggregator,
+            TranscriptTap(turn_logger),
             llm,
             turn_logger,
             goodbye_watcher,
