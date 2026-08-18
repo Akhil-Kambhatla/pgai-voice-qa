@@ -6,7 +6,7 @@ from pipecat.adapters.schemas.function_schema import FunctionSchema
 from pipecat.frames.frames import EndWorkerFrame, InterruptionWorkerFrame
 from pipecat.processors.frame_processor import FrameDirection
 
-from src import config, oracle
+from src import config, goal_judge, oracle
 
 HANGUP_OVERRIDE_SECONDS = 30
 
@@ -51,18 +51,28 @@ def build_tools(call_id: str, turn_logger, scenario: dict, exit_tracker):
         turn_logger.log_tool_call("silent_note", params.arguments, {"verdict": "ok"})
         await params.result_callback({"verdict": "ok"})
 
+    async def grant_condition(missing, elapsed):
+        if not missing:
+            return "facts_complete"
+        if elapsed >= config.MAX_CALL_SECONDS - HANGUP_OVERRIDE_SECONDS:
+            return "time_override"
+        if turn_logger.stalled():
+            return "stalled"
+        achieved, why = await goal_judge.goal_achieved(scenario["goal"], turn_logger.turns)
+        return f"goal_achieved: {why}" if achieved else ""
+
     async def handle_hang_up(params):
         reason = params.arguments.get("reason", "")
         elapsed = turn_logger.elapsed_seconds()
         missing = unmet_goals()
-        past_override = elapsed >= config.MAX_CALL_SECONDS - HANGUP_OVERRIDE_SECONDS
-        if missing and not past_override:
+        condition = await grant_condition(missing, elapsed)
+        if not condition:
             result = {"hangup": "denied", "missing": missing}
-            exit_tracker.hangup_decision(False, reason, missing, elapsed, False)
+            exit_tracker.hangup_decision(False, reason, missing, elapsed, "")
             turn_logger.log_tool_call("hang_up", params.arguments, result)
             await params.result_callback(result)
             return
-        exit_tracker.hangup_decision(True, reason, missing, elapsed, bool(missing and past_override))
+        exit_tracker.hangup_decision(True, reason, missing, elapsed, condition)
         turn_logger.log_tool_call("hang_up", params.arguments, {"hangup": "ok"})
         await params.result_callback({"hangup": "ok"})
         await params.llm.push_frame(InterruptionWorkerFrame(), FrameDirection.UPSTREAM)

@@ -41,7 +41,7 @@ class ExitTracker:
     def __init__(self, recorder: EventRecorder):
         self._recorder = recorder
 
-    def hangup_decision(self, granted: bool, reason: str, missing, elapsed: float, forced: bool):
+    def hangup_decision(self, granted: bool, reason: str, missing, elapsed: float, condition: str):
         self._recorder.record(
             "lifecycle",
             {
@@ -49,10 +49,11 @@ class ExitTracker:
                 "reason": reason,
                 "missing": missing,
                 "elapsed_seconds": round(elapsed, 1),
-                "granted_by_time_override": forced,
+                "grant_condition": condition,
             },
         )
-        logger.info(f"hang_up {'granted' if granted else 'denied'} at {elapsed:.1f}s missing={missing}")
+        verdict = f"granted ({condition})" if granted else "denied"
+        logger.info(f"hang_up {verdict} at {elapsed:.1f}s missing={missing}")
 
     def watchdog_fired(self, limit: int):
         self._recorder.record("lifecycle", {"type": "exit.watchdog_terminated", "limit_seconds": limit})
