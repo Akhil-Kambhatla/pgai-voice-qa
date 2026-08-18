@@ -79,3 +79,72 @@ Symptom: scenario required hours and closed_days; bot obtained hours and hung up
 
 ## 15. check_fact received compound claims
 Symptom: three assertions in one claim string, which cannot map to an oracle slot.
+## 16. Duplicate opening line, 1.8s apart
+Symptom: bot spoke the opening at 19.1s and again at 20.9s.
+Cause: two response owners. Semantic VAD on the server creates a response when
+the caller's turn ends, and pipecat's `_handle_context` calls `_create_response()`
+the first time an LLMContextFrame reaches the service. The first context frame
+only arrives once the user transcript lands, which is after the server already
+answered. events.jsonl shows resp at 17.61 (server) and resp at 19.50 (ours), and
+11 response.created against 6 committed user turns.
+
+## 17. Every tool result forced the bot to speak
+Symptom: an utterance at the exact timestamp of every tool call.
+Cause: `_process_completed_function_calls` ends with `if sent_new_result:
+await self._create_response()`, so delivering a result and creating a turn were
+the same action. All four tool results in call-05 produced a response within
+160ms. Delivery is still required, because a realtime service reads tool results
+out of the pushed context and not from FunctionCallResultFrame, so the fix gates
+the response rather than the delivery: a response is created only when the
+response that issued the tool call did not already speak.
+
+## 18. Tool narration spoken aloud
+Symptom: "let me check that detail for you for a moment" at 63.9s, "No, that
+helps. I'll wrap up here" at 82.4s.
+Cause: not the tool result. Both responses had output ['message',
+'function_call'] - the model narrated the call inside the same response, before
+any result existed, so the 82.4s line was not contradicting the refusal, it
+preceded it. The vocabulary came from the runtime prompt itself, which said
+"Never say you are checking something, looking something up, or that you need a
+moment" and exposed a tool literally named check_fact described as "Check one
+single fact". The prohibition supplied the exact words it forbade.
+
+## 19. Bot drifted into receptionist voice
+Symptom: "let me check that detail for you" - offering to look something up on
+the other party's behalf.
+Cause: the live session.update never used the words patient or receptionist. It
+said "You are a real person making a real phone call" and left the rest to
+inference, against the realtime API's structural framing in which our bot is the
+assistant and the clinic is the user. Nothing counteracted the assistant's
+default posture of holding records and helping the caller.
+
+## 20. Model had no tools for the first 19 seconds
+Symptom: the first session.update on the wire carried instructions but no tools;
+tools appeared only in a second update at 19.4s.
+Cause: `_send_session_update` reads tools from `self._context`, which is None
+until the first context frame. That second update also re-seeded the caller's
+transcript as an input_text item, duplicating audio the model already had.
+Tools now ship in session_properties at connect, and handlers are registered
+explicitly so they do not depend on a context frame arriving.
+
+## 21. Required slot never credited, so the call could not end
+Symptom: check_fact returned already_asked at 94.9s for a question about closed
+days; scenario required closed_days and never obtained it, so end_call stayed
+refused.
+Cause: SLOT_KEYWORDS matched substrings, so the single word "closed" scored two
+hits against the hours list ("close" and "closed") and cleared the >= 2
+threshold, while scoring only one against closed_days and failing it. The claim
+was credited to a slot already held and blocked as a repeat. Matching is now on
+word boundaries with a threshold of one, and the repeat guard cannot fire on a
+claim covering a still-missing required slot.
+
+## 22. Latency: the event tap was not the cause
+Measured rather than assumed. Median speech-stopped to first-audio in call-05 was
+0.96s, max 1.30s, already inside budget. The tap's cost over the whole call is
+~6.3ms of json.loads across ~1000 audio appends plus ~8ms of file appends across
+461 events, about 15ms in 112 seconds. The real dead air was tool round-trip:
+2.84s and 2.04s on the two tool calls whose response also spoke, against 0.01s on
+the two that did not. `_maybe_push_context_after_function_result` defers the
+context push until BotStoppedSpeakingFrame, so the result is held for exactly as
+long as the narration lasts. The stall is a symptom of #18, not of the tap, and
+event_tap.py was left alone.
