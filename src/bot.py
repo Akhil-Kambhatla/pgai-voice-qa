@@ -7,7 +7,6 @@ from pipecat.pipeline.worker import PipelineParams, PipelineWorker
 from pipecat.processors.aggregators.llm_context import LLMContext
 from pipecat.processors.aggregators.llm_response_universal import LLMContextAggregatorPair
 from pipecat.runner.utils import parse_telephony_websocket
-from pipecat.serializers.telnyx import TelnyxFrameSerializer
 from pipecat.services.openai.realtime import events as realtime_events
 from pipecat.transports.websocket.fastapi import (
     FastAPIWebsocketParams,
@@ -17,6 +16,7 @@ from pipecat.workers.runner import WorkerRunner
 
 from src import config, persona, store
 from src.bot_tools import build_tools
+from src.call_exit import ExitTracker, RecordedTelnyxSerializer
 from src.event_tap import EventRecorder
 from src.realtime_llm import SingleOwnerRealtimeLLMService
 from src.turn_log import GoodbyeWatcher, TurnLogger
@@ -32,7 +32,11 @@ async def run_bot(websocket: WebSocket):
     call_id = body.get("call_id", "live")
     scenario = store.load_scenario(body["scenario_id"])
 
-    serializer = TelnyxFrameSerializer(
+    recorder = EventRecorder(call_id)
+    exit_tracker = ExitTracker(recorder)
+
+    serializer = RecordedTelnyxSerializer(
+        recorder=recorder,
         stream_id=call_data["stream_id"],
         call_control_id=call_data["call_id"],
         outbound_encoding=call_data["outbound_encoding"],
@@ -51,9 +55,8 @@ async def run_bot(websocket: WebSocket):
     )
 
     turn_logger = TurnLogger(call_id)
-    tools = build_tools(call_id, turn_logger, scenario)
+    tools = build_tools(call_id, turn_logger, scenario, exit_tracker)
 
-    recorder = EventRecorder(call_id)
     instructions = persona.build_instructions(scenario)
     recorder.write_artifact("instructions.txt", instructions)
 
@@ -116,6 +119,7 @@ async def run_bot(websocket: WebSocket):
     async def enforce_max_duration():
         await asyncio.sleep(config.MAX_CALL_SECONDS)
         logger.warning(f"MAX_CALL_SECONDS ({config.MAX_CALL_SECONDS}) reached; ending call")
+        exit_tracker.watchdog_fired(config.MAX_CALL_SECONDS)
         await worker.cancel()
 
     watchdog = asyncio.create_task(enforce_max_duration())
@@ -128,6 +132,7 @@ async def run_bot(websocket: WebSocket):
     @transport.event_handler("on_client_disconnected")
     async def on_client_disconnected(transport, client):
         logger.info("Telnyx media stream disconnected")
+        exit_tracker.stream_disconnected()
         await worker.cancel()
 
     runner = WorkerRunner(handle_sigint=False)

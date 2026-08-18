@@ -25,7 +25,7 @@ def _verdict(result):
     return {"verdict": "conflict", "heard_earlier": result.get("rule")}
 
 
-def build_tools(call_id: str, turn_logger, scenario: dict):
+def build_tools(call_id: str, turn_logger, scenario: dict, exit_tracker):
     observations_path = os.path.join(config.CALLS_DIR, call_id, "observations.jsonl")
     os.makedirs(os.path.dirname(observations_path), exist_ok=True)
     required_slots = scenario.get("facts_to_elicit", [])
@@ -53,23 +53,25 @@ def build_tools(call_id: str, turn_logger, scenario: dict):
 
     async def handle_hang_up(params):
         reason = params.arguments.get("reason", "")
+        elapsed = turn_logger.elapsed_seconds()
         missing = unmet_goals()
-        past_override = turn_logger.elapsed_seconds() >= config.MAX_CALL_SECONDS - HANGUP_OVERRIDE_SECONDS
+        past_override = elapsed >= config.MAX_CALL_SECONDS - HANGUP_OVERRIDE_SECONDS
         if missing and not past_override:
-            logger.info(f"hang_up denied, still unmet: {missing}")
-            turn_logger.log_tool_call("hang_up", params.arguments, {"hangup": "denied", "unmet": missing})
-            await params.result_callback({"hangup": "denied"})
+            result = {"hangup": "denied", "missing": missing}
+            exit_tracker.hangup_decision(False, reason, missing, elapsed, False)
+            turn_logger.log_tool_call("hang_up", params.arguments, result)
+            await params.result_callback(result)
             return
-        logger.info(f"hang_up accepted: {reason}")
+        exit_tracker.hangup_decision(True, reason, missing, elapsed, bool(missing and past_override))
         turn_logger.log_tool_call("hang_up", params.arguments, {"hangup": "ok"})
         await params.result_callback({"hangup": "ok"})
         await params.llm.push_frame(InterruptionWorkerFrame(), FrameDirection.UPSTREAM)
-        await params.llm.push_frame(EndWorkerFrame(reason=reason), FrameDirection.UPSTREAM)
+        await params.llm.push_frame(EndWorkerFrame(reason=reason), FrameDirection.DOWNSTREAM)
 
     return [
         FunctionSchema(
             name="silent_compare",
-            description="Private thought. Sets one thing the receptionist just said about this clinic against what you were already told on this call. One statement at a time.",
+            description="Runs the instant the receptionist states anything concrete about this clinic: a time, a day, a name, a price, a policy, whether they are open. Use it on the first such statement of the call too, when there is nothing yet to set it against, because holding on to it is half of what this does. One statement per use, never two joined together.",
             properties={"claim": {"type": "string", "description": "The single thing the receptionist just said, close to their own words."}},
             required=["claim"],
             handler=handle_silent_compare,

@@ -1,11 +1,12 @@
+import calendar
 import re
 from collections import defaultdict
 
 from src import store
 
-WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
-MONTHS = ["january", "february", "march", "april", "may", "june", "july",
-          "august", "september", "october", "november", "december"]
+WEEKDAYS = [d.lower() for d in calendar.day_name]
+MONTHS = [m.lower() for m in calendar.month_name[1:]]
+CATEGORIES = ("time", "weekday", "month", "number")
 SLOT_KEYWORDS = {
     "hours": ["hours", "open", "opens", "close", "closes", "closed", "until"],
     "closed_days": ["closed", "weekend", "weekends", "days off"],
@@ -59,9 +60,15 @@ def _match_slot(claim_text, oracle):
     return best if best_hits >= 1 else None
 
 
+def is_more_specific(candidate_text, stored_text):
+    candidate, stored = _category_tokens(candidate_text), _category_tokens(stored_text)
+    gained = any(candidate[c] - stored[c] for c in CATEGORIES)
+    lost = any(stored[c] - candidate[c] for c in CATEGORIES)
+    return gained and not lost
+
+
 def compare_statements(claim_text, value_text):
-    claim_cats = _category_tokens(claim_text)
-    value_cats = _category_tokens(value_text)
+    claim_cats, value_cats = _category_tokens(claim_text), _category_tokens(value_text)
     for category in ("weekday", "month", "time"):
         claim_set, value_set = claim_cats[category], value_cats[category]
         if claim_set and value_set and not (claim_set & value_set):
@@ -96,10 +103,7 @@ def _topics_covered(claim_text, oracle_data):
     covered = {s for s, kw in SLOT_KEYWORDS.items() if _keyword_hits(claim_text, kw)}
     if _category_tokens(claim_text)["time"]:
         covered.add("hours")
-    best = _match_slot(claim_text, oracle_data)
-    if best:
-        covered.add(best)
-    return covered
+    return covered | {s for s in [_match_slot(claim_text, oracle_data)] if s}
 
 
 def _is_compound(claim_text):
@@ -133,15 +137,11 @@ def check_fact(claim_text, call_id="live", required_slots=()):
     if _fixated_suspicion(claim_text, call_id, suspicions):
         return {"status": "already_confirmed"}
 
-    if not topic:
+    entry = oracle_data.get(topic) if topic else None
+    if not entry or not entry.get("value"):
         return {"status": "unknown"}
-    entry = oracle_data[topic]
-    if not entry.get("value"):
-        return {"status": "unknown"}
-
-    status = compare_statements(claim_text, str(entry["value"]))
     return {
-        "status": status,
+        "status": compare_statements(claim_text, str(entry["value"])),
         "rule": entry["value"],
         "stated_in": entry.get("stated_in"),
         "at": entry.get("at"),

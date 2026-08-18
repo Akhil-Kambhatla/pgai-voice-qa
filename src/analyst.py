@@ -69,6 +69,10 @@ def _apply_facts(facts, call_id, oracle_data, suspicions, changes):
             }
             suspicions.append(suspicion)
             changes.append(f"suspicion: {suspicion['id']} ({slot} contradiction)")
+        elif oracle.is_more_specific(value, str(entry["value"])):
+            entry.update({"value": value, "stated_in": call_id, "at": at})
+            entry["times_stated"] += 1
+            changes.append(f"oracle: {slot} sharpened from {call_id} at {at} to \"{value}\"")
         else:
             entry["times_stated"] += 1
             changes.append(f"oracle: {slot} restated consistently (times_stated={entry['times_stated']})")
