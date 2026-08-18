@@ -76,6 +76,20 @@ def _fixated_suspicion(claim_text, call_id, suspicions):
     return None
 
 
+def _topics_covered(claim_text, oracle_data):
+    lowered = claim_text.lower()
+    covered = set()
+    for slot, keywords in SLOT_KEYWORDS.items():
+        if sum(1 for kw in keywords if kw in lowered) >= 2:
+            covered.add(slot)
+    if _category_tokens(claim_text)["time"]:
+        covered.add("hours")
+    best = _match_slot(claim_text, oracle_data)
+    if best:
+        covered.add(best)
+    return covered
+
+
 def _is_compound(claim_text):
     return ";" in claim_text or len(re.findall(r"\band\b", claim_text.lower())) > 1
 
@@ -95,10 +109,10 @@ def check_fact(claim_text, call_id="live"):
 
     oracle_data = store.load("oracle", {})
     topic = _match_slot(claim_text, oracle_data)
-    if topic and topic in _topics_checked[call_id]:
+    covered = _topics_covered(claim_text, oracle_data)
+    if covered and covered <= _topics_checked[call_id]:
         return {"status": "already_asked", "instruction": "you already asked this. do not ask again."}
-    if topic:
-        _topics_checked[call_id].add(topic)
+    _topics_checked[call_id] |= covered
     _claims_checked[call_id].append(claim_text)
 
     suspicions = store.load("suspicions", [])
