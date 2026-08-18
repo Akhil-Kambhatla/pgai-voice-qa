@@ -199,3 +199,60 @@ correctly and created no follow-up response after the result. This is residual
 model behaviour, not a mechanism defect, so conversation.md was left alone rather
 than accumulating another rule against it. Gate health on the same call: 12
 responses, 10 user turns, 10 spoken turns, one per turn.
+
+## 27. Every "let me..." utterance was reasoning commentary rendered to audio
+Symptom: "Let me share what I'm dealing with and ask about availability" at 00:14
+in call-10, "let me think this through" at 01:01, and the same shape in calls 04
+through 09.
+Cause: one bug, not five prompt failures. gpt-realtime-2.1-mini emits its
+reasoning as a real assistant message item carrying "phase": "commentary",
+alongside the actual reply. The response at t=14.31 in call-10 shows it plainly:
+output is a message with phase commentary plus the silent_compare call, and
+output_token_details.reasoning_tokens is 63. Pipecat has no notion of phase, so
+the commentary item's audio deltas became TTSAudioRawFrames like any other and
+went out over the phone. This is also why narration always coincided with a tool
+call: the commentary item is emitted in the same response as the function call,
+which is exactly what #18 and #26 were looking at from the outside.
+Fix: track item ids whose phase is commentary, read from the raw server event
+because pipecat's ConversationItem model drops unknown fields, and drop their
+audio and transcript deltas before they reach the transport. Each one is logged
+to events.jsonl as suppressed.commentary with its transcript. Replaying call-10
+catches both of its commentary items and blocks 34 transcript deltas.
+Second-order fix in the same change: the response gate counted any message item
+as speech, so a commentary-only response made the bot look like it had spoken and
+suppressed its follow-up turn, leaving it mute. The gate now ignores commentary
+items when deciding whether a turn was actually spoken.
+
+## 28. Reasoning can be disabled, but that is not what removes commentary
+Verified against the live API rather than assumed. session.update accepts
+reasoning {"effort": "none"} on gpt-realtime-2.1-mini and it works: mean
+reasoning tokens over ten responses fall from 74.4 to 0.6. The value is
+undocumented, in that the server's own validation error lists only minimal, low,
+medium, high and xhigh, but it is accepted and honoured. Pipecat forwards it
+because its reasoning-capable check is a substring test for "gpt-realtime-2",
+which "gpt-realtime-2.1-mini" satisfies.
+What it does not do is remove the commentary class. Commentary still appeared in
+2 of 10 responses with effort none, against 3 of 10 with reasoning unset, which
+is no difference at this sample size. An early four-run sample suggested it had
+removed the class entirely; that was too small and was wrong. The phase filter in
+#27 is the load-bearing fix. The effort setting is kept for the token saving
+only.
+
+## 29. silent_compare fired on a greeting
+Symptom: at t=14.31 in call-10 it ran on "Thank you for calling Retail Screening,
+how can I help you?", which asserts nothing about the clinic.
+Cause: the description said it runs on "anything concrete about this clinic",
+which a greeting naming the practice technically satisfies. It now asks for a
+checkable fact and names what is excluded: greetings, questions asked of you,
+requests for your details, acknowledgements, and your own speech, with the test
+being whether the sentence could turn out to be false. Probed against the live
+model, three of three non-claims no longer fire, including the exact greeting,
+and two of three factual claims do.
+
+## 30. Prompt caching was already working
+The premise came from a single sample. cached_tokens is 0 only on the first
+response of a call, because there is nothing yet to cache against. Across the
+rest of call-10 it is 1600, 1664 and 1728 against inputs of 1702, 1764 and 1855,
+so roughly 94 percent of each turn is served from cache. build_instructions
+already concatenates the static conversation prompt ahead of the per-scenario
+persona, which is the correct order for a stable prefix. Nothing to fix.
