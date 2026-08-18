@@ -6,7 +6,7 @@ from pipecat.adapters.schemas.function_schema import FunctionSchema
 from pipecat.frames.frames import EndWorkerFrame, InterruptionWorkerFrame
 from pipecat.processors.frame_processor import FrameDirection
 
-from src import config, goal_judge, oracle
+from src import call_exit, config, goal_judge, oracle
 
 HANGUP_OVERRIDE_SECONDS = 30
 
@@ -25,7 +25,7 @@ def _verdict(result):
     return {"verdict": "conflict", "heard_earlier": result.get("rule")}
 
 
-def build_tools(call_id: str, turn_logger, scenario: dict, exit_tracker):
+def build_tools(call_id: str, turn_logger, scenario: dict, exit_tracker, retry):
     observations_path = os.path.join(config.CALLS_DIR, call_id, "observations.jsonl")
     os.makedirs(os.path.dirname(observations_path), exist_ok=True)
     required_slots = scenario.get("facts_to_elicit", [])
@@ -56,6 +56,8 @@ def build_tools(call_id: str, turn_logger, scenario: dict, exit_tracker):
             return "facts_complete"
         if elapsed >= config.MAX_CALL_SECONDS - HANGUP_OVERRIDE_SECONDS:
             return "time_override"
+        if retry.exhausted:
+            return "nudged_twice"
         if turn_logger.stalled():
             return "stalled"
         achieved, why = await goal_judge.goal_achieved(scenario["goal"], turn_logger.turns)
@@ -64,13 +66,16 @@ def build_tools(call_id: str, turn_logger, scenario: dict, exit_tracker):
     async def handle_hang_up(params):
         reason = params.arguments.get("reason", "")
         elapsed = turn_logger.elapsed_seconds()
+        retry.note_attempt()
         missing = unmet_goals()
         condition = await grant_condition(missing, elapsed)
         if not condition:
-            result = {"hangup": "denied", "missing": missing}
+            still_want = call_exit.as_caller_wants(missing)
+            result = {"hangup": "denied", "still_want": still_want}
             exit_tracker.hangup_decision(False, reason, missing, elapsed, "")
             turn_logger.log_tool_call("hang_up", params.arguments, result)
             await params.result_callback(result)
+            retry.note_denial(still_want)
             return
         exit_tracker.hangup_decision(True, reason, missing, elapsed, condition)
         turn_logger.log_tool_call("hang_up", params.arguments, {"hangup": "ok"})

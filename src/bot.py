@@ -16,7 +16,7 @@ from pipecat.workers.runner import WorkerRunner
 
 from src import config, persona, store
 from src.bot_tools import build_tools
-from src.call_exit import ExitTracker, RecordedTelnyxSerializer
+from src.call_exit import ExitTracker, HangupRetry, RecordedTelnyxSerializer
 from src.event_tap import EventRecorder
 from src.realtime_llm import SingleOwnerRealtimeLLMService
 from src.turn_log import GoodbyeWatcher, TurnLogger
@@ -34,6 +34,7 @@ async def run_bot(websocket: WebSocket):
 
     recorder = EventRecorder(call_id)
     exit_tracker = ExitTracker(recorder)
+    retry = HangupRetry(exit_tracker)
 
     serializer = RecordedTelnyxSerializer(
         recorder=recorder,
@@ -55,7 +56,7 @@ async def run_bot(websocket: WebSocket):
     )
 
     turn_logger = TurnLogger(call_id)
-    tools = build_tools(call_id, turn_logger, scenario, exit_tracker)
+    tools = build_tools(call_id, turn_logger, scenario, exit_tracker, retry)
 
     instructions = persona.build_instructions(scenario)
     recorder.write_artifact("instructions.txt", instructions)
@@ -78,6 +79,7 @@ async def run_bot(websocket: WebSocket):
         ),
     )
 
+    retry.attach(llm)
     for tool in tools:
         llm.register_function(tool.name, tool.handler)
 
@@ -141,3 +143,4 @@ async def run_bot(websocket: WebSocket):
         await runner.run()
     finally:
         watchdog.cancel()
+        retry.note_attempt()
