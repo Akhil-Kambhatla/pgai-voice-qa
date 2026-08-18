@@ -9,6 +9,9 @@ the call was placed.
 """
 
 import asyncio
+import base64
+import json
+import urllib.parse
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 
@@ -19,23 +22,19 @@ from src import config
 TEXML_BASE = f"https://api.telnyx.com/v2/texml/Accounts/{config.TELNYX_ACCOUNT_SID}"
 _HEADERS = {"Authorization": f"Bearer {config.TELNYX_API_KEY}"}
 
-_calls_placed = 0
 
-
-async def place_call(to_number: str) -> dict:
+async def place_call(to_number: str, body: dict | None = None) -> dict:
     """Place an outbound TeXML call. Returns the Telnyx response body (includes `sid`)."""
-    global _calls_placed
-    if _calls_placed >= config.MAX_CALLS_PER_RUN:
-        raise RuntimeError(
-            f"MAX_CALLS_PER_RUN ({config.MAX_CALLS_PER_RUN}) reached; refusing to place another call"
-        )
-    _calls_placed += 1
+    answer_url = f"{config.PUBLIC_BASE_URL}/answer"
+    if body:
+        encoded = urllib.parse.quote(base64.b64encode(json.dumps(body).encode()).decode(), safe="")
+        answer_url = f"{answer_url}?body={encoded}"
 
     data = {
         "ApplicationSid": config.TELNYX_APPLICATION_SID,
         "To": to_number,
         "From": config.TELNYX_PHONE_NUMBER,
-        "Url": f"{config.PUBLIC_BASE_URL}/answer",
+        "Url": answer_url,
         "StatusCallback": f"{config.PUBLIC_BASE_URL}/status",
     }
     async with aiohttp.ClientSession() as session:

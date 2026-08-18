@@ -8,6 +8,7 @@ Telnyx closes the stream and the call fails.
 import json
 import os
 import sys
+import urllib.parse
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -16,40 +17,46 @@ import uvicorn
 from fastapi import FastAPI, HTTPException, Request, WebSocket
 from fastapi.responses import JSONResponse, Response
 
-from src import config, telnyx_client
+from src import call_counter, config, store, telnyx_client
 from src.bot import run_bot  # noqa: F401 — must load pipecat at startup, see module docstring
 
 app = FastAPI()
 
 
-def _call_dir(call_id: str) -> str:
-    return os.path.join(config.CALLS_DIR, call_id)
-
-
 def _call_record_path(call_id: str) -> str:
-    return os.path.join(_call_dir(call_id), "call.json")
+    return os.path.join(config.CALLS_DIR, call_id, "call.json")
 
 
 @app.post("/start")
 async def start_call(request: Request) -> JSONResponse:
     data = await request.json()
     phone_number = data.get("phone_number")
-    if not phone_number:
-        raise HTTPException(status_code=400, detail="Missing 'phone_number' in request body")
+    scenario_id = data.get("scenario_id")
+    if not phone_number or not scenario_id:
+        raise HTTPException(status_code=400, detail="Need 'phone_number' and 'scenario_id'")
+    try:
+        scenario = store.load_scenario(scenario_id)
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail=f"No scenario file for {scenario_id}")
 
+    call_id = call_counter.reserve_call_slot()
     placed_at = datetime.now(timezone.utc)
-    result = await telnyx_client.place_call(phone_number)
+    result = await telnyx_client.place_call(
+        phone_number, body={"scenario_id": scenario_id, "call_id": call_id}
+    )
 
-    call_id = result.get("sid") or result.get("call_control_id") or "unknown"
     record = {
         "call_id": call_id,
+        "scenario_id": scenario_id,
+        "axes": scenario.get("axes"),
+        "identity": scenario.get("identity"),
+        "telnyx_sid": result.get("sid"),
         "to": phone_number,
         "from": config.TELNYX_PHONE_NUMBER,
         "placed_at": placed_at.isoformat(),
-        "telnyx_response": result,
         "status_events": [],
     }
-    os.makedirs(_call_dir(call_id), exist_ok=True)
+    os.makedirs(os.path.dirname(_call_record_path(call_id)), exist_ok=True)
     with open(_call_record_path(call_id), "w") as f:
         json.dump(record, f, indent=2)
 
@@ -58,11 +65,16 @@ async def start_call(request: Request) -> JSONResponse:
 
 @app.post("/answer")
 async def answer(request: Request) -> Response:
+    ws_url = f"{config.PUBLIC_WS_URL}/ws"
+    body = request.query_params.get("body")
+    if body:
+        ws_url = f"{ws_url}?body={urllib.parse.quote(body, safe='')}"
     texml = f"""<?xml version="1.0" encoding="UTF-8"?>
 <Response>
     <Connect>
-        <Stream url="{config.PUBLIC_WS_URL}/ws" bidirectionalMode="rtp"></Stream>
+        <Stream url="{ws_url}" bidirectionalMode="rtp"></Stream>
     </Connect>
+    <Pause length="40"/>
 </Response>"""
     return Response(content=texml, media_type="application/xml")
 
@@ -80,17 +92,17 @@ async def websocket_endpoint(websocket: WebSocket):
 async def status_callback(request: Request) -> JSONResponse:
     form = dict(await request.form())
     form["received_at"] = datetime.now(timezone.utc).isoformat()
-    call_id = form.get("CallSid") or form.get("CallSidLegacy")
+    telnyx_sid = form.get("CallSid")
 
-    record_path = _call_record_path(call_id) if call_id else None
-    if record_path and os.path.exists(record_path):
-        with open(record_path) as f:
-            record = json.load(f)
+    record = next(
+        (r for r in store.list_call_records() if r.get("telnyx_sid") == telnyx_sid), None
+    )
+    if record:
         record.setdefault("status_events", []).append(form)
-        with open(record_path, "w") as f:
+        with open(_call_record_path(record["call_id"]), "w") as f:
             json.dump(record, f, indent=2)
     else:
-        print(f"Status callback for unknown call {call_id}: {form.get('CallStatus')}")
+        print(f"Status callback for unknown call {telnyx_sid}: {form.get('CallStatus')}")
     return JSONResponse({"ok": True})
 
 
