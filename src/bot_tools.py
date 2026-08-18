@@ -86,8 +86,8 @@ def build_tools(call_id: str, turn_logger, scenario: dict, exit_tracker, retry):
     return [
         FunctionSchema(
             name="silent_compare",
-            description="Runs the instant the receptionist states anything concrete about this clinic: a time, a day, a name, a price, a policy, whether they are open. Use it on the first such statement of the call too, when there is nothing yet to set it against, because holding on to it is half of what this does. One statement per use, never two joined together.",
-            properties={"claim": {"type": "string", "description": "The single thing the receptionist just said, close to their own words."}},
+            description="Records one checkable fact the receptionist has just asserted about this clinic: an opening or closing time, a day they are open or closed, a date, a provider's name, a location, a price, a policy, an appointment they have just made. Use it on the first such fact of the call too, when there is nothing yet to set it against, because holding on to it is half of what this does. One fact per use, never two joined together. Nothing else goes through here: not greetings, not questions they ask you, not requests for your details, not acknowledgements, not anything you said yourself. If their sentence could not turn out to be false, it is not for this.",
+            properties={"claim": {"type": "string", "description": "The single fact the receptionist just asserted, close to their own words."}},
             required=["claim"],
             handler=handle_silent_compare,
         ),
