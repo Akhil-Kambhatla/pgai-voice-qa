@@ -262,3 +262,65 @@ The response gate counted any message item as speech, so a commentary-only
 response looked like a spoken turn and suppressed the real follow-up. Found
 while implementing the phase filter, before it reached a call. Gate now ignores
 commentary when deciding whether a turn was spoken.
+## 31. reasoning effort "none" was silently disabling hang_up
+Symptom: call-11 ran the full 240 seconds and ended on the watchdog. Zero
+hang_up attempts and zero silent_compare calls in four minutes, against two
+silent_compare calls in the shorter call-09.
+Cause: the reasoning {"effort": "none"} added in #28 for token saving. Probed
+against the live model with the real instructions and the real tool set, on a
+transcript where the booking is already confirmed: with reasoning unset hang_up
+fires; with effort none it never fired once across thirteen samples, while
+silent_compare was barely affected (5/5 versus 4/5 on a factual claim). The
+judgement "am I finished here" is exactly the kind the model needs reasoning for.
+Reverted. #28 justified keeping the setting for the token saving alone, roughly
+74 tokens a turn; that trade cost the entire exit path and was wrong.
+
+## 32. The goal judge was reading half the conversation
+Symptom: the judge returned not_yet for call-08 even though the receptionist had
+referred the caller to a support number, and turns.jsonl for every call from 06
+onward contains bot and tool entries but never a single agent entry.
+Cause: the realtime service pushes its TranscriptionFrame UPSTREAM
+(llm.py line 985), and TurnLogger sits downstream of the llm in the pipeline, so
+it never saw one. Every judgement built on the turn log was therefore made from
+the caller's own speech with the receptionist's answers missing. Stall detection
+was worse than blind: it filters for agent turns, found none, and could never
+fire at all.
+Fix: a TranscriptTap processor placed between the user aggregator and the llm,
+where upstream frames from the llm pass through it, feeding agent turns to the
+same TurnLogger. Rerunning the judge with both sides present flips call-08 from
+not_yet to unachievable, correctly citing the referral to customer support.
+
+## 33. hang_up now grants on four conditions, not one
+Facts are collected on the way to a task and are not a condition for ending a
+call. Grant fires on any of: every required fact collected, the goal achieved,
+the task unachievable, or the conversation stalled, plus the two existing
+backstops of two exit nudges and the last thirty seconds.
+Unachievable is judged by the same LLM call as achievement rather than a separate
+detector, because recognising a refusal or a referral is the same natural-language
+judgement and a keyword detector for refusals would repeat the mistake behind the
+"close"/"closed" substring bug in #21. The judge now returns an outcome of
+goal_met, unachievable or not_yet, and the granting condition is reported in
+events.jsonl so the reason a call ended is visible afterwards.
+
+## 34. Stall detection rewritten after it fired on the wrong call
+The first implementation counted new content words in the last two agent turns
+against an absolute threshold. Swept over the real calls it fired on call-07 at
+69.8s on the turn "On the August of 25th", which would have ended a healthy call
+before the booking, and missed call-11 entirely. Short turns trivially clear an
+absolute word count, and lexical novelty is the wrong signal because genuine
+repetition still carries filler words.
+It now asks whether the last two agent turns introduced any new specifics, reusing
+the oracle's time, weekday, month and number extraction, and only then falls back
+to a vocabulary ratio. Swept across calls 06, 07, 08, 09 and 11 it fires on none
+of them, and fires on synthetic repetition. call-11 is correctly not a stall: the
+agent kept offering genuinely new doctors and dates, they just never fitted the
+caller's shifts, which is what the judge is for.
+
+## 35. The granted exit path is now proven end to end
+The terminal step was already covered. The join between routing and terminal was
+not, because a hand-rolled pipeline would not start. pipecat.tests.utils.run_test
+builds a working one: pushing EndWorkerFrame downstream from a mid-pipeline
+processor yields [EndWorkerFrame, EndFrame] at the end of the pipeline, which is
+the transport position where the serializer lives. With the existing test showing
+EndFrame and CancelFrame each call the Telnyx hangup endpoint, the whole chain
+from a granted hang_up to call termination is covered.
