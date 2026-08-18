@@ -60,7 +60,8 @@ async def run_bot(websocket: WebSocket):
             session_properties=realtime_events.SessionProperties(
                 audio=realtime_events.AudioConfiguration(
                     input=realtime_events.AudioInput(
-                        transcription=realtime_events.InputAudioTranscription()
+                        transcription=realtime_events.InputAudioTranscription(),
+                        turn_detection=realtime_events.SemanticTurnDetection(eagerness="low"),
                     )
                 )
             ),
