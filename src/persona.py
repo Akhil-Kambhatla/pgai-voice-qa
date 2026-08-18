@@ -18,7 +18,9 @@ def build_instructions(scenario: dict) -> str:
     dynamic = [
         scenario["persona_block"],
         f"Your details, and the only identifying details you may ever give: "
-        f"name {identity.get('name')}, date of birth {identity.get('dob')}.",
+        f"name {identity.get('name')}, date of birth {identity.get('dob')}. "
+        f"Give them only when they ask you to identify yourself. "
+        f"Never offer them before they ask.",
         f"Your goal for this call: {scenario['goal']}",
         f"Open with something like: \"{scenario['opening_line']}\"",
     ]
