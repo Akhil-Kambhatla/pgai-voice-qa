@@ -1,9 +1,68 @@
 import base64
 import json
+import re
 
 from fastapi import WebSocket
 
 from src import store
+
+CALLER_PRONOUNS = {
+    "him": "you",
+    "his": "your",
+    "her": "your",
+    "hers": "yours",
+    "himself": "yourself",
+    "herself": "yourself",
+}
+
+IRREGULAR_PRESENT = {
+    "is": "are",
+    "has": "have",
+    "does": "do",
+    "was": "were",
+    "goes": "go",
+    "isn't": "aren't",
+    "hasn't": "haven't",
+    "doesn't": "don't",
+    "wasn't": "weren't",
+}
+
+INTERVENING_ADVERB = r"(?:\w+ly|still|just|also|never|always|now|then|already|even|again|often)"
+
+
+def _matching_case(source: str, replacement: str) -> str:
+    return replacement.capitalize() if source[:1].isupper() else replacement
+
+
+def _base_verb(verb: str) -> str:
+    lowered = verb.lower()
+    if lowered in IRREGULAR_PRESENT:
+        return _matching_case(verb, IRREGULAR_PRESENT[lowered])
+    if lowered.endswith("ies") and len(lowered) > 4:
+        return verb[:-3] + "y"
+    if lowered.endswith(("sses", "shes", "ches", "xes", "zes")):
+        return verb[:-2]
+    if lowered.endswith("s") and not lowered.endswith(("ss", "us", "is")):
+        return verb[:-1]
+    return verb
+
+
+def as_second_person(text: str) -> str:
+    text = re.sub(
+        r"\b(he|she)'s\b", lambda m: _matching_case(m.group(1), "you're"), text, flags=re.IGNORECASE
+    )
+    text = re.sub(
+        rf"\b(he|she)\s+((?:{INTERVENING_ADVERB}\s+)*)([\w']+)",
+        lambda m: f"{_matching_case(m.group(1), 'you')} {m.group(2)}{_base_verb(m.group(3))}",
+        text,
+        flags=re.IGNORECASE,
+    )
+    return re.sub(
+        r"\b(him|his|her|hers|himself|herself)\b",
+        lambda m: _matching_case(m.group(1), CALLER_PRONOUNS[m.group(1).lower()]),
+        text,
+        flags=re.IGNORECASE,
+    )
 
 
 def decode_body(websocket: WebSocket) -> dict:
@@ -16,13 +75,13 @@ def decode_body(websocket: WebSocket) -> dict:
 def build_instructions(scenario: dict) -> str:
     identity = store.load("identities", {}).get(scenario["identity"], {})
     dynamic = [
-        scenario["persona_block"],
+        as_second_person(scenario["persona_block"]),
         f"Your details, and the only identifying details you may ever give: "
         f"name {identity.get('name')}, date of birth {identity.get('dob')}. "
         f"Give them only when they ask you to identify yourself. "
         f"Never offer them before they ask.",
-        f"What you are trying to get done on this call: {scenario['goal']}",
-        f"Where you are as they pick up: {scenario['opening_situation']} "
+        f"What you are trying to get done on this call: {as_second_person(scenario['goal'])}",
+        f"Where you are as they pick up: {as_second_person(scenario['opening_situation'])} "
         f"Your first words are your own. Find them in the moment, the way you would "
         f"on a real call, and do not reach for a line you have heard before.",
     ]
