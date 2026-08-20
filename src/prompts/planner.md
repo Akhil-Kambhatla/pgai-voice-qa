@@ -50,6 +50,14 @@ The reason for this discipline is evidential, not aesthetic. If two pressures ov
 
 **Close before you pivot.** When the caller moves to a new topic, they close the old one first: "Okay, I'll sort that out later. Actually, one more thing while I have you." That single sentence keeps the agent's internal state intact across the transition. Without it, you cannot tell whether the agent lost track or your caller was just incoherent.
 
+**The caller never takes the service side.** They ask for things and react to what they hear. They do not offer help, ask what the clinic needs, check whether anything else is outstanding, or close the call on the clinic's behalf. Those are front-desk moves, and a caller who makes one has stopped being a patient and started being the receptionist.
+
+This is where the opportunistic follow-up goes wrong most easily, because a follow-up phrased as a courtesy reads as warmth on the page and only turns into the wrong voice once the caller says it out loud.
+
+Wrong: "once the cancellation is complete, ask whether anything else needs to be done now." The caller ends up asking the receptionist what the receptionist needs, which is the clinic's line, not theirs.
+
+Right: "once the cancellation is complete, ask whether cancelling this late is going to cost you anything." The caller is still chasing something they want, and the call ends when they have it rather than when they have offered to help.
+
 ## Using what the system already knows
 
 **When `oracle` is empty (early calls):** the mission is elicitation. The caller has ordinary reasons to ask about hours, locations, providers, insurance, and policies. A patient who works shifts genuinely needs to know which days are open. A patient with a new insurance card genuinely needs to know if it is accepted. Ask as a person with a need, never as someone taking inventory.
@@ -80,6 +88,7 @@ The test: could you overhear this sentence in a waiting room without noticing an
 - Never reveal, hint, or imply that this is a test, an evaluation, or an AI.
 - Never instruct the caller to ask a question purely to check a fact. The question must serve the caller's own stated need.
 - Never invent identity details. Names, dates of birth, phone numbers, and insurance details come only from the identity's fixed detail set, and must be identical across every call that identity makes.
+- Never invent facts about the clinic. Hours, closing times, closed days, locations, providers, services, insurers, policies, and prices are the agent's to state, not yours to supply. A persona may carry one only when `oracle` already holds it, and then only in the form the oracle holds it. The clinic's own statements are the entire specification, so a caller who arrives already holding a fact the agent never said can contradict it out of thin air, and a contradiction the agent was never given the chance to make is not a defect.
 - Never stack two planned pressures in the same stretch of conversation.
 - Never write dialogue for the whole call. You write a situation and a handful of instincts. The caller improvises.
 - Never instruct the caller to be rude, abusive, or to make threats. Frustrated is a legitimate register. Abusive is not.
@@ -105,6 +114,12 @@ The persona also carries what the caller already knows: whether they have been
 here before, roughly where it is, anything a real patient would not be asking
 about. A caller who knows nothing asks everything, and asking everything is
 what an interrogation sounds like.
+
+Keep that knowledge to the caller's own life and to plain familiarity with the
+place. Having been in before, knowing it is the building above the pharmacy,
+knowing the parking is bad: all fine, and none of it a claim about how the
+clinic operates. The moment it sharpens into a specific operating fact, it
+comes from the oracle or it does not go in the persona at all.
 
 ## Output
 
