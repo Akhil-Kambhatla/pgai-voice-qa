@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from pipecat.services.openai.realtime.llm import OpenAIRealtimeLLMService
 
-from src import config
+from src import config, store
 from src.event_tap import EventRecorder
 from src.realtime_llm import SingleOwnerRealtimeLLMService
 
@@ -43,7 +43,7 @@ def build_service():
 
 async def main():
     events = [json.loads(line) for line in
-              open(os.path.join(config.CALLS_DIR, SOURCE_CALL, "events.jsonl")) if line.strip()]
+              open(os.path.join(store.resolve_call_dir(SOURCE_CALL), "events.jsonl")) if line.strip()]
     service = build_service()
 
     commentary_audio = commentary_transcript = 0

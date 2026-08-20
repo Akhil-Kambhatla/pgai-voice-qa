@@ -7,7 +7,7 @@ from src import config, oracle, store
 
 
 def _read_call_inputs(call_id):
-    call_dir = os.path.join(config.CALLS_DIR, call_id)
+    call_dir = store.resolve_call_dir(call_id)
     with open(os.path.join(call_dir, "call.json")) as f:
         record = json.load(f)
     transcript_path = os.path.join(call_dir, "transcript.txt")

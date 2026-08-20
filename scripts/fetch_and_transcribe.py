@@ -8,7 +8,7 @@ from datetime import datetime
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src import config, telnyx_client, transcribe
+from src import config, store, telnyx_client, transcribe
 
 
 async def main():
@@ -16,7 +16,7 @@ async def main():
         sys.exit("Usage: fetch_and_transcribe.py <call_id>")
     call_id = sys.argv[1]
 
-    call_dir = os.path.join(config.CALLS_DIR, call_id)
+    call_dir = store.resolve_call_dir(call_id)
     record_path = os.path.join(call_dir, "call.json")
     if not os.path.exists(record_path):
         sys.exit(f"No call record at {record_path}")

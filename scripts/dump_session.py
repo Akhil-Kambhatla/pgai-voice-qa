@@ -4,14 +4,14 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src import config
+from src import store
 
 MODEL_VISIBLE_TOOL_TEXT = ("conversation.item.create", "conversation.item.added")
 
 
 def main():
     call_id = sys.argv[1]
-    path = os.path.join(config.CALLS_DIR, call_id, "events.jsonl")
+    path = os.path.join(store.resolve_call_dir(call_id), "events.jsonl")
     events = [json.loads(line) for line in open(path) if line.strip()]
 
     updates = [e for e in events if e["source"] == "client" and e["type"] == "session.update"]

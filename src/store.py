@@ -4,8 +4,39 @@ import os
 from src import config
 
 
+SHARED_STATE = ("identities", "axes")
+
+
 def _path(name):
-    return os.path.join(config.DATA_DIR, f"{name}.json")
+    root = config.DATA_DIR if name in SHARED_STATE else config.STATE_DIR
+    return os.path.join(root, f"{name}.json")
+
+
+def resolve_call_dir(call_id):
+    if "/" in call_id:
+        tree, _, bare_id = call_id.partition("/")
+        if tree not in config.CALL_TREES:
+            raise SystemExit(
+                f"Unknown call tree '{tree}'; expected one of {', '.join(config.CALL_TREES)}"
+            )
+        path = os.path.join(config.CALL_TREES[tree][0], bare_id)
+        if not os.path.isdir(path):
+            raise SystemExit(f"No call directory at {path}")
+        return path
+    found = {
+        tree: os.path.join(calls_dir, call_id)
+        for tree, (calls_dir, _) in config.CALL_TREES.items()
+        if os.path.isdir(os.path.join(calls_dir, call_id))
+    }
+    if not found:
+        trees = ", ".join(config.CALL_TREES)
+        raise SystemExit(f"No call directory named {call_id} in any call tree ({trees})")
+    if len(found) > 1:
+        qualified = ", ".join(f"{tree}/{call_id}" for tree in sorted(found))
+        raise SystemExit(
+            f"Call id {call_id} exists in more than one call tree; name one of: {qualified}"
+        )
+    return next(iter(found.values()))
 
 
 def load(name, default):
@@ -17,8 +48,9 @@ def load(name, default):
 
 
 def save(name, obj):
-    os.makedirs(config.DATA_DIR, exist_ok=True)
-    with open(_path(name), "w") as f:
+    path = _path(name)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w") as f:
         json.dump(obj, f, indent=2)
 
 

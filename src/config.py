@@ -108,6 +108,17 @@ PUBLIC_WS_URL = "wss://" + PUBLIC_BASE_URL.removeprefix("https://")
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(PROJECT_DIR, "data")
-CALLS_DIR = os.path.join(DATA_DIR, "calls")
+CAMPAIGN_DIR = os.path.join(DATA_DIR, "campaign")
+
+CALL_TREES = {
+    "roleplay": (os.path.join(DATA_DIR, "calls"), DATA_DIR),
+    "campaign": (os.path.join(CAMPAIGN_DIR, "calls"), CAMPAIGN_DIR),
+}
+
+CALL_TREE = _optional("CALL_TREE") or "campaign"
+if CALL_TREE not in CALL_TREES:
+    sys.exit(f"CALL_TREE must be one of {', '.join(CALL_TREES)}; got '{CALL_TREE}'")
+
+CALLS_DIR, STATE_DIR = CALL_TREES[CALL_TREE]
 SCENARIOS_DIR = os.path.join(PROJECT_DIR, "scenarios")
 PROMPTS_DIR = os.path.join(PROJECT_DIR, "src", "prompts")

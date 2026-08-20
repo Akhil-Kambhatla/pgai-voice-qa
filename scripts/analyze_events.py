@@ -5,7 +5,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src import config, store
+from src import store
 
 INTERNAL_TOOL_MARKERS = ("status", "instruction", "noted")
 LEAK_PHRASES = [
@@ -22,7 +22,7 @@ RECEPTIONIST_PHRASES = [
 
 
 def load_jsonl(call_id, name):
-    path = os.path.join(config.CALLS_DIR, call_id, name)
+    path = os.path.join(store.resolve_call_dir(call_id), name)
     if not os.path.exists(path):
         return []
     with open(path) as f:
