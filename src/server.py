@@ -17,7 +17,7 @@ import uvicorn
 from fastapi import FastAPI, HTTPException, Request, WebSocket
 from fastapi.responses import JSONResponse, Response
 
-from src import call_counter, config, store, telnyx_client
+from src import call_counter, config, session_config, store, telnyx_client
 from src.bot import run_bot  # noqa: F401 — must load pipecat at startup, see module docstring
 
 app = FastAPI()
@@ -54,6 +54,7 @@ async def start_call(request: Request) -> JSONResponse:
         "to": phone_number,
         "from": config.TELNYX_PHONE_NUMBER,
         "placed_at": placed_at.isoformat(),
+        "session_config": session_config.resolved_turn_detection(),
         "status_events": [],
     }
     os.makedirs(os.path.dirname(_call_record_path(call_id)), exist_ok=True)

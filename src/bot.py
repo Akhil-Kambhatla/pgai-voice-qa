@@ -14,7 +14,7 @@ from pipecat.transports.websocket.fastapi import (
 )
 from pipecat.workers.runner import WorkerRunner
 
-from src import config, persona, store
+from src import config, persona, session_config, store
 from src.bot_tools import build_tools
 from src.call_exit import ExitTracker, HangupRetry, RecordedTelnyxSerializer
 from src.event_tap import EventRecorder
@@ -67,15 +67,7 @@ async def run_bot(websocket: WebSocket):
         settings=SingleOwnerRealtimeLLMService.Settings(
             model=config.REALTIME_MODEL,
             system_instruction=instructions,
-            session_properties=realtime_events.SessionProperties(
-                tools=tools,
-                audio=realtime_events.AudioConfiguration(
-                    input=realtime_events.AudioInput(
-                        transcription=realtime_events.InputAudioTranscription(),
-                        turn_detection=realtime_events.SemanticTurnDetection(eagerness="low"),
-                    )
-                ),
-            ),
+            session_properties=session_config.build_session_properties(tools),
         ),
     )
 
