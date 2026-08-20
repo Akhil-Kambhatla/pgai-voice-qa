@@ -30,8 +30,9 @@ def prompt_assembly():
     stray = persona.THIRD_PERSON.findall(outside_persona)
     assert not stray, f"third-person pronouns referring to the caller: {stray}"
 
-    assert "The first one" in instructions and "before there is anything to set it against" in instructions, \
-        "conversation.md no longer says the first fact counts"
+    static = store.load_prompt("conversation")
+    assert "set it against" not in static, \
+        "conversation.md re-describes silent_compare; the tool array is its only description"
     tool_description = next(
         t.description for t in _tool_schemas() if t.name == "silent_compare"
     )
@@ -41,7 +42,6 @@ def prompt_assembly():
     for name in ("silent_compare", "silent_note", "hang_up"):
         assert name in instructions, f"{name} missing from the assembled prompt"
 
-    static = store.load_prompt("conversation")
     tokens = approximate_tokens(static)
     low, high = STATIC_TOKEN_RANGE
     assert low <= tokens <= high, \
