@@ -60,7 +60,7 @@ def build_tools(call_id: str, turn_logger, scenario: dict, exit_tracker, retry):
             return "nudged_twice"
         if turn_logger.stalled():
             return "stalled"
-        outcome, why = await goal_judge.call_outcome(scenario["goal"], turn_logger.turns)
+        outcome, why = await goal_judge.call_outcome(scenario["goal"], turn_logger.turns, exit_tracker)
         return f"{outcome}: {why}" if outcome in goal_judge.GRANTING_OUTCOMES else ""
 
     async def handle_hang_up(params):

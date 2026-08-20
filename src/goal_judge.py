@@ -1,13 +1,15 @@
 import asyncio
 import json
+import time
 
 from loguru import logger
 from openai import AsyncOpenAI
 
 from src import config, store
 
-JUDGE_TIMEOUT_SECONDS = 6
+JUDGE_TIMEOUT_SECONDS = 2
 SPOKEN_SPEAKERS = ("bot", "agent")
+UNGRANTED_OUTCOME = "not_yet"
 _client = None
 
 
@@ -31,10 +33,12 @@ def _transcript(turns):
 GRANTING_OUTCOMES = ("goal_met", "unachievable")
 
 
-async def call_outcome(goal: str, turns) -> tuple[str, str]:
+async def call_outcome(goal: str, turns, tracker) -> tuple[str, str]:
+    started = time.monotonic()
     transcript = _transcript(turns)
     if not transcript:
-        return "not_yet", "nothing said yet"
+        tracker.judge_round_trip(time.monotonic() - started, UNGRANTED_OUTCOME, "skipped")
+        return UNGRANTED_OUTCOME, "nothing said yet"
     user_content = f"Goal:\n{goal}\n\nTranscript so far:\n{transcript}"
     try:
         response = await asyncio.wait_for(
@@ -49,8 +53,13 @@ async def call_outcome(goal: str, turns) -> tuple[str, str]:
             timeout=JUDGE_TIMEOUT_SECONDS,
         )
         verdict = json.loads(response.choices[0].message.content)
-        outcome = str(verdict.get("outcome", "not_yet"))
+        outcome = str(verdict.get("outcome", UNGRANTED_OUTCOME))
+        tracker.judge_round_trip(time.monotonic() - started, outcome, "model")
         return outcome, str(verdict.get("why", ""))
     except Exception as error:
-        logger.warning(f"goal judge failed ({error}); granting hang_up rather than trapping the call")
-        return "goal_met", "judge unavailable, failing open"
+        tracker.judge_round_trip(time.monotonic() - started, UNGRANTED_OUTCOME, "exception")
+        logger.warning(
+            f"goal judge failed ({type(error).__name__}: {error}); denying hang_up, "
+            f"the time override still ends the call"
+        )
+        return UNGRANTED_OUTCOME, "judge unavailable, failing closed"

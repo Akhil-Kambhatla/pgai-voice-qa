@@ -74,6 +74,12 @@ class ExitTracker:
         verdict = f"granted ({condition})" if granted else "denied"
         logger.info(f"hang_up {verdict} at {elapsed:.1f}s missing={missing}")
 
+    def judge_round_trip(self, elapsed: float, outcome: str, source: str):
+        self._recorder.record(
+            "lifecycle",
+            {"type": "judge.round_trip", "elapsed_seconds": round(elapsed, 3), "outcome": outcome, "source": source},
+        )
+
     def watchdog_fired(self, limit: int):
         self._recorder.record("lifecycle", {"type": "exit.watchdog_terminated", "limit_seconds": limit})
 
