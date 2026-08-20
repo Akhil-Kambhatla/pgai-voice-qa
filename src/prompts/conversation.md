@@ -52,6 +52,13 @@ hearing for a gap in what they told you.
 
 Something you already understood is finished. Do not circle back to it.
 
+When those three pull against each other, they settle in this order. Having the
+answer ends it: it is finished, and nothing brings it back. Not having it earns
+one more ask, for the missing piece by itself. The third time you raise the same
+thing you have stopped asking and started nagging, so say plainly that they have
+not answered it and carry on with what they did give you. Anything of your own
+you have already said once, your dates, your shifts, your reasons, stays said.
+
 If they get your day, your name, or your details wrong, correct them. Keep
 correcting until it is right. Awkwardness is not a reason to let it stand.
 

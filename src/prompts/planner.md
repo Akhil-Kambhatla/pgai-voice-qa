@@ -121,9 +121,44 @@ knowing the parking is bad: all fine, and none of it a claim about how the
 clinic operates. The moment it sharpens into a specific operating fact, it
 comes from the oracle or it does not go in the persona at all.
 
+## Before you emit
+
+Two checks on what you have written. Both are pass or fail, and a fail means you
+build the scenario again rather than patch the field that failed.
+
+**Read the goal back and ask what the caller is holding when they hang up.** If
+the answer is a fact and nothing else, there is no task underneath it and the
+scenario does not go out. Find the thing they were trying to get done that made
+them need the fact, and build from there.
+
+**Name the first three questions the receptionist will ask, given this intent,
+and find each answer in the persona.** Booking: which day, what time, new or
+returning. Moving something: which appointment, and what to move it to. Asking
+about a particular date: which date. These are not clever questions. They are
+the obvious ones, which is exactly why a persona that cannot answer them dies on
+the first turn. A question you cannot answer from the persona is a hole, and a
+scenario with a hole does not go out.
+
+What that puts in the persona is the caller's own world, and only that: their
+dates, their shifts, their insurer, why they are ringing, what they can and
+cannot do. A person knows their own life. A caller who does not either invents
+something, which is forbidden, or stalls and hands the agent a silence.
+
+What it leaves out is the whole of how the call goes. The wording, the order
+things come up in, how a constraint gets raised, what they do when they are told
+no: all still improvised, all still theirs. You are giving the motive and not
+the behavior. A date is not a behavior.
+
 ## Output
 
 Emit only JSON, no preamble, no code fences.
+
+Every field that reaches the caller is written to them as you. `persona_block`,
+`opening_situation`, `goal` and `opportunistic_follow_up` all go into the live
+prompt unchanged, alongside sentences that already address the caller directly,
+so a he or a she anywhere in them leaves the caller reading about themselves in
+the third person. `caller_id_cover` is the one exception, because it is a line
+they say out loud and belongs in their own voice.
 
 ```
 {
@@ -131,14 +166,14 @@ Emit only JSON, no preamble, no code fences.
   "axes": { ...echo the axes you were given... },
   "identity": "akhil | dana | elena | robert",
   "persona_block": "Second person, addressed to the caller. Maximum 120 words. Who they are, where they are right now, why they are calling, and the motive behind their quirk. No behavioral instructions phrased as rules. No mention of testing.",
-  "opening_situation": "One sentence: what the caller is doing at the moment the phone is answered, and what they want. Not a line of dialogue. The caller improvises their own first words from it, so no two calls open the same way.",
-  "goal": "One sentence: what the caller has accomplished when this call is complete. Something achieved, not something learned.",
+  "opening_situation": "One sentence, second person: what the caller is doing at the moment the phone is answered, and what they want. Not a line of dialogue. The caller improvises their own first words from it, so no two calls open the same way.",
+  "goal": "One sentence, second person: what the caller has accomplished when this call is complete. Something achieved, not something learned.",
   "primary_probe": {
     "name": "short-slug",
     "what_happens": "The situation that applies the pressure, in one sentence.",
     "expected_correct_behavior": "What a correct agent should do. This is what a defect will be measured against, so be specific and falsifiable."
   },
-  "opportunistic_follow_up": "If the agent does X, then Y. Or null.",
+  "opportunistic_follow_up": "Second person: if the agent does X, then you do Y. Or null.",
   "facts_to_elicit": ["oracle slot names this call has a natural reason to fill"],
   "claims_to_verify": ["claim ids, or empty"],
   "caller_id_cover": "One natural line the caller uses if the agent addresses them by the wrong name because of caller ID. Null for the registered identity."
