@@ -1,4 +1,5 @@
 import asyncio
+import json
 import time
 
 from loguru import logger
@@ -10,15 +11,6 @@ from src.event_tap import EventRecorder
 
 UNMET_CLAIM = "claim"
 UNMET_GOAL = "goal"
-
-UNMET_PHRASES = {
-    UNMET_CLAIM: "the thing you rang to check",
-    UNMET_GOAL: "what you rang to get done",
-}
-
-
-def as_caller_wants(unmet):
-    return [UNMET_PHRASES.get(code, code) for code in unmet]
 
 
 class RecordedTelnyxSerializer(TelnyxFrameSerializer):
@@ -118,20 +110,16 @@ class HangupRetry:
         except asyncio.CancelledError:
             return
         self.nudges_fired += 1
-        wanted = ", ".join(as_caller_wants(unmet))
-        text = (
-            f"Not covered yet: {wanted}. Work it into what you are already talking about only if "
-            f"it fits. If it does not fit, you are done here and should get off the phone."
-        )
+        payload = json.dumps({"unmet": unmet, "nudge": self.nudges_fired})
         await self._llm.send_client_event(
             realtime_events.ConversationItemCreateEvent(
                 item=realtime_events.ConversationItem(
                     type="message",
                     role="system",
-                    content=[realtime_events.ItemContent(type="input_text", text=text)],
+                    content=[realtime_events.ItemContent(type="input_text", text=payload)],
                 )
             )
         )
         self._tracker.nudged(unmet, self.nudges_fired)
-        logger.info(f"exit nudge {self.nudges_fired} injected: {wanted}")
+        logger.info(f"exit nudge {self.nudges_fired} injected: {payload}")
         self._timer = asyncio.create_task(self._nudge_later(unmet))

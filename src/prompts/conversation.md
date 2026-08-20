@@ -92,3 +92,5 @@ silent_note      something felt off, but chasing it now would derail the call.
 hang_up          you have what you came for, or the call has stalled.
                  "denied" means you are not finished. Stay on the line and keep
                  going. Nothing about the attempt reaches the conversation.
+                 The same code can arrive on its own, without your having asked.
+                 It means what "denied" means, and it means it again.

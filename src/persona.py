@@ -3,8 +3,12 @@ import json
 import re
 
 from fastapi import WebSocket
+from loguru import logger
 
 from src import store
+
+SECOND_PERSON = re.compile(r"\b(you|your|yours|yourself)\b", re.IGNORECASE)
+THIRD_PERSON = re.compile(r"\b(he|she|him|his|her|hers|himself|herself)\b", re.IGNORECASE)
 
 CALLER_PRONOUNS = {
     "him": "you",
@@ -65,6 +69,17 @@ def as_second_person(text: str) -> str:
     )
 
 
+def addressed_to_caller(field_name: str, text: str, call_id: str) -> str:
+    if SECOND_PERSON.search(text):
+        if THIRD_PERSON.search(text):
+            logger.warning(
+                f"{field_name} in {call_id} mixes second and third person; "
+                f"left exactly as the planner wrote it"
+            )
+        return text
+    return as_second_person(text)
+
+
 def decode_body(websocket: WebSocket) -> dict:
     raw = websocket.query_params.get("body")
     if not raw:
@@ -72,16 +87,18 @@ def decode_body(websocket: WebSocket) -> dict:
     return json.loads(base64.b64decode(raw))
 
 
-def build_instructions(scenario: dict) -> str:
+def build_instructions(scenario: dict, call_id: str) -> str:
     identity = store.load("identities", {}).get(scenario["identity"], {})
     dynamic = [
-        as_second_person(scenario["persona_block"]),
+        addressed_to_caller("persona_block", scenario["persona_block"], call_id),
         f"Your details, and the only identifying details you may ever give: "
         f"name {identity.get('name')}, date of birth {identity.get('dob')}. "
         f"Give them only when they ask you to identify yourself. "
         f"Never offer them before they ask.",
-        f"What you are trying to get done on this call: {as_second_person(scenario['goal'])}",
-        f"Where you are as they pick up: {as_second_person(scenario['opening_situation'])} "
+        f"What you are trying to get done on this call: "
+        f"{addressed_to_caller('goal', scenario['goal'], call_id)}",
+        f"Where you are as they pick up: "
+        f"{addressed_to_caller('opening_situation', scenario['opening_situation'], call_id)} "
         f"Your first words are your own. Find them in the moment, the way you would "
         f"on a real call, and do not reach for a line you have heard before.",
     ]

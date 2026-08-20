@@ -58,7 +58,7 @@ async def run_bot(websocket: WebSocket):
     turn_logger = TurnLogger(call_id)
     tools = build_tools(call_id, turn_logger, scenario, exit_tracker, retry)
 
-    instructions = persona.build_instructions(scenario)
+    instructions = persona.build_instructions(scenario, call_id)
     recorder.write_artifact("instructions.txt", instructions)
 
     llm = SingleOwnerRealtimeLLMService(
