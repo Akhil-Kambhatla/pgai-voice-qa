@@ -69,12 +69,12 @@ def build_tools(call_id: str, turn_logger, scenario: dict, exit_tracker, retry):
         blocking = unaddressed_claims()
         condition = await grant_condition(blocking, elapsed)
         if not condition:
-            still_want = call_exit.as_caller_wants(blocking) or [scenario["goal"]]
-            result = {"hangup": "denied", "still_want": still_want}
+            unmet = [call_exit.UNMET_CLAIM] if blocking else [call_exit.UNMET_GOAL]
+            result = {"hangup": "denied", "unmet": unmet}
             exit_tracker.hangup_decision(False, reason, blocking, elapsed, "")
             turn_logger.log_tool_call("hang_up", params.arguments, result)
             await params.result_callback(result)
-            retry.note_denial(still_want)
+            retry.note_denial(unmet)
             return
         exit_tracker.hangup_decision(True, reason, blocking, elapsed, condition)
         turn_logger.log_tool_call("hang_up", params.arguments, {"hangup": "ok"})

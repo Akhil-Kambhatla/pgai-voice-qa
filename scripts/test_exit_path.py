@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from pipecat.frames.frames import CancelFrame, EndFrame
 from pipecat.serializers.telnyx import TelnyxFrameSerializer
 
-from src import config
+from src import call_exit, config
 from src.call_exit import RecordedTelnyxSerializer
 from src.event_tap import EventRecorder
 
@@ -69,7 +69,7 @@ class FakeTracker:
     def hangup_decision(self, granted, reason, missing, elapsed, condition):
         self.decisions.append((granted, condition))
 
-    def nudged(self, still_want, count):
+    def nudged(self, unmet, count):
         pass
 
 
@@ -81,8 +81,8 @@ class FakeRetry:
     def note_attempt(self):
         pass
 
-    def note_denial(self, still_want):
-        self.denials.append(still_want)
+    def note_denial(self, unmet):
+        self.denials.append(unmet)
 
 
 class FakeParams:
@@ -102,7 +102,7 @@ async def run_hangup(scenario, turn_logger, retry, judge_verdict=("not_yet", "no
     from src import goal_judge
     from src.bot_tools import build_tools
 
-    async def stub(goal, turns):
+    async def stub(goal, turns, tracker):
         return judge_verdict
 
     goal_judge.call_outcome = stub
@@ -138,20 +138,28 @@ async def test_grant_conditions():
         if granted:
             assert "EndWorkerFrame" in params.results, (label, params.results)
         else:
-            assert params.results[0]["still_want"] == [
-                "what time they open and close", "which days they are closed"
-            ], params.results
+            assert params.results[0]["unmet"] == [call_exit.UNMET_GOAL], params.results
             assert retry.denials, "denial did not schedule a retry nudge"
         print(f"  {label:28s} -> granted={granted} condition={condition!r}")
     print("  PASS grant fires on goal, stall, nudges, or time; denial schedules a retry")
 
 
-async def test_facts_complete_skips_the_judge():
-    scenario = {"facts_to_elicit": [], "claims_to_verify": [], "goal": "irrelevant"}
-    params, tracker, _ = await run_hangup(scenario, FakeLogger(10.0), FakeRetry(), ("not_yet", "no"))
+async def test_unelicited_facts_do_not_block():
+    scenario = {
+        "facts_to_elicit": ["hours", "holiday_schedule"],
+        "claims_to_verify": [],
+        "goal": "the appointment is cancelled and nothing is left to do",
+    }
+    params, tracker, _ = await run_hangup(scenario, FakeLogger(10.0), FakeRetry(), ("goal_met", "done"))
     assert params.results[0] == {"hangup": "ok"}, params.results
-    assert tracker.decisions[0][1] == "facts_complete", tracker.decisions
-    print("  PASS all facts collected still grants without consulting the judge")
+    assert tracker.decisions[0][1].startswith("goal_met"), tracker.decisions
+
+    denied, tracker, retry = await run_hangup(
+        scenario, FakeLogger(10.0), FakeRetry(), ("not_yet", "no")
+    )
+    assert denied.results[0] == {"hangup": "denied", "unmet": [call_exit.UNMET_GOAL]}, denied.results
+    assert retry.denials == [[call_exit.UNMET_GOAL]], retry.denials
+    print("  PASS unfilled fact slots neither block a grant nor reach the deny payload")
 
 
 async def test_stall_detection():
@@ -210,7 +218,7 @@ async def main():
     await test_end_worker_frame_routes_to_an_end_frame()
     await test_serializer_terminates_on_end_and_cancel()
     await test_grant_conditions()
-    await test_facts_complete_skips_the_judge()
+    await test_unelicited_facts_do_not_block()
     await test_stall_detection()
 
 

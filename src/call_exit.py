@@ -8,22 +8,17 @@ from pipecat.services.openai.realtime import events as realtime_events
 
 from src.event_tap import EventRecorder
 
-SLOT_PHRASES = {
-    "hours": "what time they open and close",
-    "closed_days": "which days they are closed",
-    "locations": "where they are",
-    "providers": "who you would be seeing",
-    "services": "whether they do that here",
-    "insurers": "whether they take your insurance",
-    "refill_policy": "how refills work",
-    "cancel_window": "how much notice they need to cancel",
-    "appointment_length": "how long the appointment runs",
-    "holiday_schedule": "whether they are open over the holiday",
+UNMET_CLAIM = "claim"
+UNMET_GOAL = "goal"
+
+UNMET_PHRASES = {
+    UNMET_CLAIM: "the thing you rang to check",
+    UNMET_GOAL: "what you rang to get done",
 }
 
 
-def as_caller_wants(missing):
-    return [SLOT_PHRASES.get(slot, slot) for slot in missing]
+def as_caller_wants(unmet):
+    return [UNMET_PHRASES.get(code, code) for code in unmet]
 
 
 class RecordedTelnyxSerializer(TelnyxFrameSerializer):
@@ -86,9 +81,9 @@ class ExitTracker:
     def stream_disconnected(self):
         self._recorder.record("lifecycle", {"type": "exit.stream_disconnected"})
 
-    def nudged(self, still_want, count):
+    def nudged(self, unmet, count):
         self._recorder.record(
-            "lifecycle", {"type": "exit.nudge_injected", "still_want": still_want, "count": count}
+            "lifecycle", {"type": "exit.nudge_injected", "unmet": unmet, "count": count}
         )
 
 
@@ -113,17 +108,17 @@ class HangupRetry:
             self._timer.cancel()
             self._timer = None
 
-    def note_denial(self, still_want):
+    def note_denial(self, unmet):
         self.note_attempt()
-        self._timer = asyncio.create_task(self._nudge_later(still_want))
+        self._timer = asyncio.create_task(self._nudge_later(unmet))
 
-    async def _nudge_later(self, still_want):
+    async def _nudge_later(self, unmet):
         try:
             await asyncio.sleep(self._delay)
         except asyncio.CancelledError:
             return
         self.nudges_fired += 1
-        wanted = ", ".join(still_want)
+        wanted = ", ".join(as_caller_wants(unmet))
         text = (
             f"Not covered yet: {wanted}. Work it into what you are already talking about only if "
             f"it fits. If it does not fit, you are done here and should get off the phone."
@@ -137,6 +132,6 @@ class HangupRetry:
                 )
             )
         )
-        self._tracker.nudged(still_want, self.nudges_fired)
+        self._tracker.nudged(unmet, self.nudges_fired)
         logger.info(f"exit nudge {self.nudges_fired} injected: {wanted}")
-        self._timer = asyncio.create_task(self._nudge_later(still_want))
+        self._timer = asyncio.create_task(self._nudge_later(unmet))
