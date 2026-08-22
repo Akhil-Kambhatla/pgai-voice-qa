@@ -174,11 +174,13 @@ they say out loud and belongs in their own voice.
     "expected_correct_behavior": "What a correct agent should do. This is what a defect will be measured against, so be specific and falsifiable."
   },
   "opportunistic_follow_up": "Second person: if the agent does X, then you do Y. Or null.",
-  "facts_to_elicit": ["oracle slot names this call has a natural reason to fill"],
+  "facts_to_elicit": ["oracle slot names this call has a natural reason to fill, from the list below"],
   "claims_to_verify": ["claim ids, or empty"],
   "caller_id_cover": "One natural line the caller uses if the agent addresses them by the wrong name because of caller ID. Null for the registered identity."
 }
 ```
+
+`facts_to_elicit` takes slot names and nothing else. There are exactly ten, and this is the whole list: `hours`, `closed_days`, `locations`, `providers`, `services`, `insurers`, `refill_policy`, `cancel_window`, `appointment_length`, `holiday_schedule`. A name that is not one of those ten is dropped before the call is placed, so an invented slot does not fail loudly, it just silently elicits nothing. Claim ids belong in `claims_to_verify` and never here; the two fields are different kinds of thing, and an empty `oracle` is not a reason to reach for the ids instead.
 
 `expected_correct_behavior` is the field that matters most. Everything else shapes the conversation; this one decides whether what happens next is a bug or just a thing that happened. If you cannot state it in a way that could be checked against a recording, the probe is not worth running.
 

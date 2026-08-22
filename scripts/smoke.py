@@ -38,6 +38,8 @@ CHECKS = [
      smoke_checks.payload_hygiene),
     ("commentary replay", "the phase filter, against two calls it took three rounds to fix",
      smoke_replay.commentary_filter),
+    ("oracle slot guard", "a valid slot fills an empty oracle, an invented one is refused",
+     smoke_checks.facts_survive_an_empty_oracle),
     ("transcript channels", "channel 1 is the bot, so the submission is not mislabelled",
      smoke_checks.transcription_mapping),
     ("call tree resolution", "graded calls cannot land in the roleplay tree",

@@ -9,7 +9,6 @@ from pipecat.services.openai.realtime import events as realtime_events
 
 from src.event_tap import EventRecorder
 
-UNMET_CLAIM = "claim"
 UNMET_GOAL = "goal"
 
 

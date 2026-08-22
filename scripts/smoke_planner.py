@@ -6,7 +6,9 @@ import tempfile
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src import config, persona, store
+from loguru import logger
+
+from src import config, oracle, persona, store
 from src.planner import plan_next_call
 
 REQUIRED_FIELDS = (
@@ -32,10 +34,10 @@ def learned_not_achieved(goal):
     return bool(re.match(r"^(you know|you have learned|you find out|you understand)\b", lowered))
 
 
-def clinic_facts_in(text, oracle):
+def clinic_facts_in(text, oracle_data):
     if not text:
         return []
-    oracle_text = " ".join(str(v).lower() for v in oracle.values()) if oracle else ""
+    oracle_text = " ".join(str(v).lower() for v in oracle_data.values()) if oracle_data else ""
     hits = []
     for sentence in re.split(r"[.;]", text):
         lowered = sentence.lower()
@@ -46,7 +48,7 @@ def clinic_facts_in(text, oracle):
     return hits
 
 
-def assess(scenario, oracle):
+def assess(scenario, oracle_data):
     failures = []
     for field in REQUIRED_FIELDS:
         if field not in scenario:
@@ -61,6 +63,10 @@ def assess(scenario, oracle):
     if goal and learned_not_achieved(goal):
         failures.append("goal describes a fact learned, not something achieved")
 
+    for slot in scenario.get("facts_to_elicit") or []:
+        if slot not in oracle.ORACLE_SLOTS:
+            failures.append(f"facts_to_elicit carries {slot!r}, which is not an oracle slot name")
+
     identity = store.load("identities", {}).get(scenario.get("identity"), {})
     persona_text = scenario.get("persona_block") or ""
     if identity:
@@ -74,7 +80,7 @@ def assess(scenario, oracle):
     else:
         failures.append(f"identity {scenario.get('identity')!r} is not in identities.json")
 
-    invented = clinic_facts_in(persona_text, oracle)
+    invented = clinic_facts_in(persona_text, oracle_data)
     for fact in invented:
         failures.append(f"persona asserts a clinic fact absent from the oracle: {fact!r}")
 
@@ -86,20 +92,28 @@ def assess(scenario, oracle):
 
 
 def sample(draws):
-    oracle = store.load("oracle", {})
+    oracle_data = store.load("oracle", {})
     scratch = tempfile.mkdtemp(prefix="smoke-scenarios-")
     original = config.SCENARIOS_DIR
     config.SCENARIOS_DIR = scratch
+    dropped = []
+    sink = logger.add(lambda m: dropped.append(m.record["message"]), level="WARNING")
     results = []
     try:
         for _ in range(draws):
+            before = len(dropped)
             try:
                 scenario = plan_next_call()
             except Exception as error:
                 results.append(("<planner error>", [f"{type(error).__name__}: {error}"]))
                 continue
-            results.append((scenario.get("scenario_id", "<no slug>"), assess(scenario, oracle)))
+            failures = assess(scenario, oracle_data)
+            for message in dropped[before:]:
+                if "facts_to_elicit" in message:
+                    failures.append(f"validator had to strip the emitted facts_to_elicit: {message}")
+            results.append((scenario.get("scenario_id", "<no slug>"), failures))
     finally:
+        logger.remove(sink)
         config.SCENARIOS_DIR = original
         shutil.rmtree(scratch, ignore_errors=True)
     return results

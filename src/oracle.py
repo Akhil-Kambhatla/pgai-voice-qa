@@ -20,11 +20,12 @@ SLOT_KEYWORDS = {
     "holiday_schedule": ["holiday", "holidays", "labor day", "memorial day", "thanksgiving", "christmas"],
 }
 
+ORACLE_SLOTS = tuple(SLOT_KEYWORDS)
+
 TRANSIENT_MARKERS = ["tonight", "right now", "at the moment", "currently", "for the night", "for the day"]
 
 _probe_counts = defaultdict(int)
 _topics_checked = defaultdict(set)
-_claims_checked = defaultdict(list)
 
 
 def _tokens(text):
@@ -114,11 +115,6 @@ def topics_checked(call_id):
     return set(_topics_checked[call_id])
 
 
-def claim_addressed(call_id, target_text):
-    target_tokens = _tokens(target_text)
-    return any(len(target_tokens & _tokens(c)) >= 3 for c in _claims_checked[call_id])
-
-
 def check_fact(claim_text, call_id="live", required_slots=()):
     if _is_compound(claim_text):
         return {"status": "invalid"}
@@ -131,7 +127,6 @@ def check_fact(claim_text, call_id="live", required_slots=()):
     _topics_checked[call_id] |= covered
     if covered and covered <= previously_checked and not (covered & still_missing):
         return {"status": "already_asked"}
-    _claims_checked[call_id].append(claim_text)
 
     suspicions = store.load("suspicions", [])
     if _fixated_suspicion(claim_text, call_id, suspicions):

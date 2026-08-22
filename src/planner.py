@@ -2,9 +2,10 @@ import json
 import re
 from datetime import datetime
 
+from loguru import logger
 from openai import OpenAI
 
-from src import config, scoring, store
+from src import config, oracle, scoring, store
 
 
 def gather_state():
@@ -61,5 +62,17 @@ def plan_next_call():
     scenario["identity"] = chosen_axes["identity"]
     scenario["call_index"] = call_index
     scenario["axis_score"] = round(axis_score, 4)
+    scenario["facts_to_elicit"] = _valid_slots_only(scenario)
     store.save_scenario(scenario)
     return scenario
+
+
+def _valid_slots_only(scenario):
+    requested = scenario.get("facts_to_elicit") or []
+    dropped = [slot for slot in requested if slot not in oracle.ORACLE_SLOTS]
+    if dropped:
+        logger.warning(
+            f"{scenario['scenario_id']}: dropped facts_to_elicit entries that are not oracle "
+            f"slot names: {dropped}"
+        )
+    return [slot for slot in requested if slot in oracle.ORACLE_SLOTS]

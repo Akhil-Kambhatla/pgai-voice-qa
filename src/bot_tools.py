@@ -30,13 +30,6 @@ def build_tools(call_id: str, turn_logger, scenario: dict, exit_tracker, retry):
     os.makedirs(os.path.dirname(observations_path), exist_ok=True)
     required_slots = scenario.get("facts_to_elicit", [])
 
-    def unaddressed_claims():
-        return [
-            target
-            for target in scenario.get("claims_to_verify", [])
-            if not oracle.claim_addressed(call_id, target)
-        ]
-
     async def handle_silent_compare(params):
         claim = params.arguments.get("claim", "")
         result = oracle.check_fact(claim, call_id, required_slots=required_slots)
@@ -50,15 +43,13 @@ def build_tools(call_id: str, turn_logger, scenario: dict, exit_tracker, retry):
         turn_logger.log_tool_call("silent_note", params.arguments, {"verdict": "ok"})
         await params.result_callback({"verdict": "ok"})
 
-    async def grant_condition(blocking, elapsed):
+    async def grant_condition(elapsed):
         if elapsed >= config.MAX_CALL_SECONDS - HANGUP_OVERRIDE_SECONDS:
             return "time_override"
         if retry.exhausted:
             return "nudged_twice"
         if turn_logger.stalled():
             return "stalled"
-        if blocking:
-            return ""
         outcome, why = await goal_judge.call_outcome(scenario["goal"], turn_logger.turns, exit_tracker)
         return f"{outcome}: {why}" if outcome in goal_judge.GRANTING_OUTCOMES else ""
 
@@ -66,17 +57,16 @@ def build_tools(call_id: str, turn_logger, scenario: dict, exit_tracker, retry):
         reason = params.arguments.get("reason", "")
         elapsed = turn_logger.elapsed_seconds()
         retry.note_attempt()
-        blocking = unaddressed_claims()
-        condition = await grant_condition(blocking, elapsed)
+        condition = await grant_condition(elapsed)
         if not condition:
-            unmet = [call_exit.UNMET_CLAIM] if blocking else [call_exit.UNMET_GOAL]
+            unmet = [call_exit.UNMET_GOAL]
             result = {"hangup": "denied", "unmet": unmet}
-            exit_tracker.hangup_decision(False, reason, blocking, elapsed, "")
+            exit_tracker.hangup_decision(False, reason, [], elapsed, "")
             turn_logger.log_tool_call("hang_up", params.arguments, result)
             await params.result_callback(result)
             retry.note_denial(unmet)
             return
-        exit_tracker.hangup_decision(True, reason, blocking, elapsed, condition)
+        exit_tracker.hangup_decision(True, reason, [], elapsed, condition)
         turn_logger.log_tool_call("hang_up", params.arguments, {"hangup": "ok"})
         await params.result_callback({"hangup": "ok"})
         await params.llm.push_frame(InterruptionWorkerFrame(), FrameDirection.UPSTREAM)

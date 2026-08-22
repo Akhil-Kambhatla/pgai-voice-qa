@@ -5,7 +5,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src import call_exit, config, persona, store, transcribe
+from src import call_exit, config, ledgers, oracle, persona, store, transcribe
 
 REAL_SCENARIO = "01-past-hours-akhil"
 CLINIC_SCOPE = "Your own life runs the other way."
@@ -66,9 +66,8 @@ def payload_hygiene():
     goal_four_grams = ngrams(goal, 4)
     payloads = [
         {"hangup": "denied", "unmet": [call_exit.UNMET_GOAL]},
-        {"hangup": "denied", "unmet": [call_exit.UNMET_CLAIM]},
         {"unmet": [call_exit.UNMET_GOAL], "nudge": 1},
-        {"unmet": [call_exit.UNMET_CLAIM], "nudge": 2},
+        {"unmet": [call_exit.UNMET_GOAL], "nudge": 2},
     ]
     for payload in payloads:
         text = json.dumps(payload)
@@ -77,6 +76,26 @@ def payload_hygiene():
             f"{text} contains an English sentence"
         for code in payload["unmet"]:
             assert code and len(code.split()) == 1, f"{text} carries a non-code: {code!r}"
+
+
+def facts_survive_an_empty_oracle():
+    empty = {}
+    changes = []
+    ledgers.apply_facts(
+        [{"slot": "hours", "value": "We close at 5PM.", "at": "0:32"}],
+        "smoke", empty, [], changes,
+    )
+    assert empty.get("hours", {}).get("value") == "We close at 5PM.", \
+        f"a valid slot was discarded against an empty oracle: {empty}"
+
+    invented = {}
+    changes = []
+    ledgers.apply_facts(
+        [{"slot": "parking_policy", "value": "Parking is free.", "at": "0:40"}],
+        "smoke", invented, [], changes,
+    )
+    assert invented == {}, f"an invented slot was accepted: {invented}"
+    assert len(oracle.ORACLE_SLOTS) == 10, oracle.ORACLE_SLOTS
 
 
 def transcription_mapping():
