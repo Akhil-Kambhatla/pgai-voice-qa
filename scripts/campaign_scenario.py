@@ -13,8 +13,18 @@ UNSURE_MARKERS = (
     "doesn't know", "you do not know", "you don't know", "forgotten", "forgets",
     "vague about", "hazy", "cannot say which", "not certain",
 )
-PROFILE_MARKERS = ("profile",)
-FULL_NAME_MARKERS = ("first and last name", "first and last", "full name", "first name and last name")
+REFUSAL_MARKERS = (
+    "refuse", "refusing", "decline", "declining", "withhold", "withholding",
+    "will not give", "won't give", "do not give", "don't give", "will not say",
+    "won't say", "do not say", "don't say", "not willing to give", "unwilling to give",
+    "reluctant to give", "reluctant to share", "avoid giving", "resist giving",
+    "hold back", "rather not give", "rather not say", "push back on giving",
+    "does not want to give", "doesn't want to give", "not want to give",
+    "keep to yourself", "keeps to yourself",
+)
+IDENTIFICATION_TARGETS = (
+    "name", "date of birth", "dob", "identify", "identification", "profile", "who you are",
+)
 CALLER_FIELDS = ("persona_block", "goal", "opening_situation")
 
 
@@ -23,9 +33,6 @@ def validate(scenario):
     for slot in scenario.get("facts_to_elicit") or []:
         if slot not in oracle.ORACLE_SLOTS:
             failures.append(f"facts_to_elicit carries {slot!r}, which is not one of the ten oracle slots")
-
-    if scenario.get("claims_to_verify"):
-        failures.append(f"claims_to_verify must be empty, got {scenario['claims_to_verify']}")
 
     for field in CALLER_FIELDS:
         text = scenario.get(field) or ""
@@ -42,17 +49,23 @@ def validate(scenario):
             failures.append(f"persona makes the caller unsure of their own life: {marker!r}")
             break
 
-    has_profile = any(marker in persona_text for marker in PROFILE_MARKERS)
-    has_full_name = any(marker in persona_text for marker in FULL_NAME_MARKERS)
-    if not (has_profile and has_full_name):
-        missing = []
-        if not has_profile:
-            missing.append("creating the demo profile")
-        if not has_full_name:
-            missing.append("giving first and last name")
-        failures.append(f"persona does not say the caller will: {', '.join(missing)}")
+    sentence, marker = stonewalls_identification(persona_text)
+    if sentence:
+        failures.append(
+            f"persona has the caller stonewall identification ({marker!r}): {sentence!r}"
+        )
 
     return failures
+
+
+def stonewalls_identification(persona_text):
+    for sentence in re.split(r"[.;!?\n]", persona_text.lower()):
+        if not any(target in sentence for target in IDENTIFICATION_TARGETS):
+            continue
+        for marker in REFUSAL_MARKERS:
+            if marker in sentence:
+                return sentence.strip(), marker
+    return None, None
 
 
 def _wrapped(text, indent="    ", width=76):

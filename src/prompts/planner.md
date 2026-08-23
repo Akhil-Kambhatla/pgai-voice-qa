@@ -31,7 +31,9 @@ These are observed facts from graded calls, not assumptions. Every scenario has 
 
 **It gates everything behind a demo patient profile.** The agent opens by offering to create one and asks for a first and last name. Until that exists it will not reschedule, cancel, or book. A caller who declines gets deflected to "scan the QR code at the booth" and the agent then ends the call.
 
-**So the caller creates the profile.** Every persona you write is willing to do this, and gives both first and last name when asked. This is not a concession; it is the only path to the part of the conversation worth testing. Refusing the profile has already been recorded twice as a defect and does not need reproducing.
+**So the caller identifies themselves readily.** Every persona you write gives its name when asked, without hedging or making the agent ask twice. This is not a concession; it is the only path to the part of the conversation worth testing. Stonewalling identification ends the call in under a minute, it has already been recorded twice as a defect, and it does not need reproducing.
+
+**Dana's profile already exists.** It was created on this caller ID in call-04, and the agent binds the number to it, so a Dana persona is asked to confirm who she is rather than to create anything. Never write a Dana persona that sets up a profile; she already has one. For the other three identities the agent still offers to create one, and they accept.
 
 **It ends calls unilaterally.** It says a closing line and hangs up seconds later, sometimes over the caller. Design for a call that reaches its goal early rather than one that needs four minutes of patience.
 

@@ -12,7 +12,6 @@ GOOD = {
     "axes": {"intent": "book", "temporal": "explicit"},
     "persona_block": (
         "You are Dana Whitfield. Your knee has been sore since Saturday and you want it seen. "
-        "You are happy to set up the demo profile and give your first and last name when asked. "
         "You work Monday and Wednesday, so Tuesday August 25 is the day you can make."
     ),
     "opening_situation": "You are on a short break, wanting a knee appointment on Tuesday August 25.",
@@ -26,15 +25,23 @@ GOOD = {
 
 BAD_SHAPES = [
     ("facts_to_elicit outside the ten slots", {"facts_to_elicit": ["claim-01", "parking"]}, "not one of the ten"),
-    ("claims_to_verify non-empty", {"claims_to_verify": ["claim-01"]}, "must be empty"),
     ("third person about the caller", {"goal": "She has the appointment booked for Tuesday."}, "third person"),
     ("goal is a fact learned", {"goal": "You know their opening hours for August 25."}, "fact learned"),
     ("caller unsure of own life",
      {"persona_block": GOOD["persona_block"] + " You are not sure which day your shift falls on."},
      "unsure of their own life"),
-    ("persona omits the demo profile",
-     {"persona_block": "You are Dana Whitfield. Your knee has been sore since Saturday."},
-     "does not say the caller will"),
+    ("caller stonewalls identification",
+     {"persona_block": GOOD["persona_block"] + " You refuse to give your name until they explain why."},
+     "stonewall identification"),
+]
+
+ACCEPTED_SHAPES = [
+    ("claims_to_verify populated", {"claims_to_verify": ["claim-01"]}),
+    ("persona silent about names", {"persona_block": "You are Dana Whitfield. Your knee has been sore since Saturday."}),
+    ("declines a time slot, not a name",
+     {"persona_block": GOOD["persona_block"] + " You decline the first slot they offer because you are working."}),
+    ("gives the name in a later sentence",
+     {"persona_block": "You are Dana Whitfield. You refuse to be rushed. You give your name when asked."}),
 ]
 
 failures = []
@@ -57,6 +64,11 @@ def test_validation():
         problems = campaign_scenario.validate(scenario)
         hit = any(expected in problem for problem in problems)
         check(hit, f"rejected: {label}", f"{label} was not rejected, got {problems}")
+    for label, override in ACCEPTED_SHAPES:
+        scenario = copy.deepcopy(GOOD)
+        scenario.update(override)
+        problems = campaign_scenario.validate(scenario)
+        check(not problems, f"accepted: {label}", f"{label} was wrongly rejected: {problems}")
 
 
 def test_gives_up_after_three_attempts():
@@ -66,7 +78,7 @@ def test_gives_up_after_three_attempts():
     def always_bad():
         attempts["n"] += 1
         scenario = copy.deepcopy(GOOD)
-        scenario["claims_to_verify"] = ["claim-01"]
+        scenario["facts_to_elicit"] = ["parking"]
         scenario["scenario_id"] = f"99-bad-{attempts['n']}"
         return scenario
 
@@ -80,7 +92,7 @@ def test_gives_up_after_three_attempts():
         good_on_second["n"] += 1
         if good_on_second["n"] == 1:
             scenario = copy.deepcopy(GOOD)
-            scenario["claims_to_verify"] = ["claim-01"]
+            scenario["facts_to_elicit"] = ["parking"]
             return scenario
         return copy.deepcopy(GOOD)
 
