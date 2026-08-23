@@ -91,6 +91,8 @@ if _threshold:
     if not 0.0 <= VAD_THRESHOLD <= 1.0:
         sys.exit(f"VAD_THRESHOLD must be between 0.0 and 1.0; got {VAD_THRESHOLD}")
 
+TRANSCRIBE_LANGUAGE = _optional("TRANSCRIBE_LANGUAGE") or "en"
+
 VAD_SILENCE_MS = None
 if _silence_ms:
     try:

@@ -1,5 +1,6 @@
 import json
 import os
+from datetime import datetime, timezone
 
 from openai import OpenAI
 
@@ -39,6 +40,21 @@ def _extract(transcript, turns):
     return json.loads(response.choices[0].message.content)
 
 
+def _write_extraction_record(call_id, extracted, changes, skipped):
+    record = {
+        "call_id": call_id,
+        "extracted_at": datetime.now(timezone.utc).isoformat(),
+        "model": config.PLANNER_MODEL,
+        "returned_counts": {bucket: len(items) for bucket, items in extracted.items()},
+        "raw": extracted,
+        "applied": changes,
+        "skipped": skipped,
+    }
+    path = os.path.join(store.resolve_call_dir(call_id), "extraction.json")
+    with open(path, "w") as f:
+        json.dump(record, f, indent=2)
+
+
 def analyze_call(call_id):
     record, transcript, turns = _read_call_inputs(call_id)
     extracted = _extract(transcript, turns)
@@ -52,11 +68,12 @@ def analyze_call(call_id):
     identity = record.get("identity")
     changes = []
 
-    ledgers.apply_facts(extracted.get("facts", []), call_id, oracle_data, suspicions, changes)
+    skipped = ledgers.apply_facts(extracted.get("facts", []), call_id, oracle_data, suspicions, changes)
     ledgers.apply_claims(extracted.get("claims", []), call_id, identity, claims, changes)
     ledgers.apply_promises(extracted.get("promises", []), call_id, identity, promises, changes)
     ledgers.apply_capabilities(extracted.get("capabilities", []), call_id, capabilities, changes)
-    ledgers.apply_entities(extracted.get("entities", []), call_id, frontier, changes)
+    skipped += ledgers.apply_entities(extracted.get("entities", []), call_id, frontier, changes)
+    _write_extraction_record(call_id, extracted, changes, skipped)
 
     store.save("oracle", oracle_data)
     store.save("claims", claims)

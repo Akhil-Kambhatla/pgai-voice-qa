@@ -19,7 +19,9 @@ def build_session_properties(tools):
         tools=tools,
         audio=realtime_events.AudioConfiguration(
             input=realtime_events.AudioInput(
-                transcription=realtime_events.InputAudioTranscription(),
+                transcription=realtime_events.InputAudioTranscription(
+                    language=config.TRANSCRIBE_LANGUAGE
+                ),
                 turn_detection=build_turn_detection(),
             )
         ),

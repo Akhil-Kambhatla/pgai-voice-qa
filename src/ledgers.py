@@ -14,12 +14,15 @@ def next_id(items, prefix):
 
 
 def apply_facts(facts, call_id, oracle_data, suspicions, changes):
+    skipped = []
     for fact in facts:
         slot, value, at = fact.get("slot"), fact.get("value"), fact.get("at")
         if slot not in oracle.ORACLE_SLOTS:
             logger.warning(f"{call_id}: dropped fact with unknown slot {slot!r}")
+            skipped.append({"bucket": "facts", "reason": f"unknown slot {slot!r}", "item": fact})
             continue
         if not value:
+            skipped.append({"bucket": "facts", "reason": "empty value", "item": fact})
             continue
         entry = oracle_data.setdefault(slot, dict(EMPTY_SLOT))
         if not entry["value"]:
@@ -49,6 +52,7 @@ def apply_facts(facts, call_id, oracle_data, suspicions, changes):
         else:
             entry["times_stated"] += 1
             changes.append(f"oracle: {slot} restated consistently (times_stated={entry['times_stated']})")
+    return skipped
 
 
 def apply_claims(extracted, call_id, identity, claims, changes):
@@ -97,13 +101,19 @@ def apply_capabilities(extracted, call_id, capabilities, changes):
 
 
 def apply_entities(entities, call_id, frontier, changes):
+    skipped = []
     known = {e["name"].lower() for e in frontier}
     for entity in entities:
         name = (entity.get("name") or "").strip()
-        if not name or name.lower() in known:
+        if not name:
+            skipped.append({"bucket": "entities", "reason": "no name", "item": entity})
+            continue
+        if name.lower() in known:
+            skipped.append({"bucket": "entities", "reason": "already on the frontier", "item": entity})
             continue
         frontier.append(
             {"name": name, "kind": entity.get("kind", "other"), "mentioned_in": call_id, "probed": False}
         )
         known.add(name.lower())
         changes.append(f"frontier: {name} ({entity.get('kind')}) unprobed")
+    return skipped
