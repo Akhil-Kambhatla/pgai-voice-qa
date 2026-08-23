@@ -92,10 +92,38 @@ def test_profile_creation_is_conditional():
     confirming["persona_block"] = (
         GOOD["persona_block"] + " Your profile is already on file, so you just confirm who you are."
     )
-    for label, records in (("record-having", {"dana"}), ("no record", set())):
-        problems = campaign_scenario.validate(confirming, record_identities=records)
-        check(not problems, f"confirming an existing profile is accepted ({label})",
-              f"confirming persona rejected ({label}): {problems}")
+    check(not campaign_scenario.validate(confirming, record_identities={"dana"}),
+          "confirming an existing profile is accepted when the record exists",
+          "confirming was rejected for a record-having identity")
+    check(any("has no record" in p
+              for p in campaign_scenario.validate(confirming, record_identities=set())),
+          "confirming a profile is rejected when no record exists, which is the same leak",
+          "a no-record identity was allowed to confirm a profile it does not have")
+
+    asserting = copy.deepcopy(GOOD)
+    asserting["persona_block"] = (
+        GOOD["persona_block"] + " You already exist in their system and will confirm who you are."
+    )
+    no_record = campaign_scenario.validate(asserting, record_identities=set())
+    check(any("has no record" in p for p in no_record),
+          "a no-record identity asserting an existing record is rejected",
+          f"not rejected for a no-record identity: {no_record}")
+
+    on_file = copy.deepcopy(GOOD)
+    on_file["persona_block"] = (
+        GOOD["persona_block"] + " You already know this clinic has your record on file."
+    )
+    check(any("has no record" in p for p in campaign_scenario.validate(on_file, record_identities=set())),
+          "the on-file phrasing is rejected too",
+          "the on-file phrasing slipped through")
+
+    check(not campaign_scenario.validate(creating, record_identities=set()),
+          "a no-record persona offering to create one is still accepted",
+          "the creation persona was wrongly rejected for a no-record identity")
+
+    check(campaign_scenario.validate(asserting, record_identities={"dana"}) == [],
+          "the same assertion is accepted when the identity does have a record",
+          "asserting a real record was rejected")
 
     derived = ledgers.identities_with_records()
     check(derived == {"dana"}, f"records derived from the claims ledger: {sorted(derived)}",

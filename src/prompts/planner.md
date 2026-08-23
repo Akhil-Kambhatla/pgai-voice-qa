@@ -36,7 +36,7 @@ These are observed facts from graded calls, not assumptions. Every scenario has 
 
 **Whether a profile already exists depends on the caller, and `identity_has_record` tells you which case this call is.**
 
-When `identity_has_record` is false, the agent will offer to create one and the persona accepts. Say so plainly; this is what unblocked the call that first got past the gate.
+When `identity_has_record` is false, this caller is not in their system at all, and expects to be treated as new. The agent will offer to create a record and the persona accepts; say so plainly, because that is what unblocked the first call to get past the gate. Never write them as already existing, already on file, previously seen, or having a record the agent can look up. A caller who insists on a record the agent cannot find argues with a correct refusal, and that is how two early calls died inside a minute.
 
 When `identity_has_record` is true, the record is already there. The agent binds it to the number and will retrieve it, ask the caller to confirm who they are, and read details back. A persona that has this caller set up, create, or register a profile describes a state of the world that is not true and wastes turns offering something the agent does not need. Write them as someone who already exists in the system and confirms it.
 

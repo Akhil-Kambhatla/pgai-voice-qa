@@ -30,6 +30,12 @@ PROFILE_CREATION_VERBS = (
     "set up", "sets up", "setting up", "create", "creates", "creating",
     "register", "registering", "sign up", "signing up", "start one", "set one up",
 )
+RECORD_WORDS = ("record", "profile", "account", "chart", "in their system", "in the system")
+RECORD_EXISTS_MARKERS = (
+    "already", "exists", "existing", "on file", "on record", "from last time",
+    "from before", "they have your", "you are registered", "previously set up",
+)
+NEGATION_MARKERS = (" not ", "n't", "never", "no record", "no profile", "yet to")
 PROFILE_EXISTS_MARKERS = (
     "already", "exists", "existing", "on file", "on record", "from last time",
     "from before", "have a profile", "has a profile", "confirm",
@@ -66,15 +72,35 @@ def validate(scenario, record_identities=None):
             f"persona has the caller stonewall identification ({marker!r}): {sentence!r}"
         )
 
-    if scenario.get("identity") in record_identities:
+    identity = scenario.get("identity")
+    if identity in record_identities:
         sentence, verb = creates_a_profile(persona_text)
         if sentence:
             failures.append(
-                f"{scenario.get('identity')} already has a record, but the persona has them "
+                f"{identity} already has a record, but the persona has them "
                 f"{verb!r} a profile: {sentence!r}"
+            )
+    else:
+        sentence, marker = asserts_a_record(persona_text)
+        if sentence:
+            failures.append(
+                f"{identity} has no record, but the persona asserts one "
+                f"({marker!r}): {sentence!r}"
             )
 
     return failures
+
+
+def asserts_a_record(persona_text):
+    for sentence in re.split(r"[.;!?\n]", persona_text.lower()):
+        if any(marker in sentence for marker in NEGATION_MARKERS):
+            continue
+        if not any(word in sentence for word in RECORD_WORDS):
+            continue
+        for marker in RECORD_EXISTS_MARKERS:
+            if marker in sentence:
+                return sentence.strip(), marker
+    return None, None
 
 
 def creates_a_profile(persona_text):
