@@ -19,13 +19,25 @@ def gather_state():
     return history, unverified_claims, open_suspicions
 
 
-def plan_next_call():
+def pinned_axes_for(identity):
+    if not identity:
+        return {}
+    known = store.load("identities", {})
+    if identity not in known:
+        raise SystemExit(
+            f"unknown identity {identity!r}; data/identities.json has: {', '.join(sorted(known))}"
+        )
+    return {"identity": identity}
+
+
+def plan_next_call(identity=None):
+    pinned = pinned_axes_for(identity)
     axes_space = store.load("axes", {})
     history, unverified_claims, open_suspicions = gather_state()
     call_index = len(history) + 1
 
     chosen_axes, axis_score = scoring.select_scenario_axes(
-        axes_space, history, open_suspicions, unverified_claims, call_index
+        axes_space, history, open_suspicions, unverified_claims, call_index, pinned=pinned
     )
 
     identities = store.load("identities", {})

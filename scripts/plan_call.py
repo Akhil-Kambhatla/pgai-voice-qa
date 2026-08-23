@@ -1,3 +1,4 @@
+import argparse
 import json
 import os
 import sys
@@ -8,10 +9,18 @@ from src.planner import plan_next_call
 
 
 def main():
-    scenario = plan_next_call()
+    parser = argparse.ArgumentParser(description="Plan one call scenario without dialling.")
+    parser.add_argument(
+        "--identity",
+        help="pin the caller identity for this scenario, leaving the other seven axes free",
+    )
+    arguments = parser.parse_args()
+
+    scenario = plan_next_call(identity=arguments.identity)
     print(f"scenario_id: {scenario['scenario_id']}")
     print(f"call_index:  {scenario['call_index']} (axis score {scenario['axis_score']})")
-    print(f"identity:    {scenario['identity']}")
+    pin_note = " (pinned)" if arguments.identity else ""
+    print(f"identity:    {scenario['identity']}{pin_note}")
     print("axes:")
     for axis, value in scenario["axes"].items():
         print(f"  {axis}: {value}")

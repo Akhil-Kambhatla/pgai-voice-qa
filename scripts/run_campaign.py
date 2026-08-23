@@ -1,3 +1,4 @@
+import argparse
 import os
 import subprocess
 import sys
@@ -7,7 +8,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from scripts import campaign_call, campaign_scenario, campaign_summary
 from src import config
-from src.planner import plan_next_call
+from src.planner import pinned_axes_for, plan_next_call
 
 MAX_PLAN_ATTEMPTS = 3
 SCRIPTS_DIR = os.path.join(config.PROJECT_DIR, "scripts")
@@ -88,12 +89,24 @@ def run_one_call(number, ask, planner=plan_next_call, dial=campaign_call.dial,
 
 
 def main():
-    number = sys.argv[1] if len(sys.argv) > 1 else config.TARGET_NUMBER
+    parser = argparse.ArgumentParser(description="Run the graded campaign call loop.")
+    parser.add_argument("number", nargs="?", default=config.TARGET_NUMBER)
+    parser.add_argument(
+        "--identity",
+        help="pin the caller identity for every call in this run, leaving the other axes free",
+    )
+    arguments = parser.parse_args()
+    pinned_axes_for(arguments.identity)
+
+    number = arguments.number
+    pin_note = f", identity pinned to {arguments.identity}" if arguments.identity else ""
     print(f"campaign runner: dialling {number}, cap {config.MAX_CALLS_PER_RUN} per day, "
-          f"{config.MAX_CALL_SECONDS}s per call")
+          f"{config.MAX_CALL_SECONDS}s per call{pin_note}")
     while True:
         try:
-            outcome = run_one_call(number, input)
+            outcome = run_one_call(
+                number, input, planner=lambda: plan_next_call(identity=arguments.identity)
+            )
         except campaign_call.PreflightFailure as failure:
             print(f"\nSTOPPED: {failure}")
             return 1

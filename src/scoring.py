@@ -33,6 +33,8 @@ def covered_pairs(history):
 
 def uncovered_pair_fraction(candidate, prior_pairs):
     pairs = list(itertools.combinations(sorted(candidate.items()), 2))
+    if not pairs:
+        return 0.0
     uncovered = sum(
         1 for (a1, v1), (a2, v2) in pairs if (a1, v1, a2, v2) not in prior_pairs
     )
@@ -40,6 +42,8 @@ def uncovered_pair_fraction(candidate, prior_pairs):
 
 
 def novelty(candidate, counts):
+    if not candidate:
+        return 0.0
     total = sum(
         1.0 / math.sqrt(1 + counts[axis][value]) for axis, value in candidate.items()
     )
@@ -67,26 +71,29 @@ def lead_score(candidate, suspicions):
     return min(max(total, 0.0), 1.0)
 
 
-def is_valid(candidate, call_index, unverified_claims):
+def is_valid(candidate, call_index, unverified_claims, pinned=None):
+    pinned = pinned or {}
     if candidate["continuity"] == "verifies_claim" and not unverified_claims:
         return False
     if candidate["continuity"] == "references_prior" and call_index <= 2:
         return False
     if call_index <= 2:
         for axis, value in DISCOVERY_FORCED.items():
-            if candidate[axis] != value:
+            if axis not in pinned and candidate[axis] != value:
                 return False
     return True
 
 
-def score(candidate, counts, prior_pairs, suspicions, call_index, total_calls):
+def score(candidate, counts, prior_pairs, suspicions, call_index, total_calls, pinned=None):
+    free = {axis: value for axis, value in candidate.items() if axis not in (pinned or {})}
     w = call_index / total_calls
-    explore = (novelty(candidate, counts) + uncovered_pair_fraction(candidate, prior_pairs)) / 2
+    explore = (novelty(free, counts) + uncovered_pair_fraction(free, prior_pairs)) / 2
     return (1 - w) * explore + w * lead_score(candidate, suspicions)
 
 
 def select_scenario_axes(axes, history, suspicions, unverified_claims, call_index,
-                         total_calls=TOTAL_CALLS, seed=None):
+                         total_calls=TOTAL_CALLS, seed=None, pinned=None):
+    pinned = pinned or {}
     rng = random.Random(seed)
     counts = usage_counts(history, axes)
     prior_pairs = covered_pairs(history)
@@ -95,9 +102,10 @@ def select_scenario_axes(axes, history, suspicions, unverified_claims, call_inde
         candidate = {axis: rng.choice(values) for axis, values in axes.items()}
         if call_index <= 2:
             candidate.update(DISCOVERY_FORCED)
-        if not is_valid(candidate, call_index, unverified_claims):
+        candidate.update(pinned)
+        if not is_valid(candidate, call_index, unverified_claims, pinned):
             continue
-        s = score(candidate, counts, prior_pairs, suspicions, call_index, total_calls)
+        s = score(candidate, counts, prior_pairs, suspicions, call_index, total_calls, pinned)
         if s > best_score:
             best, best_score = candidate, s
     if best is None:
@@ -105,4 +113,5 @@ def select_scenario_axes(axes, history, suspicions, unverified_claims, call_inde
         for axis, values in axes.items():
             best.setdefault(axis, values[0])
         best["continuity"] = "fresh"
+        best.update(pinned)
     return best, best_score
