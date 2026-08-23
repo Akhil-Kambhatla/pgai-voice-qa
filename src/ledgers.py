@@ -1,8 +1,18 @@
 from loguru import logger
 
-from src import oracle
+from src import oracle, store
 
 EMPTY_SLOT = {"value": None, "stated_in": None, "at": None, "times_stated": 0}
+RECORD_CLAIM_MARKERS = ("profile", "account", "on file", "your record")
+
+
+def identities_with_records():
+    found = set()
+    for claim in store.load("claims", []):
+        haystack = f"{claim.get('action') or ''} {claim.get('text') or ''}".lower()
+        if any(marker in haystack for marker in RECORD_CLAIM_MARKERS) and claim.get("identity"):
+            found.add(claim["identity"])
+    return found
 
 
 def empty_oracle():

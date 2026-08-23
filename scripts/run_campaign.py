@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from scripts import campaign_call, campaign_scenario, campaign_summary
+from scripts import campaign_call, campaign_render, campaign_scenario, campaign_summary
 from src import config
 from src.planner import pinned_axes_for, plan_next_call
 
@@ -60,7 +60,7 @@ def run_one_call(number, ask, planner=plan_next_call, dial=campaign_call.dial,
             print(f"  {scenario_id}: {'; '.join(failures)}")
         return "planning_failed"
 
-    print(campaign_scenario.render(scenario))
+    print(campaign_render.render(scenario))
     answer = ask("dial this scenario? [enter] dial, [s] skip and regenerate, [q] quit: ")
     if answer.strip().lower() == "q":
         return "quit"

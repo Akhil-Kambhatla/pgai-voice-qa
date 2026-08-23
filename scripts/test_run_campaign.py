@@ -4,71 +4,8 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from scripts import campaign_scenario, campaign_summary, run_campaign
-
-GOOD = {
-    "scenario_id": "99-good-scenario",
-    "identity": "dana",
-    "axes": {"intent": "book", "temporal": "explicit"},
-    "persona_block": (
-        "You are Dana Whitfield. Your knee has been sore since Saturday and you want it seen. "
-        "You work Monday and Wednesday, so Tuesday August 25 is the day you can make."
-    ),
-    "opening_situation": "You are on a short break, wanting a knee appointment on Tuesday August 25.",
-    "goal": "You have an appointment booked on a day you can actually make, or you know when to call back.",
-    "primary_probe": {"name": "explicit-date-booking", "what_happens": "You ask for one specific date.",
-                      "expected_correct_behavior": "The agent books on that date or says it cannot."},
-    "opportunistic_follow_up": "If they mention a second location, ask whether the hours differ.",
-    "facts_to_elicit": ["providers", "appointment_length"],
-    "claims_to_verify": [],
-}
-
-BAD_SHAPES = [
-    ("facts_to_elicit outside the ten slots", {"facts_to_elicit": ["claim-01", "parking"]}, "not one of the ten"),
-    ("third person about the caller", {"goal": "She has the appointment booked for Tuesday."}, "third person"),
-    ("goal is a fact learned", {"goal": "You know their opening hours for August 25."}, "fact learned"),
-    ("caller unsure of own life",
-     {"persona_block": GOOD["persona_block"] + " You are not sure which day your shift falls on."},
-     "unsure of their own life"),
-    ("caller stonewalls identification",
-     {"persona_block": GOOD["persona_block"] + " You refuse to give your name until they explain why."},
-     "stonewall identification"),
-]
-
-ACCEPTED_SHAPES = [
-    ("claims_to_verify populated", {"claims_to_verify": ["claim-01"]}),
-    ("persona silent about names", {"persona_block": "You are Dana Whitfield. Your knee has been sore since Saturday."}),
-    ("declines a time slot, not a name",
-     {"persona_block": GOOD["persona_block"] + " You decline the first slot they offer because you are working."}),
-    ("gives the name in a later sentence",
-     {"persona_block": "You are Dana Whitfield. You refuse to be rushed. You give your name when asked."}),
-]
-
-failures = []
-
-
-def check(condition, passed, failed):
-    if condition:
-        print(f"  PASS {passed}")
-    else:
-        failures.append(failed)
-
-
-def test_validation():
-    print("--- validation")
-    problems = campaign_scenario.validate(GOOD)
-    check(not problems, "a good scenario is accepted", f"good scenario rejected: {problems}")
-    for label, override, expected in BAD_SHAPES:
-        scenario = copy.deepcopy(GOOD)
-        scenario.update(override)
-        problems = campaign_scenario.validate(scenario)
-        hit = any(expected in problem for problem in problems)
-        check(hit, f"rejected: {label}", f"{label} was not rejected, got {problems}")
-    for label, override in ACCEPTED_SHAPES:
-        scenario = copy.deepcopy(GOOD)
-        scenario.update(override)
-        problems = campaign_scenario.validate(scenario)
-        check(not problems, f"accepted: {label}", f"{label} was wrongly rejected: {problems}")
+from scripts import campaign_summary, run_campaign
+from scripts.test_scenario_rules import GOOD, check, failures
 
 
 def test_gives_up_after_three_attempts():
@@ -116,7 +53,6 @@ def test_summary_against_call_05():
 
 
 def main():
-    test_validation()
     test_gives_up_after_three_attempts()
     test_summary_against_call_05()
     print()

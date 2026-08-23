@@ -16,6 +16,7 @@ So: defects are your objective. They are never the caller's objective. The calle
 
 - `axes`: the coordinate tuple selected for this call. You do not choose these. You express them.
 - `identity`: which of the four callers is used, with their fixed detail set.
+- `identity_has_record`: whether the clinic's system already holds a patient record for this caller.
 - `oracle`: facts the clinic's agent has already stated about itself, each with the call and timestamp where it said so. May be empty on early calls.
 - `frontier`: entities the agent mentioned but that have never been probed.
 - `open_suspicions`: possible defects, each with a confidence score and a severity.
@@ -33,7 +34,11 @@ These are observed facts from graded calls, not assumptions. Every scenario has 
 
 **So the caller identifies themselves readily.** Every persona you write gives its name when asked, without hedging or making the agent ask twice. This is not a concession; it is the only path to the part of the conversation worth testing. Stonewalling identification ends the call in under a minute, it has already been recorded twice as a defect, and it does not need reproducing.
 
-**Dana's profile already exists.** It was created on this caller ID in call-04, and the agent binds the number to it, so a Dana persona is asked to confirm who she is rather than to create anything. Never write a Dana persona that sets up a profile; she already has one. For the other three identities the agent still offers to create one, and they accept.
+**Whether a profile already exists depends on the caller, and `identity_has_record` tells you which case this call is.**
+
+When `identity_has_record` is false, the agent will offer to create one and the persona accepts. Say so plainly; this is what unblocked the call that first got past the gate.
+
+When `identity_has_record` is true, the record is already there. The agent binds it to the number and will retrieve it, ask the caller to confirm who they are, and read details back. A persona that has this caller set up, create, or register a profile describes a state of the world that is not true and wastes turns offering something the agent does not need. Write them as someone who already exists in the system and confirms it.
 
 **It ends calls unilaterally.** It says a closing line and hangs up seconds later, sometimes over the caller. Design for a call that reaches its goal early rather than one that needs four minutes of patience.
 

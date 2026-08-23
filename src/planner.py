@@ -5,7 +5,7 @@ from datetime import datetime
 from loguru import logger
 from openai import OpenAI
 
-from src import config, oracle, scoring, store
+from src import config, ledgers, oracle, scoring, store
 
 
 def gather_state():
@@ -46,6 +46,7 @@ def plan_next_call(identity=None):
         {
             "axes": chosen_axes,
             "identity": identities.get(chosen_axes["identity"]),
+            "identity_has_record": chosen_axes["identity"] in ledgers.identities_with_records(),
             "oracle": store.load("oracle", {}),
             "frontier": [e for e in store.load("frontier", []) if not e.get("probed")],
             "open_suspicions": open_suspicions,
