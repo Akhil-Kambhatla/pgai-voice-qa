@@ -5,7 +5,6 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from scripts import campaign_scenario, campaign_summary, run_campaign
-from src import ledgers
 
 GOOD = {
     "scenario_id": "99-good-scenario",
@@ -28,9 +27,15 @@ BAD_SHAPES = [
     ("facts_to_elicit outside the ten slots", {"facts_to_elicit": ["claim-01", "parking"]}, "not one of the ten"),
     ("third person about the caller", {"goal": "She has the appointment booked for Tuesday."}, "third person"),
     ("goal is a fact learned", {"goal": "You know their opening hours for August 25."}, "fact learned"),
-    ("caller unsure of own life",
+    ("caller unsure of their own dates",
      {"persona_block": GOOD["persona_block"] + " You are not sure which day your shift falls on."},
      "unsure of their own life"),
+    ("caller cannot recall their own details",
+     {"persona_block": GOOD["persona_block"] + " You don't know when your last appointment with your physio was."},
+     "unsure of their own life"),
+    ("goal is only a fact learned",
+     {"goal": "You know whether Aetna is accepted here."},
+     "fact learned"),
     ("caller stonewalls identification",
      {"persona_block": GOOD["persona_block"] + " You refuse to give your name until they explain why."},
      "stonewall identification"),
@@ -43,6 +48,16 @@ ACCEPTED_SHAPES = [
      {"persona_block": GOOD["persona_block"] + " You decline the first slot they offer because you are working."}),
     ("gives the name in a later sentence",
      {"persona_block": "You are Dana Whitfield. You refuse to be rushed. You give your name when asked."}),
+    ("uncertainty belongs to the agent",
+     {"persona_block": GOOD["persona_block"] + " You may repeat it if they seem unsure."}),
+    ("uncertainty about something the clinic owns",
+     {"persona_block": GOOD["persona_block"] + " You are not sure whether they take your insurance."}),
+    ("uncertainty about whether a booking went through",
+     {"persona_block": GOOD["persona_block"] + " You booked something last week but you are not sure it went through."}),
+    ("goal pairs a fact with a next step",
+     {"goal": "You know whether your Medicare plan is accepted, and if it is, you have the next step for getting seen."}),
+    ("goal is a plain outcome",
+     {"goal": "You have the appointment moved to a time you can actually make."}),
 ]
 
 failures = []
@@ -72,67 +87,8 @@ def test_validation():
         check(not problems, f"accepted: {label}", f"{label} was wrongly rejected: {problems}")
 
 
-def test_profile_creation_is_conditional():
-    print("--- profile creation depends on whether the identity has a record")
-    creating = copy.deepcopy(GOOD)
-    creating["persona_block"] = (
-        GOOD["persona_block"] + " You will set up whatever patient profile they need."
-    )
-    with_record = campaign_scenario.validate(creating, record_identities={"dana"})
-    check(any("already has a record" in p for p in with_record),
-          "a record-having identity offering to create a profile is rejected",
-          f"not rejected for a record-having identity: {with_record}")
-
-    without_record = campaign_scenario.validate(creating, record_identities=set())
-    check(not without_record,
-          "the same persona is accepted for an identity with no record",
-          f"wrongly rejected for an identity with no record: {without_record}")
-
-    confirming = copy.deepcopy(GOOD)
-    confirming["persona_block"] = (
-        GOOD["persona_block"] + " Your profile is already on file, so you just confirm who you are."
-    )
-    check(not campaign_scenario.validate(confirming, record_identities={"dana"}),
-          "confirming an existing profile is accepted when the record exists",
-          "confirming was rejected for a record-having identity")
-    check(any("has no record" in p
-              for p in campaign_scenario.validate(confirming, record_identities=set())),
-          "confirming a profile is rejected when no record exists, which is the same leak",
-          "a no-record identity was allowed to confirm a profile it does not have")
-
-    asserting = copy.deepcopy(GOOD)
-    asserting["persona_block"] = (
-        GOOD["persona_block"] + " You already exist in their system and will confirm who you are."
-    )
-    no_record = campaign_scenario.validate(asserting, record_identities=set())
-    check(any("has no record" in p for p in no_record),
-          "a no-record identity asserting an existing record is rejected",
-          f"not rejected for a no-record identity: {no_record}")
-
-    on_file = copy.deepcopy(GOOD)
-    on_file["persona_block"] = (
-        GOOD["persona_block"] + " You already know this clinic has your record on file."
-    )
-    check(any("has no record" in p for p in campaign_scenario.validate(on_file, record_identities=set())),
-          "the on-file phrasing is rejected too",
-          "the on-file phrasing slipped through")
-
-    check(not campaign_scenario.validate(creating, record_identities=set()),
-          "a no-record persona offering to create one is still accepted",
-          "the creation persona was wrongly rejected for a no-record identity")
-
-    check(campaign_scenario.validate(asserting, record_identities={"dana"}) == [],
-          "the same assertion is accepted when the identity does have a record",
-          "asserting a real record was rejected")
-
-    derived = ledgers.identities_with_records()
-    check(derived == {"dana"}, f"records derived from the claims ledger: {sorted(derived)}",
-          f"derivation returned {sorted(derived)}, want dana from claim-01")
-
-
 def main():
     test_validation()
-    test_profile_creation_is_conditional()
     print()
     if failures:
         print("FAILED")

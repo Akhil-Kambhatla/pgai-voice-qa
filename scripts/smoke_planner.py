@@ -25,13 +25,22 @@ SERVICE_SIDE = (
 )
 
 
+KNOWLEDGE_MARKERS = (
+    "you know", "you have learned", "you find out", "you understand", "you have the answer",
+)
+OUTCOME_MARKERS = (
+    "booked", "moved", "cancelled", "canceled", "confirmed", "sorted", "resolved",
+    "corrected", "updated", "arranged", "rescheduled", "scheduled", "set up",
+    "on the books", "have an appointment", "call back", "nothing further", "done",
+    "next step", "what to do", "when to call", "what you need", "routed", "approved",
+)
+
+
 def learned_not_achieved(goal):
-    lowered = goal.lower()
-    achieved = ("booked", "moved", "cancelled", "canceled", "confirmed", "sorted",
-                "have an appointment", "call back", "nothing further", "done")
-    if any(word in lowered for word in achieved):
+    clauses = [c for c in re.split(r",| and | or |;", goal.lower()) if c.strip()]
+    if not any(any(m in c for m in KNOWLEDGE_MARKERS) for c in clauses):
         return False
-    return bool(re.match(r"^(you know|you have learned|you find out|you understand)\b", lowered))
+    return not any(any(m in c for m in OUTCOME_MARKERS) for c in clauses)
 
 
 def clinic_facts_in(text, oracle_data):
