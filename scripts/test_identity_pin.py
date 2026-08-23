@@ -79,8 +79,7 @@ def test_unknown_identity_fails_loudly():
          "--identity", "nobody"],
         cwd=config.PROJECT_DIR, capture_output=True, text=True,
     )
-    message = (done.stderr or done.stdout).strip().splitlines()
-    message = message[-1] if message else ""
+    message = ((done.stderr or done.stdout).strip().splitlines() or [""])[-1]
     check(done.returncode != 0, f"plan_call.py exits {done.returncode}",
           "an unknown identity was accepted")
     check("unknown identity" in message and "akhil" in message,
@@ -92,8 +91,7 @@ def test_unknown_identity_fails_loudly():
          "+15550000000", "--identity", "nobody"],
         cwd=config.PROJECT_DIR, capture_output=True, text=True,
     )
-    runner_message = (runner.stderr or runner.stdout).strip().splitlines()
-    runner_message = runner_message[-1] if runner_message else ""
+    runner_message = ((runner.stderr or runner.stdout).strip().splitlines() or [""])[-1]
     check(runner.returncode != 0 and "unknown identity" in runner_message,
           f"run_campaign.py rejects it before dialling: exit {runner.returncode}",
           f"run_campaign accepted an unknown identity: {runner.returncode} {runner_message}")
