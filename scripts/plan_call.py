@@ -12,14 +12,18 @@ def main():
     parser = argparse.ArgumentParser(description="Plan one call scenario without dialling.")
     parser.add_argument(
         "--identity",
-        help="pin the caller identity for this scenario, leaving the other seven axes free",
+        help="shorthand for --axis identity=NAME",
+    )
+    parser.add_argument(
+        "--axis", action="append", default=[], metavar="NAME=VALUE",
+        help="pin one axis, repeatable; the sampler still chooses the rest",
     )
     arguments = parser.parse_args()
 
-    scenario = plan_next_call(identity=arguments.identity)
+    scenario = plan_next_call(identity=arguments.identity, axis_pairs=arguments.axis)
     print(f"scenario_id: {scenario['scenario_id']}")
     print(f"call_index:  {scenario['call_index']} (axis score {scenario['axis_score']})")
-    pin_note = " (pinned)" if arguments.identity else ""
+    pin_note = " (pinned)" if arguments.identity or arguments.axis else ""
     print(f"identity:    {scenario['identity']}{pin_note}")
     print("axes:")
     for axis, value in scenario["axes"].items():

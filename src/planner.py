@@ -19,19 +19,40 @@ def gather_state():
     return history, unverified_claims, open_suspicions
 
 
+def pinned_axes(identity=None, axis_pairs=()):
+    axes_space = store.load("axes", {})
+    pinned = {}
+    if identity:
+        known = store.load("identities", {})
+        if identity not in known:
+            raise SystemExit(
+                f"unknown identity {identity!r}; data/identities.json has: {', '.join(sorted(known))}"
+            )
+        pinned["identity"] = identity
+    for pair in axis_pairs or ():
+        if "=" not in pair:
+            raise SystemExit(f"--axis expects name=value, got {pair!r}")
+        name, _, value = pair.partition("=")
+        name, value = name.strip(), value.strip()
+        if name not in axes_space:
+            raise SystemExit(
+                f"unknown axis {name!r}; data/axes.json has: {', '.join(sorted(axes_space))}"
+            )
+        if value not in axes_space[name]:
+            raise SystemExit(
+                f"unknown value {value!r} for axis {name!r}; valid values are: "
+                f"{', '.join(axes_space[name])}"
+            )
+        pinned[name] = value
+    return pinned
+
+
 def pinned_axes_for(identity):
-    if not identity:
-        return {}
-    known = store.load("identities", {})
-    if identity not in known:
-        raise SystemExit(
-            f"unknown identity {identity!r}; data/identities.json has: {', '.join(sorted(known))}"
-        )
-    return {"identity": identity}
+    return pinned_axes(identity=identity)
 
 
-def plan_next_call(identity=None):
-    pinned = pinned_axes_for(identity)
+def plan_next_call(identity=None, axis_pairs=()):
+    pinned = pinned_axes(identity, axis_pairs)
     axes_space = store.load("axes", {})
     history, unverified_claims, open_suspicions = gather_state()
     call_index = len(history) + 1

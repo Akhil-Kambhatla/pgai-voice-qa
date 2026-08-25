@@ -8,15 +8,15 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from scripts import campaign_call, campaign_render, campaign_scenario, campaign_summary
 from src import config
-from src.planner import pinned_axes_for, plan_next_call
+from src.planner import pinned_axes, plan_next_call
 
 MAX_PLAN_ATTEMPTS = 3
 SCRIPTS_DIR = os.path.join(config.PROJECT_DIR, "scripts")
 
 
-def plan_valid_scenario(planner=plan_next_call):
+def plan_valid_scenario(planner=plan_next_call, max_attempts=MAX_PLAN_ATTEMPTS):
     attempts = []
-    for attempt in range(1, MAX_PLAN_ATTEMPTS + 1):
+    for attempt in range(1, max_attempts + 1):
         scenario = planner()
         failures = campaign_scenario.validate(scenario)
         attempts.append((scenario.get("scenario_id"), failures))
@@ -46,16 +46,19 @@ def announce(turn):
 
 
 def run_one_call(number, ask, planner=plan_next_call, dial=campaign_call.dial,
-                 wait=campaign_call.wait_for_completion, steps=run_step):
+                 wait=campaign_call.wait_for_completion, steps=run_step, regenerate=True):
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     placed, tunnels = campaign_call.preflight(today)
     print(f"preflight ok: server up, {tunnels} ngrok tunnel matching PUBLIC_BASE_URL, "
           f"{placed} of {config.MAX_CALLS_PER_RUN} calls placed today")
 
-    print("planning...")
-    scenario, attempts = plan_valid_scenario(planner)
+    print("planning..." if regenerate else "loading the scenario you wrote...")
+    scenario, attempts = plan_valid_scenario(planner, MAX_PLAN_ATTEMPTS if regenerate else 1)
     if scenario is None:
-        print(f"gave up after {len(attempts)} attempts; the planner could not produce a valid scenario:")
+        if regenerate:
+            print(f"gave up after {len(attempts)} attempts; the planner could not produce a valid scenario:")
+        else:
+            print("the scenario you wrote was rejected, and there is nothing to regenerate from:")
         for scenario_id, failures in attempts:
             print(f"  {scenario_id}: {'; '.join(failures)}")
         return "planning_failed"
@@ -91,27 +94,39 @@ def run_one_call(number, ask, planner=plan_next_call, dial=campaign_call.dial,
 def main():
     parser = argparse.ArgumentParser(description="Run the graded campaign call loop.")
     parser.add_argument("number", nargs="?", default=config.TARGET_NUMBER)
+    parser.add_argument("--identity", help="shorthand for --axis identity=NAME")
     parser.add_argument(
-        "--identity",
-        help="pin the caller identity for every call in this run, leaving the other axes free",
+        "--axis", action="append", default=[], metavar="NAME=VALUE",
+        help="pin one axis, repeatable; the sampler still chooses the rest",
+    )
+    parser.add_argument(
+        "--scenario", metavar="PATH",
+        help="dial a scenario JSON you wrote by hand instead of planning one",
     )
     arguments = parser.parse_args()
-    pinned_axes_for(arguments.identity)
+    pinned = pinned_axes(arguments.identity, arguments.axis)
 
     number = arguments.number
-    pin_note = f", identity pinned to {arguments.identity}" if arguments.identity else ""
+    if arguments.scenario:
+        planner, regenerate = campaign_scenario.load_written(arguments.scenario), False
+        source_note = f", from {arguments.scenario}"
+    else:
+        planner, regenerate = lambda: plan_next_call(
+            identity=arguments.identity, axis_pairs=arguments.axis), True
+        source_note = f", pinned {pinned}" if pinned else ""
     print(f"campaign runner: dialling {number}, cap {config.MAX_CALLS_PER_RUN} per day, "
-          f"{config.MAX_CALL_SECONDS}s per call{pin_note}")
+          f"{config.MAX_CALL_SECONDS}s per call{source_note}")
     while True:
         try:
-            outcome = run_one_call(
-                number, input, planner=lambda: plan_next_call(identity=arguments.identity)
-            )
+            outcome = run_one_call(number, input, planner=planner, regenerate=regenerate)
         except campaign_call.PreflightFailure as failure:
             print(f"\nSTOPPED: {failure}")
             return 1
         if outcome == "quit":
             print("stopping at your request")
+            return 0
+        if outcome == "skipped" and not regenerate:
+            print("skipped, and there is no second draft of a scenario you wrote by hand")
             return 0
         if outcome == "planning_failed":
             return 1

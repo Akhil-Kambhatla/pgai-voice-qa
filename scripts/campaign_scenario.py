@@ -1,3 +1,4 @@
+import json
 import os
 import sys
 
@@ -10,7 +11,7 @@ from scripts.campaign_detectors import (
     stonewalls_identification,
     unsure_of_own_life,
 )
-from src import ledgers, oracle, persona
+from src import ledgers, oracle, persona, store
 
 CALLER_FIELDS = ("persona_block", "goal", "opening_situation")
 
@@ -62,3 +63,13 @@ def validate(scenario, record_identities=None):
             )
 
     return failures
+
+
+def load_written(path):
+    def loader():
+        with open(path) as handle:
+            scenario = json.load(handle)
+        store.save_scenario(scenario)
+        return scenario
+
+    return loader
