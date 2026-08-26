@@ -13,9 +13,23 @@ UNMET_GOAL = "goal"
 
 
 class RecordedTelnyxSerializer(TelnyxFrameSerializer):
-    def __init__(self, *, recorder: EventRecorder, **kwargs):
+    def __init__(self, *, recorder: EventRecorder, on_far_end_stop=None, **kwargs):
         super().__init__(**kwargs)
         self._recorder = recorder
+        self._on_far_end_stop = on_far_end_stop
+        self._far_end_stopped = False
+
+    async def deserialize(self, data):
+        event = _telnyx_event_name(data)
+        if event and event not in ("media", "dtmf"):
+            self._recorder.record("telnyx", {"type": f"telnyx.{event}"})
+        if event == "stop" and not self._far_end_stopped:
+            self._far_end_stopped = True
+            self._recorder.record("lifecycle", {"type": "exit.far_end_stop"})
+            logger.info("Telnyx sent stop; the far end is gone, ending the call")
+            if self._on_far_end_stop:
+                await self._on_far_end_stop()
+        return await super().deserialize(data)
 
     async def serialize(self, frame):
         if isinstance(frame, (EndFrame, CancelFrame)):
@@ -69,8 +83,11 @@ class ExitTracker:
     def watchdog_fired(self, limit: int):
         self._recorder.record("lifecycle", {"type": "exit.watchdog_terminated", "limit_seconds": limit})
 
-    def stream_disconnected(self):
-        self._recorder.record("lifecycle", {"type": "exit.stream_disconnected"})
+    def far_end_disconnected(self, signal: str, elapsed: float):
+        payload = {"type": "exit.far_end_disconnected", "signal": signal}
+        payload["elapsed_seconds"] = round(elapsed, 1)
+        self._recorder.record("lifecycle", payload)
+        logger.info(f"far end disconnected via {signal} at {elapsed:.1f}s")
 
     def nudged(self, unmet, count):
         self._recorder.record(
@@ -122,3 +139,10 @@ class HangupRetry:
         self._tracker.nudged(unmet, self.nudges_fired)
         logger.info(f"exit nudge {self.nudges_fired} injected: {payload}")
         self._timer = asyncio.create_task(self._nudge_later(unmet))
+
+
+def _telnyx_event_name(data):
+    try:
+        return None if isinstance(data, bytes) else json.loads(data).get("event")
+    except (TypeError, ValueError, AttributeError):
+        return None

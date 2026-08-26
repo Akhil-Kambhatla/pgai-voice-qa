@@ -42,11 +42,16 @@ def ending(events, completion):
     granted = [e for e in events if (e.get("event") or {}).get("type") == "exit.hangup_granted"]
     denied = [e for e in events if (e.get("event") or {}).get("type") == "exit.hangup_denied"]
     watchdog = [e for e in events if (e.get("event") or {}).get("type") == "exit.watchdog_terminated"]
+    dropped = [e for e in events if (e.get("event") or {}).get("type") == "exit.far_end_disconnected"]
     if granted:
         condition = granted[-1]["event"].get("grant_condition")
         return f"hang_up granted at {granted[-1]['t']:.1f}s", condition, len(denied)
     if watchdog:
         return "watchdog terminated the call at MAX_CALL_SECONDS", "watchdog", len(denied)
+    if dropped:
+        signal = dropped[-1]["event"].get("signal")
+        return (f"far end disconnected at {dropped[-1]['t']:.1f}s", f"none, torn down on {signal}",
+                len(denied))
     source = (completion or {}).get("hangup_source")
     if source == "callee":
         return "far end hung up first", "none, the agent dropped the call", len(denied)

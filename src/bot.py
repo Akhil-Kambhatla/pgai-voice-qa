@@ -1,4 +1,5 @@
 import asyncio
+import time
 
 from fastapi import WebSocket
 from loguru import logger
@@ -35,9 +36,19 @@ async def run_bot(websocket: WebSocket):
     recorder = EventRecorder(call_id)
     exit_tracker = ExitTracker(recorder)
     retry = HangupRetry(exit_tracker)
+    started = time.monotonic()
+    torn_down = {"signal": None}
+
+    async def end_on_far_end_loss(signal):
+        if torn_down["signal"]:
+            return
+        torn_down["signal"] = signal
+        exit_tracker.far_end_disconnected(signal, time.monotonic() - started)
+        await worker.cancel()
 
     serializer = RecordedTelnyxSerializer(
         recorder=recorder,
+        on_far_end_stop=lambda: end_on_far_end_loss("telnyx_stop"),
         stream_id=call_data["stream_id"],
         call_control_id=call_data["call_id"],
         outbound_encoding=call_data["outbound_encoding"],
@@ -126,9 +137,7 @@ async def run_bot(websocket: WebSocket):
 
     @transport.event_handler("on_client_disconnected")
     async def on_client_disconnected(transport, client):
-        logger.info("Telnyx media stream disconnected")
-        exit_tracker.stream_disconnected()
-        await worker.cancel()
+        await end_on_far_end_loss("websocket_closed")
 
     runner = WorkerRunner(handle_sigint=False)
     await runner.add_workers(worker)
