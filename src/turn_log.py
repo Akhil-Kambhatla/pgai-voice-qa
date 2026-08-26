@@ -4,12 +4,21 @@ import re
 import time
 
 from loguru import logger
-from pipecat.frames.frames import Frame, TranscriptionFrame, TTSStoppedFrame, TTSTextFrame
+from pipecat.frames.frames import (
+    Frame,
+    InterruptionWorkerFrame,
+    TranscriptionFrame,
+    TTSStoppedFrame,
+    TTSTextFrame,
+)
 from pipecat.processors.frame_processor import FrameDirection, FrameProcessor
 
 from src import config, oracle
 
 _GOODBYE_RE = re.compile(r"\b(good\s?-?\s?bye|bye+|bye\s?now)\b", re.IGNORECASE)
+_FAR_END_FAREWELL_RE = re.compile(
+    r"\b(good\s?-?\s?bye|bye[\s-]?bye|bye now|bye)\s*[.!?\"']*\s*$", re.IGNORECASE
+)
 
 
 def _content_words(text):
@@ -106,4 +115,26 @@ class GoodbyeWatcher(FrameProcessor):
                 logger.info(f"Goodbye backstop fired on {self._turn_text!r}; ending call")
                 await self.on_goodbye()
             self._turn_text = ""
+        await self.push_frame(frame, direction)
+
+
+class FarEndFarewellWatcher(FrameProcessor):
+    def __init__(self, recorder=None):
+        super().__init__()
+        self._recorder = recorder
+        self._fired = False
+
+    async def process_frame(self, frame: Frame, direction: FrameDirection):
+        await super().process_frame(frame, direction)
+        if isinstance(frame, TranscriptionFrame) and not self._fired:
+            heard = (frame.text or "").strip()
+            if _FAR_END_FAREWELL_RE.search(heard):
+                self._fired = True
+                if self._recorder:
+                    self._recorder.record(
+                        "lifecycle",
+                        {"type": "exit.far_end_farewell_truncated", "heard": heard[:140]},
+                    )
+                logger.info(f"far end said goodbye; truncating the reply: {heard!r}")
+                await self.push_frame(InterruptionWorkerFrame(), FrameDirection.UPSTREAM)
         await self.push_frame(frame, direction)
