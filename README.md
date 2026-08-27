@@ -6,7 +6,7 @@ sides, and reports defects in that agent's behaviour.
 
 The target is Pivot Point Orthopedics, a fictional demo clinic reachable at
 +1 805 439 8008. Thirteen graded calls were placed between 2026-08-20 and
-2026-08-23. Thirteen defects are written up in [BUGS.md](BUGS.md), three of them
+2026-08-27. Thirteen defects are written up in [BUGS.md](BUGS.md), three of them
 critical. Bugs we found in our *own* harness while building it are in
 [DEVLOG.md](DEVLOG.md), kept separate on purpose so the two are never confused.
 
