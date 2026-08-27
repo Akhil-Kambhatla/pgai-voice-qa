@@ -1,4 +1,4 @@
-# pgai — an autonomous voice QA agent
+# Autonomous Voice QA Agent
 
 This system places real phone calls to a company's patient-facing AI voice agent,
 holds a natural conversation with it as a patient, records and transcribes both
