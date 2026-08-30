@@ -1,0 +1,56 @@
+{
+  "call_id": "call-06",
+  "scenario_id": "01-after-hours-hours-check",
+  "axes": {
+    "intent": "hours",
+    "identity": "akhil",
+    "temporal": "after_hours",
+    "cooperation": "full",
+    "delivery": "trailing_off",
+    "register": "neutral",
+    "continuity": "fresh",
+    "curveball": "none"
+  },
+  "identity": "akhil",
+  "telnyx_sid": "v3:-VbWyHVRHgw7alJs3r0HfS1AQQ5Bo8byg2WyxCTKfH68Kd2nA4gg1w",
+  "to": "+17325939363",
+  "from": "+12078048142",
+  "placed_at": "2026-08-18T19:38:54.803882+00:00",
+  "status_events": [
+    {
+      "AccountSid": "cefd9136-3dd7-42eb-8685-3a4739851770",
+      "AnsweredTime": "2026-08-18T19:38:59.220933Z",
+      "CallControlId": "v3:-VbWyHVRHgw7alJs3r0HfS1AQQ5Bo8byg2WyxCTKfH68Kd2nA4gg1w",
+      "CallDuration": "58",
+      "CallLegId": "72c4e342-9b3c-11f1-b2a2-02420aef8da1",
+      "CallQualityStats": "{\"inbound\":{\"jitter_max_variance\":\"2.28\",\"jitter_packet_count\":\"0\",\"mos\":\"4.50\",\"packet_count\":\"2880\",\"skip_packet_count\":\"43\"},\"outbound\":{\"packet_count\":\"2886\",\"skip_packet_count\":\"0\"}}",
+      "CallSessionId": "72c15f74-9b3c-11f1-a0de-02420aef8da1",
+      "CallSid": "v3:-VbWyHVRHgw7alJs3r0HfS1AQQ5Bo8byg2WyxCTKfH68Kd2nA4gg1w",
+      "CallSidLegacy": "v3:-VbWyHVRHgw7alJs3r0HfS1AQQ5Bo8byg2WyxCTKfH68Kd2nA4gg1w",
+      "CallStatus": "completed",
+      "CallbackSource": "call-progress-events",
+      "ConnectionId": "3028585572957422853",
+      "EndTime": "2026-08-18T19:39:57.620929Z",
+      "From": "+12078048142",
+      "HangupCause": "normal_clearing",
+      "HangupSource": "callee",
+      "OccurredAt": "2026-08-18T19:39:57.620929Z",
+      "OrganizationId": "",
+      "SequenceNumber": "0",
+      "SipHangupCause": "200",
+      "SipHeader_P-Mav-Extension-Correlation-ID": "18a4ea8f5021d0eb",
+      "SipHeader_P-Visited-Network-ID": "ims.mnc260.mcc310.3gppnetwork.org",
+      "StartTime": "2026-08-18T19:38:59.220933Z",
+      "Timestamp": "2026-08-18 19:39:57.672165Z",
+      "To": "+17325939363",
+      "UserId": "cefd9136-3dd7-42eb-8685-3a4739851770",
+      "received_at": "2026-08-18T19:39:57.697418+00:00"
+    }
+  ],
+  "recording": {
+    "sid": "cdc6a42c-c43f-48af-a93e-995df079d862",
+    "start_time": "Tue, 18 Aug 2026 19:38:59 +0000",
+    "duration": 58,
+    "channels": 2
+  }
+}

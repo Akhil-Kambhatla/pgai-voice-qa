@@ -1,0 +1,12 @@
+[00:04] AGENT: Hello?
+[00:05] BOT: Hi.
+[00:06] BOT: Could you tell me your office hours, please?
+[00:09] BOT: Thanks so much. Goodbye.
+[00:17] AGENT: Hello?
+[00:18] BOT: Hello.
+[00:19] BOT: What are your office hours, please? Thank you. Goodbye.
+[00:24] AGENT: Goodbye.
+[00:25] BOT: Goodbye,
+[00:26] BOT: and thanks again for your help.
+[00:31] AGENT: Hello?
+[00:32] BOT: Hi there. Let me keep this quick and friendly for you. Hello. What are your office hours, please? Thank you. Goodbye.

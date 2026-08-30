@@ -1,0 +1,17 @@
+[00:00] AGENT: This call may be recorded for quality and training purposes.
+[00:04] AGENT: Thank
+[00:07] BOT: I press
+[00:07] AGENT: you for calling Pivot Point or
+[00:10] BOT: I need to
+[00:10] AGENT: how can I help you today?
+[00:12] BOT: I want
+[00:13] AGENT: Good.
+[00:15] BOT: I wanna cancel an appointment.
+[00:17] BOT: Can you find that one for me?
+[00:21] AGENT: I can help with that. Would you like to create a demo patient profile first? I just need your first and last name to get started.
+[00:29] BOT: I don't want to create a demo profile. I'm here to cancel an appointment. What details are needed to find my booking?
+[00:38] AGENT: No problem. To cancel an appointment, I do need a patient profile.
+[00:42] AGENT: If you prefer not to create one now, you can scan the QR code at the booth later to set up your profile and manage appointments.
+[00:50] AGENT: Let me know if you have any other questions,
+[00:52] AGENT: and have a great day.
+[00:55] BOT: I'm Akil Kambatla. Do you need my date

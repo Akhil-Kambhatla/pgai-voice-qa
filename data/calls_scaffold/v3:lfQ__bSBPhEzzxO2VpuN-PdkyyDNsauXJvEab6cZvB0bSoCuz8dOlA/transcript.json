@@ -1,0 +1,377 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "01a01187-4acc-76b0-b92f-79697bab0280",
+    "sha256": "f758474e9738bd439307683e67b224190f221d8cfb5c90c082449a24acfae70b",
+    "created": "2026-08-17 21:01:14.628000+00:00",
+    "duration": 15.855938,
+    "channels": 2,
+    "models": [
+      "2187e11a-3532-4498-b076-81fa530bdd49"
+    ],
+    "model_info": {
+      "2187e11a-3532-4498-b076-81fa530bdd49": {
+        "name": "general-nova-3",
+        "version": "2025-07-31.0",
+        "arch": "nova-3"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "Hi.",
+            "confidence": 0.86376953,
+            "words": [
+              {
+                "word": "hi",
+                "start": 8.48,
+                "end": 8.88,
+                "confidence": 0.86376953,
+                "punctuated_word": "Hi."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nHi.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "Hi.",
+                      "start": 8.48,
+                      "end": 8.88
+                    }
+                  ],
+                  "num_words": 1,
+                  "start": 8.48,
+                  "end": 8.88
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "transcript": "Hello. Could you tell me your office hours, please? Thanks so much. Goodbye.",
+            "confidence": 0.9995117,
+            "words": [
+              {
+                "word": "hello",
+                "start": 9.679999,
+                "end": 10.559999,
+                "confidence": 0.9099121,
+                "punctuated_word": "Hello."
+              },
+              {
+                "word": "could",
+                "start": 10.96,
+                "end": 11.2,
+                "confidence": 0.99902344,
+                "punctuated_word": "Could"
+              },
+              {
+                "word": "you",
+                "start": 11.2,
+                "end": 11.36,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "tell",
+                "start": 11.36,
+                "end": 11.5199995,
+                "confidence": 1.0,
+                "punctuated_word": "tell"
+              },
+              {
+                "word": "me",
+                "start": 11.5199995,
+                "end": 11.599999,
+                "confidence": 1.0,
+                "punctuated_word": "me"
+              },
+              {
+                "word": "your",
+                "start": 11.599999,
+                "end": 11.84,
+                "confidence": 1.0,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "office",
+                "start": 11.84,
+                "end": 12.08,
+                "confidence": 1.0,
+                "punctuated_word": "office"
+              },
+              {
+                "word": "hours",
+                "start": 12.08,
+                "end": 12.639999,
+                "confidence": 0.99902344,
+                "punctuated_word": "hours,"
+              },
+              {
+                "word": "please",
+                "start": 12.639999,
+                "end": 13.119999,
+                "confidence": 0.9995117,
+                "punctuated_word": "please?"
+              },
+              {
+                "word": "thanks",
+                "start": 13.599999,
+                "end": 14.0,
+                "confidence": 0.9892578,
+                "punctuated_word": "Thanks"
+              },
+              {
+                "word": "so",
+                "start": 14.0,
+                "end": 14.32,
+                "confidence": 0.99121094,
+                "punctuated_word": "so"
+              },
+              {
+                "word": "much",
+                "start": 14.32,
+                "end": 14.799999,
+                "confidence": 1.0,
+                "punctuated_word": "much."
+              },
+              {
+                "word": "goodbye",
+                "start": 14.799999,
+                "end": 15.12,
+                "confidence": 0.9951172,
+                "punctuated_word": "Goodbye."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nHello. Could you tell me your office hours, please? Thanks so much. Goodbye.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "Hello.",
+                      "start": 9.679999,
+                      "end": 10.559999
+                    },
+                    {
+                      "text": "Could you tell me your office hours, please?",
+                      "start": 10.96,
+                      "end": 13.119999
+                    },
+                    {
+                      "text": "Thanks so much.",
+                      "start": 13.599999,
+                      "end": 14.799999
+                    },
+                    {
+                      "text": "Goodbye.",
+                      "start": 14.799999,
+                      "end": 15.12
+                    }
+                  ],
+                  "num_words": 13,
+                  "start": 9.679999,
+                  "end": 15.12
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "utterances": [
+      {
+        "start": 8.48,
+        "end": 8.88,
+        "confidence": 0.86376953,
+        "channel": 0,
+        "transcript": "Hi.",
+        "words": [
+          {
+            "word": "hi",
+            "start": 8.48,
+            "end": 8.88,
+            "confidence": 0.86376953,
+            "punctuated_word": "Hi."
+          }
+        ],
+        "id": "41b24d92-c376-456a-8df1-03a0de4c013f"
+      },
+      {
+        "start": 9.679999,
+        "end": 10.559999,
+        "confidence": 0.9099121,
+        "channel": 1,
+        "transcript": "Hello.",
+        "words": [
+          {
+            "word": "hello",
+            "start": 9.679999,
+            "end": 10.559999,
+            "confidence": 0.9099121,
+            "punctuated_word": "Hello."
+          }
+        ],
+        "id": "ae4b00b6-3261-47af-b278-76b44175a426"
+      },
+      {
+        "start": 10.96,
+        "end": 13.119999,
+        "confidence": 0.9996948,
+        "channel": 1,
+        "transcript": "Could you tell me your office hours, please?",
+        "words": [
+          {
+            "word": "could",
+            "start": 10.96,
+            "end": 11.2,
+            "confidence": 0.99902344,
+            "punctuated_word": "Could"
+          },
+          {
+            "word": "you",
+            "start": 11.2,
+            "end": 11.36,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "tell",
+            "start": 11.36,
+            "end": 11.5199995,
+            "confidence": 1.0,
+            "punctuated_word": "tell"
+          },
+          {
+            "word": "me",
+            "start": 11.5199995,
+            "end": 11.599999,
+            "confidence": 1.0,
+            "punctuated_word": "me"
+          },
+          {
+            "word": "your",
+            "start": 11.599999,
+            "end": 11.84,
+            "confidence": 1.0,
+            "punctuated_word": "your"
+          },
+          {
+            "word": "office",
+            "start": 11.84,
+            "end": 12.08,
+            "confidence": 1.0,
+            "punctuated_word": "office"
+          },
+          {
+            "word": "hours",
+            "start": 12.08,
+            "end": 12.639999,
+            "confidence": 0.99902344,
+            "punctuated_word": "hours,"
+          },
+          {
+            "word": "please",
+            "start": 12.639999,
+            "end": 13.119999,
+            "confidence": 0.9995117,
+            "punctuated_word": "please?"
+          }
+        ],
+        "id": "c11eee3e-8e79-4c1c-8240-3ebd0e3cb1e4"
+      },
+      {
+        "start": 13.599999,
+        "end": 15.12,
+        "confidence": 0.9938965,
+        "channel": 1,
+        "transcript": "Thanks so much. Goodbye.",
+        "words": [
+          {
+            "word": "thanks",
+            "start": 13.599999,
+            "end": 14.0,
+            "confidence": 0.9892578,
+            "punctuated_word": "Thanks"
+          },
+          {
+            "word": "so",
+            "start": 14.0,
+            "end": 14.32,
+            "confidence": 0.99121094,
+            "punctuated_word": "so"
+          },
+          {
+            "word": "much",
+            "start": 14.32,
+            "end": 14.799999,
+            "confidence": 1.0,
+            "punctuated_word": "much."
+          },
+          {
+            "word": "goodbye",
+            "start": 14.799999,
+            "end": 15.12,
+            "confidence": 0.9951172,
+            "punctuated_word": "Goodbye."
+          }
+        ],
+        "id": "b43f68b2-56cf-47ae-b2ef-9270f9e5638d"
+      }
+    ],
+    "paragraphs": {
+      "transcript": "\nChannel 0: Hi.\n\nChannel 1: Hello. Could you tell me your office hours, please? Thanks so much. Goodbye.",
+      "paragraphs": [
+        {
+          "sentences": [
+            {
+              "text": "Hi.",
+              "start": 8.48,
+              "end": 8.88
+            }
+          ],
+          "channel": 0,
+          "num_words": 1,
+          "start": 8.48,
+          "end": 8.88
+        },
+        {
+          "sentences": [
+            {
+              "text": "Hello.",
+              "start": 9.679999,
+              "end": 10.559999
+            },
+            {
+              "text": "Could you tell me your office hours, please?",
+              "start": 10.96,
+              "end": 13.119999
+            },
+            {
+              "text": "Thanks so much.",
+              "start": 13.599999,
+              "end": 14.799999
+            },
+            {
+              "text": "Goodbye.",
+              "start": 14.799999,
+              "end": 15.12
+            }
+          ],
+          "channel": 1,
+          "num_words": 13,
+          "start": 9.679999,
+          "end": 15.12
+        }
+      ]
+    }
+  }
+}

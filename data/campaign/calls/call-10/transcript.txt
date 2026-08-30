@@ -1,0 +1,24 @@
+[00:00] AGENT: This call may be recorded for quality and training purposes.
+[00:03] AGENT: Thanks
+[00:06] AGENT: for calling Pivot Point Orthopedics,
+[00:09] AGENT: part of Pretty Good AI. How may I help you today?
+[00:15] BOT: I'm Dana Whitfield.
+[00:16] BOT: I called to confirm the time of an appointment. What's on file for me?
+[00:23] AGENT: Can you please provide your date of birth?
+[00:25] BOT: My date of birth is 03/14/1988.
+[00:33] AGENT: Just to confirm, I have your name as Dana Whitfield and your date of birth as 03/14/1988.
+[00:41] AGENT: Is that correct?
+[00:46] BOT: Yes. That's correct.
+[00:53] AGENT: Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Just let me know.
+[01:07] BOT: I don't have the phone number for you right now. If you can look it up another way, that would help. If not, I can get the date of birth again.
+[01:18] AGENT: No problem.
+[01:19] AGENT: Could you please spell out your first and last name for me and confirm your date of birth one more time?
+[01:27] BOT: Dana Whitfield.
+[01:29] BOT: Date of birth, 03/14/1988.
+[01:37] AGENT: Thanks for confirming.
+[01:39] AGENT: I still can't find your record in our system. I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to have them contact you?
+[01:51] BOT: Yes, please. It'd be great if the support team reaches out. I'd like to confirm they can find me or help get the record sorted.
+[02:04] AGENT: Transferring you now. Thank you.
+[02:07] AGENT: Hello. You've reached the Pretty Good AI test line. Goodbye.
+[02:12] BOT: Goodbye.
+[02:13] BOT: If you need anything else, you know where to reach me.

@@ -1,0 +1,2031 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "01a0157c-3fd2-74e3-a63c-b711f56db12a",
+    "sha256": "218cce8aac639897262ee0e225d45ce5db3e84bb2553d988befaf4d6afd44fa8",
+    "created": "2026-08-18 15:27:39.821000+00:00",
+    "duration": 53.69594,
+    "channels": 2,
+    "models": [
+      "2187e11a-3532-4498-b076-81fa530bdd49"
+    ],
+    "model_info": {
+      "2187e11a-3532-4498-b076-81fa530bdd49": {
+        "name": "general-nova-3",
+        "version": "2025-07-31.0",
+        "arch": "nova-3"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "Hi. This is Akhil's clinic. No. We're not open tonight. Our office timings are from 9AM to 5PM from Monday through Friday, and we are closed on the weekends. Yeah. Bye bye.",
+            "confidence": 0.9980469,
+            "words": [
+              {
+                "word": "hi",
+                "start": 2.24,
+                "end": 2.8799999,
+                "confidence": 0.99902344,
+                "punctuated_word": "Hi."
+              },
+              {
+                "word": "this",
+                "start": 2.96,
+                "end": 3.28,
+                "confidence": 1.0,
+                "punctuated_word": "This"
+              },
+              {
+                "word": "is",
+                "start": 3.28,
+                "end": 3.52,
+                "confidence": 0.9970703,
+                "punctuated_word": "is"
+              },
+              {
+                "word": "akhil's",
+                "start": 3.52,
+                "end": 4.08,
+                "confidence": 0.8934326,
+                "punctuated_word": "Akhil's"
+              },
+              {
+                "word": "clinic",
+                "start": 4.08,
+                "end": 4.48,
+                "confidence": 0.81762695,
+                "punctuated_word": "clinic."
+              },
+              {
+                "word": "no",
+                "start": 18.445,
+                "end": 18.845,
+                "confidence": 0.8083496,
+                "punctuated_word": "No."
+              },
+              {
+                "word": "we're",
+                "start": 18.845,
+                "end": 19.085,
+                "confidence": 0.9916992,
+                "punctuated_word": "We're"
+              },
+              {
+                "word": "not",
+                "start": 19.085,
+                "end": 19.244999,
+                "confidence": 1.0,
+                "punctuated_word": "not"
+              },
+              {
+                "word": "open",
+                "start": 19.244999,
+                "end": 19.565,
+                "confidence": 1.0,
+                "punctuated_word": "open"
+              },
+              {
+                "word": "tonight",
+                "start": 19.565,
+                "end": 20.045,
+                "confidence": 0.99853516,
+                "punctuated_word": "tonight."
+              },
+              {
+                "word": "our",
+                "start": 20.045,
+                "end": 20.285,
+                "confidence": 1.0,
+                "punctuated_word": "Our"
+              },
+              {
+                "word": "office",
+                "start": 20.285,
+                "end": 20.605,
+                "confidence": 1.0,
+                "punctuated_word": "office"
+              },
+              {
+                "word": "timings",
+                "start": 20.605,
+                "end": 21.085,
+                "confidence": 0.984375,
+                "punctuated_word": "timings"
+              },
+              {
+                "word": "are",
+                "start": 21.085,
+                "end": 21.485,
+                "confidence": 0.9970703,
+                "punctuated_word": "are"
+              },
+              {
+                "word": "from",
+                "start": 21.485,
+                "end": 22.205,
+                "confidence": 0.9980469,
+                "punctuated_word": "from"
+              },
+              {
+                "word": "9am",
+                "start": 22.205,
+                "end": 22.845001,
+                "confidence": 0.96118164,
+                "punctuated_word": "9AM"
+              },
+              {
+                "word": "to",
+                "start": 22.845001,
+                "end": 23.085,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "5pm",
+                "start": 23.085,
+                "end": 23.724998,
+                "confidence": 0.9995117,
+                "punctuated_word": "5PM"
+              },
+              {
+                "word": "from",
+                "start": 23.724998,
+                "end": 24.125,
+                "confidence": 0.92822266,
+                "punctuated_word": "from"
+              },
+              {
+                "word": "monday",
+                "start": 24.125,
+                "end": 24.445,
+                "confidence": 1.0,
+                "punctuated_word": "Monday"
+              },
+              {
+                "word": "through",
+                "start": 24.445,
+                "end": 24.845,
+                "confidence": 0.9902344,
+                "punctuated_word": "through"
+              },
+              {
+                "word": "friday",
+                "start": 24.845,
+                "end": 25.485,
+                "confidence": 0.9875488,
+                "punctuated_word": "Friday,"
+              },
+              {
+                "word": "and",
+                "start": 25.485,
+                "end": 25.564999,
+                "confidence": 1.0,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "we",
+                "start": 25.564999,
+                "end": 25.724998,
+                "confidence": 1.0,
+                "punctuated_word": "we"
+              },
+              {
+                "word": "are",
+                "start": 25.724998,
+                "end": 25.885,
+                "confidence": 0.984375,
+                "punctuated_word": "are"
+              },
+              {
+                "word": "closed",
+                "start": 25.885,
+                "end": 26.125,
+                "confidence": 0.9716797,
+                "punctuated_word": "closed"
+              },
+              {
+                "word": "on",
+                "start": 26.125,
+                "end": 26.365,
+                "confidence": 1.0,
+                "punctuated_word": "on"
+              },
+              {
+                "word": "the",
+                "start": 26.365,
+                "end": 26.445,
+                "confidence": 0.99902344,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "weekends",
+                "start": 26.445,
+                "end": 26.845,
+                "confidence": 0.9980469,
+                "punctuated_word": "weekends."
+              },
+              {
+                "word": "yeah",
+                "start": 43.984997,
+                "end": 44.785,
+                "confidence": 0.98950195,
+                "punctuated_word": "Yeah."
+              },
+              {
+                "word": "bye",
+                "start": 51.905,
+                "end": 52.225,
+                "confidence": 0.87597656,
+                "punctuated_word": "Bye"
+              },
+              {
+                "word": "bye",
+                "start": 52.225,
+                "end": 52.545,
+                "confidence": 0.86938477,
+                "punctuated_word": "bye."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nHi. This is Akhil's clinic. No. We're not open tonight. Our office timings are from 9AM to 5PM from Monday through Friday, and we are closed on the weekends.\n\nYeah. Bye bye.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "Hi.",
+                      "start": 2.24,
+                      "end": 2.8799999
+                    },
+                    {
+                      "text": "This is Akhil's clinic.",
+                      "start": 2.96,
+                      "end": 4.48
+                    },
+                    {
+                      "text": "No.",
+                      "start": 18.445,
+                      "end": 18.845
+                    },
+                    {
+                      "text": "We're not open tonight.",
+                      "start": 18.845,
+                      "end": 20.045
+                    },
+                    {
+                      "text": "Our office timings are from 9AM to 5PM from Monday through Friday, and we are closed on the weekends.",
+                      "start": 20.045,
+                      "end": 26.845
+                    }
+                  ],
+                  "num_words": 29,
+                  "start": 2.24,
+                  "end": 26.845
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "Yeah.",
+                      "start": 43.984997,
+                      "end": 44.785
+                    },
+                    {
+                      "text": "Bye bye.",
+                      "start": 51.905,
+                      "end": 52.545
+                    }
+                  ],
+                  "num_words": 3,
+                  "start": 43.984997,
+                  "end": 52.545
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "transcript": "Hi. Sorry. Are you this clinic, and are you still open right now? Thanks. Is this the clinic I'm calling? And are you still open tonight? Okay. Let me make sure I've got that clearly. I just need a moment to repeat what you said. Okay. So you're closed tonight. Your hours are Monday through Friday, 9AM to 5PM, and weekends are closed. Did I hear that right? Thanks so much. I'll call back tomorrow. Take care.",
+            "confidence": 1.0,
+            "words": [
+              {
+                "word": "hi",
+                "start": 6.3199997,
+                "end": 7.12,
+                "confidence": 0.9980469,
+                "punctuated_word": "Hi."
+              },
+              {
+                "word": "sorry",
+                "start": 7.52,
+                "end": 8.24,
+                "confidence": 0.99853516,
+                "punctuated_word": "Sorry."
+              },
+              {
+                "word": "are",
+                "start": 8.24,
+                "end": 8.48,
+                "confidence": 1.0,
+                "punctuated_word": "Are"
+              },
+              {
+                "word": "you",
+                "start": 8.48,
+                "end": 8.639999,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "this",
+                "start": 8.639999,
+                "end": 8.8,
+                "confidence": 0.9428711,
+                "punctuated_word": "this"
+              },
+              {
+                "word": "clinic",
+                "start": 8.8,
+                "end": 9.36,
+                "confidence": 0.87402344,
+                "punctuated_word": "clinic,"
+              },
+              {
+                "word": "and",
+                "start": 9.36,
+                "end": 9.44,
+                "confidence": 1.0,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "are",
+                "start": 9.44,
+                "end": 9.679999,
+                "confidence": 1.0,
+                "punctuated_word": "are"
+              },
+              {
+                "word": "you",
+                "start": 9.679999,
+                "end": 9.84,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "still",
+                "start": 9.84,
+                "end": 10.0,
+                "confidence": 1.0,
+                "punctuated_word": "still"
+              },
+              {
+                "word": "open",
+                "start": 10.0,
+                "end": 10.24,
+                "confidence": 1.0,
+                "punctuated_word": "open"
+              },
+              {
+                "word": "right",
+                "start": 10.24,
+                "end": 10.48,
+                "confidence": 1.0,
+                "punctuated_word": "right"
+              },
+              {
+                "word": "now",
+                "start": 10.48,
+                "end": 10.8,
+                "confidence": 0.9995117,
+                "punctuated_word": "now?"
+              },
+              {
+                "word": "thanks",
+                "start": 10.8,
+                "end": 11.5199995,
+                "confidence": 0.9995117,
+                "punctuated_word": "Thanks."
+              },
+              {
+                "word": "is",
+                "start": 11.679999,
+                "end": 12.0,
+                "confidence": 1.0,
+                "punctuated_word": "Is"
+              },
+              {
+                "word": "this",
+                "start": 12.0,
+                "end": 12.16,
+                "confidence": 1.0,
+                "punctuated_word": "this"
+              },
+              {
+                "word": "the",
+                "start": 12.16,
+                "end": 12.32,
+                "confidence": 0.9980469,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "clinic",
+                "start": 12.32,
+                "end": 12.639999,
+                "confidence": 1.0,
+                "punctuated_word": "clinic"
+              },
+              {
+                "word": "i'm",
+                "start": 12.639999,
+                "end": 12.96,
+                "confidence": 1.0,
+                "punctuated_word": "I'm"
+              },
+              {
+                "word": "calling",
+                "start": 12.96,
+                "end": 13.5199995,
+                "confidence": 0.84375,
+                "punctuated_word": "calling?"
+              },
+              {
+                "word": "and",
+                "start": 13.679999,
+                "end": 13.92,
+                "confidence": 1.0,
+                "punctuated_word": "And"
+              },
+              {
+                "word": "are",
+                "start": 13.92,
+                "end": 14.24,
+                "confidence": 1.0,
+                "punctuated_word": "are"
+              },
+              {
+                "word": "you",
+                "start": 14.24,
+                "end": 14.4,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "still",
+                "start": 14.4,
+                "end": 14.639999,
+                "confidence": 1.0,
+                "punctuated_word": "still"
+              },
+              {
+                "word": "open",
+                "start": 14.639999,
+                "end": 14.96,
+                "confidence": 1.0,
+                "punctuated_word": "open"
+              },
+              {
+                "word": "tonight",
+                "start": 14.96,
+                "end": 15.28,
+                "confidence": 0.99902344,
+                "punctuated_word": "tonight?"
+              },
+              {
+                "word": "okay",
+                "start": 27.695,
+                "end": 28.095,
+                "confidence": 1.0,
+                "punctuated_word": "Okay."
+              },
+              {
+                "word": "let",
+                "start": 28.48,
+                "end": 28.8,
+                "confidence": 1.0,
+                "punctuated_word": "Let"
+              },
+              {
+                "word": "me",
+                "start": 28.8,
+                "end": 28.96,
+                "confidence": 1.0,
+                "punctuated_word": "me"
+              },
+              {
+                "word": "make",
+                "start": 28.96,
+                "end": 29.119999,
+                "confidence": 1.0,
+                "punctuated_word": "make"
+              },
+              {
+                "word": "sure",
+                "start": 29.119999,
+                "end": 29.279999,
+                "confidence": 1.0,
+                "punctuated_word": "sure"
+              },
+              {
+                "word": "i've",
+                "start": 29.279999,
+                "end": 29.6,
+                "confidence": 0.9946289,
+                "punctuated_word": "I've"
+              },
+              {
+                "word": "got",
+                "start": 29.6,
+                "end": 29.76,
+                "confidence": 1.0,
+                "punctuated_word": "got"
+              },
+              {
+                "word": "that",
+                "start": 29.76,
+                "end": 29.92,
+                "confidence": 0.99902344,
+                "punctuated_word": "that"
+              },
+              {
+                "word": "clearly",
+                "start": 29.92,
+                "end": 30.64,
+                "confidence": 1.0,
+                "punctuated_word": "clearly."
+              },
+              {
+                "word": "i",
+                "start": 30.64,
+                "end": 30.88,
+                "confidence": 1.0,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "just",
+                "start": 30.88,
+                "end": 31.199999,
+                "confidence": 1.0,
+                "punctuated_word": "just"
+              },
+              {
+                "word": "need",
+                "start": 31.199999,
+                "end": 31.439999,
+                "confidence": 0.99902344,
+                "punctuated_word": "need"
+              },
+              {
+                "word": "a",
+                "start": 31.439999,
+                "end": 31.68,
+                "confidence": 1.0,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "moment",
+                "start": 31.68,
+                "end": 32.079998,
+                "confidence": 1.0,
+                "punctuated_word": "moment"
+              },
+              {
+                "word": "to",
+                "start": 32.079998,
+                "end": 32.4,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "repeat",
+                "start": 32.4,
+                "end": 32.64,
+                "confidence": 1.0,
+                "punctuated_word": "repeat"
+              },
+              {
+                "word": "what",
+                "start": 32.64,
+                "end": 32.88,
+                "confidence": 1.0,
+                "punctuated_word": "what"
+              },
+              {
+                "word": "you",
+                "start": 32.88,
+                "end": 32.96,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "said",
+                "start": 32.96,
+                "end": 33.52,
+                "confidence": 0.9995117,
+                "punctuated_word": "said."
+              },
+              {
+                "word": "okay",
+                "start": 34.64,
+                "end": 35.36,
+                "confidence": 0.9995117,
+                "punctuated_word": "Okay."
+              },
+              {
+                "word": "so",
+                "start": 35.36,
+                "end": 35.6,
+                "confidence": 1.0,
+                "punctuated_word": "So"
+              },
+              {
+                "word": "you're",
+                "start": 35.6,
+                "end": 35.84,
+                "confidence": 0.9980469,
+                "punctuated_word": "you're"
+              },
+              {
+                "word": "closed",
+                "start": 35.84,
+                "end": 36.079998,
+                "confidence": 0.94970703,
+                "punctuated_word": "closed"
+              },
+              {
+                "word": "tonight",
+                "start": 36.079998,
+                "end": 36.64,
+                "confidence": 0.97094727,
+                "punctuated_word": "tonight."
+              },
+              {
+                "word": "your",
+                "start": 36.64,
+                "end": 36.8,
+                "confidence": 1.0,
+                "punctuated_word": "Your"
+              },
+              {
+                "word": "hours",
+                "start": 36.8,
+                "end": 37.04,
+                "confidence": 1.0,
+                "punctuated_word": "hours"
+              },
+              {
+                "word": "are",
+                "start": 37.04,
+                "end": 37.2,
+                "confidence": 1.0,
+                "punctuated_word": "are"
+              },
+              {
+                "word": "monday",
+                "start": 37.2,
+                "end": 37.44,
+                "confidence": 0.9970703,
+                "punctuated_word": "Monday"
+              },
+              {
+                "word": "through",
+                "start": 37.44,
+                "end": 37.68,
+                "confidence": 0.97314453,
+                "punctuated_word": "through"
+              },
+              {
+                "word": "friday",
+                "start": 37.68,
+                "end": 38.239998,
+                "confidence": 0.9707031,
+                "punctuated_word": "Friday,"
+              },
+              {
+                "word": "9am",
+                "start": 38.239998,
+                "end": 38.72,
+                "confidence": 1.0,
+                "punctuated_word": "9AM"
+              },
+              {
+                "word": "to",
+                "start": 38.72,
+                "end": 38.96,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "5pm",
+                "start": 38.96,
+                "end": 39.76,
+                "confidence": 0.9935303,
+                "punctuated_word": "5PM,"
+              },
+              {
+                "word": "and",
+                "start": 39.76,
+                "end": 39.92,
+                "confidence": 1.0,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "weekends",
+                "start": 39.92,
+                "end": 40.32,
+                "confidence": 0.99902344,
+                "punctuated_word": "weekends"
+              },
+              {
+                "word": "are",
+                "start": 40.32,
+                "end": 40.559998,
+                "confidence": 1.0,
+                "punctuated_word": "are"
+              },
+              {
+                "word": "closed",
+                "start": 40.559998,
+                "end": 41.04,
+                "confidence": 1.0,
+                "punctuated_word": "closed."
+              },
+              {
+                "word": "did",
+                "start": 41.04,
+                "end": 41.36,
+                "confidence": 0.99902344,
+                "punctuated_word": "Did"
+              },
+              {
+                "word": "i",
+                "start": 41.36,
+                "end": 41.44,
+                "confidence": 1.0,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "hear",
+                "start": 41.44,
+                "end": 41.6,
+                "confidence": 0.9970703,
+                "punctuated_word": "hear"
+              },
+              {
+                "word": "that",
+                "start": 41.6,
+                "end": 41.68,
+                "confidence": 1.0,
+                "punctuated_word": "that"
+              },
+              {
+                "word": "right",
+                "start": 41.68,
+                "end": 41.92,
+                "confidence": 0.93408203,
+                "punctuated_word": "right?"
+              },
+              {
+                "word": "thanks",
+                "start": 45.635002,
+                "end": 45.955,
+                "confidence": 0.92578125,
+                "punctuated_word": "Thanks"
+              },
+              {
+                "word": "so",
+                "start": 45.955,
+                "end": 46.195,
+                "confidence": 0.99902344,
+                "punctuated_word": "so"
+              },
+              {
+                "word": "much",
+                "start": 46.195,
+                "end": 46.675003,
+                "confidence": 1.0,
+                "punctuated_word": "much."
+              },
+              {
+                "word": "i'll",
+                "start": 46.675003,
+                "end": 46.995003,
+                "confidence": 1.0,
+                "punctuated_word": "I'll"
+              },
+              {
+                "word": "call",
+                "start": 46.995003,
+                "end": 47.155003,
+                "confidence": 0.99121094,
+                "punctuated_word": "call"
+              },
+              {
+                "word": "back",
+                "start": 47.155003,
+                "end": 47.315002,
+                "confidence": 1.0,
+                "punctuated_word": "back"
+              },
+              {
+                "word": "tomorrow",
+                "start": 47.315002,
+                "end": 47.955,
+                "confidence": 1.0,
+                "punctuated_word": "tomorrow."
+              },
+              {
+                "word": "take",
+                "start": 47.955,
+                "end": 48.195,
+                "confidence": 1.0,
+                "punctuated_word": "Take"
+              },
+              {
+                "word": "care",
+                "start": 48.195,
+                "end": 48.435,
+                "confidence": 1.0,
+                "punctuated_word": "care."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nHi. Sorry. Are you this clinic, and are you still open right now? Thanks. Is this the clinic I'm calling?\n\nAnd are you still open tonight? Okay. Let me make sure I've got that clearly. I just need a moment to repeat what you said. Okay.\n\nSo you're closed tonight. Your hours are Monday through Friday, 9AM to 5PM, and weekends are closed. Did I hear that right? Thanks so much. I'll call back tomorrow.\n\nTake care.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "Hi.",
+                      "start": 6.3199997,
+                      "end": 7.12
+                    },
+                    {
+                      "text": "Sorry.",
+                      "start": 7.52,
+                      "end": 8.24
+                    },
+                    {
+                      "text": "Are you this clinic, and are you still open right now?",
+                      "start": 8.24,
+                      "end": 10.8
+                    },
+                    {
+                      "text": "Thanks.",
+                      "start": 10.8,
+                      "end": 11.5199995
+                    },
+                    {
+                      "text": "Is this the clinic I'm calling?",
+                      "start": 11.679999,
+                      "end": 13.5199995
+                    }
+                  ],
+                  "num_words": 20,
+                  "start": 6.3199997,
+                  "end": 13.5199995
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "And are you still open tonight?",
+                      "start": 13.679999,
+                      "end": 15.28
+                    },
+                    {
+                      "text": "Okay.",
+                      "start": 27.695,
+                      "end": 28.095
+                    },
+                    {
+                      "text": "Let me make sure I've got that clearly.",
+                      "start": 28.48,
+                      "end": 30.64
+                    },
+                    {
+                      "text": "I just need a moment to repeat what you said.",
+                      "start": 30.64,
+                      "end": 33.52
+                    },
+                    {
+                      "text": "Okay.",
+                      "start": 34.64,
+                      "end": 35.36
+                    }
+                  ],
+                  "num_words": 26,
+                  "start": 13.679999,
+                  "end": 35.36
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "So you're closed tonight.",
+                      "start": 35.36,
+                      "end": 36.64
+                    },
+                    {
+                      "text": "Your hours are Monday through Friday, 9AM to 5PM, and weekends are closed.",
+                      "start": 36.64,
+                      "end": 41.04
+                    },
+                    {
+                      "text": "Did I hear that right?",
+                      "start": 41.04,
+                      "end": 41.92
+                    },
+                    {
+                      "text": "Thanks so much.",
+                      "start": 45.635002,
+                      "end": 46.675003
+                    },
+                    {
+                      "text": "I'll call back tomorrow.",
+                      "start": 46.675003,
+                      "end": 47.955
+                    }
+                  ],
+                  "num_words": 29,
+                  "start": 35.36,
+                  "end": 47.955
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "Take care.",
+                      "start": 47.955,
+                      "end": 48.435
+                    }
+                  ],
+                  "num_words": 2,
+                  "start": 47.955,
+                  "end": 48.435
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "utterances": [
+      {
+        "start": 2.24,
+        "end": 4.48,
+        "confidence": 0.9414307,
+        "channel": 0,
+        "transcript": "Hi. This is Akhil's clinic.",
+        "words": [
+          {
+            "word": "hi",
+            "start": 2.24,
+            "end": 2.8799999,
+            "confidence": 0.99902344,
+            "punctuated_word": "Hi."
+          },
+          {
+            "word": "this",
+            "start": 2.96,
+            "end": 3.28,
+            "confidence": 1.0,
+            "punctuated_word": "This"
+          },
+          {
+            "word": "is",
+            "start": 3.28,
+            "end": 3.52,
+            "confidence": 0.9970703,
+            "punctuated_word": "is"
+          },
+          {
+            "word": "akhil's",
+            "start": 3.52,
+            "end": 4.08,
+            "confidence": 0.8934326,
+            "punctuated_word": "Akhil's"
+          },
+          {
+            "word": "clinic",
+            "start": 4.08,
+            "end": 4.48,
+            "confidence": 0.81762695,
+            "punctuated_word": "clinic."
+          }
+        ],
+        "id": "33e283bb-7d9d-47b0-9fac-aa0df8cad3b2"
+      },
+      {
+        "start": 6.3199997,
+        "end": 7.12,
+        "confidence": 0.9980469,
+        "channel": 1,
+        "transcript": "Hi.",
+        "words": [
+          {
+            "word": "hi",
+            "start": 6.3199997,
+            "end": 7.12,
+            "confidence": 0.9980469,
+            "punctuated_word": "Hi."
+          }
+        ],
+        "id": "0e137ac5-7288-44ea-acbd-ecb01d0e6ed9"
+      },
+      {
+        "start": 7.52,
+        "end": 11.5199995,
+        "confidence": 0.9857272,
+        "channel": 1,
+        "transcript": "Sorry. Are you this clinic, and are you still open right now? Thanks.",
+        "words": [
+          {
+            "word": "sorry",
+            "start": 7.52,
+            "end": 8.24,
+            "confidence": 0.99853516,
+            "punctuated_word": "Sorry."
+          },
+          {
+            "word": "are",
+            "start": 8.24,
+            "end": 8.48,
+            "confidence": 1.0,
+            "punctuated_word": "Are"
+          },
+          {
+            "word": "you",
+            "start": 8.48,
+            "end": 8.639999,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "this",
+            "start": 8.639999,
+            "end": 8.8,
+            "confidence": 0.9428711,
+            "punctuated_word": "this"
+          },
+          {
+            "word": "clinic",
+            "start": 8.8,
+            "end": 9.36,
+            "confidence": 0.87402344,
+            "punctuated_word": "clinic,"
+          },
+          {
+            "word": "and",
+            "start": 9.36,
+            "end": 9.44,
+            "confidence": 1.0,
+            "punctuated_word": "and"
+          },
+          {
+            "word": "are",
+            "start": 9.44,
+            "end": 9.679999,
+            "confidence": 1.0,
+            "punctuated_word": "are"
+          },
+          {
+            "word": "you",
+            "start": 9.679999,
+            "end": 9.84,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "still",
+            "start": 9.84,
+            "end": 10.0,
+            "confidence": 1.0,
+            "punctuated_word": "still"
+          },
+          {
+            "word": "open",
+            "start": 10.0,
+            "end": 10.24,
+            "confidence": 1.0,
+            "punctuated_word": "open"
+          },
+          {
+            "word": "right",
+            "start": 10.24,
+            "end": 10.48,
+            "confidence": 1.0,
+            "punctuated_word": "right"
+          },
+          {
+            "word": "now",
+            "start": 10.48,
+            "end": 10.8,
+            "confidence": 0.9995117,
+            "punctuated_word": "now?"
+          },
+          {
+            "word": "thanks",
+            "start": 10.8,
+            "end": 11.5199995,
+            "confidence": 0.9995117,
+            "punctuated_word": "Thanks."
+          }
+        ],
+        "id": "41902c4d-01ed-4d8b-a7f7-ad0ff2b64bfa"
+      },
+      {
+        "start": 11.679999,
+        "end": 15.28,
+        "confidence": 0.98673505,
+        "channel": 1,
+        "transcript": "Is this the clinic I'm calling? And are you still open tonight?",
+        "words": [
+          {
+            "word": "is",
+            "start": 11.679999,
+            "end": 12.0,
+            "confidence": 1.0,
+            "punctuated_word": "Is"
+          },
+          {
+            "word": "this",
+            "start": 12.0,
+            "end": 12.16,
+            "confidence": 1.0,
+            "punctuated_word": "this"
+          },
+          {
+            "word": "the",
+            "start": 12.16,
+            "end": 12.32,
+            "confidence": 0.9980469,
+            "punctuated_word": "the"
+          },
+          {
+            "word": "clinic",
+            "start": 12.32,
+            "end": 12.639999,
+            "confidence": 1.0,
+            "punctuated_word": "clinic"
+          },
+          {
+            "word": "i'm",
+            "start": 12.639999,
+            "end": 12.96,
+            "confidence": 1.0,
+            "punctuated_word": "I'm"
+          },
+          {
+            "word": "calling",
+            "start": 12.96,
+            "end": 13.5199995,
+            "confidence": 0.84375,
+            "punctuated_word": "calling?"
+          },
+          {
+            "word": "and",
+            "start": 13.679999,
+            "end": 13.92,
+            "confidence": 1.0,
+            "punctuated_word": "And"
+          },
+          {
+            "word": "are",
+            "start": 13.92,
+            "end": 14.24,
+            "confidence": 1.0,
+            "punctuated_word": "are"
+          },
+          {
+            "word": "you",
+            "start": 14.24,
+            "end": 14.4,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "still",
+            "start": 14.4,
+            "end": 14.639999,
+            "confidence": 1.0,
+            "punctuated_word": "still"
+          },
+          {
+            "word": "open",
+            "start": 14.639999,
+            "end": 14.96,
+            "confidence": 1.0,
+            "punctuated_word": "open"
+          },
+          {
+            "word": "tonight",
+            "start": 14.96,
+            "end": 15.28,
+            "confidence": 0.99902344,
+            "punctuated_word": "tonight?"
+          }
+        ],
+        "id": "e38b752f-1d7d-4213-aaef-b7a6e533b3c3"
+      },
+      {
+        "start": 18.445,
+        "end": 26.845,
+        "confidence": 0.98324585,
+        "channel": 0,
+        "transcript": "No. We're not open tonight. Our office timings are from 9AM to 5PM from Monday through Friday, and we are closed on the weekends.",
+        "words": [
+          {
+            "word": "no",
+            "start": 18.445,
+            "end": 18.845,
+            "confidence": 0.8083496,
+            "punctuated_word": "No."
+          },
+          {
+            "word": "we're",
+            "start": 18.845,
+            "end": 19.085,
+            "confidence": 0.9916992,
+            "punctuated_word": "We're"
+          },
+          {
+            "word": "not",
+            "start": 19.085,
+            "end": 19.244999,
+            "confidence": 1.0,
+            "punctuated_word": "not"
+          },
+          {
+            "word": "open",
+            "start": 19.244999,
+            "end": 19.565,
+            "confidence": 1.0,
+            "punctuated_word": "open"
+          },
+          {
+            "word": "tonight",
+            "start": 19.565,
+            "end": 20.045,
+            "confidence": 0.99853516,
+            "punctuated_word": "tonight."
+          },
+          {
+            "word": "our",
+            "start": 20.045,
+            "end": 20.285,
+            "confidence": 1.0,
+            "punctuated_word": "Our"
+          },
+          {
+            "word": "office",
+            "start": 20.285,
+            "end": 20.605,
+            "confidence": 1.0,
+            "punctuated_word": "office"
+          },
+          {
+            "word": "timings",
+            "start": 20.605,
+            "end": 21.085,
+            "confidence": 0.984375,
+            "punctuated_word": "timings"
+          },
+          {
+            "word": "are",
+            "start": 21.085,
+            "end": 21.485,
+            "confidence": 0.9970703,
+            "punctuated_word": "are"
+          },
+          {
+            "word": "from",
+            "start": 21.485,
+            "end": 22.205,
+            "confidence": 0.9980469,
+            "punctuated_word": "from"
+          },
+          {
+            "word": "9am",
+            "start": 22.205,
+            "end": 22.845001,
+            "confidence": 0.96118164,
+            "punctuated_word": "9AM"
+          },
+          {
+            "word": "to",
+            "start": 22.845001,
+            "end": 23.085,
+            "confidence": 1.0,
+            "punctuated_word": "to"
+          },
+          {
+            "word": "5pm",
+            "start": 23.085,
+            "end": 23.724998,
+            "confidence": 0.9995117,
+            "punctuated_word": "5PM"
+          },
+          {
+            "word": "from",
+            "start": 23.724998,
+            "end": 24.125,
+            "confidence": 0.92822266,
+            "punctuated_word": "from"
+          },
+          {
+            "word": "monday",
+            "start": 24.125,
+            "end": 24.445,
+            "confidence": 1.0,
+            "punctuated_word": "Monday"
+          },
+          {
+            "word": "through",
+            "start": 24.445,
+            "end": 24.845,
+            "confidence": 0.9902344,
+            "punctuated_word": "through"
+          },
+          {
+            "word": "friday",
+            "start": 24.845,
+            "end": 25.485,
+            "confidence": 0.9875488,
+            "punctuated_word": "Friday,"
+          },
+          {
+            "word": "and",
+            "start": 25.485,
+            "end": 25.564999,
+            "confidence": 1.0,
+            "punctuated_word": "and"
+          },
+          {
+            "word": "we",
+            "start": 25.564999,
+            "end": 25.724998,
+            "confidence": 1.0,
+            "punctuated_word": "we"
+          },
+          {
+            "word": "are",
+            "start": 25.724998,
+            "end": 25.885,
+            "confidence": 0.984375,
+            "punctuated_word": "are"
+          },
+          {
+            "word": "closed",
+            "start": 25.885,
+            "end": 26.125,
+            "confidence": 0.9716797,
+            "punctuated_word": "closed"
+          },
+          {
+            "word": "on",
+            "start": 26.125,
+            "end": 26.365,
+            "confidence": 1.0,
+            "punctuated_word": "on"
+          },
+          {
+            "word": "the",
+            "start": 26.365,
+            "end": 26.445,
+            "confidence": 0.99902344,
+            "punctuated_word": "the"
+          },
+          {
+            "word": "weekends",
+            "start": 26.445,
+            "end": 26.845,
+            "confidence": 0.9980469,
+            "punctuated_word": "weekends."
+          }
+        ],
+        "id": "5af632ce-37ce-4daf-a004-972dc233dd41"
+      },
+      {
+        "start": 27.695,
+        "end": 33.52,
+        "confidence": 0.9995888,
+        "channel": 1,
+        "transcript": "Okay. Let me make sure I've got that clearly. I just need a moment to repeat what you said.",
+        "words": [
+          {
+            "word": "okay",
+            "start": 27.695,
+            "end": 28.095,
+            "confidence": 1.0,
+            "punctuated_word": "Okay."
+          },
+          {
+            "word": "let",
+            "start": 28.48,
+            "end": 28.8,
+            "confidence": 1.0,
+            "punctuated_word": "Let"
+          },
+          {
+            "word": "me",
+            "start": 28.8,
+            "end": 28.96,
+            "confidence": 1.0,
+            "punctuated_word": "me"
+          },
+          {
+            "word": "make",
+            "start": 28.96,
+            "end": 29.119999,
+            "confidence": 1.0,
+            "punctuated_word": "make"
+          },
+          {
+            "word": "sure",
+            "start": 29.119999,
+            "end": 29.279999,
+            "confidence": 1.0,
+            "punctuated_word": "sure"
+          },
+          {
+            "word": "i've",
+            "start": 29.279999,
+            "end": 29.6,
+            "confidence": 0.9946289,
+            "punctuated_word": "I've"
+          },
+          {
+            "word": "got",
+            "start": 29.6,
+            "end": 29.76,
+            "confidence": 1.0,
+            "punctuated_word": "got"
+          },
+          {
+            "word": "that",
+            "start": 29.76,
+            "end": 29.92,
+            "confidence": 0.99902344,
+            "punctuated_word": "that"
+          },
+          {
+            "word": "clearly",
+            "start": 29.92,
+            "end": 30.64,
+            "confidence": 1.0,
+            "punctuated_word": "clearly."
+          },
+          {
+            "word": "i",
+            "start": 30.64,
+            "end": 30.88,
+            "confidence": 1.0,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "just",
+            "start": 30.88,
+            "end": 31.199999,
+            "confidence": 1.0,
+            "punctuated_word": "just"
+          },
+          {
+            "word": "need",
+            "start": 31.199999,
+            "end": 31.439999,
+            "confidence": 0.99902344,
+            "punctuated_word": "need"
+          },
+          {
+            "word": "a",
+            "start": 31.439999,
+            "end": 31.68,
+            "confidence": 1.0,
+            "punctuated_word": "a"
+          },
+          {
+            "word": "moment",
+            "start": 31.68,
+            "end": 32.079998,
+            "confidence": 1.0,
+            "punctuated_word": "moment"
+          },
+          {
+            "word": "to",
+            "start": 32.079998,
+            "end": 32.4,
+            "confidence": 1.0,
+            "punctuated_word": "to"
+          },
+          {
+            "word": "repeat",
+            "start": 32.4,
+            "end": 32.64,
+            "confidence": 1.0,
+            "punctuated_word": "repeat"
+          },
+          {
+            "word": "what",
+            "start": 32.64,
+            "end": 32.88,
+            "confidence": 1.0,
+            "punctuated_word": "what"
+          },
+          {
+            "word": "you",
+            "start": 32.88,
+            "end": 32.96,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "said",
+            "start": 32.96,
+            "end": 33.52,
+            "confidence": 0.9995117,
+            "punctuated_word": "said."
+          }
+        ],
+        "id": "7df93803-1c61-4ff9-9e20-9c949eb8c89b"
+      },
+      {
+        "start": 34.64,
+        "end": 41.92,
+        "confidence": 0.99051565,
+        "channel": 1,
+        "transcript": "Okay. So you're closed tonight. Your hours are Monday through Friday, 9AM to 5PM, and weekends are closed. Did I hear that right?",
+        "words": [
+          {
+            "word": "okay",
+            "start": 34.64,
+            "end": 35.36,
+            "confidence": 0.9995117,
+            "punctuated_word": "Okay."
+          },
+          {
+            "word": "so",
+            "start": 35.36,
+            "end": 35.6,
+            "confidence": 1.0,
+            "punctuated_word": "So"
+          },
+          {
+            "word": "you're",
+            "start": 35.6,
+            "end": 35.84,
+            "confidence": 0.9980469,
+            "punctuated_word": "you're"
+          },
+          {
+            "word": "closed",
+            "start": 35.84,
+            "end": 36.079998,
+            "confidence": 0.94970703,
+            "punctuated_word": "closed"
+          },
+          {
+            "word": "tonight",
+            "start": 36.079998,
+            "end": 36.64,
+            "confidence": 0.97094727,
+            "punctuated_word": "tonight."
+          },
+          {
+            "word": "your",
+            "start": 36.64,
+            "end": 36.8,
+            "confidence": 1.0,
+            "punctuated_word": "Your"
+          },
+          {
+            "word": "hours",
+            "start": 36.8,
+            "end": 37.04,
+            "confidence": 1.0,
+            "punctuated_word": "hours"
+          },
+          {
+            "word": "are",
+            "start": 37.04,
+            "end": 37.2,
+            "confidence": 1.0,
+            "punctuated_word": "are"
+          },
+          {
+            "word": "monday",
+            "start": 37.2,
+            "end": 37.44,
+            "confidence": 0.9970703,
+            "punctuated_word": "Monday"
+          },
+          {
+            "word": "through",
+            "start": 37.44,
+            "end": 37.68,
+            "confidence": 0.97314453,
+            "punctuated_word": "through"
+          },
+          {
+            "word": "friday",
+            "start": 37.68,
+            "end": 38.239998,
+            "confidence": 0.9707031,
+            "punctuated_word": "Friday,"
+          },
+          {
+            "word": "9am",
+            "start": 38.239998,
+            "end": 38.72,
+            "confidence": 1.0,
+            "punctuated_word": "9AM"
+          },
+          {
+            "word": "to",
+            "start": 38.72,
+            "end": 38.96,
+            "confidence": 1.0,
+            "punctuated_word": "to"
+          },
+          {
+            "word": "5pm",
+            "start": 38.96,
+            "end": 39.76,
+            "confidence": 0.9935303,
+            "punctuated_word": "5PM,"
+          },
+          {
+            "word": "and",
+            "start": 39.76,
+            "end": 39.92,
+            "confidence": 1.0,
+            "punctuated_word": "and"
+          },
+          {
+            "word": "weekends",
+            "start": 39.92,
+            "end": 40.32,
+            "confidence": 0.99902344,
+            "punctuated_word": "weekends"
+          },
+          {
+            "word": "are",
+            "start": 40.32,
+            "end": 40.559998,
+            "confidence": 1.0,
+            "punctuated_word": "are"
+          },
+          {
+            "word": "closed",
+            "start": 40.559998,
+            "end": 41.04,
+            "confidence": 1.0,
+            "punctuated_word": "closed."
+          },
+          {
+            "word": "did",
+            "start": 41.04,
+            "end": 41.36,
+            "confidence": 0.99902344,
+            "punctuated_word": "Did"
+          },
+          {
+            "word": "i",
+            "start": 41.36,
+            "end": 41.44,
+            "confidence": 1.0,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "hear",
+            "start": 41.44,
+            "end": 41.6,
+            "confidence": 0.9970703,
+            "punctuated_word": "hear"
+          },
+          {
+            "word": "that",
+            "start": 41.6,
+            "end": 41.68,
+            "confidence": 1.0,
+            "punctuated_word": "that"
+          },
+          {
+            "word": "right",
+            "start": 41.68,
+            "end": 41.92,
+            "confidence": 0.93408203,
+            "punctuated_word": "right?"
+          }
+        ],
+        "id": "bb40ba4d-1891-4f13-b1c3-5d24ee7fd47a"
+      },
+      {
+        "start": 43.984997,
+        "end": 44.785,
+        "confidence": 0.98950195,
+        "channel": 0,
+        "transcript": "Yeah.",
+        "words": [
+          {
+            "word": "yeah",
+            "start": 43.984997,
+            "end": 44.785,
+            "confidence": 0.98950195,
+            "punctuated_word": "Yeah."
+          }
+        ],
+        "id": "87f6b296-c330-4f30-91c0-b48d3e233d2f"
+      },
+      {
+        "start": 45.635002,
+        "end": 48.435,
+        "confidence": 0.9906684,
+        "channel": 1,
+        "transcript": "Thanks so much. I'll call back tomorrow. Take care.",
+        "words": [
+          {
+            "word": "thanks",
+            "start": 45.635002,
+            "end": 45.955,
+            "confidence": 0.92578125,
+            "punctuated_word": "Thanks"
+          },
+          {
+            "word": "so",
+            "start": 45.955,
+            "end": 46.195,
+            "confidence": 0.99902344,
+            "punctuated_word": "so"
+          },
+          {
+            "word": "much",
+            "start": 46.195,
+            "end": 46.675003,
+            "confidence": 1.0,
+            "punctuated_word": "much."
+          },
+          {
+            "word": "i'll",
+            "start": 46.675003,
+            "end": 46.995003,
+            "confidence": 1.0,
+            "punctuated_word": "I'll"
+          },
+          {
+            "word": "call",
+            "start": 46.995003,
+            "end": 47.155003,
+            "confidence": 0.99121094,
+            "punctuated_word": "call"
+          },
+          {
+            "word": "back",
+            "start": 47.155003,
+            "end": 47.315002,
+            "confidence": 1.0,
+            "punctuated_word": "back"
+          },
+          {
+            "word": "tomorrow",
+            "start": 47.315002,
+            "end": 47.955,
+            "confidence": 1.0,
+            "punctuated_word": "tomorrow."
+          },
+          {
+            "word": "take",
+            "start": 47.955,
+            "end": 48.195,
+            "confidence": 1.0,
+            "punctuated_word": "Take"
+          },
+          {
+            "word": "care",
+            "start": 48.195,
+            "end": 48.435,
+            "confidence": 1.0,
+            "punctuated_word": "care."
+          }
+        ],
+        "id": "f4e03a1e-845f-4304-b876-f2199fdbb329"
+      },
+      {
+        "start": 51.905,
+        "end": 52.545,
+        "confidence": 0.87268066,
+        "channel": 0,
+        "transcript": "Bye bye.",
+        "words": [
+          {
+            "word": "bye",
+            "start": 51.905,
+            "end": 52.225,
+            "confidence": 0.87597656,
+            "punctuated_word": "Bye"
+          },
+          {
+            "word": "bye",
+            "start": 52.225,
+            "end": 52.545,
+            "confidence": 0.86938477,
+            "punctuated_word": "bye."
+          }
+        ],
+        "id": "fd76fd7d-fe25-4683-bbd8-da1d4b7c4baf"
+      }
+    ],
+    "paragraphs": {
+      "transcript": "\nChannel 0: Hi. This is Akhil's clinic.\n\nChannel 1: Hi. Sorry. Are you this clinic, and are you still open right now? Thanks. Is this the clinic I'm calling?\n\nAnd are you still open tonight?\n\nChannel 0: No. We're not open tonight. Our office timings are from 9AM to 5PM from Monday through Friday, and we are closed on the weekends.\n\nChannel 1: Okay. Let me make sure I've got that clearly. I just need a moment to repeat what you said. Okay. So you're closed tonight.\n\nYour hours are Monday through Friday, 9AM to 5PM, and weekends are closed. Did I hear that right?\n\nChannel 0: Yeah.\n\nChannel 1: Thanks so much. I'll call back tomorrow. Take care.\n\nChannel 0: Bye bye.",
+      "paragraphs": [
+        {
+          "sentences": [
+            {
+              "text": "Hi.",
+              "start": 2.24,
+              "end": 2.8799999
+            },
+            {
+              "text": "This is Akhil's clinic.",
+              "start": 2.96,
+              "end": 4.48
+            }
+          ],
+          "channel": 0,
+          "num_words": 5,
+          "start": 2.24,
+          "end": 4.48
+        },
+        {
+          "sentences": [
+            {
+              "text": "Hi.",
+              "start": 6.3199997,
+              "end": 7.12
+            },
+            {
+              "text": "Sorry.",
+              "start": 7.52,
+              "end": 8.24
+            },
+            {
+              "text": "Are you this clinic, and are you still open right now?",
+              "start": 8.24,
+              "end": 10.8
+            },
+            {
+              "text": "Thanks.",
+              "start": 10.8,
+              "end": 11.5199995
+            },
+            {
+              "text": "Is this the clinic I'm calling?",
+              "start": 11.679999,
+              "end": 13.5199995
+            }
+          ],
+          "channel": 1,
+          "num_words": 20,
+          "start": 6.3199997,
+          "end": 13.5199995
+        },
+        {
+          "sentences": [
+            {
+              "text": "And are you still open tonight?",
+              "start": 13.679999,
+              "end": 15.28
+            }
+          ],
+          "channel": 1,
+          "num_words": 6,
+          "start": 13.679999,
+          "end": 15.28
+        },
+        {
+          "sentences": [
+            {
+              "text": "No.",
+              "start": 18.445,
+              "end": 18.845
+            },
+            {
+              "text": "We're not open tonight.",
+              "start": 18.845,
+              "end": 20.045
+            },
+            {
+              "text": "Our office timings are from 9AM to 5PM from Monday through Friday, and we are closed on the weekends.",
+              "start": 20.045,
+              "end": 26.845
+            }
+          ],
+          "channel": 0,
+          "num_words": 24,
+          "start": 18.445,
+          "end": 26.845
+        },
+        {
+          "sentences": [
+            {
+              "text": "Okay.",
+              "start": 27.695,
+              "end": 28.095
+            },
+            {
+              "text": "Let me make sure I've got that clearly.",
+              "start": 28.48,
+              "end": 30.64
+            },
+            {
+              "text": "I just need a moment to repeat what you said.",
+              "start": 30.64,
+              "end": 33.52
+            },
+            {
+              "text": "Okay.",
+              "start": 34.64,
+              "end": 35.36
+            },
+            {
+              "text": "So you're closed tonight.",
+              "start": 35.36,
+              "end": 36.64
+            }
+          ],
+          "channel": 1,
+          "num_words": 24,
+          "start": 27.695,
+          "end": 36.64
+        },
+        {
+          "sentences": [
+            {
+              "text": "Your hours are Monday through Friday, 9AM to 5PM, and weekends are closed.",
+              "start": 36.64,
+              "end": 41.04
+            },
+            {
+              "text": "Did I hear that right?",
+              "start": 41.04,
+              "end": 41.92
+            }
+          ],
+          "channel": 1,
+          "num_words": 18,
+          "start": 36.64,
+          "end": 41.92
+        },
+        {
+          "sentences": [
+            {
+              "text": "Yeah.",
+              "start": 43.984997,
+              "end": 44.785
+            }
+          ],
+          "channel": 0,
+          "num_words": 1,
+          "start": 43.984997,
+          "end": 44.785
+        },
+        {
+          "sentences": [
+            {
+              "text": "Thanks so much.",
+              "start": 45.635002,
+              "end": 46.675003
+            },
+            {
+              "text": "I'll call back tomorrow.",
+              "start": 46.675003,
+              "end": 47.955
+            },
+            {
+              "text": "Take care.",
+              "start": 47.955,
+              "end": 48.435
+            }
+          ],
+          "channel": 1,
+          "num_words": 9,
+          "start": 45.635002,
+          "end": 48.435
+        },
+        {
+          "sentences": [
+            {
+              "text": "Bye bye.",
+              "start": 51.905,
+              "end": 52.545
+            }
+          ],
+          "channel": 0,
+          "num_words": 2,
+          "start": 51.905,
+          "end": 52.545
+        }
+      ]
+    }
+  }
+}

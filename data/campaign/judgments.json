@@ -1,0 +1,719 @@
+{
+  "call_ids": [
+    "campaign/call-01",
+    "campaign/call-02",
+    "campaign/call-03",
+    "campaign/call-04",
+    "campaign/call-05",
+    "campaign/call-06",
+    "campaign/call-07",
+    "campaign/call-08",
+    "campaign/call-09",
+    "campaign/call-10",
+    "campaign/call-11",
+    "campaign/call-12",
+    "campaign/call-13"
+  ],
+  "model": "gpt-5.4-mini",
+  "too_soon_seconds": 15,
+  "endings": {
+    "campaign/call-01": {
+      "duration_seconds": 157,
+      "end_time": "2026-08-20T14:55:47.852227Z",
+      "hangup_source": "callee",
+      "hangup_cause": "normal_clearing",
+      "exit_events": [
+        "exit.hangup_denied",
+        "exit.stream_disconnected"
+      ]
+    },
+    "campaign/call-02": {
+      "duration_seconds": 58,
+      "end_time": "2026-08-22T19:29:09.916296Z",
+      "hangup_source": "callee",
+      "hangup_cause": "normal_clearing",
+      "exit_events": [
+        "exit.stream_disconnected"
+      ]
+    },
+    "campaign/call-03": {
+      "duration_seconds": 35,
+      "end_time": "2026-08-22T19:39:40.276921Z",
+      "hangup_source": "callee",
+      "hangup_cause": "normal_clearing",
+      "exit_events": [
+        "exit.stream_disconnected"
+      ]
+    },
+    "campaign/call-04": {
+      "duration_seconds": 140,
+      "end_time": "2026-08-22T19:50:50.496295Z",
+      "hangup_source": "callee",
+      "hangup_cause": "normal_clearing",
+      "exit_events": [
+        "exit.frame_reached_serializer",
+        "exit.hangup_granted",
+        "exit.telnyx_hangup_requested",
+        "exit.telnyx_hangup_returned"
+      ]
+    },
+    "campaign/call-05": {
+      "duration_seconds": 180,
+      "end_time": "2026-08-23T16:07:37.664736Z",
+      "hangup_source": "caller",
+      "hangup_cause": "normal_clearing",
+      "exit_events": [
+        "exit.frame_reached_serializer",
+        "exit.hangup_granted",
+        "exit.telnyx_hangup_requested",
+        "exit.telnyx_hangup_returned"
+      ]
+    },
+    "campaign/call-06": {
+      "duration_seconds": 155,
+      "end_time": "2026-08-23T17:12:32.192948Z",
+      "hangup_source": "callee",
+      "hangup_cause": "normal_clearing",
+      "exit_events": [
+        "exit.stream_disconnected"
+      ]
+    },
+    "campaign/call-07": {
+      "duration_seconds": 176,
+      "end_time": "2026-08-23T17:47:59.609570Z",
+      "hangup_source": "callee",
+      "hangup_cause": "normal_clearing",
+      "exit_events": [
+        "exit.frame_reached_serializer",
+        "exit.hangup_granted",
+        "exit.telnyx_hangup_requested",
+        "exit.telnyx_hangup_returned"
+      ]
+    },
+    "campaign/call-08": {
+      "duration_seconds": 178,
+      "end_time": "2026-08-23T18:11:16.495171Z",
+      "hangup_source": "callee",
+      "hangup_cause": "normal_clearing",
+      "exit_events": [
+        "exit.stream_disconnected"
+      ]
+    },
+    "campaign/call-09": {
+      "duration_seconds": 143,
+      "end_time": "2026-08-23T23:22:09.688689Z",
+      "hangup_source": "callee",
+      "hangup_cause": "normal_clearing",
+      "exit_events": [
+        "exit.hangup_denied",
+        "exit.stream_disconnected"
+      ]
+    },
+    "campaign/call-10": {
+      "duration_seconds": 136,
+      "end_time": "2026-08-25T21:16:53.850455Z",
+      "hangup_source": "caller",
+      "hangup_cause": "normal_clearing",
+      "exit_events": [
+        "exit.frame_reached_serializer",
+        "exit.hangup_denied",
+        "exit.telnyx_hangup_requested",
+        "exit.telnyx_hangup_returned"
+      ]
+    },
+    "campaign/call-11": {
+      "duration_seconds": 186,
+      "end_time": "2026-08-26T04:10:56.507011Z",
+      "hangup_source": "callee",
+      "hangup_cause": "normal_clearing",
+      "exit_events": [
+        "exit.stream_disconnected"
+      ]
+    },
+    "campaign/call-12": {
+      "duration_seconds": 136,
+      "end_time": "2026-08-27T15:23:17.163506Z",
+      "hangup_source": "callee",
+      "hangup_cause": "normal_clearing",
+      "exit_events": [
+        "exit.far_end_disconnected",
+        "exit.far_end_farewell_truncated",
+        "exit.far_end_stop",
+        "exit.hangup_denied"
+      ]
+    },
+    "campaign/call-13": {
+      "duration_seconds": 244,
+      "end_time": "2026-08-27T15:30:23.347801Z",
+      "hangup_source": "caller",
+      "hangup_cause": "normal_clearing",
+      "exit_events": [
+        "exit.frame_reached_serializer",
+        "exit.hangup_denied",
+        "exit.nudge_injected",
+        "exit.telnyx_hangup_requested",
+        "exit.telnyx_hangup_returned",
+        "exit.watchdog_terminated"
+      ]
+    }
+  },
+  "resolutions": [
+    {
+      "promise_id": "promise-01",
+      "call_id": "campaign/call-01",
+      "at": "0:42",
+      "action": "help with hours lookup",
+      "text": "I'll help you with that.",
+      "outcome": "vacuous",
+      "unresolvable_reason": null,
+      "evidence": "",
+      "rationale": "\"Help you with that\" does not specify any concrete event that would count as fulfillment.",
+      "kind": "vacuous",
+      "kind_why": "\"Help you with that\" does not specify any concrete event that would count as fulfillment.",
+      "seconds_after_promise": 115,
+      "remaining_agent_turns": 16,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-02",
+      "call_id": "campaign/call-01",
+      "at": "1:06",
+      "action": "provide hours information",
+      "text": "I'll provide the information.",
+      "outcome": "vacuous",
+      "unresolvable_reason": null,
+      "evidence": "",
+      "rationale": "\"Provide the information\" is too unspecific to identify a definite action or outcome.",
+      "kind": "vacuous",
+      "kind_why": "\"Provide the information\" is too unspecific to identify a definite action or outcome.",
+      "seconds_after_promise": 91,
+      "remaining_agent_turns": 12,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-03",
+      "call_id": "campaign/call-01",
+      "at": "1:45",
+      "action": "notify staff and follow up",
+      "text": "If you'd like, I can let them know you need this information and have them follow-up with you.",
+      "outcome": "unresolvable",
+      "unresolvable_reason": "not_observable_on_call",
+      "evidence": "",
+      "rationale": "It promises to notify staff and have them follow up later, which would happen after the call.",
+      "kind": "out_of_band",
+      "kind_why": "It promises to notify staff and have them follow up later, which would happen after the call.",
+      "seconds_after_promise": 52,
+      "remaining_agent_turns": 5,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-04",
+      "call_id": "campaign/call-01",
+      "at": "2:03",
+      "action": "connect to clinic support",
+      "text": "I'll connect you to our clinic support team so they can help confirm the schedule for August 18.",
+      "outcome": "unfulfilled",
+      "unresolvable_reason": null,
+      "evidence": "[2:16] AGENT: You've reached the Pretty Good AI test line. Goodbye.",
+      "rationale": "The transfer did not reach clinic support; instead it hit a test line that said goodbye.",
+      "kind": "in_call",
+      "kind_why": "Connecting the caller to the clinic support team is a transfer that would occur during this call.",
+      "seconds_after_promise": 34,
+      "remaining_agent_turns": 4,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-05",
+      "call_id": "campaign/call-05",
+      "at": "1:33",
+      "action": "have support team follow up",
+      "text": "I can make sure our clinic support team follows up with you.",
+      "outcome": "unresolvable",
+      "unresolvable_reason": "not_observable_on_call",
+      "evidence": "",
+      "rationale": "It promises a later follow-up from the support team, which would happen after the call.",
+      "kind": "out_of_band",
+      "kind_why": "It promises a later follow-up from the support team, which would happen after the call.",
+      "seconds_after_promise": 87,
+      "remaining_agent_turns": 11,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-06",
+      "call_id": "campaign/call-05",
+      "at": "2:11",
+      "action": "have support team reach out",
+      "text": "If you'd like, I could have the support team reach out to help fix this.",
+      "outcome": "unresolvable",
+      "unresolvable_reason": "not_observable_on_call",
+      "evidence": "",
+      "rationale": "It commits to arranging a later outreach by the support team, not an action visible now.",
+      "kind": "out_of_band",
+      "kind_why": "It commits to arranging a later outreach by the support team, not an action visible now.",
+      "seconds_after_promise": 49,
+      "remaining_agent_turns": 7,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-07",
+      "call_id": "campaign/call-05",
+      "at": "2:36",
+      "action": "connect support team for follow-up",
+      "text": "The clinic support team will need to look into it and help you update or confirm your details.",
+      "outcome": "unresolvable",
+      "unresolvable_reason": "not_observable_on_call",
+      "evidence": "",
+      "rationale": "It describes the support team following up later to look into the issue and update details.",
+      "kind": "out_of_band",
+      "kind_why": "It describes the support team following up later to look into the issue and update details.",
+      "seconds_after_promise": 24,
+      "remaining_agent_turns": 4,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-08",
+      "call_id": "campaign/call-05",
+      "at": "2:46",
+      "action": "connect to support team",
+      "text": "Would you like me to connect you to them now?",
+      "outcome": "unfulfilled",
+      "unresolvable_reason": null,
+      "evidence": "[2:58] AGENT: Hello. You've reached the pretty",
+      "rationale": "The call did not reach a responsive support party; it only shows the start of a greeting after the transfer announcement.",
+      "kind": "in_call",
+      "kind_why": "Connecting the caller to them now is a transfer that would be visible during this call.",
+      "seconds_after_promise": 14,
+      "remaining_agent_turns": 2,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-09",
+      "call_id": "campaign/call-05",
+      "at": "2:54",
+      "action": "transfer to support team",
+      "text": "Transfer you now. Thank you.",
+      "outcome": "unfulfilled",
+      "unresolvable_reason": null,
+      "evidence": "[2:58] AGENT: Hello. You've reached the pretty",
+      "rationale": "After the transfer announcement, the remainder shows only the beginning of a greeting, not a support agent engaging with the caller's issue.",
+      "kind": "in_call",
+      "kind_why": "A transfer now either happens on the line during the call or it does not.",
+      "seconds_after_promise": 6,
+      "remaining_agent_turns": 1,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-10",
+      "call_id": "campaign/call-06",
+      "at": "2:12",
+      "action": "transfer to patient support",
+      "text": "Transferring you now.",
+      "outcome": "unfulfilled",
+      "unresolvable_reason": null,
+      "evidence": "[2:21] AGENT: Hello. You've reached the Pretty Good AI test line. Goodbye.",
+      "rationale": "The supposed transfer did not connect to patient support; it landed on a test line goodbye instead.",
+      "kind": "in_call",
+      "kind_why": "It promises an immediate transfer, which would succeed or fail during this call.",
+      "seconds_after_promise": 23,
+      "remaining_agent_turns": 2,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-11",
+      "call_id": "campaign/call-08",
+      "at": "2:22",
+      "action": "connect to patient support",
+      "text": "I'll connect you to our patient support team now",
+      "outcome": "unfulfilled",
+      "unresolvable_reason": null,
+      "evidence": "[2:36] AGENT: You've reached the Pretty Good AI test line. Goodbye.",
+      "rationale": "The supposed transfer led only to a test-line greeting and goodbye, not to patient support engaging with the refill issue.",
+      "kind": "in_call",
+      "kind_why": "Connecting the caller to the patient support team is a transfer that would happen during this call.",
+      "seconds_after_promise": 36,
+      "remaining_agent_turns": 5,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-12",
+      "call_id": "campaign/call-09",
+      "at": "1:59",
+      "action": "make sure clinic support follows up",
+      "text": "I can make sure our clinic support team follows up with you.",
+      "outcome": "unresolvable",
+      "unresolvable_reason": "not_observable_on_call",
+      "evidence": "",
+      "rationale": "It promises a later follow-up from the support team, which would happen after the call.",
+      "kind": "out_of_band",
+      "kind_why": "It promises a later follow-up from the support team, which would happen after the call.",
+      "seconds_after_promise": 24,
+      "remaining_agent_turns": 3,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-13",
+      "call_id": "campaign/call-09",
+      "at": "1:59",
+      "action": "connect to patient support team",
+      "text": "Would you like me to connect you to our patient support team?",
+      "outcome": "unfulfilled",
+      "unresolvable_reason": null,
+      "evidence": "[2:15] AGENT: You've reached the Pretty Good AI test line. Goodbye.",
+      "rationale": "The supposed connection led only to a test line and goodbye, not to a responsive patient support party.",
+      "kind": "in_call",
+      "kind_why": "It offers to connect the caller to the support team during this call.",
+      "seconds_after_promise": 24,
+      "remaining_agent_turns": 3,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-14",
+      "call_id": "campaign/call-09",
+      "at": "2:11",
+      "action": "transfer call",
+      "text": "Transferring you now.",
+      "outcome": "unfulfilled",
+      "unresolvable_reason": null,
+      "evidence": "[2:15] AGENT: You've reached the Pretty Good AI test line. Goodbye.",
+      "rationale": "The transfer ended at a test recording instead of a different party engaging with the caller.",
+      "kind": "in_call",
+      "kind_why": "A transfer either happens on the line now or it does not.",
+      "seconds_after_promise": 12,
+      "remaining_agent_turns": 2,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-15",
+      "call_id": "campaign/call-10",
+      "at": "1:39",
+      "action": "clinic support follow-up",
+      "text": "I can make sure our clinic support team follows up with you.",
+      "outcome": "unresolvable",
+      "unresolvable_reason": "not_observable_on_call",
+      "evidence": "",
+      "rationale": "It promises a later follow-up from clinic support, which would happen after the call.",
+      "kind": "out_of_band",
+      "kind_why": "It promises a later follow-up from clinic support, which would happen after the call.",
+      "seconds_after_promise": 37,
+      "remaining_agent_turns": 2,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-16",
+      "call_id": "campaign/call-10",
+      "at": "2:04",
+      "action": "transfer",
+      "text": "Transferring you now.",
+      "outcome": "unfulfilled",
+      "unresolvable_reason": null,
+      "evidence": "[2:07] AGENT: Hello. You've reached the Pretty Good AI test line. Goodbye.",
+      "rationale": "The purported transfer went to a test-line greeting and goodbye instead of another party engaging with the caller's issue.",
+      "kind": "in_call",
+      "kind_why": "It promises a transfer now, which would be visible during the call.",
+      "seconds_after_promise": 12,
+      "remaining_agent_turns": 1,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-17",
+      "call_id": "campaign/call-11",
+      "at": "1:14",
+      "action": "have information shortly",
+      "text": "I'll have your information shortly.",
+      "outcome": "vacuous",
+      "unresolvable_reason": null,
+      "evidence": "",
+      "rationale": "\"Have your information shortly\" does not specify a concrete, checkable action.",
+      "kind": "vacuous",
+      "kind_why": "\"Have your information shortly\" does not specify a concrete, checkable action.",
+      "seconds_after_promise": 112,
+      "remaining_agent_turns": 9,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-18",
+      "call_id": "campaign/call-11",
+      "at": "1:24",
+      "action": "let you know",
+      "text": "I'll let you know as soon as I have your details.",
+      "outcome": "unresolvable",
+      "unresolvable_reason": "not_observable_on_call",
+      "evidence": "",
+      "rationale": "Letting the caller know later is a follow-up communication that would happen after the call.",
+      "kind": "out_of_band",
+      "kind_why": "Letting the caller know later is a follow-up communication that would happen after the call.",
+      "seconds_after_promise": 102,
+      "remaining_agent_turns": 8,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-19",
+      "call_id": "campaign/call-11",
+      "at": "2:35",
+      "action": "connect to patient support team",
+      "text": "I'll connect you to our patient support team so they can help you directly.",
+      "outcome": "unfulfilled",
+      "unresolvable_reason": null,
+      "evidence": "[2:47] AGENT: Hello. You've reached the Pretty Good AI test line. Goodbye.",
+      "rationale": "The supposed connection to patient support instead reached a test line that immediately ended the call.",
+      "kind": "in_call",
+      "kind_why": "Connecting the caller to the patient support team is a transfer that would happen during this call.",
+      "seconds_after_promise": 31,
+      "remaining_agent_turns": 2,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-20",
+      "call_id": "campaign/call-11",
+      "at": "2:42",
+      "action": "transfer call",
+      "text": "Transferring you now.",
+      "outcome": "unfulfilled",
+      "unresolvable_reason": null,
+      "evidence": "[2:47] AGENT: Hello. You've reached the Pretty Good AI test line. Goodbye.",
+      "rationale": "The transfer did not lead to patient support; it led to a test line greeting and goodbye.",
+      "kind": "in_call",
+      "kind_why": "Transferring the call now is an in-call action visible on the recording.",
+      "seconds_after_promise": 24,
+      "remaining_agent_turns": 1,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-21",
+      "call_id": "campaign/call-12",
+      "at": "1:53",
+      "action": "connect to patient support team",
+      "text": "I'll connect you to our patient support team so they can help with your prescription issue.",
+      "outcome": "unfulfilled",
+      "unresolvable_reason": null,
+      "evidence": "[2:07] AGENT: You've reached the Pretty Good AI test line.",
+      "rationale": "The supposed connection led only to a test-line greeting, not to a patient support party engaging with the prescription issue.",
+      "kind": "in_call",
+      "kind_why": "It promises a transfer to the patient support team during this call.",
+      "seconds_after_promise": 23,
+      "remaining_agent_turns": 4,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-22",
+      "call_id": "campaign/call-12",
+      "at": "2:03",
+      "action": "transfer call",
+      "text": "Transferring you now.",
+      "outcome": "unfulfilled",
+      "unresolvable_reason": null,
+      "evidence": "[2:07] AGENT: You've reached the Pretty Good AI test line.",
+      "rationale": "After the transfer announcement, the call reached a test line instead of a new party that took over the caller's problem.",
+      "kind": "in_call",
+      "kind_why": "It promises an immediate call transfer that would be visible on the recording.",
+      "seconds_after_promise": 13,
+      "remaining_agent_turns": 3,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-23",
+      "call_id": "campaign/call-13",
+      "at": "3:06",
+      "action": "send insurance upload link",
+      "text": "I'll send you a text with a link to upload your insurance card when you have it ready.",
+      "outcome": "unresolvable",
+      "unresolvable_reason": "not_observable_on_call",
+      "evidence": "",
+      "rationale": "Sending a text with the link happens after the call, so it cannot be confirmed during the recording.",
+      "kind": "out_of_band",
+      "kind_why": "Sending a text with the link happens after the call, so it cannot be confirmed during the recording.",
+      "seconds_after_promise": 58,
+      "remaining_agent_turns": 4,
+      "gate_notes": []
+    },
+    {
+      "promise_id": "promise-24",
+      "call_id": "campaign/call-13",
+      "at": "2:48",
+      "action": "connect to insurance support workflow",
+      "text": "One moment while I connect you to our insurance support workflow.",
+      "outcome": "unfulfilled",
+      "unresolvable_reason": null,
+      "evidence": "[2:53] AGENT: Let me help with that. What is the name of your insurance company and plan?",
+      "rationale": "The workflow did not connect to separate insurance support; the same agent continued asking for insurance details and handling the issue directly.",
+      "kind": "in_call",
+      "kind_why": "Connecting the caller to another workflow is a transfer that either happens during this call or does not.",
+      "seconds_after_promise": 76,
+      "remaining_agent_turns": 6,
+      "gate_notes": []
+    }
+  ],
+  "capability_pairs_exact": [
+    {
+      "kind": "capability_pair",
+      "detection": "mechanical",
+      "ability": "past hours lookup",
+      "affirmed": {
+        "id": "cap-01",
+        "text": "You do not need to create a profile or give your name just to check the clinic's past hours.",
+        "ability": "past hours lookup",
+        "can": true,
+        "call_id": "campaign/call-01",
+        "at": "0:25"
+      },
+      "denied": {
+        "id": "cap-02",
+        "text": "I do not have access to the clinic's past hours directly.",
+        "ability": "past hours lookup",
+        "can": false,
+        "call_id": "campaign/call-01",
+        "at": "1:18"
+      },
+      "same_call": true
+    }
+  ],
+  "capability_pairs_clustered": [],
+  "phone_recitals": {
+    "campaign/call-08": [
+      {
+        "call_id": "campaign/call-08",
+        "at_seconds": 76,
+        "form": "full number",
+        "text": "I have your number as (207) 804-8142. Is that correct?"
+      },
+      {
+        "call_id": "campaign/call-08",
+        "at_seconds": 90,
+        "form": "full number",
+        "text": "Just to confirm, your name is Dana Whitfield. Your date of birth is 03/14/1988, and your phone number is (207) 804-8142. Is all of that correct?"
+      }
+    ],
+    "campaign/call-09": [
+      {
+        "call_id": "campaign/call-09",
+        "at_seconds": 70,
+        "form": "full number",
+        "text": "I have your name as Dana Whitfield. Date of birth, 03/14/1988, and your phone number as (207) 804-8142. Is all of that correct?"
+      },
+      {
+        "call_id": "campaign/call-09",
+        "at_seconds": 93,
+        "form": "full number",
+        "text": "Thank you for clarifying. Would you like to use your current phone number, (207) 804-8142, to look up your record, or would you prefer to provide a different number you may have on file with us?"
+      }
+    ],
+    "campaign/call-13": [
+      {
+        "call_id": "campaign/call-13",
+        "at_seconds": 195,
+        "form": "last four digits",
+        "text": "There is no insurance currently on file for you. Would you like to receive a text message at your number ending 8142 to upload photos of your insurance card when you have it?"
+      },
+      {
+        "call_id": "campaign/call-13",
+        "at_seconds": 219,
+        "form": "last four digits",
+        "text": "I sent a text link to your number ending in 8142. When you have your insurance card ready, just use that link to upload photos of the front and back. If you need help with any part of the form, let me know."
+      }
+    ]
+  },
+  "phone_findings": [
+    {
+      "kind": "statement_against_behaviour",
+      "detection": "mechanical",
+      "datum": "the caller's phone number",
+      "denial": {
+        "id": "cap-25",
+        "text": "I'm not able to see which phone number is on file for you.",
+        "ability": "see phone number",
+        "can": false,
+        "call_id": "campaign/call-11",
+        "at": "2:35"
+      },
+      "recitals": [
+        {
+          "call_id": "campaign/call-08",
+          "at_seconds": 76,
+          "form": "full number",
+          "text": "I have your number as (207) 804-8142. Is that correct?"
+        },
+        {
+          "call_id": "campaign/call-08",
+          "at_seconds": 90,
+          "form": "full number",
+          "text": "Just to confirm, your name is Dana Whitfield. Your date of birth is 03/14/1988, and your phone number is (207) 804-8142. Is all of that correct?"
+        },
+        {
+          "call_id": "campaign/call-09",
+          "at_seconds": 70,
+          "form": "full number",
+          "text": "I have your name as Dana Whitfield. Date of birth, 03/14/1988, and your phone number as (207) 804-8142. Is all of that correct?"
+        },
+        {
+          "call_id": "campaign/call-09",
+          "at_seconds": 93,
+          "form": "full number",
+          "text": "Thank you for clarifying. Would you like to use your current phone number, (207) 804-8142, to look up your record, or would you prefer to provide a different number you may have on file with us?"
+        },
+        {
+          "call_id": "campaign/call-13",
+          "at_seconds": 195,
+          "form": "last four digits",
+          "text": "There is no insurance currently on file for you. Would you like to receive a text message at your number ending 8142 to upload photos of your insurance card when you have it?"
+        },
+        {
+          "call_id": "campaign/call-13",
+          "at_seconds": 219,
+          "form": "last four digits",
+          "text": "I sent a text link to your number ending in 8142. When you have your insurance card ready, just use that link to upload photos of the front and back. If you need help with any part of the form, let me know."
+        }
+      ],
+      "caveat": "The detector matches the number the call was placed from. It cannot tell a number read off caller ID from a number read out of a stored record, and the denial is specifically about what is on file. Confirm against the recording before filing."
+    }
+  ],
+  "proposed_findings": [
+    {
+      "kind": "statement_against_behaviour",
+      "detection": "model_proposed",
+      "capability": {
+        "id": "cap-09",
+        "text": "I don't have access to view or share the details in your record directly.",
+        "ability": "view record details",
+        "can": false,
+        "call_id": "campaign/call-05",
+        "at": "2:29"
+      },
+      "evidence_call_id": "campaign/call-05",
+      "evidence_at": "1:56",
+      "evidence": "I wasn't able to find your record in the system, so I can't confirm your appointment or the name on file.",
+      "rationale": "This demonstrates the agent did attempt record access/finding and failed, matching the later denial that it cannot access or view record details."
+    },
+    {
+      "kind": "statement_against_behaviour",
+      "detection": "model_proposed",
+      "capability": {
+        "id": "cap-23",
+        "text": "I still can't access your record.",
+        "ability": "access record",
+        "can": false,
+        "call_id": "campaign/call-11",
+        "at": "2:11"
+      },
+      "evidence_call_id": "campaign/call-08",
+      "evidence_at": "1:16",
+      "evidence": "I have your number as (207) 804-8142. Is that correct?",
+      "rationale": "The agent produced a phone number that the caller did not provide on that turn, demonstrating access to on-file data despite later saying it cannot access the record."
+    },
+    {
+      "kind": "statement_against_behaviour",
+      "detection": "model_proposed",
+      "capability": {
+        "id": "cap-25",
+        "text": "I'm not able to see which phone number is on file for you.",
+        "ability": "see phone number",
+        "can": false,
+        "call_id": "campaign/call-11",
+        "at": "2:35"
+      },
+      "evidence_call_id": "campaign/call-08",
+      "evidence_at": "1:16",
+      "evidence": "I have your number as (207) 804-8142. Is that correct?",
+      "rationale": "By stating the caller's on-file phone number without being given it on that turn, the agent demonstrated it could see the phone number on file."
+    }
+  ]
+}

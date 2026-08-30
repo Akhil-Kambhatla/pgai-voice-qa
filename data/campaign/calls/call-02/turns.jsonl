@@ -1,0 +1,11 @@
+{"speaker": "agent", "text": "training purposes. Para espa\u00f1ol oprima el dos.", "elapsed_seconds": 6.2}
+{"speaker": "agent", "text": "Thank you for calling Pivot Point Orth", "elapsed_seconds": 9.4}
+{"speaker": "bot", "text": "I press 2. Is thisI need to cancel my appointment.", "elapsed_seconds": 9.7}
+{"speaker": "agent", "text": "How can I help you today?", "elapsed_seconds": 12.3}
+{"speaker": "bot", "text": "I want to cancel an appointment. Which one is on my calendar?", "elapsed_seconds": 12.7}
+{"speaker": "agent", "text": "Good", "elapsed_seconds": 14.4}
+{"speaker": "bot", "text": "I want to cancel an appointment. Can you find that one for me?", "elapsed_seconds": 14.8}
+{"speaker": "agent", "text": "I can help with that. Would you like to create a demo patient profile first? I just need your first and last name to get started", "elapsed_seconds": 28.2}
+{"speaker": "bot", "text": "I don\u2019t want to create a demo profile. I\u2019m here to cancel an appointment. What details are needed to find my booking?", "elapsed_seconds": 29.2}
+{"speaker": "agent", "text": "No problem. To cancel an appointment, I do need a patient profile. If you prefer not to create one now, you can scan the QR code at the booth later to set up your profile and manage appointments. Let me know if you have any other questions, and have a great day", "elapsed_seconds": 53.8}
+{"speaker": "bot", "text": "I\u2019m Akhil Kambhatla. Do you need my date of birth too?", "elapsed_seconds": 54.9}

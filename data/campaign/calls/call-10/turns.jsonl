@@ -1,0 +1,22 @@
+{"speaker": "agent", "text": "and training purposes. Para espa\u00f1ol, oprima el dos.", "elapsed_seconds": 6.7}
+{"speaker": "agent", "text": "Thanks for calling Pivot Point Orthopedics, part of pretty good AI. How may I help you today?", "elapsed_seconds": 15.0}
+{"speaker": "bot", "text": "I\u2019m Dana Whitfield. I called to confirm the time of an appointment. What\u2019s on file for me?", "elapsed_seconds": 15.8}
+{"speaker": "agent", "text": "Can you please provide your date of birth?", "elapsed_seconds": 25.7}
+{"speaker": "bot", "text": "My date of birth is March 14, 1988.", "elapsed_seconds": 25.9}
+{"speaker": "agent", "text": "Just to confirm, I have your name as Dana Whitfield and your date of birth as March 14th, 1988.", "elapsed_seconds": 41.4}
+{"speaker": "agent", "text": "Is that correct?", "elapsed_seconds": 44.4}
+{"speaker": "tool", "text": "{\"name\": \"silent_compare\", \"arguments\": {\"claim\": \"Dana Whitfield and March 14, 1988 are on file for the appointment.\"}, \"result\": {\"status\": \"unknown\"}}", "elapsed_seconds": 45.2}
+{"speaker": "bot", "text": "Yes, that\u2019s correct.", "elapsed_seconds": 46.0}
+{"speaker": "agent", "text": "Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again.", "elapsed_seconds": 63.8}
+{"speaker": "agent", "text": "Just let me know.", "elapsed_seconds": 66.9}
+{"speaker": "bot", "text": "I don\u2019t have the phone number for you right now. If you can look it up another way, that would help. If not, I can give the date of birth again.", "elapsed_seconds": 68.6}
+{"speaker": "agent", "text": "No problem.", "elapsed_seconds": 80.2}
+{"speaker": "agent", "text": "Could you please spell out your first and last name for me and confirm your date of birth one more time?", "elapsed_seconds": 87.2}
+{"speaker": "bot", "text": "Dana Whitfield. Date of birth: March 14, 1988.", "elapsed_seconds": 87.9}
+{"speaker": "tool", "text": "{\"name\": \"silent_compare\", \"arguments\": {\"claim\": \"Clinic support team can follow up with the patient.\"}, \"result\": {\"status\": \"unknown\"}}", "elapsed_seconds": 111.4}
+{"speaker": "agent", "text": "Thanks for confirming. I still can't find your record in our system. I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to have them contact you?", "elapsed_seconds": 111.5}
+{"speaker": "bot", "text": "Yes, please. It\u2019d be great if the support team reaches out. I\u2019d like to confirm they can find me or help get the record sorted.", "elapsed_seconds": 112.5}
+{"speaker": "agent", "text": "Ken, for you now, thank you.", "elapsed_seconds": 126.6}
+{"speaker": "tool", "text": "{\"name\": \"hang_up\", \"arguments\": {\"reason\": \"Thanks, it\\u2019s all set\\u2014support will follow up, and the call is finished.\"}, \"result\": {\"hangup\": \"denied\", \"unmet\": [\"goal\"]}}", "elapsed_seconds": 129.1}
+{"speaker": "agent", "text": "Hello, you've reached the pretty good AI test line. Goodbye.", "elapsed_seconds": 132.2}
+{"speaker": "bot", "text": "Goodbye! If you need anything else, you know where to reach me.", "elapsed_seconds": 132.5}

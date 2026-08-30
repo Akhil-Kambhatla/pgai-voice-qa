@@ -1,0 +1,90 @@
+{
+  "call_id": "campaign/call-04",
+  "extracted_at": "2026-08-23T15:56:36.552047+00:00",
+  "model": "gpt-5.4-mini",
+  "returned_counts": {
+    "facts": 5,
+    "capabilities": 1,
+    "claims": 2,
+    "promises": 0,
+    "entities": 3
+  },
+  "raw": {
+    "facts": [
+      {
+        "slot": "services",
+        "value": "The clinic schedules new patient appointments.",
+        "at": "0:22"
+      },
+      {
+        "slot": "services",
+        "value": "A demo patient profile is needed to schedule a new patient appointment.",
+        "at": "0:22"
+      },
+      {
+        "slot": "providers",
+        "value": "Dugie Hauser sees new patient appointments this coming Tuesday.",
+        "at": "1:17"
+      },
+      {
+        "slot": "providers",
+        "value": "Judy Hauser sees patients here.",
+        "at": "1:37"
+      },
+      {
+        "slot": "locations",
+        "value": "Appointments are at Pivot Point Orthopedics.",
+        "at": "1:37"
+      }
+    ],
+    "capabilities": [
+      {
+        "text": "To schedule a new patient appointment, you'll need a demo patient profile.",
+        "ability": "schedule new patient appointment",
+        "can": false,
+        "at": "0:22"
+      }
+    ],
+    "claims": [
+      {
+        "text": "Your patient profile is set up, and your date of birth is 07/04/2000 for demo purposes.",
+        "action": "set up patient profile",
+        "at": "0:42"
+      },
+      {
+        "text": "You're booked for Tuesday, August 25 at 11:15AM with Judy Hauser at Pivot Point Orthopedic.",
+        "action": "booked appointment",
+        "at": "1:37"
+      }
+    ],
+    "promises": [],
+    "entities": [
+      {
+        "name": "Pivot Point Orthopedics",
+        "kind": "location"
+      },
+      {
+        "name": "Dugie Hauser",
+        "kind": "provider"
+      },
+      {
+        "name": "Judy Hauser",
+        "kind": "provider"
+      }
+    ]
+  },
+  "applied": [
+    "oracle: services restated consistently (times_stated=2)",
+    "oracle: services restated consistently (times_stated=3)",
+    "oracle: providers filled from campaign/call-04 at 1:17",
+    "oracle: providers restated consistently (times_stated=2)",
+    "oracle: locations restated consistently (times_stated=3)",
+    "claim: claim-01 unverified (set up patient profile)",
+    "claim: claim-02 unverified (booked appointment)",
+    "capability: cap-07 schedule new patient appointment can=False",
+    "frontier: Pivot Point Orthopedics (location) unprobed",
+    "frontier: Dugie Hauser (provider) unprobed",
+    "frontier: Judy Hauser (provider) unprobed"
+  ],
+  "skipped": []
+}

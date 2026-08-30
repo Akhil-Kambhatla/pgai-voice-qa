@@ -1,0 +1,35 @@
+[00:00] AGENT: This call may be recorded for quality and training purposes.
+[00:04] AGENT: Thanks
+[00:06] AGENT: for calling Pivot Point Orthopaedics,
+[00:09] AGENT: part of Pretty Good AI. How may I help you today?
+[00:15] BOT: Hi.
+[00:15] BOT: I'm Bob. I'm looking to get a new orthopedics appointment.
+[00:19] BOT: What openings do you have?
+[00:23] AGENT: I see you're calling from the number we have on file.
+[00:26] AGENT: Am I speaking with Dana?
+[00:30] BOT: Yeah. This is Bob, Robert Ostrowski.
+[00:34] BOT: Sorry. The name on your end might look different. I'm calling to get an appointment booked, if possible.
+[00:41] AGENT: Please provide your date of birth.
+[00:44] AGENT: Just
+[00:44] BOT: My date of birth is 08/22/1951.
+[00:52] AGENT: to confirm, can you please spell your first and last name for me?
+[00:56] BOT: Sure. It's Bob Robert Ostrovsky.
+[01:00] BOT: So first name Bob, spelled b o b,
+[01:03] BOT: last name Ostrowski,
+[01:05] BOT: spelled o s t r o w s k I.
+[01:11] AGENT: Thank you. And your date of birth is 08/22/1951.
+[01:15] AGENT: Correct?
+[01:16] BOT: Yes.
+[01:17] BOT: That's right. 08/22/1951.
+[01:21] BOT: Anything else you need before we go?
+[01:25] AGENT: To help find your record, would you like to use the phone number you have on file with us? If so, please tell me that number. If you're not sure, I can confirm your name and date of birth again.
+[01:38] BOT: I'm not sure about the number on file. My name is Bob Robert Ostrowski,
+[01:43] BOT: and my date of birth is 08/22/1951.
+[01:47] BOT: If you've got the number on your side, that's great. If not, we can stick with my name and date of birth, and you can try finding me that way.
+[01:58] AGENT: I'm having trouble locating your record in our system. I can connect you to our patient support team. However, I'm a pretty good AI and can do many of the things an operator can. Do you want to give me a try?
+[02:12] AGENT: Transferring
+[02:14] BOT: Yes, please. I need a new appointment with the right provider.
+[02:18] AGENT: you now. Thank you.
+[02:21] BOT: Perfect.
+[02:21] AGENT: Hello. You've reached the Pretty Good AI test line. Goodbye.
+[02:26] BOT: Okay. Thanks. Guess I'll just wait for the call.

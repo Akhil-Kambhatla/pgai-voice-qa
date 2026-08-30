@@ -1,0 +1,20 @@
+{"speaker": "agent", "text": "Quality and training purposes. Para espa\u00f1ol oprima el dos.", "elapsed_seconds": 6.8}
+{"speaker": "agent", "text": "Thanks for calling Pivot Point Orthopedics.", "elapsed_seconds": 9.4}
+{"speaker": "agent", "text": "Part of pretty good AI. How may I help you today?", "elapsed_seconds": 14.5}
+{"speaker": "bot", "text": "I\u2019m calling about a Tuesday visit at 11:15 AM with Judy Hauser. Will my Aetna plan work for it?", "elapsed_seconds": 15.5}
+{"speaker": "agent", "text": "Can you please provide your full name and date of birth?", "elapsed_seconds": 27.9}
+{"speaker": "bot", "text": "Dana Whitfield, born March 14, 1988.", "elapsed_seconds": 28.5}
+{"speaker": "agent", "text": "Just to confirm, I have your name as Dana Westfield and your date of birth as March 14th, 1988. Is that correct? If so, please spell your first and last name for me", "elapsed_seconds": 48.4}
+{"speaker": "tool", "text": "{\"name\": \"silent_compare\", \"arguments\": {\"claim\": \"The caller's name is Dana Whitfield and the date of birth is March 14, 1988.\"}, \"result\": {\"status\": \"unknown\"}}", "elapsed_seconds": 48.9}
+{"speaker": "bot", "text": "Dana Whitfield. D-a-n-a W-h-i-t-f-i-e-l-d.", "elapsed_seconds": 50.2}
+{"speaker": "agent", "text": "Thanks for spelling that. Could you please confirm your date of birth one more time?", "elapsed_seconds": 63.7}
+{"speaker": "bot", "text": "March 14, 1988.", "elapsed_seconds": 64.2}
+{"speaker": "agent", "text": "I have your name as Dana Whitfield, date of birth March 14th, 1988", "elapsed_seconds": 75.6}
+{"speaker": "agent", "text": "And your phone number as two oh seven eight oh four eight one four two. Is all of that correct?", "elapsed_seconds": 82.9}
+{"speaker": "bot", "text": "I didn\u2019t give a phone number. I\u2019m calling from my personal phone. If you need to update it, I can do that if you ask.", "elapsed_seconds": 84.8}
+{"speaker": "agent", "text": "Thank you for clarifying. Would you like to use your current phone number? Two oh seven eight zero four eight one four two? To look up your record, or would you prefer to provide a different number you may have on file with us?", "elapsed_seconds": 109.6}
+{"speaker": "bot", "text": "Use the number I\u2019m calling from. I don\u2019t want to say anything else yet.", "elapsed_seconds": 110.3}
+{"speaker": "agent", "text": "I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to connect you to our patient support team?", "elapsed_seconds": 127.5}
+{"speaker": "bot", "text": "Yes, please connect me. I\u2019m on my lunch break, so I\u2019d like to sort this out right now.", "elapsed_seconds": 128.2}
+{"speaker": "agent", "text": "Transferring you now. Thank you. Hello. You've reached the pretty good AI test line. Goodbye", "elapsed_seconds": 140.3}
+{"speaker": "tool", "text": "{\"name\": \"hang_up\", \"arguments\": {\"reason\": \"The call seems to have ended after the transfer with the AI test line. I need to wrap it up since support isn\\u2019t available here.\"}, \"result\": {\"hangup\": \"denied\", \"unmet\": [\"goal\"]}}", "elapsed_seconds": 142.2}

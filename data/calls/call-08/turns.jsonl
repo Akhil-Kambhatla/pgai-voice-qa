@@ -1,0 +1,13 @@
+{"speaker": "bot", "text": "I\u2019m Akhil. I\u2019m calling about my knee, which hasn\u2019t settled. Can I get seen this week?", "elapsed_seconds": 11.8}
+{"speaker": "bot", "text": "I\u2019m Akhil. I\u2019m calling about my knee, which hasn\u2019t settled yet. I\u2019d like to get seen this week.", "elapsed_seconds": 26.8}
+{"speaker": "tool", "text": "{\"name\": \"silent_compare\", \"arguments\": {\"claim\": \"We have a couple of doctors that have a specialty in knee care. We have Mr. Akhil Kambhatla, who\\u2019s has a degree...\"}, \"result\": {\"status\": \"unknown\"}}", "elapsed_seconds": 58.7}
+{"speaker": "bot", "text": "Okay, let\u2019s see what you\u2019ve got for me.", "elapsed_seconds": 58.7}
+{"speaker": "bot", "text": "Is that the same provider, Akhil Kambhatla, or a different doctorWait, is that the same doctor with the knee specialty? And do you need my name or something to place the booking?", "elapsed_seconds": 79.0}
+{"speaker": "bot", "text": "Thanks, I\u2019ve got that. Monday at 9 and Friday at 4. Which day is the Monday appointment for?", "elapsed_seconds": 112.5}
+{"speaker": "bot", "text": "August 24 could work\u2014can you confirm that 9:00 AM slot is still open?", "elapsed_seconds": 128.1}
+{"speaker": "bot", "text": "My name is Akhil Kambhatla, born June 2, 2003. I don\u2019t have a phone number or address to share. What should I do next?", "elapsed_seconds": 154.3}
+{"speaker": "bot", "text": "I don\u2019t have a preferred email to share. What\u2019s the next step if I don\u2019t have a contact email?", "elapsed_seconds": 170.7}
+{"speaker": "bot", "text": "Got it, thanks. Do you have a customer support phone number I can call?", "elapsed_seconds": 188.0}
+{"speaker": "tool", "text": "{\"name\": \"hang_up\", \"arguments\": {\"reason\": \"Customer support number was provided; contact will be made.\"}, \"result\": {\"hangup\": \"denied\", \"still_want\": [\"what time they open and close\", \"which days they are closed\"]}}", "elapsed_seconds": 211.8}
+{"speaker": "bot", "text": "What time do you open and close each day?", "elapsed_seconds": 213.2}
+{"speaker": "bot", "text": "Okay, that makes sense. Is someone available by phone during those weekday hours?", "elapsed_seconds": 235.7}

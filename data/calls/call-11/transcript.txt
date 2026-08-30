@@ -1,0 +1,51 @@
+[00:02] AGENT: Hi. Welcome to Wheaton's Clinic. How may I help you?
+[00:10] BOT: Hi.
+[00:11] BOT: I wrenched my knee playing football on Saturday, and stairs are the worst. I'd like to get seen this week if possible. Are there any openings?
+[00:21] AGENT: Sure.
+[00:22] AGENT: Can I first get your details?
+[00:25] BOT: Sorry. I for
+[00:27] BOT: Okay. Thanks for hanging on. I'm not ready to give my details yet. I just wanted to know if there's any appointment time available this week.
+[00:39] AGENT: Yes.
+[00:41] AGENT: Who do you wanna visit?
+[00:51] BOT: I didn't catch a provider's name yet. If you could tell me who would be available for knee issues, that'd help. I just wanna know if that's who I'd be seeing.
+[01:03] AGENT: Do you have a preference doctor in mind, or should I list the available doctors
+[01:10] AGENT: for the upcoming week?
+[01:12] BOT: I don't have
+[01:18] BOT: I don't have a preference. Please list the available doctors for the upcoming week. Now I know who to see for my knee.
+[01:27] AGENT: Sure.
+[01:29] AGENT: There's doctor Richard,
+[01:31] AGENT: who's available on the August 20 from 4PM
+[01:35] AGENT: to 5PM.
+[01:37] AGENT: There's a doctor
+[01:38] AGENT: Sreya
+[01:39] AGENT: who's available on the August 21 from 3PM to 4PM.
+[01:44] AGENT: Would you like me to proceed with any of them?
+[01:55] BOT: I'd like to see doctor Ria, but you said she's available on the August 21, from three to 4PM.
+[02:01] BOT: That works for me, but I can't take time off this week. Is that still available, or would it be easier to book with doctor Richard on the twentieth?
+[02:12] AGENT: At what time
+[02:13] AGENT: do you work hours then?
+[02:16] BOT: I work until 03:30PM on Monday, Wednesday, and Friday.
+[02:19] BOT: I'm not available after that time.
+[02:25] BOT: If you
+[02:25] AGENT: There's also doctor
+[02:27] AGENT: there's also doctor
+[02:30] AGENT: Marcel
+[02:31] AGENT: who
+[02:32] AGENT: is a really
+[02:33] AGENT: specialized doctor, and his timings are from 9AM to 11AM.
+[02:47] BOT: Thanks for the update. I didn't hear doctor Marcel's availability clearly, but I'm interested if that fits. Can you confirm which days he's available and whether any of those fall before 03:30PM?
+[02:59] AGENT: Yes. He's available from tomorrow
+[03:03] AGENT: till the August 25
+[03:05] AGENT: every day from 9AM to 1PM.
+[03:08] BOT: Got it. Doctor Marcel is available from tomorrow through August 25 each day from 9AM to 1PM.
+[03:15] BOT: I can't take time off this week, so I'd like to see if any of those fit before noon. If yes, I'm good to proceed.
+[03:24] AGENT: I can move I can request with doctor Marcio to take your appointment in the evening at 4PM.
+[03:31] AGENT: Is that okay?
+[03:33] BOT: I can't do evening appointments.
+[03:35] BOT: My latest time is 03:30PM
+[03:37] BOT: on Monday, Wednesday, and Friday, and Tuesday and Thursday are completely off. So 4PM
+[03:43] BOT: wouldn't work for me.
+[03:47] AGENT: Okay. Then I'll book you for Tuesday at 4PM.
+[03:52] AGENT: Is that okay?
+[03:56] BOT: Now Tuesday is off for me. I'm available only Monday, Wednesday, and Friday,
+[04:02] BOT: and not after three

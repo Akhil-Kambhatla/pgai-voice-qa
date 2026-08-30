@@ -1,0 +1,10 @@
+{
+  "intent": ["book", "reschedule", "cancel", "refill", "insurance", "hours", "out_of_scope"],
+  "identity": ["akhil", "dana", "elena", "robert"],
+  "temporal": ["explicit", "relative", "ambiguous", "past", "holiday", "after_hours"],
+  "cooperation": ["full", "partial", "self_correcting", "contradictory", "distracted"],
+  "delivery": ["clean", "fast_digits", "spelled_name", "interrupting", "trailing_off"],
+  "register": ["neutral", "rushed", "confused", "frustrated"],
+  "continuity": ["fresh", "references_prior", "verifies_claim"],
+  "curveball": ["none", "second_intent", "urgency_mention", "out_of_scope_ask"]
+}

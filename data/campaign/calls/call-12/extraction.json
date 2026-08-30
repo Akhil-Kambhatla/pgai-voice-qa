@@ -1,0 +1,69 @@
+{
+  "call_id": "campaign/call-12",
+  "extracted_at": "2026-08-27T15:23:23.647917+00:00",
+  "model": "gpt-5.4-mini",
+  "returned_counts": {
+    "facts": 0,
+    "capabilities": 1,
+    "claims": 0,
+    "promises": 2,
+    "entities": 2
+  },
+  "raw": {
+    "facts": [],
+    "capabilities": [
+      {
+        "text": "I'm unable to locate your record in our system right now.",
+        "ability": "locate record",
+        "can": false,
+        "at": "1:53"
+      }
+    ],
+    "claims": [],
+    "promises": [
+      {
+        "text": "I'll connect you to our patient support team so they can help with your prescription issue.",
+        "action": "connect to patient support team",
+        "at": "1:53"
+      },
+      {
+        "text": "Transferring you now.",
+        "action": "transfer call",
+        "at": "2:03"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Pivot Point Orthopedics",
+        "kind": "location"
+      },
+      {
+        "name": "Pretty Good AI",
+        "kind": "other"
+      }
+    ]
+  },
+  "applied": [
+    "promise: promise-21 at 1:53 (connect to patient support team)",
+    "promise: promise-22 at 2:03 (transfer call)",
+    "capability: cap-27 locate record can=False"
+  ],
+  "skipped": [
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pivot Point Orthopedics",
+        "kind": "location"
+      }
+    },
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pretty Good AI",
+        "kind": "other"
+      }
+    }
+  ]
+}

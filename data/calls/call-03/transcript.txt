@@ -1,0 +1,28 @@
+[00:02] AGENT: Hi. Welcome to Accuse Clinic.
+[00:06] BOT: Hi. Sorry. Are you still open right now, or have you closed for the night? Hi.
+[00:11] BOT: Hi. Quick question. Are you still open right now, or have you closed for the night?
+[00:19] AGENT: We are closed for tonight.
+[00:22] BOT: Okay. Let me check that for a moment.
+[00:25] BOT: Got it. Okay.
+[00:26] BOT: What are your regular business hours so I
+[00:30] BOT: okay.
+[00:30] BOT: Since you're closed tonight, could you tell me your regular hours?
+[00:34] BOT: Like, when you usually open and close?
+[00:39] AGENT: We are open
+[00:40] AGENT: from Monday to Friday
+[00:43] AGENT: from 9AM to 5PM. PM.
+[00:47] BOT: Let me check that for you real quick.
+[00:49] BOT: That makes sense. Thanks for the answer. Before we wrap up, could you repeat exactly when you're closed tonight and then confirm those hours again? Monday through Friday, nine to five, or is there something different about today?
+[01:04] AGENT: No. We are closed today at 5PM.
+[01:08] BOT: Okay.
+[01:09] BOT: Thanks. Can you tell me whether you're closed on weekends too or only on certain days?
+[01:15] AGENT: We're closed on weekends.
+[01:18] BOT: So you're closed on weekends.
+[01:20] BOT: Right? Could you repeat the exact closure details you confirmed?
+[01:24] BOT: What days, times, and which clinic or location are affected?
+[01:30] AGENT: We are open from Monday to Friday,
+[01:33] AGENT: from 9AM to 5PM, and then we are closed on weekends.
+[01:38] BOT: Perfect. Thanks. You're open Monday through Friday from 9AM to 5PM
+[01:43] BOT: and closed on weekends. I've got it. Thanks.
+[01:49] AGENT: Okay. Do you need anything else?
+[01:53] BOT: Actually, one quick thing. When you say weekends, you mean

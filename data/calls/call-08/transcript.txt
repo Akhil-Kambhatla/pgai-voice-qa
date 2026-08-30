@@ -1,0 +1,52 @@
+[00:03] AGENT: Hi there. My name is Surya Kumbatla.
+[00:06] AGENT: How may I assist you today?
+[00:12] BOT: I'm Akhil. I'm calling about my knee, which hasn't settled.
+[00:15] BOT: Can I get seen this week?
+[00:20] AGENT: Sorry.
+[00:21] AGENT: That was I was unable to understand that. Can you please repeat that again?
+[00:26] BOT: I'm Akhil. I'm calling about my knee, which hasn't settled yet. I'd like to get seen this week.
+[00:34] AGENT: Sure. We have a couple of doctors that have an specialty
+[00:39] AGENT: in knee care.
+[00:41] AGENT: We have mister Akhil Kambatla
+[00:43] AGENT: who has
+[00:45] AGENT: a degree.
+[00:47] AGENT: We can book you an appointment with them.
+[00:58] BOT: Okay. Let's see what you've got for me.
+[01:04] AGENT: We have
+[01:06] AGENT: let me check his schedule.
+[01:09] AGENT: He has an opening tomorrow at
+[01:12] AGENT: 9AM
+[01:13] AGENT: and another appointment on
+[01:15] AGENT: Friday at
+[01:17] AGENT: 4PM.
+[01:19] BOT: Wait.
+[01:19] BOT: Is that the same doctor with the knee specialty?
+[01:22] BOT: And do you need my name or something to place the booking?
+[01:29] AGENT: I apologize if you miss an if I said it wrong.
+[01:33] AGENT: We have a doctor for knee specialty,
+[01:36] AGENT: and his availability dates are Monday at 9AM
+[01:40] AGENT: and Friday at 4PM.
+[01:52] BOT: Thanks.
+[01:53] BOT: I've got that. Monday at nine and Friday at four. Which day is the Monday appointment for?
+[02:04] AGENT: It is
+[02:06] AGENT: August 24.
+[02:08] BOT: August 24 could work. Can you confirm that 9AM slot is still open?
+[02:16] AGENT: It is still open.
+[02:18] AGENT: Can you please provide me with your name, phone number, and address
+[02:22] AGENT: so that I can book an appointment for you?
+[02:33] BOT: My name is Achil Kambatla,
+[02:36] BOT: born 06/02/2003.
+[02:38] BOT: I don't have a phone number or address to share.
+[02:41] BOT: What should I do next?
+[02:45] AGENT: Do you have a preferred email address we can reach out to you?
+[02:50] BOT: I don't have a preferred email to share. What's the next step if I don't have a DAE email?
+[03:00] AGENT: Please contact our customer support team, and they'll assist you further with the appointment.
+[03:08] BOT: Got it. Thanks. Do you have a customer support phone number I can call?
+[03:14] AGENT: Sure.
+[03:15] AGENT: It's 1234567890.
+[03:33] BOT: What time do you open and close each day?
+[03:39] AGENT: Our office is open from
+[03:41] AGENT: 8AM to 5PM
+[03:44] AGENT: on weekdays
+[03:45] AGENT: and closed on the weekends.
+[03:55] BOT: Okay. That makes sense. Is someone available by phone during those weekday hours?

@@ -1,0 +1,29 @@
+{"speaker": "agent", "text": "espa\u00f1ol o prima el dos.", "elapsed_seconds": 6.2}
+{"speaker": "agent", "text": "Thanks for calling Pivot Point Orthopedics.", "elapsed_seconds": 8.8}
+{"speaker": "agent", "text": "Part of pretty good AI. How may I help you today?", "elapsed_seconds": 14.3}
+{"speaker": "bot", "text": "Hi, I\u2019m coming in for a follow-up for my knee. Do you have an available time next week, and what time is it?", "elapsed_seconds": 15.7}
+{"speaker": "agent", "text": "I can help with her follow-up. I have your full name and date of birth", "elapsed_seconds": 29.2}
+{"speaker": "bot", "text": "Dana Whitfield, March 14, 1988.", "elapsed_seconds": 30.4}
+{"speaker": "agent", "text": "Just to confirm, I have your name as Dana Whitfield and your date of birth as March 14th, 1988. Is that correct?", "elapsed_seconds": 46.6}
+{"speaker": "bot", "text": "Yes, that\u2019s right. Thanks.", "elapsed_seconds": 46.8}
+{"speaker": "agent", "text": "Thank you for confirming. One moment while I look up your information.", "elapsed_seconds": 56.7}
+{"speaker": "tool", "text": "{\"name\": \"silent_compare\", \"arguments\": {\"claim\": \"You said you\\u2019re looking up my information.\"}, \"result\": {\"status\": \"unknown\"}}", "elapsed_seconds": 57.2}
+{"speaker": "bot", "text": "Thanks. I can hold for a moment while you check that.", "elapsed_seconds": 58.2}
+{"speaker": "agent", "text": "Perfect. Please hold while I check your details.", "elapsed_seconds": 68.6}
+{"speaker": "bot", "text": "Okay, I\u2019ll wait. Thanks.", "elapsed_seconds": 68.9}
+{"speaker": "agent", "text": "Thank you for your patience. I'll have your information shortly.", "elapsed_seconds": 79.4}
+{"speaker": "bot", "text": "Okay, I\u2019ll stay on the line.", "elapsed_seconds": 79.5}
+{"speaker": "agent", "text": "Sounds good. I'll let you know as soon as I have your details.", "elapsed_seconds": 87.3}
+{"speaker": "bot", "text": "Alright, sounds good. I\u2019m ready when you are.", "elapsed_seconds": 87.7}
+{"speaker": "agent", "text": "Would you like to use your phone number to look up your record? If so", "elapsed_seconds": 97.5}
+{"speaker": "agent", "text": "Please provide the number you have on file with us.", "elapsed_seconds": 99.9}
+{"speaker": "agent", "text": "If you're not sure, just let me know.", "elapsed_seconds": 103.7}
+{"speaker": "bot", "text": "I don\u2019t have a phone number on hand for you to use. That\u2019s the only thing I\u2019m missing right now, so I can\u2019t give it.", "elapsed_seconds": 104.4}
+{"speaker": "agent", "text": "No problem. Could you please spell out your first and last name and confirm your date of birth one more time?", "elapsed_seconds": 119.5}
+{"speaker": "bot", "text": "Dana, Whitfield. Date of birth: March 14, 1988.", "elapsed_seconds": 120.5}
+{"speaker": "agent", "text": "Thank you for confirming. I still can't access your record. I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to have them contact you about your follow-up appointment?", "elapsed_seconds": 143.3}
+{"speaker": "bot", "text": "Yes, please. Have them contact me about the follow-up. But I don\u2019t know which number they have on file\u2014can you tell me what it is?", "elapsed_seconds": 144.4}
+{"speaker": "agent", "text": "I'm not able to see which phone number is on file for you. I'll connect you to our patient support team so they can help you directly. Please stay on the line. Transferring you now. Thank you.", "elapsed_seconds": 165.8}
+{"speaker": "bot", "text": "Thanks, I\u2019ll stay on the line. When someone picks up from support, I\u2019ll talk with them about the follow-up.", "elapsed_seconds": 166.5}
+{"speaker": "agent", "text": "Hello, you've reached the pretty good AI test line. Goodbye", "elapsed_seconds": 171.6}
+{"speaker": "bot", "text": "Oh, alright. It sounds like I might\u2019ve gotten routed somewhere else. If that was a test line, that\u2019s fine. I\u2019ll stop here.", "elapsed_seconds": 173.0}

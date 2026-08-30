@@ -1,0 +1,46 @@
+{
+  "akhil": {
+    "name": "Akhil Kambhatla",
+    "dob": "2003-06-02",
+    "phone": "+12078048142",
+    "email": "akhil.kambhatla@gmail.com",
+    "address": "418 Silver Spring Ave, Apt 3B, Silver Spring, MD 20910",
+    "insurer": "CareFirst BlueCross BlueShield",
+    "member_id": "CFB84213907",
+    "registered": true,
+    "notes": "Registered in the clinic's system. The Telnyx caller ID belongs to this person."
+  },
+  "dana": {
+    "name": "Dana Whitfield",
+    "dob": "1988-03-14",
+    "phone": "+12405550178",
+    "email": "dana.whitfield@gmail.com",
+    "address": "77 Fenwick Lane, Silver Spring, MD 20910",
+    "insurer": "Aetna",
+    "member_id": "W284461730",
+    "registered": false,
+    "test_purpose": "Clean baseline new patient. Establishes how the new-patient path is supposed to work with zero friction."
+  },
+  "elena": {
+    "name": "Elena Vasquez-Moreau",
+    "dob": "1979-11-07",
+    "phone": "+12405550293",
+    "email": "e.vasquezmoreau@gmail.com",
+    "address": "1206 Colesville Rd, Unit 14, Silver Spring, MD 20910",
+    "insurer": "United Healthcare",
+    "member_id": "UHC5590432881",
+    "registered": false,
+    "test_purpose": "Compound hyphenated surname. Tests name capture, spelling prompts, and readback accuracy against the Dana baseline. The email drops the hyphen, which is a second capture surface."
+  },
+  "robert": {
+    "name": "Robert Ostrowski",
+    "dob": "1951-08-22",
+    "phone": "+12405550461",
+    "email": "bob.ostrowski51@gmail.com",
+    "address": "9 Grubb Road, Silver Spring, MD 20910",
+    "insurer": "Medicare",
+    "member_id": "1EG4TE5MK73",
+    "registered": false,
+    "test_purpose": "Older patient with an awkward surname. Tests patience, repetition handling, and spelling capture. Goes by Bob, which tests whether the agent handles a preferred name differing from the legal one."
+  }
+}

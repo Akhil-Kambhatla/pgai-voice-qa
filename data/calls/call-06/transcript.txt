@@ -1,0 +1,9 @@
+[00:02] AGENT: Hi. My name is Akid. Welcome to Wheaton's Clinic. How may I help you?
+[00:09] BOT: Hi.
+[00:09] BOT: Sorry. Are you still open right now, or have you closed for the night?
+[00:15] AGENT: We're still open right now, but we close in the evening.
+[00:27] BOT: What time do you close this evening?
+[00:32] AGENT: We close at 5PM.
+[00:36] BOT: Okay. Thanks.
+[00:42] AGENT: Is there anything else I can help you with?
+[00:47] BOT: No. That's all. Thanks.

@@ -1,0 +1,77 @@
+{
+  "call_id": "campaign/call-08",
+  "extracted_at": "2026-08-23T18:11:31.109250+00:00",
+  "model": "gpt-5.4-mini",
+  "returned_counts": {
+    "facts": 0,
+    "capabilities": 3,
+    "claims": 0,
+    "promises": 1,
+    "entities": 2
+  },
+  "raw": {
+    "facts": [],
+    "capabilities": [
+      {
+        "text": "I'm unable to find your record in our system right now.",
+        "ability": "find record",
+        "can": false,
+        "at": "1:52"
+      },
+      {
+        "text": "I can connect you to our patient support team.",
+        "ability": "connect to support",
+        "can": true,
+        "at": "1:52"
+      },
+      {
+        "text": "I'm a pretty good AI and can do many of the things an operator can.",
+        "ability": "do operator tasks",
+        "can": true,
+        "at": "1:58"
+      }
+    ],
+    "claims": [],
+    "promises": [
+      {
+        "text": "I'll connect you to our patient support team now",
+        "action": "connect to patient support",
+        "at": "2:22"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Pivot Point Orthopaedics",
+        "kind": "location"
+      },
+      {
+        "name": "Pretty Good AI",
+        "kind": "other"
+      }
+    ]
+  },
+  "applied": [
+    "promise: promise-11 at 2:22 (connect to patient support)",
+    "capability: cap-15 find record can=False",
+    "capability: cap-16 connect to support can=True",
+    "capability: cap-17 do operator tasks can=True"
+  ],
+  "skipped": [
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pivot Point Orthopaedics",
+        "kind": "location"
+      }
+    },
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pretty Good AI",
+        "kind": "other"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[00:02] AGENT: Thank you for calling Retail Screen. How can I help you?
+[00:13] BOT: Okay.
+[00:14] BOT: Let me share what I'm dealing with and ask about availability.
+[00:27] AGENT: I'm sorry.
+[00:29] AGENT: Did you say something?
+[00:31] BOT: Yeah. I need help with my knee. I've got swelling and pain after playing football, and stairs are the worst.
+[00:43] AGENT: Would you like to book an appointment with us?
+[00:46] BOT: Yes.
+[00:47] BOT: I want an appointment.
+[00:48] BOT: What days and times are available this week?
+[00:53] AGENT: Before we go ahead, I would like to know your name, date of birth, and phone number.
+[01:01] BOT: Sure. I can share the identifying details you asked for, but let me think this through.

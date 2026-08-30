@@ -1,0 +1,18 @@
+[00:03] AGENT: Hi. My name is Akil. Welcome
+[00:06] AGENT: to the clinic.
+[00:08] BOT: Hi. Sorry. Are you still open right now, or have you closed for the night? I'm outside after work waiting for a ride, and I'm honestly just trying to figure out whether I should call back tomorrow or make plans around what's still open.
+[00:23] AGENT: I mean, like, our clinic is open from Monday to Friday at until from 9AM
+[00:30] AGENT: to 5PM,
+[00:32] AGENT: and we are closed on weekends.
+[00:34] AGENT: So if you tell me on what date you want me to schedule a appointment for you, I can do it, sir.
+[00:41] BOT: Thanks for the welcome. I caught most of what you said. So the clinic hours are Monday to Friday, 9AM to 5PM,
+[00:49] BOT: and closed on weekends. Right? If that's correct
+[00:53] AGENT: Yes.
+[00:55] BOT: Okay.
+[00:56] BOT: Got it. Thanks.
+[00:58] BOT: One more thing while I have you. Even with the regular hours, are you open right now tonight? I'm just trying to plan if I should come by or call back tomorrow.
+[01:10] AGENT: No. We're not open tonight.
+[01:12] AGENT: We are closed after 5PM.
+[01:16] BOT: Got it. Thanks for that clarification.
+[01:19] BOT: Let me just confirm a couple of things. Okay. I see. Thanks for confirming. So you're closed after 5PM tonight.
+[01:26] BOT: I'm good with that. I'll call back tomorrow if I need anything.

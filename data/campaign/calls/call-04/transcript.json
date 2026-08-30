@@ -1,0 +1,4326 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "01a02b07-ca2f-7b00-8e14-065292bfd36d",
+    "sha256": "62295a75a4c6e3212f0f4b8e0167e0c672465184085acdfe0805b0e94104023d",
+    "created": "2026-08-22 19:52:06.728000+00:00",
+    "duration": 139.77594,
+    "channels": 2,
+    "models": [
+      "2187e11a-3532-4498-b076-81fa530bdd49"
+    ],
+    "model_info": {
+      "2187e11a-3532-4498-b076-81fa530bdd49": {
+        "name": "general-nova-3",
+        "version": "2025-07-31.0",
+        "arch": "nova-3"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "This call may be recorded for quality and training purposes. Thank you for calling Pivot Point Orthopedics. Would you like to create a demo patient profile? I just need your first and last name to get started. To schedule a new patient appointment, you'll need a demo patient profile. Would you like to create one now? I just need your first and last name. Your patient profile is set up, and your date of birth is 07/04/2000 for demo purposes. How can I help you today? Let's get your new patient appointment scheduled. Do you have a specific provider you'd like to see, or are you open to the first available? We have openings for new patient appointments this coming Tuesday with Dugie Hauser. Would you like 11:15AM, 12PM, or 12:45PM? You're booked for Tuesday, August 25 at 11:15AM with Judy Hauser at Pivot Point Orthopedic. Please bring your photo ID, insurance card, a list of current medications, and any imaging discs if you have them. Is there anything else I could help you with? You're all set for your appointment. If you need anything else, just let us know. Have a great day.",
+            "confidence": 1.0,
+            "words": [
+              {
+                "word": "this",
+                "start": 0.0,
+                "end": 0.39999998,
+                "confidence": 0.99902344,
+                "punctuated_word": "This"
+              },
+              {
+                "word": "call",
+                "start": 0.39999998,
+                "end": 0.64,
+                "confidence": 1.0,
+                "punctuated_word": "call"
+              },
+              {
+                "word": "may",
+                "start": 0.64,
+                "end": 0.88,
+                "confidence": 0.9980469,
+                "punctuated_word": "may"
+              },
+              {
+                "word": "be",
+                "start": 0.88,
+                "end": 1.04,
+                "confidence": 1.0,
+                "punctuated_word": "be"
+              },
+              {
+                "word": "recorded",
+                "start": 1.04,
+                "end": 1.4399999,
+                "confidence": 1.0,
+                "punctuated_word": "recorded"
+              },
+              {
+                "word": "for",
+                "start": 1.4399999,
+                "end": 1.68,
+                "confidence": 1.0,
+                "punctuated_word": "for"
+              },
+              {
+                "word": "quality",
+                "start": 1.68,
+                "end": 2.08,
+                "confidence": 1.0,
+                "punctuated_word": "quality"
+              },
+              {
+                "word": "and",
+                "start": 2.08,
+                "end": 2.32,
+                "confidence": 1.0,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "training",
+                "start": 2.32,
+                "end": 2.72,
+                "confidence": 1.0,
+                "punctuated_word": "training"
+              },
+              {
+                "word": "purposes",
+                "start": 2.72,
+                "end": 3.6,
+                "confidence": 0.9980469,
+                "punctuated_word": "purposes."
+              },
+              {
+                "word": "thank",
+                "start": 4.88,
+                "end": 5.92,
+                "confidence": 0.80615234,
+                "punctuated_word": "Thank"
+              },
+              {
+                "word": "you",
+                "start": 7.44,
+                "end": 7.6,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "for",
+                "start": 7.6,
+                "end": 7.7599998,
+                "confidence": 1.0,
+                "punctuated_word": "for"
+              },
+              {
+                "word": "calling",
+                "start": 7.7599998,
+                "end": 8.08,
+                "confidence": 0.9980469,
+                "punctuated_word": "calling"
+              },
+              {
+                "word": "pivot",
+                "start": 8.08,
+                "end": 8.48,
+                "confidence": 0.9970703,
+                "punctuated_word": "Pivot"
+              },
+              {
+                "word": "point",
+                "start": 8.48,
+                "end": 8.72,
+                "confidence": 0.89501953,
+                "punctuated_word": "Point"
+              },
+              {
+                "word": "orthopedics",
+                "start": 8.72,
+                "end": 9.759999,
+                "confidence": 0.89868164,
+                "punctuated_word": "Orthopedics."
+              },
+              {
+                "word": "would",
+                "start": 9.92,
+                "end": 10.16,
+                "confidence": 1.0,
+                "punctuated_word": "Would"
+              },
+              {
+                "word": "you",
+                "start": 10.16,
+                "end": 10.32,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "like",
+                "start": 10.32,
+                "end": 10.48,
+                "confidence": 1.0,
+                "punctuated_word": "like"
+              },
+              {
+                "word": "to",
+                "start": 10.48,
+                "end": 10.559999,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "create",
+                "start": 10.559999,
+                "end": 10.8,
+                "confidence": 1.0,
+                "punctuated_word": "create"
+              },
+              {
+                "word": "a",
+                "start": 10.8,
+                "end": 10.96,
+                "confidence": 1.0,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "demo",
+                "start": 10.96,
+                "end": 11.2,
+                "confidence": 1.0,
+                "punctuated_word": "demo"
+              },
+              {
+                "word": "patient",
+                "start": 11.2,
+                "end": 11.5199995,
+                "confidence": 1.0,
+                "punctuated_word": "patient"
+              },
+              {
+                "word": "profile",
+                "start": 11.5199995,
+                "end": 12.4,
+                "confidence": 0.94873047,
+                "punctuated_word": "profile?"
+              },
+              {
+                "word": "i",
+                "start": 12.48,
+                "end": 12.719999,
+                "confidence": 0.65722656,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "just",
+                "start": 12.719999,
+                "end": 12.88,
+                "confidence": 0.8881836,
+                "punctuated_word": "just"
+              },
+              {
+                "word": "need",
+                "start": 12.88,
+                "end": 13.04,
+                "confidence": 0.9970703,
+                "punctuated_word": "need"
+              },
+              {
+                "word": "your",
+                "start": 13.04,
+                "end": 13.12,
+                "confidence": 1.0,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "first",
+                "start": 13.12,
+                "end": 13.28,
+                "confidence": 1.0,
+                "punctuated_word": "first"
+              },
+              {
+                "word": "and",
+                "start": 13.28,
+                "end": 13.44,
+                "confidence": 0.99902344,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "last",
+                "start": 13.44,
+                "end": 13.599999,
+                "confidence": 1.0,
+                "punctuated_word": "last"
+              },
+              {
+                "word": "name",
+                "start": 13.599999,
+                "end": 13.759999,
+                "confidence": 1.0,
+                "punctuated_word": "name"
+              },
+              {
+                "word": "to",
+                "start": 13.759999,
+                "end": 13.92,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "get",
+                "start": 13.92,
+                "end": 14.08,
+                "confidence": 1.0,
+                "punctuated_word": "get"
+              },
+              {
+                "word": "started",
+                "start": 14.08,
+                "end": 14.4,
+                "confidence": 1.0,
+                "punctuated_word": "started."
+              },
+              {
+                "word": "to",
+                "start": 22.185,
+                "end": 22.425,
+                "confidence": 1.0,
+                "punctuated_word": "To"
+              },
+              {
+                "word": "schedule",
+                "start": 22.425,
+                "end": 22.744999,
+                "confidence": 1.0,
+                "punctuated_word": "schedule"
+              },
+              {
+                "word": "a",
+                "start": 22.744999,
+                "end": 22.985,
+                "confidence": 1.0,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "new",
+                "start": 22.985,
+                "end": 23.145,
+                "confidence": 1.0,
+                "punctuated_word": "new"
+              },
+              {
+                "word": "patient",
+                "start": 23.145,
+                "end": 23.384998,
+                "confidence": 1.0,
+                "punctuated_word": "patient"
+              },
+              {
+                "word": "appointment",
+                "start": 23.384998,
+                "end": 24.025,
+                "confidence": 1.0,
+                "punctuated_word": "appointment,"
+              },
+              {
+                "word": "you'll",
+                "start": 24.025,
+                "end": 24.185,
+                "confidence": 1.0,
+                "punctuated_word": "you'll"
+              },
+              {
+                "word": "need",
+                "start": 24.185,
+                "end": 24.425,
+                "confidence": 1.0,
+                "punctuated_word": "need"
+              },
+              {
+                "word": "a",
+                "start": 24.425,
+                "end": 24.585,
+                "confidence": 1.0,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "demo",
+                "start": 24.585,
+                "end": 24.904999,
+                "confidence": 1.0,
+                "punctuated_word": "demo"
+              },
+              {
+                "word": "patient",
+                "start": 24.904999,
+                "end": 25.305,
+                "confidence": 1.0,
+                "punctuated_word": "patient"
+              },
+              {
+                "word": "profile",
+                "start": 25.305,
+                "end": 26.185,
+                "confidence": 1.0,
+                "punctuated_word": "profile."
+              },
+              {
+                "word": "would",
+                "start": 26.345,
+                "end": 26.664999,
+                "confidence": 1.0,
+                "punctuated_word": "Would"
+              },
+              {
+                "word": "you",
+                "start": 26.664999,
+                "end": 26.744999,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "like",
+                "start": 26.744999,
+                "end": 26.904999,
+                "confidence": 1.0,
+                "punctuated_word": "like"
+              },
+              {
+                "word": "to",
+                "start": 26.904999,
+                "end": 27.064999,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "create",
+                "start": 27.064999,
+                "end": 27.305,
+                "confidence": 1.0,
+                "punctuated_word": "create"
+              },
+              {
+                "word": "one",
+                "start": 27.305,
+                "end": 27.544998,
+                "confidence": 1.0,
+                "punctuated_word": "one"
+              },
+              {
+                "word": "now",
+                "start": 27.544998,
+                "end": 28.025,
+                "confidence": 1.0,
+                "punctuated_word": "now?"
+              },
+              {
+                "word": "i",
+                "start": 28.025,
+                "end": 28.345,
+                "confidence": 1.0,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "just",
+                "start": 28.345,
+                "end": 28.505,
+                "confidence": 1.0,
+                "punctuated_word": "just"
+              },
+              {
+                "word": "need",
+                "start": 28.505,
+                "end": 28.664999,
+                "confidence": 1.0,
+                "punctuated_word": "need"
+              },
+              {
+                "word": "your",
+                "start": 28.664999,
+                "end": 28.825,
+                "confidence": 1.0,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "first",
+                "start": 28.825,
+                "end": 29.064999,
+                "confidence": 1.0,
+                "punctuated_word": "first"
+              },
+              {
+                "word": "and",
+                "start": 29.064999,
+                "end": 29.224998,
+                "confidence": 1.0,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "last",
+                "start": 29.224998,
+                "end": 29.465,
+                "confidence": 1.0,
+                "punctuated_word": "last"
+              },
+              {
+                "word": "name",
+                "start": 29.465,
+                "end": 29.785,
+                "confidence": 0.9536133,
+                "punctuated_word": "name."
+              },
+              {
+                "word": "your",
+                "start": 42.23,
+                "end": 42.55,
+                "confidence": 1.0,
+                "punctuated_word": "Your"
+              },
+              {
+                "word": "patient",
+                "start": 42.55,
+                "end": 42.949997,
+                "confidence": 1.0,
+                "punctuated_word": "patient"
+              },
+              {
+                "word": "profile",
+                "start": 42.949997,
+                "end": 43.43,
+                "confidence": 1.0,
+                "punctuated_word": "profile"
+              },
+              {
+                "word": "is",
+                "start": 43.43,
+                "end": 43.67,
+                "confidence": 1.0,
+                "punctuated_word": "is"
+              },
+              {
+                "word": "set",
+                "start": 43.67,
+                "end": 43.91,
+                "confidence": 0.98828125,
+                "punctuated_word": "set"
+              },
+              {
+                "word": "up",
+                "start": 43.91,
+                "end": 44.15,
+                "confidence": 0.939209,
+                "punctuated_word": "up,"
+              },
+              {
+                "word": "and",
+                "start": 44.295,
+                "end": 44.614998,
+                "confidence": 1.0,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "your",
+                "start": 44.614998,
+                "end": 44.855,
+                "confidence": 1.0,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "date",
+                "start": 44.855,
+                "end": 45.015,
+                "confidence": 1.0,
+                "punctuated_word": "date"
+              },
+              {
+                "word": "of",
+                "start": 45.015,
+                "end": 45.175,
+                "confidence": 0.9980469,
+                "punctuated_word": "of"
+              },
+              {
+                "word": "birth",
+                "start": 45.175,
+                "end": 45.335,
+                "confidence": 1.0,
+                "punctuated_word": "birth"
+              },
+              {
+                "word": "is",
+                "start": 45.335,
+                "end": 45.574997,
+                "confidence": 1.0,
+                "punctuated_word": "is"
+              },
+              {
+                "word": "07/04/2000",
+                "start": 45.574997,
+                "end": 46.855,
+                "confidence": 0.9970703,
+                "punctuated_word": "07/04/2000"
+              },
+              {
+                "word": "for",
+                "start": 46.855,
+                "end": 47.094997,
+                "confidence": 0.99316406,
+                "punctuated_word": "for"
+              },
+              {
+                "word": "demo",
+                "start": 47.094997,
+                "end": 47.414997,
+                "confidence": 1.0,
+                "punctuated_word": "demo"
+              },
+              {
+                "word": "purposes",
+                "start": 47.414997,
+                "end": 48.135,
+                "confidence": 1.0,
+                "punctuated_word": "purposes."
+              },
+              {
+                "word": "how",
+                "start": 48.295,
+                "end": 48.614998,
+                "confidence": 1.0,
+                "punctuated_word": "How"
+              },
+              {
+                "word": "can",
+                "start": 48.614998,
+                "end": 48.774998,
+                "confidence": 1.0,
+                "punctuated_word": "can"
+              },
+              {
+                "word": "i",
+                "start": 48.774998,
+                "end": 48.855,
+                "confidence": 1.0,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "help",
+                "start": 48.855,
+                "end": 49.015,
+                "confidence": 1.0,
+                "punctuated_word": "help"
+              },
+              {
+                "word": "you",
+                "start": 49.015,
+                "end": 49.175,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "today",
+                "start": 49.175,
+                "end": 49.495,
+                "confidence": 1.0,
+                "punctuated_word": "today?"
+              },
+              {
+                "word": "let's",
+                "start": 60.9,
+                "end": 61.3,
+                "confidence": 0.99365234,
+                "punctuated_word": "Let's"
+              },
+              {
+                "word": "get",
+                "start": 61.3,
+                "end": 61.46,
+                "confidence": 1.0,
+                "punctuated_word": "get"
+              },
+              {
+                "word": "your",
+                "start": 61.46,
+                "end": 61.62,
+                "confidence": 1.0,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "new",
+                "start": 61.62,
+                "end": 61.86,
+                "confidence": 1.0,
+                "punctuated_word": "new"
+              },
+              {
+                "word": "patient",
+                "start": 61.86,
+                "end": 62.100002,
+                "confidence": 1.0,
+                "punctuated_word": "patient"
+              },
+              {
+                "word": "appointment",
+                "start": 62.100002,
+                "end": 62.5,
+                "confidence": 0.98828125,
+                "punctuated_word": "appointment"
+              },
+              {
+                "word": "scheduled",
+                "start": 62.5,
+                "end": 63.38,
+                "confidence": 0.99658203,
+                "punctuated_word": "scheduled."
+              },
+              {
+                "word": "do",
+                "start": 63.46,
+                "end": 63.78,
+                "confidence": 1.0,
+                "punctuated_word": "Do"
+              },
+              {
+                "word": "you",
+                "start": 63.78,
+                "end": 63.940002,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "have",
+                "start": 63.940002,
+                "end": 64.1,
+                "confidence": 1.0,
+                "punctuated_word": "have"
+              },
+              {
+                "word": "a",
+                "start": 64.1,
+                "end": 64.26,
+                "confidence": 0.99902344,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "specific",
+                "start": 64.26,
+                "end": 64.74,
+                "confidence": 1.0,
+                "punctuated_word": "specific"
+              },
+              {
+                "word": "provider",
+                "start": 64.74,
+                "end": 65.14,
+                "confidence": 1.0,
+                "punctuated_word": "provider"
+              },
+              {
+                "word": "you'd",
+                "start": 65.14,
+                "end": 65.54,
+                "confidence": 1.0,
+                "punctuated_word": "you'd"
+              },
+              {
+                "word": "like",
+                "start": 65.54,
+                "end": 65.7,
+                "confidence": 1.0,
+                "punctuated_word": "like"
+              },
+              {
+                "word": "to",
+                "start": 65.7,
+                "end": 65.78,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "see",
+                "start": 65.78,
+                "end": 66.26,
+                "confidence": 0.94433594,
+                "punctuated_word": "see,"
+              },
+              {
+                "word": "or",
+                "start": 66.26,
+                "end": 66.5,
+                "confidence": 1.0,
+                "punctuated_word": "or"
+              },
+              {
+                "word": "are",
+                "start": 66.5,
+                "end": 66.74,
+                "confidence": 1.0,
+                "punctuated_word": "are"
+              },
+              {
+                "word": "you",
+                "start": 66.74,
+                "end": 66.9,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "open",
+                "start": 66.9,
+                "end": 67.14,
+                "confidence": 1.0,
+                "punctuated_word": "open"
+              },
+              {
+                "word": "to",
+                "start": 67.14,
+                "end": 67.3,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "the",
+                "start": 67.3,
+                "end": 67.38,
+                "confidence": 1.0,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "first",
+                "start": 67.38,
+                "end": 67.62,
+                "confidence": 1.0,
+                "punctuated_word": "first"
+              },
+              {
+                "word": "available",
+                "start": 67.62,
+                "end": 68.1,
+                "confidence": 1.0,
+                "punctuated_word": "available?"
+              },
+              {
+                "word": "we",
+                "start": 77.115005,
+                "end": 77.515,
+                "confidence": 0.97998047,
+                "punctuated_word": "We"
+              },
+              {
+                "word": "have",
+                "start": 77.515,
+                "end": 77.83501,
+                "confidence": 1.0,
+                "punctuated_word": "have"
+              },
+              {
+                "word": "openings",
+                "start": 77.83501,
+                "end": 78.395004,
+                "confidence": 0.9980469,
+                "punctuated_word": "openings"
+              },
+              {
+                "word": "for",
+                "start": 78.395004,
+                "end": 78.635,
+                "confidence": 1.0,
+                "punctuated_word": "for"
+              },
+              {
+                "word": "new",
+                "start": 78.635,
+                "end": 78.955,
+                "confidence": 1.0,
+                "punctuated_word": "new"
+              },
+              {
+                "word": "patient",
+                "start": 78.955,
+                "end": 79.355,
+                "confidence": 1.0,
+                "punctuated_word": "patient"
+              },
+              {
+                "word": "appointments",
+                "start": 79.355,
+                "end": 79.995,
+                "confidence": 0.85595703,
+                "punctuated_word": "appointments"
+              },
+              {
+                "word": "this",
+                "start": 79.995,
+                "end": 80.395004,
+                "confidence": 0.9980469,
+                "punctuated_word": "this"
+              },
+              {
+                "word": "coming",
+                "start": 80.395004,
+                "end": 80.635,
+                "confidence": 1.0,
+                "punctuated_word": "coming"
+              },
+              {
+                "word": "tuesday",
+                "start": 80.635,
+                "end": 81.515,
+                "confidence": 1.0,
+                "punctuated_word": "Tuesday"
+              },
+              {
+                "word": "with",
+                "start": 81.595,
+                "end": 81.915,
+                "confidence": 0.9970703,
+                "punctuated_word": "with"
+              },
+              {
+                "word": "dugie",
+                "start": 81.915,
+                "end": 82.395004,
+                "confidence": 0.6020508,
+                "punctuated_word": "Dugie"
+              },
+              {
+                "word": "hauser",
+                "start": 82.395004,
+                "end": 83.195,
+                "confidence": 0.8706665,
+                "punctuated_word": "Hauser."
+              },
+              {
+                "word": "would",
+                "start": 83.195,
+                "end": 83.515,
+                "confidence": 1.0,
+                "punctuated_word": "Would"
+              },
+              {
+                "word": "you",
+                "start": 83.515,
+                "end": 83.595,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "like",
+                "start": 83.595,
+                "end": 83.755005,
+                "confidence": 1.0,
+                "punctuated_word": "like"
+              },
+              {
+                "word": "11:15am",
+                "start": 83.755005,
+                "end": 85.035,
+                "confidence": 0.9991862,
+                "punctuated_word": "11:15AM,"
+              },
+              {
+                "word": "12pm",
+                "start": 85.035,
+                "end": 85.675,
+                "confidence": 0.99731445,
+                "punctuated_word": "12PM,"
+              },
+              {
+                "word": "or",
+                "start": 85.675,
+                "end": 85.755005,
+                "confidence": 1.0,
+                "punctuated_word": "or"
+              },
+              {
+                "word": "12:45pm",
+                "start": 85.755005,
+                "end": 86.795006,
+                "confidence": 0.9998779,
+                "punctuated_word": "12:45PM?"
+              },
+              {
+                "word": "you're",
+                "start": 97.520004,
+                "end": 98.0,
+                "confidence": 0.9523926,
+                "punctuated_word": "You're"
+              },
+              {
+                "word": "booked",
+                "start": 98.0,
+                "end": 98.240005,
+                "confidence": 1.0,
+                "punctuated_word": "booked"
+              },
+              {
+                "word": "for",
+                "start": 98.240005,
+                "end": 98.48,
+                "confidence": 1.0,
+                "punctuated_word": "for"
+              },
+              {
+                "word": "tuesday",
+                "start": 98.48,
+                "end": 99.200005,
+                "confidence": 0.9980469,
+                "punctuated_word": "Tuesday,"
+              },
+              {
+                "word": "august",
+                "start": 99.200005,
+                "end": 99.72,
+                "confidence": 1.0,
+                "punctuated_word": "August"
+              },
+              {
+                "word": "25",
+                "start": 99.72,
+                "end": 100.240005,
+                "confidence": 1.0,
+                "punctuated_word": "25"
+              },
+              {
+                "word": "at",
+                "start": 100.240005,
+                "end": 100.560005,
+                "confidence": 0.8125,
+                "punctuated_word": "at"
+              },
+              {
+                "word": "11:15am",
+                "start": 100.560005,
+                "end": 102.16,
+                "confidence": 0.99934894,
+                "punctuated_word": "11:15AM"
+              },
+              {
+                "word": "with",
+                "start": 102.16,
+                "end": 102.48,
+                "confidence": 0.96435547,
+                "punctuated_word": "with"
+              },
+              {
+                "word": "judy",
+                "start": 102.48,
+                "end": 102.880005,
+                "confidence": 0.84228516,
+                "punctuated_word": "Judy"
+              },
+              {
+                "word": "hauser",
+                "start": 102.880005,
+                "end": 103.28,
+                "confidence": 0.8754883,
+                "punctuated_word": "Hauser"
+              },
+              {
+                "word": "at",
+                "start": 103.28,
+                "end": 103.520004,
+                "confidence": 0.9980469,
+                "punctuated_word": "at"
+              },
+              {
+                "word": "pivot",
+                "start": 103.520004,
+                "end": 103.920006,
+                "confidence": 0.9914551,
+                "punctuated_word": "Pivot"
+              },
+              {
+                "word": "point",
+                "start": 103.920006,
+                "end": 104.16,
+                "confidence": 0.99316406,
+                "punctuated_word": "Point"
+              },
+              {
+                "word": "orthopedic",
+                "start": 104.16,
+                "end": 104.880005,
+                "confidence": 0.85180664,
+                "punctuated_word": "Orthopedic."
+              },
+              {
+                "word": "please",
+                "start": 105.325005,
+                "end": 105.645004,
+                "confidence": 1.0,
+                "punctuated_word": "Please"
+              },
+              {
+                "word": "bring",
+                "start": 105.645004,
+                "end": 105.965004,
+                "confidence": 1.0,
+                "punctuated_word": "bring"
+              },
+              {
+                "word": "your",
+                "start": 105.965004,
+                "end": 106.125,
+                "confidence": 1.0,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "photo",
+                "start": 106.125,
+                "end": 106.445,
+                "confidence": 1.0,
+                "punctuated_word": "photo"
+              },
+              {
+                "word": "id",
+                "start": 106.445,
+                "end": 107.165,
+                "confidence": 0.99902344,
+                "punctuated_word": "ID,"
+              },
+              {
+                "word": "insurance",
+                "start": 107.165,
+                "end": 107.805,
+                "confidence": 1.0,
+                "punctuated_word": "insurance"
+              },
+              {
+                "word": "card",
+                "start": 107.805,
+                "end": 108.445,
+                "confidence": 1.0,
+                "punctuated_word": "card,"
+              },
+              {
+                "word": "a",
+                "start": 108.525,
+                "end": 108.765,
+                "confidence": 1.0,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "list",
+                "start": 108.765,
+                "end": 109.005005,
+                "confidence": 1.0,
+                "punctuated_word": "list"
+              },
+              {
+                "word": "of",
+                "start": 109.005005,
+                "end": 109.165,
+                "confidence": 1.0,
+                "punctuated_word": "of"
+              },
+              {
+                "word": "current",
+                "start": 109.165,
+                "end": 109.485,
+                "confidence": 1.0,
+                "punctuated_word": "current"
+              },
+              {
+                "word": "medications",
+                "start": 109.485,
+                "end": 110.365005,
+                "confidence": 0.9758301,
+                "punctuated_word": "medications,"
+              },
+              {
+                "word": "and",
+                "start": 110.605,
+                "end": 110.765,
+                "confidence": 0.99902344,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "any",
+                "start": 110.765,
+                "end": 111.005005,
+                "confidence": 1.0,
+                "punctuated_word": "any"
+              },
+              {
+                "word": "imaging",
+                "start": 111.005005,
+                "end": 111.485,
+                "confidence": 0.99902344,
+                "punctuated_word": "imaging"
+              },
+              {
+                "word": "discs",
+                "start": 111.485,
+                "end": 111.965004,
+                "confidence": 0.96655273,
+                "punctuated_word": "discs"
+              },
+              {
+                "word": "if",
+                "start": 111.965004,
+                "end": 112.125,
+                "confidence": 0.8251953,
+                "punctuated_word": "if"
+              },
+              {
+                "word": "you",
+                "start": 112.125,
+                "end": 112.285,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "have",
+                "start": 112.285,
+                "end": 112.445,
+                "confidence": 1.0,
+                "punctuated_word": "have"
+              },
+              {
+                "word": "them",
+                "start": 112.445,
+                "end": 113.005005,
+                "confidence": 1.0,
+                "punctuated_word": "them."
+              },
+              {
+                "word": "is",
+                "start": 113.245,
+                "end": 113.485,
+                "confidence": 0.99316406,
+                "punctuated_word": "Is"
+              },
+              {
+                "word": "there",
+                "start": 113.485,
+                "end": 113.645004,
+                "confidence": 0.9951172,
+                "punctuated_word": "there"
+              },
+              {
+                "word": "anything",
+                "start": 113.645004,
+                "end": 113.805,
+                "confidence": 1.0,
+                "punctuated_word": "anything"
+              },
+              {
+                "word": "else",
+                "start": 113.805,
+                "end": 113.965004,
+                "confidence": 1.0,
+                "punctuated_word": "else"
+              },
+              {
+                "word": "i",
+                "start": 113.965004,
+                "end": 114.125,
+                "confidence": 1.0,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "could",
+                "start": 114.125,
+                "end": 114.285,
+                "confidence": 0.8935547,
+                "punctuated_word": "could"
+              },
+              {
+                "word": "help",
+                "start": 114.285,
+                "end": 114.445,
+                "confidence": 1.0,
+                "punctuated_word": "help"
+              },
+              {
+                "word": "you",
+                "start": 114.445,
+                "end": 114.525,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "with",
+                "start": 114.525,
+                "end": 114.765,
+                "confidence": 1.0,
+                "punctuated_word": "with?"
+              },
+              {
+                "word": "you're",
+                "start": 130.03,
+                "end": 130.51,
+                "confidence": 0.9980469,
+                "punctuated_word": "You're"
+              },
+              {
+                "word": "all",
+                "start": 130.51,
+                "end": 130.67,
+                "confidence": 1.0,
+                "punctuated_word": "all"
+              },
+              {
+                "word": "set",
+                "start": 130.67,
+                "end": 130.91,
+                "confidence": 1.0,
+                "punctuated_word": "set"
+              },
+              {
+                "word": "for",
+                "start": 130.91,
+                "end": 131.06999,
+                "confidence": 1.0,
+                "punctuated_word": "for"
+              },
+              {
+                "word": "your",
+                "start": 131.06999,
+                "end": 131.23,
+                "confidence": 1.0,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "appointment",
+                "start": 131.23,
+                "end": 131.95,
+                "confidence": 1.0,
+                "punctuated_word": "appointment."
+              },
+              {
+                "word": "if",
+                "start": 132.11,
+                "end": 132.43,
+                "confidence": 1.0,
+                "punctuated_word": "If"
+              },
+              {
+                "word": "you",
+                "start": 132.43,
+                "end": 132.51,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "need",
+                "start": 132.51,
+                "end": 132.67,
+                "confidence": 1.0,
+                "punctuated_word": "need"
+              },
+              {
+                "word": "anything",
+                "start": 132.67,
+                "end": 132.98999,
+                "confidence": 1.0,
+                "punctuated_word": "anything"
+              },
+              {
+                "word": "else",
+                "start": 132.98999,
+                "end": 133.31,
+                "confidence": 0.9970703,
+                "punctuated_word": "else,"
+              },
+              {
+                "word": "just",
+                "start": 133.31,
+                "end": 133.47,
+                "confidence": 1.0,
+                "punctuated_word": "just"
+              },
+              {
+                "word": "let",
+                "start": 133.47,
+                "end": 133.62999,
+                "confidence": 1.0,
+                "punctuated_word": "let"
+              },
+              {
+                "word": "us",
+                "start": 133.62999,
+                "end": 133.79,
+                "confidence": 1.0,
+                "punctuated_word": "us"
+              },
+              {
+                "word": "know",
+                "start": 133.79,
+                "end": 134.27,
+                "confidence": 1.0,
+                "punctuated_word": "know."
+              },
+              {
+                "word": "have",
+                "start": 134.34999,
+                "end": 134.67,
+                "confidence": 1.0,
+                "punctuated_word": "Have"
+              },
+              {
+                "word": "a",
+                "start": 134.67,
+                "end": 134.75,
+                "confidence": 1.0,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "great",
+                "start": 134.75,
+                "end": 134.98999,
+                "confidence": 1.0,
+                "punctuated_word": "great"
+              },
+              {
+                "word": "day",
+                "start": 134.98999,
+                "end": 135.23,
+                "confidence": 0.99902344,
+                "punctuated_word": "day."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nThis call may be recorded for quality and training purposes. Thank you for calling Pivot Point Orthopedics. Would you like to create a demo patient profile? I just need your first and last name to get started. To schedule a new patient appointment, you'll need a demo patient profile.\n\nWould you like to create one now? I just need your first and last name. Your patient profile is set up, and your date of birth is 07/04/2000 for demo purposes. How can I help you today? Let's get your new patient appointment scheduled.\n\nDo you have a specific provider you'd like to see, or are you open to the first available? We have openings for new patient appointments this coming Tuesday with Dugie Hauser. Would you like 11:15AM, 12PM, or 12:45PM? You're booked for Tuesday, August 25 at 11:15AM with Judy Hauser at Pivot Point Orthopedic. Please bring your photo ID, insurance card, a list of current medications, and any imaging discs if you have them.\n\nIs there anything else I could help you with? You're all set for your appointment. If you need anything else, just let us know. Have a great day.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "This call may be recorded for quality and training purposes.",
+                      "start": 0.0,
+                      "end": 3.6
+                    },
+                    {
+                      "text": "Thank you for calling Pivot Point Orthopedics.",
+                      "start": 4.88,
+                      "end": 9.759999
+                    },
+                    {
+                      "text": "Would you like to create a demo patient profile?",
+                      "start": 9.92,
+                      "end": 12.4
+                    },
+                    {
+                      "text": "I just need your first and last name to get started.",
+                      "start": 12.48,
+                      "end": 14.4
+                    },
+                    {
+                      "text": "To schedule a new patient appointment, you'll need a demo patient profile.",
+                      "start": 22.185,
+                      "end": 26.185
+                    }
+                  ],
+                  "num_words": 49,
+                  "start": 0.0,
+                  "end": 26.185
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "Would you like to create one now?",
+                      "start": 26.345,
+                      "end": 28.025
+                    },
+                    {
+                      "text": "I just need your first and last name.",
+                      "start": 28.025,
+                      "end": 29.785
+                    },
+                    {
+                      "text": "Your patient profile is set up, and your date of birth is 07/04/2000 for demo purposes.",
+                      "start": 42.23,
+                      "end": 48.135
+                    },
+                    {
+                      "text": "How can I help you today?",
+                      "start": 48.295,
+                      "end": 49.495
+                    },
+                    {
+                      "text": "Let's get your new patient appointment scheduled.",
+                      "start": 60.9,
+                      "end": 63.38
+                    }
+                  ],
+                  "num_words": 44,
+                  "start": 26.345,
+                  "end": 63.38
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "Do you have a specific provider you'd like to see, or are you open to the first available?",
+                      "start": 63.46,
+                      "end": 68.1
+                    },
+                    {
+                      "text": "We have openings for new patient appointments this coming Tuesday with Dugie Hauser.",
+                      "start": 77.115005,
+                      "end": 83.195
+                    },
+                    {
+                      "text": "Would you like 11:15AM, 12PM, or 12:45PM?",
+                      "start": 83.195,
+                      "end": 86.795006
+                    },
+                    {
+                      "text": "You're booked for Tuesday, August 25 at 11:15AM with Judy Hauser at Pivot Point Orthopedic.",
+                      "start": 97.520004,
+                      "end": 104.880005
+                    },
+                    {
+                      "text": "Please bring your photo ID, insurance card, a list of current medications, and any imaging discs if you have them.",
+                      "start": 105.325005,
+                      "end": 113.005005
+                    }
+                  ],
+                  "num_words": 73,
+                  "start": 63.46,
+                  "end": 113.005005
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "Is there anything else I could help you with?",
+                      "start": 113.245,
+                      "end": 114.765
+                    },
+                    {
+                      "text": "You're all set for your appointment.",
+                      "start": 130.03,
+                      "end": 131.95
+                    },
+                    {
+                      "text": "If you need anything else, just let us know.",
+                      "start": 132.11,
+                      "end": 134.27
+                    },
+                    {
+                      "text": "Have a great day.",
+                      "start": 134.34999,
+                      "end": 135.23
+                    }
+                  ],
+                  "num_words": 28,
+                  "start": 113.245,
+                  "end": 135.23
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "transcript": "I'm not looking to demo anything. I need a new patient appointment. Dana Whitfield. That's a demo profile, not mine. I need a real new patient booking. First available is fine. I'm new and flexible. 11:15AM. Got it. I'm Dana Whitfield. The appointment is Tuesday, August 25 at 11:15. I'll bring those items. Thanks.",
+            "confidence": 1.0,
+            "words": [
+              {
+                "word": "i'm",
+                "start": 15.695,
+                "end": 16.255001,
+                "confidence": 0.9880371,
+                "punctuated_word": "I'm"
+              },
+              {
+                "word": "not",
+                "start": 16.255001,
+                "end": 16.415,
+                "confidence": 1.0,
+                "punctuated_word": "not"
+              },
+              {
+                "word": "looking",
+                "start": 16.415,
+                "end": 16.655,
+                "confidence": 1.0,
+                "punctuated_word": "looking"
+              },
+              {
+                "word": "to",
+                "start": 16.655,
+                "end": 16.815,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "demo",
+                "start": 16.815,
+                "end": 17.055,
+                "confidence": 1.0,
+                "punctuated_word": "demo"
+              },
+              {
+                "word": "anything",
+                "start": 17.055,
+                "end": 17.695,
+                "confidence": 0.99902344,
+                "punctuated_word": "anything."
+              },
+              {
+                "word": "i",
+                "start": 17.695,
+                "end": 17.855,
+                "confidence": 1.0,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "need",
+                "start": 17.855,
+                "end": 18.175,
+                "confidence": 1.0,
+                "punctuated_word": "need"
+              },
+              {
+                "word": "a",
+                "start": 18.175,
+                "end": 18.335,
+                "confidence": 0.99902344,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "new",
+                "start": 18.335,
+                "end": 18.655,
+                "confidence": 1.0,
+                "punctuated_word": "new"
+              },
+              {
+                "word": "patient",
+                "start": 18.655,
+                "end": 19.055,
+                "confidence": 1.0,
+                "punctuated_word": "patient"
+              },
+              {
+                "word": "appointment",
+                "start": 19.055,
+                "end": 19.535,
+                "confidence": 1.0,
+                "punctuated_word": "appointment."
+              },
+              {
+                "word": "dana",
+                "start": 32.99,
+                "end": 33.55,
+                "confidence": 0.98828125,
+                "punctuated_word": "Dana"
+              },
+              {
+                "word": "whitfield",
+                "start": 33.55,
+                "end": 34.11,
+                "confidence": 0.98030597,
+                "punctuated_word": "Whitfield."
+              },
+              {
+                "word": "that's",
+                "start": 52.86,
+                "end": 53.34,
+                "confidence": 0.99609375,
+                "punctuated_word": "That's"
+              },
+              {
+                "word": "a",
+                "start": 53.34,
+                "end": 53.5,
+                "confidence": 0.98535156,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "demo",
+                "start": 53.5,
+                "end": 53.82,
+                "confidence": 0.99902344,
+                "punctuated_word": "demo"
+              },
+              {
+                "word": "profile",
+                "start": 53.82,
+                "end": 54.7,
+                "confidence": 0.9675293,
+                "punctuated_word": "profile,"
+              },
+              {
+                "word": "not",
+                "start": 54.7,
+                "end": 55.02,
+                "confidence": 1.0,
+                "punctuated_word": "not"
+              },
+              {
+                "word": "mine",
+                "start": 55.02,
+                "end": 55.58,
+                "confidence": 1.0,
+                "punctuated_word": "mine."
+              },
+              {
+                "word": "i",
+                "start": 55.74,
+                "end": 56.06,
+                "confidence": 0.99902344,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "need",
+                "start": 56.06,
+                "end": 56.22,
+                "confidence": 1.0,
+                "punctuated_word": "need"
+              },
+              {
+                "word": "a",
+                "start": 56.22,
+                "end": 56.38,
+                "confidence": 1.0,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "real",
+                "start": 56.38,
+                "end": 56.620003,
+                "confidence": 1.0,
+                "punctuated_word": "real"
+              },
+              {
+                "word": "new",
+                "start": 56.620003,
+                "end": 56.86,
+                "confidence": 0.99316406,
+                "punctuated_word": "new"
+              },
+              {
+                "word": "patient",
+                "start": 56.86,
+                "end": 57.18,
+                "confidence": 1.0,
+                "punctuated_word": "patient"
+              },
+              {
+                "word": "booking",
+                "start": 57.18,
+                "end": 57.58,
+                "confidence": 1.0,
+                "punctuated_word": "booking."
+              },
+              {
+                "word": "first",
+                "start": 71.595,
+                "end": 71.915,
+                "confidence": 0.99902344,
+                "punctuated_word": "First"
+              },
+              {
+                "word": "available",
+                "start": 71.915,
+                "end": 72.555,
+                "confidence": 1.0,
+                "punctuated_word": "available"
+              },
+              {
+                "word": "is",
+                "start": 72.555,
+                "end": 72.875,
+                "confidence": 0.9980469,
+                "punctuated_word": "is"
+              },
+              {
+                "word": "fine",
+                "start": 72.875,
+                "end": 73.435,
+                "confidence": 0.99853516,
+                "punctuated_word": "fine."
+              },
+              {
+                "word": "i'm",
+                "start": 73.435,
+                "end": 73.755,
+                "confidence": 1.0,
+                "punctuated_word": "I'm"
+              },
+              {
+                "word": "new",
+                "start": 73.755,
+                "end": 73.995,
+                "confidence": 1.0,
+                "punctuated_word": "new"
+              },
+              {
+                "word": "and",
+                "start": 73.995,
+                "end": 74.235,
+                "confidence": 0.99902344,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "flexible",
+                "start": 74.235,
+                "end": 74.715,
+                "confidence": 0.99902344,
+                "punctuated_word": "flexible."
+              },
+              {
+                "word": "11:15am",
+                "start": 90.055,
+                "end": 91.41499,
+                "confidence": 0.97786456,
+                "punctuated_word": "11:15AM."
+              },
+              {
+                "word": "got",
+                "start": 118.005005,
+                "end": 118.40501,
+                "confidence": 0.98291016,
+                "punctuated_word": "Got"
+              },
+              {
+                "word": "it",
+                "start": 118.40501,
+                "end": 118.885,
+                "confidence": 1.0,
+                "punctuated_word": "it."
+              },
+              {
+                "word": "i'm",
+                "start": 118.965004,
+                "end": 119.365005,
+                "confidence": 1.0,
+                "punctuated_word": "I'm"
+              },
+              {
+                "word": "dana",
+                "start": 119.365005,
+                "end": 119.685005,
+                "confidence": 0.9980469,
+                "punctuated_word": "Dana"
+              },
+              {
+                "word": "whitfield",
+                "start": 119.685005,
+                "end": 120.565,
+                "confidence": 0.98128253,
+                "punctuated_word": "Whitfield."
+              },
+              {
+                "word": "the",
+                "start": 120.565,
+                "end": 120.885,
+                "confidence": 1.0,
+                "punctuated_word": "The"
+              },
+              {
+                "word": "appointment",
+                "start": 120.885,
+                "end": 121.205,
+                "confidence": 1.0,
+                "punctuated_word": "appointment"
+              },
+              {
+                "word": "is",
+                "start": 121.205,
+                "end": 121.525,
+                "confidence": 1.0,
+                "punctuated_word": "is"
+              },
+              {
+                "word": "tuesday",
+                "start": 121.525,
+                "end": 122.245,
+                "confidence": 0.9970703,
+                "punctuated_word": "Tuesday,"
+              },
+              {
+                "word": "august",
+                "start": 122.245,
+                "end": 122.765,
+                "confidence": 1.0,
+                "punctuated_word": "August"
+              },
+              {
+                "word": "25",
+                "start": 122.765,
+                "end": 123.285,
+                "confidence": 1.0,
+                "punctuated_word": "25"
+              },
+              {
+                "word": "at",
+                "start": 123.285,
+                "end": 123.685005,
+                "confidence": 0.7919922,
+                "punctuated_word": "at"
+              },
+              {
+                "word": "11:15",
+                "start": 123.685005,
+                "end": 124.805,
+                "confidence": 1.0,
+                "punctuated_word": "11:15."
+              },
+              {
+                "word": "i'll",
+                "start": 124.965004,
+                "end": 125.205,
+                "confidence": 1.0,
+                "punctuated_word": "I'll"
+              },
+              {
+                "word": "bring",
+                "start": 125.205,
+                "end": 125.365005,
+                "confidence": 1.0,
+                "punctuated_word": "bring"
+              },
+              {
+                "word": "those",
+                "start": 125.365005,
+                "end": 125.685005,
+                "confidence": 0.8251953,
+                "punctuated_word": "those"
+              },
+              {
+                "word": "items",
+                "start": 125.685005,
+                "end": 126.165,
+                "confidence": 0.9995117,
+                "punctuated_word": "items."
+              },
+              {
+                "word": "thanks",
+                "start": 126.770004,
+                "end": 127.170006,
+                "confidence": 1.0,
+                "punctuated_word": "Thanks."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nI'm not looking to demo anything. I need a new patient appointment. Dana Whitfield. That's a demo profile, not mine. I need a real new patient booking.\n\nFirst available is fine. I'm new and flexible. 11:15AM. Got it. I'm Dana Whitfield.\n\nThe appointment is Tuesday, August 25 at 11:15. I'll bring those items. Thanks.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "I'm not looking to demo anything.",
+                      "start": 15.695,
+                      "end": 17.695
+                    },
+                    {
+                      "text": "I need a new patient appointment.",
+                      "start": 17.695,
+                      "end": 19.535
+                    },
+                    {
+                      "text": "Dana Whitfield.",
+                      "start": 32.99,
+                      "end": 34.11
+                    },
+                    {
+                      "text": "That's a demo profile, not mine.",
+                      "start": 52.86,
+                      "end": 55.58
+                    },
+                    {
+                      "text": "I need a real new patient booking.",
+                      "start": 55.74,
+                      "end": 57.58
+                    }
+                  ],
+                  "num_words": 27,
+                  "start": 15.695,
+                  "end": 57.58
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "First available is fine.",
+                      "start": 71.595,
+                      "end": 73.435
+                    },
+                    {
+                      "text": "I'm new and flexible.",
+                      "start": 73.435,
+                      "end": 74.715
+                    },
+                    {
+                      "text": "11:15AM.",
+                      "start": 90.055,
+                      "end": 91.41499
+                    },
+                    {
+                      "text": "Got it.",
+                      "start": 118.005005,
+                      "end": 118.885
+                    },
+                    {
+                      "text": "I'm Dana Whitfield.",
+                      "start": 118.965004,
+                      "end": 120.565
+                    }
+                  ],
+                  "num_words": 14,
+                  "start": 71.595,
+                  "end": 120.565
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "The appointment is Tuesday, August 25 at 11:15.",
+                      "start": 120.565,
+                      "end": 124.805
+                    },
+                    {
+                      "text": "I'll bring those items.",
+                      "start": 124.965004,
+                      "end": 126.165
+                    },
+                    {
+                      "text": "Thanks.",
+                      "start": 126.770004,
+                      "end": 127.170006
+                    }
+                  ],
+                  "num_words": 13,
+                  "start": 120.565,
+                  "end": 127.170006
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "utterances": [
+      {
+        "start": 0.0,
+        "end": 3.6,
+        "confidence": 0.9995117,
+        "channel": 0,
+        "transcript": "This call may be recorded for quality and training purposes.",
+        "words": [
+          {
+            "word": "this",
+            "start": 0.0,
+            "end": 0.39999998,
+            "confidence": 0.99902344,
+            "punctuated_word": "This"
+          },
+          {
+            "word": "call",
+            "start": 0.39999998,
+            "end": 0.64,
+            "confidence": 1.0,
+            "punctuated_word": "call"
+          },
+          {
+            "word": "may",
+            "start": 0.64,
+            "end": 0.88,
+            "confidence": 0.9980469,
+            "punctuated_word": "may"
+          },
+          {
+            "word": "be",
+            "start": 0.88,
+            "end": 1.04,
+            "confidence": 1.0,
+            "punctuated_word": "be"
+          },
+          {
+            "word": "recorded",
+            "start": 1.04,
+            "end": 1.4399999,
+            "confidence": 1.0,
+            "punctuated_word": "recorded"
+          },
+          {
+            "word": "for",
+            "start": 1.4399999,
+            "end": 1.68,
+            "confidence": 1.0,
+            "punctuated_word": "for"
+          },
+          {
+            "word": "quality",
+            "start": 1.68,
+            "end": 2.08,
+            "confidence": 1.0,
+            "punctuated_word": "quality"
+          },
+          {
+            "word": "and",
+            "start": 2.08,
+            "end": 2.32,
+            "confidence": 1.0,
+            "punctuated_word": "and"
+          },
+          {
+            "word": "training",
+            "start": 2.32,
+            "end": 2.72,
+            "confidence": 1.0,
+            "punctuated_word": "training"
+          },
+          {
+            "word": "purposes",
+            "start": 2.72,
+            "end": 3.6,
+            "confidence": 0.9980469,
+            "punctuated_word": "purposes."
+          }
+        ],
+        "id": "28bb8af9-9877-4a4f-af28-5c7c90f8850b"
+      },
+      {
+        "start": 4.88,
+        "end": 5.92,
+        "confidence": 0.80615234,
+        "channel": 0,
+        "transcript": "Thank",
+        "words": [
+          {
+            "word": "thank",
+            "start": 4.88,
+            "end": 5.92,
+            "confidence": 0.80615234,
+            "punctuated_word": "Thank"
+          }
+        ],
+        "id": "6ff386dc-6907-4280-b4b0-883447445afb"
+      },
+      {
+        "start": 7.44,
+        "end": 9.759999,
+        "confidence": 0.96480304,
+        "channel": 0,
+        "transcript": "you for calling Pivot Point Orthopedics.",
+        "words": [
+          {
+            "word": "you",
+            "start": 7.44,
+            "end": 7.6,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "for",
+            "start": 7.6,
+            "end": 7.7599998,
+            "confidence": 1.0,
+            "punctuated_word": "for"
+          },
+          {
+            "word": "calling",
+            "start": 7.7599998,
+            "end": 8.08,
+            "confidence": 0.9980469,
+            "punctuated_word": "calling"
+          },
+          {
+            "word": "pivot",
+            "start": 8.08,
+            "end": 8.48,
+            "confidence": 0.9970703,
+            "punctuated_word": "Pivot"
+          },
+          {
+            "word": "point",
+            "start": 8.48,
+            "end": 8.72,
+            "confidence": 0.89501953,
+            "punctuated_word": "Point"
+          },
+          {
+            "word": "orthopedics",
+            "start": 8.72,
+            "end": 9.759999,
+            "confidence": 0.89868164,
+            "punctuated_word": "Orthopedics."
+          }
+        ],
+        "id": "90bf7f87-274b-435f-ae4e-32f8d14620ca"
+      },
+      {
+        "start": 9.92,
+        "end": 12.4,
+        "confidence": 0.9943034,
+        "channel": 0,
+        "transcript": "Would you like to create a demo patient profile?",
+        "words": [
+          {
+            "word": "would",
+            "start": 9.92,
+            "end": 10.16,
+            "confidence": 1.0,
+            "punctuated_word": "Would"
+          },
+          {
+            "word": "you",
+            "start": 10.16,
+            "end": 10.32,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "like",
+            "start": 10.32,
+            "end": 10.48,
+            "confidence": 1.0,
+            "punctuated_word": "like"
+          },
+          {
+            "word": "to",
+            "start": 10.48,
+            "end": 10.559999,
+            "confidence": 1.0,
+            "punctuated_word": "to"
+          },
+          {
+            "word": "create",
+            "start": 10.559999,
+            "end": 10.8,
+            "confidence": 1.0,
+            "punctuated_word": "create"
+          },
+          {
+            "word": "a",
+            "start": 10.8,
+            "end": 10.96,
+            "confidence": 1.0,
+            "punctuated_word": "a"
+          },
+          {
+            "word": "demo",
+            "start": 10.96,
+            "end": 11.2,
+            "confidence": 1.0,
+            "punctuated_word": "demo"
+          },
+          {
+            "word": "patient",
+            "start": 11.2,
+            "end": 11.5199995,
+            "confidence": 1.0,
+            "punctuated_word": "patient"
+          },
+          {
+            "word": "profile",
+            "start": 11.5199995,
+            "end": 12.4,
+            "confidence": 0.94873047,
+            "punctuated_word": "profile?"
+          }
+        ],
+        "id": "f69e3005-567a-48a6-80dd-bf65a1803dc2"
+      },
+      {
+        "start": 12.48,
+        "end": 14.4,
+        "confidence": 0.95831853,
+        "channel": 0,
+        "transcript": "I just need your first and last name to get started.",
+        "words": [
+          {
+            "word": "i",
+            "start": 12.48,
+            "end": 12.719999,
+            "confidence": 0.65722656,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "just",
+            "start": 12.719999,
+            "end": 12.88,
+            "confidence": 0.8881836,
+            "punctuated_word": "just"
+          },
+          {
+            "word": "need",
+            "start": 12.88,
+            "end": 13.04,
+            "confidence": 0.9970703,
+            "punctuated_word": "need"
+          },
+          {
+            "word": "your",
+            "start": 13.04,
+            "end": 13.12,
+            "confidence": 1.0,
+            "punctuated_word": "your"
+          },
+          {
+            "word": "first",
+            "start": 13.12,
+            "end": 13.28,
+            "confidence": 1.0,
+            "punctuated_word": "first"
+          },
+          {
+            "word": "and",
+            "start": 13.28,
+            "end": 13.44,
+            "confidence": 0.99902344,
+            "punctuated_word": "and"
+          },
+          {
+            "word": "last",
+            "start": 13.44,
+            "end": 13.599999,
+            "confidence": 1.0,
+            "punctuated_word": "last"
+          },
+          {
+            "word": "name",
+            "start": 13.599999,
+            "end": 13.759999,
+            "confidence": 1.0,
+            "punctuated_word": "name"
+          },
+          {
+            "word": "to",
+            "start": 13.759999,
+            "end": 13.92,
+            "confidence": 1.0,
+            "punctuated_word": "to"
+          },
+          {
+            "word": "get",
+            "start": 13.92,
+            "end": 14.08,
+            "confidence": 1.0,
+            "punctuated_word": "get"
+          },
+          {
+            "word": "started",
+            "start": 14.08,
+            "end": 14.4,
+            "confidence": 1.0,
+            "punctuated_word": "started."
+          }
+        ],
+        "id": "eaddd5c7-8492-450a-a8e2-53566104dd61"
+      },
+      {
+        "start": 15.695,
+        "end": 19.535,
+        "confidence": 0.99884033,
+        "channel": 1,
+        "transcript": "I'm not looking to demo anything. I need a new patient appointment.",
+        "words": [
+          {
+            "word": "i'm",
+            "start": 15.695,
+            "end": 16.255001,
+            "confidence": 0.9880371,
+            "punctuated_word": "I'm"
+          },
+          {
+            "word": "not",
+            "start": 16.255001,
+            "end": 16.415,
+            "confidence": 1.0,
+            "punctuated_word": "not"
+          },
+          {
+            "word": "looking",
+            "start": 16.415,
+            "end": 16.655,
+            "confidence": 1.0,
+            "punctuated_word": "looking"
+          },
+          {
+            "word": "to",
+            "start": 16.655,
+            "end": 16.815,
+            "confidence": 1.0,
+            "punctuated_word": "to"
+          },
+          {
+            "word": "demo",
+            "start": 16.815,
+            "end": 17.055,
+            "confidence": 1.0,
+            "punctuated_word": "demo"
+          },
+          {
+            "word": "anything",
+            "start": 17.055,
+            "end": 17.695,
+            "confidence": 0.99902344,
+            "punctuated_word": "anything."
+          },
+          {
+            "word": "i",
+            "start": 17.695,
+            "end": 17.855,
+            "confidence": 1.0,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "need",
+            "start": 17.855,
+            "end": 18.175,
+            "confidence": 1.0,
+            "punctuated_word": "need"
+          },
+          {
+            "word": "a",
+            "start": 18.175,
+            "end": 18.335,
+            "confidence": 0.99902344,
+            "punctuated_word": "a"
+          },
+          {
+            "word": "new",
+            "start": 18.335,
+            "end": 18.655,
+            "confidence": 1.0,
+            "punctuated_word": "new"
+          },
+          {
+            "word": "patient",
+            "start": 18.655,
+            "end": 19.055,
+            "confidence": 1.0,
+            "punctuated_word": "patient"
+          },
+          {
+            "word": "appointment",
+            "start": 19.055,
+            "end": 19.535,
+            "confidence": 1.0,
+            "punctuated_word": "appointment."
+          }
+        ],
+        "id": "c495f991-d5d0-4bc7-8951-360d45aaf141"
+      },
+      {
+        "start": 22.185,
+        "end": 26.185,
+        "confidence": 1.0,
+        "channel": 0,
+        "transcript": "To schedule a new patient appointment, you'll need a demo patient profile.",
+        "words": [
+          {
+            "word": "to",
+            "start": 22.185,
+            "end": 22.425,
+            "confidence": 1.0,
+            "punctuated_word": "To"
+          },
+          {
+            "word": "schedule",
+            "start": 22.425,
+            "end": 22.744999,
+            "confidence": 1.0,
+            "punctuated_word": "schedule"
+          },
+          {
+            "word": "a",
+            "start": 22.744999,
+            "end": 22.985,
+            "confidence": 1.0,
+            "punctuated_word": "a"
+          },
+          {
+            "word": "new",
+            "start": 22.985,
+            "end": 23.145,
+            "confidence": 1.0,
+            "punctuated_word": "new"
+          },
+          {
+            "word": "patient",
+            "start": 23.145,
+            "end": 23.384998,
+            "confidence": 1.0,
+            "punctuated_word": "patient"
+          },
+          {
+            "word": "appointment",
+            "start": 23.384998,
+            "end": 24.025,
+            "confidence": 1.0,
+            "punctuated_word": "appointment,"
+          },
+          {
+            "word": "you'll",
+            "start": 24.025,
+            "end": 24.185,
+            "confidence": 1.0,
+            "punctuated_word": "you'll"
+          },
+          {
+            "word": "need",
+            "start": 24.185,
+            "end": 24.425,
+            "confidence": 1.0,
+            "punctuated_word": "need"
+          },
+          {
+            "word": "a",
+            "start": 24.425,
+            "end": 24.585,
+            "confidence": 1.0,
+            "punctuated_word": "a"
+          },
+          {
+            "word": "demo",
+            "start": 24.585,
+            "end": 24.904999,
+            "confidence": 1.0,
+            "punctuated_word": "demo"
+          },
+          {
+            "word": "patient",
+            "start": 24.904999,
+            "end": 25.305,
+            "confidence": 1.0,
+            "punctuated_word": "patient"
+          },
+          {
+            "word": "profile",
+            "start": 25.305,
+            "end": 26.185,
+            "confidence": 1.0,
+            "punctuated_word": "profile."
+          }
+        ],
+        "id": "7914b4d3-be53-4b5a-84ea-affbcf79b831"
+      },
+      {
+        "start": 26.345,
+        "end": 29.785,
+        "confidence": 0.99690753,
+        "channel": 0,
+        "transcript": "Would you like to create one now? I just need your first and last name.",
+        "words": [
+          {
+            "word": "would",
+            "start": 26.345,
+            "end": 26.664999,
+            "confidence": 1.0,
+            "punctuated_word": "Would"
+          },
+          {
+            "word": "you",
+            "start": 26.664999,
+            "end": 26.744999,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "like",
+            "start": 26.744999,
+            "end": 26.904999,
+            "confidence": 1.0,
+            "punctuated_word": "like"
+          },
+          {
+            "word": "to",
+            "start": 26.904999,
+            "end": 27.064999,
+            "confidence": 1.0,
+            "punctuated_word": "to"
+          },
+          {
+            "word": "create",
+            "start": 27.064999,
+            "end": 27.305,
+            "confidence": 1.0,
+            "punctuated_word": "create"
+          },
+          {
+            "word": "one",
+            "start": 27.305,
+            "end": 27.544998,
+            "confidence": 1.0,
+            "punctuated_word": "one"
+          },
+          {
+            "word": "now",
+            "start": 27.544998,
+            "end": 28.025,
+            "confidence": 1.0,
+            "punctuated_word": "now?"
+          },
+          {
+            "word": "i",
+            "start": 28.025,
+            "end": 28.345,
+            "confidence": 1.0,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "just",
+            "start": 28.345,
+            "end": 28.505,
+            "confidence": 1.0,
+            "punctuated_word": "just"
+          },
+          {
+            "word": "need",
+            "start": 28.505,
+            "end": 28.664999,
+            "confidence": 1.0,
+            "punctuated_word": "need"
+          },
+          {
+            "word": "your",
+            "start": 28.664999,
+            "end": 28.825,
+            "confidence": 1.0,
+            "punctuated_word": "your"
+          },
+          {
+            "word": "first",
+            "start": 28.825,
+            "end": 29.064999,
+            "confidence": 1.0,
+            "punctuated_word": "first"
+          },
+          {
+            "word": "and",
+            "start": 29.064999,
+            "end": 29.224998,
+            "confidence": 1.0,
+            "punctuated_word": "and"
+          },
+          {
+            "word": "last",
+            "start": 29.224998,
+            "end": 29.465,
+            "confidence": 1.0,
+            "punctuated_word": "last"
+          },
+          {
+            "word": "name",
+            "start": 29.465,
+            "end": 29.785,
+            "confidence": 0.9536133,
+            "punctuated_word": "name."
+          }
+        ],
+        "id": "7f2c8103-6431-4ee4-9510-3597cc2f0d73"
+      },
+      {
+        "start": 32.99,
+        "end": 34.11,
+        "confidence": 0.9842936,
+        "channel": 1,
+        "transcript": "Dana Whitfield.",
+        "words": [
+          {
+            "word": "dana",
+            "start": 32.99,
+            "end": 33.55,
+            "confidence": 0.98828125,
+            "punctuated_word": "Dana"
+          },
+          {
+            "word": "whitfield",
+            "start": 33.55,
+            "end": 34.11,
+            "confidence": 0.98030597,
+            "punctuated_word": "Whitfield."
+          }
+        ],
+        "id": "3fe0f0ad-ae24-4896-91b3-530ad055b21a"
+      },
+      {
+        "start": 42.23,
+        "end": 46.855,
+        "confidence": 0.99404675,
+        "channel": 0,
+        "transcript": "Your patient profile is set up, and your date of birth is 07/04/2000",
+        "words": [
+          {
+            "word": "your",
+            "start": 42.23,
+            "end": 42.55,
+            "confidence": 1.0,
+            "punctuated_word": "Your"
+          },
+          {
+            "word": "patient",
+            "start": 42.55,
+            "end": 42.949997,
+            "confidence": 1.0,
+            "punctuated_word": "patient"
+          },
+          {
+            "word": "profile",
+            "start": 42.949997,
+            "end": 43.43,
+            "confidence": 1.0,
+            "punctuated_word": "profile"
+          },
+          {
+            "word": "is",
+            "start": 43.43,
+            "end": 43.67,
+            "confidence": 1.0,
+            "punctuated_word": "is"
+          },
+          {
+            "word": "set",
+            "start": 43.67,
+            "end": 43.91,
+            "confidence": 0.98828125,
+            "punctuated_word": "set"
+          },
+          {
+            "word": "up",
+            "start": 43.91,
+            "end": 44.15,
+            "confidence": 0.939209,
+            "punctuated_word": "up,"
+          },
+          {
+            "word": "and",
+            "start": 44.295,
+            "end": 44.614998,
+            "confidence": 1.0,
+            "punctuated_word": "and"
+          },
+          {
+            "word": "your",
+            "start": 44.614998,
+            "end": 44.855,
+            "confidence": 1.0,
+            "punctuated_word": "your"
+          },
+          {
+            "word": "date",
+            "start": 44.855,
+            "end": 45.015,
+            "confidence": 1.0,
+            "punctuated_word": "date"
+          },
+          {
+            "word": "of",
+            "start": 45.015,
+            "end": 45.175,
+            "confidence": 0.9980469,
+            "punctuated_word": "of"
+          },
+          {
+            "word": "birth",
+            "start": 45.175,
+            "end": 45.335,
+            "confidence": 1.0,
+            "punctuated_word": "birth"
+          },
+          {
+            "word": "is",
+            "start": 45.335,
+            "end": 45.574997,
+            "confidence": 1.0,
+            "punctuated_word": "is"
+          },
+          {
+            "word": "07/04/2000",
+            "start": 45.574997,
+            "end": 46.855,
+            "confidence": 0.9970703,
+            "punctuated_word": "07/04/2000"
+          }
+        ],
+        "id": "c1dfedac-42a6-4cb6-a141-d22740503055"
+      },
+      {
+        "start": 46.855,
+        "end": 48.135,
+        "confidence": 0.9977214,
+        "channel": 0,
+        "transcript": "for demo purposes.",
+        "words": [
+          {
+            "word": "for",
+            "start": 46.855,
+            "end": 47.094997,
+            "confidence": 0.99316406,
+            "punctuated_word": "for"
+          },
+          {
+            "word": "demo",
+            "start": 47.094997,
+            "end": 47.414997,
+            "confidence": 1.0,
+            "punctuated_word": "demo"
+          },
+          {
+            "word": "purposes",
+            "start": 47.414997,
+            "end": 48.135,
+            "confidence": 1.0,
+            "punctuated_word": "purposes."
+          }
+        ],
+        "id": "2c736704-9d39-42e1-a781-78045aebfa6a"
+      },
+      {
+        "start": 48.295,
+        "end": 49.495,
+        "confidence": 1.0,
+        "channel": 0,
+        "transcript": "How can I help you today?",
+        "words": [
+          {
+            "word": "how",
+            "start": 48.295,
+            "end": 48.614998,
+            "confidence": 1.0,
+            "punctuated_word": "How"
+          },
+          {
+            "word": "can",
+            "start": 48.614998,
+            "end": 48.774998,
+            "confidence": 1.0,
+            "punctuated_word": "can"
+          },
+          {
+            "word": "i",
+            "start": 48.774998,
+            "end": 48.855,
+            "confidence": 1.0,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "help",
+            "start": 48.855,
+            "end": 49.015,
+            "confidence": 1.0,
+            "punctuated_word": "help"
+          },
+          {
+            "word": "you",
+            "start": 49.015,
+            "end": 49.175,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "today",
+            "start": 49.175,
+            "end": 49.495,
+            "confidence": 1.0,
+            "punctuated_word": "today?"
+          }
+        ],
+        "id": "7118dc47-f8d6-4a82-b2ef-8acce145c952"
+      },
+      {
+        "start": 52.86,
+        "end": 54.7,
+        "confidence": 0.9869995,
+        "channel": 1,
+        "transcript": "That's a demo profile,",
+        "words": [
+          {
+            "word": "that's",
+            "start": 52.86,
+            "end": 53.34,
+            "confidence": 0.99609375,
+            "punctuated_word": "That's"
+          },
+          {
+            "word": "a",
+            "start": 53.34,
+            "end": 53.5,
+            "confidence": 0.98535156,
+            "punctuated_word": "a"
+          },
+          {
+            "word": "demo",
+            "start": 53.5,
+            "end": 53.82,
+            "confidence": 0.99902344,
+            "punctuated_word": "demo"
+          },
+          {
+            "word": "profile",
+            "start": 53.82,
+            "end": 54.7,
+            "confidence": 0.9675293,
+            "punctuated_word": "profile,"
+          }
+        ],
+        "id": "19bde900-2e93-4fc6-a5d2-7494a45f0fa4"
+      },
+      {
+        "start": 54.7,
+        "end": 57.58,
+        "confidence": 0.9991319,
+        "channel": 1,
+        "transcript": "not mine. I need a real new patient booking.",
+        "words": [
+          {
+            "word": "not",
+            "start": 54.7,
+            "end": 55.02,
+            "confidence": 1.0,
+            "punctuated_word": "not"
+          },
+          {
+            "word": "mine",
+            "start": 55.02,
+            "end": 55.58,
+            "confidence": 1.0,
+            "punctuated_word": "mine."
+          },
+          {
+            "word": "i",
+            "start": 55.74,
+            "end": 56.06,
+            "confidence": 0.99902344,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "need",
+            "start": 56.06,
+            "end": 56.22,
+            "confidence": 1.0,
+            "punctuated_word": "need"
+          },
+          {
+            "word": "a",
+            "start": 56.22,
+            "end": 56.38,
+            "confidence": 1.0,
+            "punctuated_word": "a"
+          },
+          {
+            "word": "real",
+            "start": 56.38,
+            "end": 56.620003,
+            "confidence": 1.0,
+            "punctuated_word": "real"
+          },
+          {
+            "word": "new",
+            "start": 56.620003,
+            "end": 56.86,
+            "confidence": 0.99316406,
+            "punctuated_word": "new"
+          },
+          {
+            "word": "patient",
+            "start": 56.86,
+            "end": 57.18,
+            "confidence": 1.0,
+            "punctuated_word": "patient"
+          },
+          {
+            "word": "booking",
+            "start": 57.18,
+            "end": 57.58,
+            "confidence": 1.0,
+            "punctuated_word": "booking."
+          }
+        ],
+        "id": "87c21fdf-efd8-4c01-932c-cb414f4d2e60"
+      },
+      {
+        "start": 60.9,
+        "end": 63.38,
+        "confidence": 0.9969308,
+        "channel": 0,
+        "transcript": "Let's get your new patient appointment scheduled.",
+        "words": [
+          {
+            "word": "let's",
+            "start": 60.9,
+            "end": 61.3,
+            "confidence": 0.99365234,
+            "punctuated_word": "Let's"
+          },
+          {
+            "word": "get",
+            "start": 61.3,
+            "end": 61.46,
+            "confidence": 1.0,
+            "punctuated_word": "get"
+          },
+          {
+            "word": "your",
+            "start": 61.46,
+            "end": 61.62,
+            "confidence": 1.0,
+            "punctuated_word": "your"
+          },
+          {
+            "word": "new",
+            "start": 61.62,
+            "end": 61.86,
+            "confidence": 1.0,
+            "punctuated_word": "new"
+          },
+          {
+            "word": "patient",
+            "start": 61.86,
+            "end": 62.100002,
+            "confidence": 1.0,
+            "punctuated_word": "patient"
+          },
+          {
+            "word": "appointment",
+            "start": 62.100002,
+            "end": 62.5,
+            "confidence": 0.98828125,
+            "punctuated_word": "appointment"
+          },
+          {
+            "word": "scheduled",
+            "start": 62.5,
+            "end": 63.38,
+            "confidence": 0.99658203,
+            "punctuated_word": "scheduled."
+          }
+        ],
+        "id": "37620692-42d3-478a-b22c-8d278c45537a"
+      },
+      {
+        "start": 63.46,
+        "end": 68.1,
+        "confidence": 0.9968533,
+        "channel": 0,
+        "transcript": "Do you have a specific provider you'd like to see, or are you open to the first available?",
+        "words": [
+          {
+            "word": "do",
+            "start": 63.46,
+            "end": 63.78,
+            "confidence": 1.0,
+            "punctuated_word": "Do"
+          },
+          {
+            "word": "you",
+            "start": 63.78,
+            "end": 63.940002,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "have",
+            "start": 63.940002,
+            "end": 64.1,
+            "confidence": 1.0,
+            "punctuated_word": "have"
+          },
+          {
+            "word": "a",
+            "start": 64.1,
+            "end": 64.26,
+            "confidence": 0.99902344,
+            "punctuated_word": "a"
+          },
+          {
+            "word": "specific",
+            "start": 64.26,
+            "end": 64.74,
+            "confidence": 1.0,
+            "punctuated_word": "specific"
+          },
+          {
+            "word": "provider",
+            "start": 64.74,
+            "end": 65.14,
+            "confidence": 1.0,
+            "punctuated_word": "provider"
+          },
+          {
+            "word": "you'd",
+            "start": 65.14,
+            "end": 65.54,
+            "confidence": 1.0,
+            "punctuated_word": "you'd"
+          },
+          {
+            "word": "like",
+            "start": 65.54,
+            "end": 65.7,
+            "confidence": 1.0,
+            "punctuated_word": "like"
+          },
+          {
+            "word": "to",
+            "start": 65.7,
+            "end": 65.78,
+            "confidence": 1.0,
+            "punctuated_word": "to"
+          },
+          {
+            "word": "see",
+            "start": 65.78,
+            "end": 66.26,
+            "confidence": 0.94433594,
+            "punctuated_word": "see,"
+          },
+          {
+            "word": "or",
+            "start": 66.26,
+            "end": 66.5,
+            "confidence": 1.0,
+            "punctuated_word": "or"
+          },
+          {
+            "word": "are",
+            "start": 66.5,
+            "end": 66.74,
+            "confidence": 1.0,
+            "punctuated_word": "are"
+          },
+          {
+            "word": "you",
+            "start": 66.74,
+            "end": 66.9,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "open",
+            "start": 66.9,
+            "end": 67.14,
+            "confidence": 1.0,
+            "punctuated_word": "open"
+          },
+          {
+            "word": "to",
+            "start": 67.14,
+            "end": 67.3,
+            "confidence": 1.0,
+            "punctuated_word": "to"
+          },
+          {
+            "word": "the",
+            "start": 67.3,
+            "end": 67.38,
+            "confidence": 1.0,
+            "punctuated_word": "the"
+          },
+          {
+            "word": "first",
+            "start": 67.38,
+            "end": 67.62,
+            "confidence": 1.0,
+            "punctuated_word": "first"
+          },
+          {
+            "word": "available",
+            "start": 67.62,
+            "end": 68.1,
+            "confidence": 1.0,
+            "punctuated_word": "available?"
+          }
+        ],
+        "id": "25abb073-026c-453a-a606-dc35c2adc65f"
+      },
+      {
+        "start": 71.595,
+        "end": 74.715,
+        "confidence": 0.99920654,
+        "channel": 1,
+        "transcript": "First available is fine. I'm new and flexible.",
+        "words": [
+          {
+            "word": "first",
+            "start": 71.595,
+            "end": 71.915,
+            "confidence": 0.99902344,
+            "punctuated_word": "First"
+          },
+          {
+            "word": "available",
+            "start": 71.915,
+            "end": 72.555,
+            "confidence": 1.0,
+            "punctuated_word": "available"
+          },
+          {
+            "word": "is",
+            "start": 72.555,
+            "end": 72.875,
+            "confidence": 0.9980469,
+            "punctuated_word": "is"
+          },
+          {
+            "word": "fine",
+            "start": 72.875,
+            "end": 73.435,
+            "confidence": 0.99853516,
+            "punctuated_word": "fine."
+          },
+          {
+            "word": "i'm",
+            "start": 73.435,
+            "end": 73.755,
+            "confidence": 1.0,
+            "punctuated_word": "I'm"
+          },
+          {
+            "word": "new",
+            "start": 73.755,
+            "end": 73.995,
+            "confidence": 1.0,
+            "punctuated_word": "new"
+          },
+          {
+            "word": "and",
+            "start": 73.995,
+            "end": 74.235,
+            "confidence": 0.99902344,
+            "punctuated_word": "and"
+          },
+          {
+            "word": "flexible",
+            "start": 74.235,
+            "end": 74.715,
+            "confidence": 0.99902344,
+            "punctuated_word": "flexible."
+          }
+        ],
+        "id": "6c1584bc-126f-4ced-8b5e-78fed882f395"
+      },
+      {
+        "start": 77.115005,
+        "end": 81.515,
+        "confidence": 0.9832031,
+        "channel": 0,
+        "transcript": "We have openings for new patient appointments this coming Tuesday",
+        "words": [
+          {
+            "word": "we",
+            "start": 77.115005,
+            "end": 77.515,
+            "confidence": 0.97998047,
+            "punctuated_word": "We"
+          },
+          {
+            "word": "have",
+            "start": 77.515,
+            "end": 77.83501,
+            "confidence": 1.0,
+            "punctuated_word": "have"
+          },
+          {
+            "word": "openings",
+            "start": 77.83501,
+            "end": 78.395004,
+            "confidence": 0.9980469,
+            "punctuated_word": "openings"
+          },
+          {
+            "word": "for",
+            "start": 78.395004,
+            "end": 78.635,
+            "confidence": 1.0,
+            "punctuated_word": "for"
+          },
+          {
+            "word": "new",
+            "start": 78.635,
+            "end": 78.955,
+            "confidence": 1.0,
+            "punctuated_word": "new"
+          },
+          {
+            "word": "patient",
+            "start": 78.955,
+            "end": 79.355,
+            "confidence": 1.0,
+            "punctuated_word": "patient"
+          },
+          {
+            "word": "appointments",
+            "start": 79.355,
+            "end": 79.995,
+            "confidence": 0.85595703,
+            "punctuated_word": "appointments"
+          },
+          {
+            "word": "this",
+            "start": 79.995,
+            "end": 80.395004,
+            "confidence": 0.9980469,
+            "punctuated_word": "this"
+          },
+          {
+            "word": "coming",
+            "start": 80.395004,
+            "end": 80.635,
+            "confidence": 1.0,
+            "punctuated_word": "coming"
+          },
+          {
+            "word": "tuesday",
+            "start": 80.635,
+            "end": 81.515,
+            "confidence": 1.0,
+            "punctuated_word": "Tuesday"
+          }
+        ],
+        "id": "a4008e40-4b0a-4bbf-a206-957615d09133"
+      },
+      {
+        "start": 81.595,
+        "end": 85.035,
+        "confidence": 0.9241391,
+        "channel": 0,
+        "transcript": "with Dugie Hauser. Would you like 11:15AM,",
+        "words": [
+          {
+            "word": "with",
+            "start": 81.595,
+            "end": 81.915,
+            "confidence": 0.9970703,
+            "punctuated_word": "with"
+          },
+          {
+            "word": "dugie",
+            "start": 81.915,
+            "end": 82.395004,
+            "confidence": 0.6020508,
+            "punctuated_word": "Dugie"
+          },
+          {
+            "word": "hauser",
+            "start": 82.395004,
+            "end": 83.195,
+            "confidence": 0.8706665,
+            "punctuated_word": "Hauser."
+          },
+          {
+            "word": "would",
+            "start": 83.195,
+            "end": 83.515,
+            "confidence": 1.0,
+            "punctuated_word": "Would"
+          },
+          {
+            "word": "you",
+            "start": 83.515,
+            "end": 83.595,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "like",
+            "start": 83.595,
+            "end": 83.755005,
+            "confidence": 1.0,
+            "punctuated_word": "like"
+          },
+          {
+            "word": "11:15am",
+            "start": 83.755005,
+            "end": 85.035,
+            "confidence": 0.9991862,
+            "punctuated_word": "11:15AM,"
+          }
+        ],
+        "id": "fbee4210-a8dc-4eda-b5c8-e92c0df4a36c"
+      },
+      {
+        "start": 85.035,
+        "end": 86.795006,
+        "confidence": 0.99906415,
+        "channel": 0,
+        "transcript": "12PM, or 12:45PM?",
+        "words": [
+          {
+            "word": "12pm",
+            "start": 85.035,
+            "end": 85.675,
+            "confidence": 0.99731445,
+            "punctuated_word": "12PM,"
+          },
+          {
+            "word": "or",
+            "start": 85.675,
+            "end": 85.755005,
+            "confidence": 1.0,
+            "punctuated_word": "or"
+          },
+          {
+            "word": "12:45pm",
+            "start": 85.755005,
+            "end": 86.795006,
+            "confidence": 0.9998779,
+            "punctuated_word": "12:45PM?"
+          }
+        ],
+        "id": "8cbc5671-c5bf-4a23-9019-7ccc56541a54"
+      },
+      {
+        "start": 90.055,
+        "end": 91.41499,
+        "confidence": 0.97786456,
+        "channel": 1,
+        "transcript": "11:15AM.",
+        "words": [
+          {
+            "word": "11:15am",
+            "start": 90.055,
+            "end": 91.41499,
+            "confidence": 0.97786456,
+            "punctuated_word": "11:15AM."
+          }
+        ],
+        "id": "172c9fee-7b02-4217-97fd-d7707e9ebd15"
+      },
+      {
+        "start": 97.520004,
+        "end": 102.16,
+        "confidence": 0.9702861,
+        "channel": 0,
+        "transcript": "You're booked for Tuesday, August 25 at 11:15AM",
+        "words": [
+          {
+            "word": "you're",
+            "start": 97.520004,
+            "end": 98.0,
+            "confidence": 0.9523926,
+            "punctuated_word": "You're"
+          },
+          {
+            "word": "booked",
+            "start": 98.0,
+            "end": 98.240005,
+            "confidence": 1.0,
+            "punctuated_word": "booked"
+          },
+          {
+            "word": "for",
+            "start": 98.240005,
+            "end": 98.48,
+            "confidence": 1.0,
+            "punctuated_word": "for"
+          },
+          {
+            "word": "tuesday",
+            "start": 98.48,
+            "end": 99.200005,
+            "confidence": 0.9980469,
+            "punctuated_word": "Tuesday,"
+          },
+          {
+            "word": "august",
+            "start": 99.200005,
+            "end": 99.72,
+            "confidence": 1.0,
+            "punctuated_word": "August"
+          },
+          {
+            "word": "25",
+            "start": 99.72,
+            "end": 100.240005,
+            "confidence": 1.0,
+            "punctuated_word": "25"
+          },
+          {
+            "word": "at",
+            "start": 100.240005,
+            "end": 100.560005,
+            "confidence": 0.8125,
+            "punctuated_word": "at"
+          },
+          {
+            "word": "11:15am",
+            "start": 100.560005,
+            "end": 102.16,
+            "confidence": 0.99934894,
+            "punctuated_word": "11:15AM"
+          }
+        ],
+        "id": "dd36fada-4ffd-4f2d-95ad-6684aae9dc2d"
+      },
+      {
+        "start": 102.16,
+        "end": 104.880005,
+        "confidence": 0.9309431,
+        "channel": 0,
+        "transcript": "with Judy Hauser at Pivot Point Orthopedic.",
+        "words": [
+          {
+            "word": "with",
+            "start": 102.16,
+            "end": 102.48,
+            "confidence": 0.96435547,
+            "punctuated_word": "with"
+          },
+          {
+            "word": "judy",
+            "start": 102.48,
+            "end": 102.880005,
+            "confidence": 0.84228516,
+            "punctuated_word": "Judy"
+          },
+          {
+            "word": "hauser",
+            "start": 102.880005,
+            "end": 103.28,
+            "confidence": 0.8754883,
+            "punctuated_word": "Hauser"
+          },
+          {
+            "word": "at",
+            "start": 103.28,
+            "end": 103.520004,
+            "confidence": 0.9980469,
+            "punctuated_word": "at"
+          },
+          {
+            "word": "pivot",
+            "start": 103.520004,
+            "end": 103.920006,
+            "confidence": 0.9914551,
+            "punctuated_word": "Pivot"
+          },
+          {
+            "word": "point",
+            "start": 103.920006,
+            "end": 104.16,
+            "confidence": 0.99316406,
+            "punctuated_word": "Point"
+          },
+          {
+            "word": "orthopedic",
+            "start": 104.16,
+            "end": 104.880005,
+            "confidence": 0.85180664,
+            "punctuated_word": "Orthopedic."
+          }
+        ],
+        "id": "f2519bef-69e1-4a37-b977-ed4e1aebb108"
+      },
+      {
+        "start": 105.325005,
+        "end": 110.365005,
+        "confidence": 0.9979045,
+        "channel": 0,
+        "transcript": "Please bring your photo ID, insurance card, a list of current medications,",
+        "words": [
+          {
+            "word": "please",
+            "start": 105.325005,
+            "end": 105.645004,
+            "confidence": 1.0,
+            "punctuated_word": "Please"
+          },
+          {
+            "word": "bring",
+            "start": 105.645004,
+            "end": 105.965004,
+            "confidence": 1.0,
+            "punctuated_word": "bring"
+          },
+          {
+            "word": "your",
+            "start": 105.965004,
+            "end": 106.125,
+            "confidence": 1.0,
+            "punctuated_word": "your"
+          },
+          {
+            "word": "photo",
+            "start": 106.125,
+            "end": 106.445,
+            "confidence": 1.0,
+            "punctuated_word": "photo"
+          },
+          {
+            "word": "id",
+            "start": 106.445,
+            "end": 107.165,
+            "confidence": 0.99902344,
+            "punctuated_word": "ID,"
+          },
+          {
+            "word": "insurance",
+            "start": 107.165,
+            "end": 107.805,
+            "confidence": 1.0,
+            "punctuated_word": "insurance"
+          },
+          {
+            "word": "card",
+            "start": 107.805,
+            "end": 108.445,
+            "confidence": 1.0,
+            "punctuated_word": "card,"
+          },
+          {
+            "word": "a",
+            "start": 108.525,
+            "end": 108.765,
+            "confidence": 1.0,
+            "punctuated_word": "a"
+          },
+          {
+            "word": "list",
+            "start": 108.765,
+            "end": 109.005005,
+            "confidence": 1.0,
+            "punctuated_word": "list"
+          },
+          {
+            "word": "of",
+            "start": 109.005005,
+            "end": 109.165,
+            "confidence": 1.0,
+            "punctuated_word": "of"
+          },
+          {
+            "word": "current",
+            "start": 109.165,
+            "end": 109.485,
+            "confidence": 1.0,
+            "punctuated_word": "current"
+          },
+          {
+            "word": "medications",
+            "start": 109.485,
+            "end": 110.365005,
+            "confidence": 0.9758301,
+            "punctuated_word": "medications,"
+          }
+        ],
+        "id": "cd8ef6af-f116-4d33-a8ff-07f5da604094"
+      },
+      {
+        "start": 110.605,
+        "end": 113.005005,
+        "confidence": 0.97372437,
+        "channel": 0,
+        "transcript": "and any imaging discs if you have them.",
+        "words": [
+          {
+            "word": "and",
+            "start": 110.605,
+            "end": 110.765,
+            "confidence": 0.99902344,
+            "punctuated_word": "and"
+          },
+          {
+            "word": "any",
+            "start": 110.765,
+            "end": 111.005005,
+            "confidence": 1.0,
+            "punctuated_word": "any"
+          },
+          {
+            "word": "imaging",
+            "start": 111.005005,
+            "end": 111.485,
+            "confidence": 0.99902344,
+            "punctuated_word": "imaging"
+          },
+          {
+            "word": "discs",
+            "start": 111.485,
+            "end": 111.965004,
+            "confidence": 0.96655273,
+            "punctuated_word": "discs"
+          },
+          {
+            "word": "if",
+            "start": 111.965004,
+            "end": 112.125,
+            "confidence": 0.8251953,
+            "punctuated_word": "if"
+          },
+          {
+            "word": "you",
+            "start": 112.125,
+            "end": 112.285,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "have",
+            "start": 112.285,
+            "end": 112.445,
+            "confidence": 1.0,
+            "punctuated_word": "have"
+          },
+          {
+            "word": "them",
+            "start": 112.445,
+            "end": 113.005005,
+            "confidence": 1.0,
+            "punctuated_word": "them."
+          }
+        ],
+        "id": "52cc04e8-314a-46c9-a0d4-b1db46942722"
+      },
+      {
+        "start": 113.245,
+        "end": 114.765,
+        "confidence": 0.98687065,
+        "channel": 0,
+        "transcript": "Is there anything else I could help you with?",
+        "words": [
+          {
+            "word": "is",
+            "start": 113.245,
+            "end": 113.485,
+            "confidence": 0.99316406,
+            "punctuated_word": "Is"
+          },
+          {
+            "word": "there",
+            "start": 113.485,
+            "end": 113.645004,
+            "confidence": 0.9951172,
+            "punctuated_word": "there"
+          },
+          {
+            "word": "anything",
+            "start": 113.645004,
+            "end": 113.805,
+            "confidence": 1.0,
+            "punctuated_word": "anything"
+          },
+          {
+            "word": "else",
+            "start": 113.805,
+            "end": 113.965004,
+            "confidence": 1.0,
+            "punctuated_word": "else"
+          },
+          {
+            "word": "i",
+            "start": 113.965004,
+            "end": 114.125,
+            "confidence": 1.0,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "could",
+            "start": 114.125,
+            "end": 114.285,
+            "confidence": 0.8935547,
+            "punctuated_word": "could"
+          },
+          {
+            "word": "help",
+            "start": 114.285,
+            "end": 114.445,
+            "confidence": 1.0,
+            "punctuated_word": "help"
+          },
+          {
+            "word": "you",
+            "start": 114.445,
+            "end": 114.525,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "with",
+            "start": 114.525,
+            "end": 114.765,
+            "confidence": 1.0,
+            "punctuated_word": "with?"
+          }
+        ],
+        "id": "89d5e95f-72b8-4985-bce4-6cc2052762f5"
+      },
+      {
+        "start": 118.005005,
+        "end": 120.565,
+        "confidence": 0.992448,
+        "channel": 1,
+        "transcript": "Got it. I'm Dana Whitfield.",
+        "words": [
+          {
+            "word": "got",
+            "start": 118.005005,
+            "end": 118.40501,
+            "confidence": 0.98291016,
+            "punctuated_word": "Got"
+          },
+          {
+            "word": "it",
+            "start": 118.40501,
+            "end": 118.885,
+            "confidence": 1.0,
+            "punctuated_word": "it."
+          },
+          {
+            "word": "i'm",
+            "start": 118.965004,
+            "end": 119.365005,
+            "confidence": 1.0,
+            "punctuated_word": "I'm"
+          },
+          {
+            "word": "dana",
+            "start": 119.365005,
+            "end": 119.685005,
+            "confidence": 0.9980469,
+            "punctuated_word": "Dana"
+          },
+          {
+            "word": "whitfield",
+            "start": 119.685005,
+            "end": 120.565,
+            "confidence": 0.98128253,
+            "punctuated_word": "Whitfield."
+          }
+        ],
+        "id": "c29adac5-b082-42dc-a2d9-501ba5678ec2"
+      },
+      {
+        "start": 120.565,
+        "end": 124.805,
+        "confidence": 0.9736328,
+        "channel": 1,
+        "transcript": "The appointment is Tuesday, August 25 at 11:15.",
+        "words": [
+          {
+            "word": "the",
+            "start": 120.565,
+            "end": 120.885,
+            "confidence": 1.0,
+            "punctuated_word": "The"
+          },
+          {
+            "word": "appointment",
+            "start": 120.885,
+            "end": 121.205,
+            "confidence": 1.0,
+            "punctuated_word": "appointment"
+          },
+          {
+            "word": "is",
+            "start": 121.205,
+            "end": 121.525,
+            "confidence": 1.0,
+            "punctuated_word": "is"
+          },
+          {
+            "word": "tuesday",
+            "start": 121.525,
+            "end": 122.245,
+            "confidence": 0.9970703,
+            "punctuated_word": "Tuesday,"
+          },
+          {
+            "word": "august",
+            "start": 122.245,
+            "end": 122.765,
+            "confidence": 1.0,
+            "punctuated_word": "August"
+          },
+          {
+            "word": "25",
+            "start": 122.765,
+            "end": 123.285,
+            "confidence": 1.0,
+            "punctuated_word": "25"
+          },
+          {
+            "word": "at",
+            "start": 123.285,
+            "end": 123.685005,
+            "confidence": 0.7919922,
+            "punctuated_word": "at"
+          },
+          {
+            "word": "11:15",
+            "start": 123.685005,
+            "end": 124.805,
+            "confidence": 1.0,
+            "punctuated_word": "11:15."
+          }
+        ],
+        "id": "ef59fce2-28f9-41cf-9460-90f5ac5328cc"
+      },
+      {
+        "start": 124.965004,
+        "end": 126.165,
+        "confidence": 0.95617676,
+        "channel": 1,
+        "transcript": "I'll bring those items.",
+        "words": [
+          {
+            "word": "i'll",
+            "start": 124.965004,
+            "end": 125.205,
+            "confidence": 1.0,
+            "punctuated_word": "I'll"
+          },
+          {
+            "word": "bring",
+            "start": 125.205,
+            "end": 125.365005,
+            "confidence": 1.0,
+            "punctuated_word": "bring"
+          },
+          {
+            "word": "those",
+            "start": 125.365005,
+            "end": 125.685005,
+            "confidence": 0.8251953,
+            "punctuated_word": "those"
+          },
+          {
+            "word": "items",
+            "start": 125.685005,
+            "end": 126.165,
+            "confidence": 0.9995117,
+            "punctuated_word": "items."
+          }
+        ],
+        "id": "b85e15ed-137d-47f2-87a7-c6ca40ba1de6"
+      },
+      {
+        "start": 126.770004,
+        "end": 127.170006,
+        "confidence": 1.0,
+        "channel": 1,
+        "transcript": "Thanks.",
+        "words": [
+          {
+            "word": "thanks",
+            "start": 126.770004,
+            "end": 127.170006,
+            "confidence": 1.0,
+            "punctuated_word": "Thanks."
+          }
+        ],
+        "id": "0741aab3-1b1f-44aa-b32b-a56080195dc4"
+      },
+      {
+        "start": 130.03,
+        "end": 131.95,
+        "confidence": 0.9996745,
+        "channel": 0,
+        "transcript": "You're all set for your appointment.",
+        "words": [
+          {
+            "word": "you're",
+            "start": 130.03,
+            "end": 130.51,
+            "confidence": 0.9980469,
+            "punctuated_word": "You're"
+          },
+          {
+            "word": "all",
+            "start": 130.51,
+            "end": 130.67,
+            "confidence": 1.0,
+            "punctuated_word": "all"
+          },
+          {
+            "word": "set",
+            "start": 130.67,
+            "end": 130.91,
+            "confidence": 1.0,
+            "punctuated_word": "set"
+          },
+          {
+            "word": "for",
+            "start": 130.91,
+            "end": 131.06999,
+            "confidence": 1.0,
+            "punctuated_word": "for"
+          },
+          {
+            "word": "your",
+            "start": 131.06999,
+            "end": 131.23,
+            "confidence": 1.0,
+            "punctuated_word": "your"
+          },
+          {
+            "word": "appointment",
+            "start": 131.23,
+            "end": 131.95,
+            "confidence": 1.0,
+            "punctuated_word": "appointment."
+          }
+        ],
+        "id": "ce40e215-8520-4efa-a645-19442aaba66c"
+      },
+      {
+        "start": 132.11,
+        "end": 135.23,
+        "confidence": 0.99969953,
+        "channel": 0,
+        "transcript": "If you need anything else, just let us know. Have a great day.",
+        "words": [
+          {
+            "word": "if",
+            "start": 132.11,
+            "end": 132.43,
+            "confidence": 1.0,
+            "punctuated_word": "If"
+          },
+          {
+            "word": "you",
+            "start": 132.43,
+            "end": 132.51,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "need",
+            "start": 132.51,
+            "end": 132.67,
+            "confidence": 1.0,
+            "punctuated_word": "need"
+          },
+          {
+            "word": "anything",
+            "start": 132.67,
+            "end": 132.98999,
+            "confidence": 1.0,
+            "punctuated_word": "anything"
+          },
+          {
+            "word": "else",
+            "start": 132.98999,
+            "end": 133.31,
+            "confidence": 0.9970703,
+            "punctuated_word": "else,"
+          },
+          {
+            "word": "just",
+            "start": 133.31,
+            "end": 133.47,
+            "confidence": 1.0,
+            "punctuated_word": "just"
+          },
+          {
+            "word": "let",
+            "start": 133.47,
+            "end": 133.62999,
+            "confidence": 1.0,
+            "punctuated_word": "let"
+          },
+          {
+            "word": "us",
+            "start": 133.62999,
+            "end": 133.79,
+            "confidence": 1.0,
+            "punctuated_word": "us"
+          },
+          {
+            "word": "know",
+            "start": 133.79,
+            "end": 134.27,
+            "confidence": 1.0,
+            "punctuated_word": "know."
+          },
+          {
+            "word": "have",
+            "start": 134.34999,
+            "end": 134.67,
+            "confidence": 1.0,
+            "punctuated_word": "Have"
+          },
+          {
+            "word": "a",
+            "start": 134.67,
+            "end": 134.75,
+            "confidence": 1.0,
+            "punctuated_word": "a"
+          },
+          {
+            "word": "great",
+            "start": 134.75,
+            "end": 134.98999,
+            "confidence": 1.0,
+            "punctuated_word": "great"
+          },
+          {
+            "word": "day",
+            "start": 134.98999,
+            "end": 135.23,
+            "confidence": 0.99902344,
+            "punctuated_word": "day."
+          }
+        ],
+        "id": "282510e4-55fd-4888-a4d7-8d7dc5b6e6d9"
+      }
+    ],
+    "paragraphs": {
+      "transcript": "\nChannel 0: This call may be recorded for quality and training purposes. Thank you for calling Pivot Point Orthopedics. Would you like to create a demo patient profile? I just need your first and last name to get started.\n\nChannel 1: I'm not looking to demo anything. I need a new patient appointment.\n\nChannel 0: To schedule a new patient appointment, you'll need a demo patient profile. Would you like to create one now? I just need your first and last name.\n\nChannel 1: Dana Whitfield.\n\nChannel 0: Your patient profile is set up, and your date of birth is 07/04/2000 for demo purposes. How can I help you today?\n\nChannel 1: That's a demo profile, not mine. I need a real new patient booking.\n\nChannel 0: Let's get your new patient appointment scheduled. Do you have a specific provider you'd like to see, or are you open to the first available?\n\nChannel 1: First available is fine. I'm new and flexible.\n\nChannel 0: We have openings for new patient appointments this coming Tuesday with Dugie Hauser. Would you like 11:15AM, 12PM, or 12:45PM?\n\nChannel 1: 11:15AM.\n\nChannel 0: You're booked for Tuesday, August 25 at 11:15AM with Judy Hauser at Pivot Point Orthopedic. Please bring your photo ID, insurance card, a list of current medications, and any imaging discs if you have them. Is there anything else I could help you with?\n\nChannel 1: Got it. I'm Dana Whitfield. The appointment is Tuesday, August 25 at 11:15. I'll bring those items. Thanks.\n\nChannel 0: You're all set for your appointment. If you need anything else, just let us know. Have a great day.",
+      "paragraphs": [
+        {
+          "sentences": [
+            {
+              "text": "This call may be recorded for quality and training purposes.",
+              "start": 0.0,
+              "end": 3.6
+            },
+            {
+              "text": "Thank you for calling Pivot Point Orthopedics.",
+              "start": 4.88,
+              "end": 9.759999
+            },
+            {
+              "text": "Would you like to create a demo patient profile?",
+              "start": 9.92,
+              "end": 12.4
+            },
+            {
+              "text": "I just need your first and last name to get started.",
+              "start": 12.48,
+              "end": 14.4
+            }
+          ],
+          "channel": 0,
+          "num_words": 37,
+          "start": 0.0,
+          "end": 14.4
+        },
+        {
+          "sentences": [
+            {
+              "text": "I'm not looking to demo anything.",
+              "start": 15.695,
+              "end": 17.695
+            },
+            {
+              "text": "I need a new patient appointment.",
+              "start": 17.695,
+              "end": 19.535
+            }
+          ],
+          "channel": 1,
+          "num_words": 12,
+          "start": 15.695,
+          "end": 19.535
+        },
+        {
+          "sentences": [
+            {
+              "text": "To schedule a new patient appointment, you'll need a demo patient profile.",
+              "start": 22.185,
+              "end": 26.185
+            },
+            {
+              "text": "Would you like to create one now?",
+              "start": 26.345,
+              "end": 28.025
+            },
+            {
+              "text": "I just need your first and last name.",
+              "start": 28.025,
+              "end": 29.785
+            }
+          ],
+          "channel": 0,
+          "num_words": 27,
+          "start": 22.185,
+          "end": 29.785
+        },
+        {
+          "sentences": [
+            {
+              "text": "Dana Whitfield.",
+              "start": 32.99,
+              "end": 34.11
+            }
+          ],
+          "channel": 1,
+          "num_words": 2,
+          "start": 32.99,
+          "end": 34.11
+        },
+        {
+          "sentences": [
+            {
+              "text": "Your patient profile is set up, and your date of birth is 07/04/2000 for demo purposes.",
+              "start": 42.23,
+              "end": 48.135
+            },
+            {
+              "text": "How can I help you today?",
+              "start": 48.295,
+              "end": 49.495
+            }
+          ],
+          "channel": 0,
+          "num_words": 22,
+          "start": 42.23,
+          "end": 49.495
+        },
+        {
+          "sentences": [
+            {
+              "text": "That's a demo profile, not mine.",
+              "start": 52.86,
+              "end": 55.58
+            },
+            {
+              "text": "I need a real new patient booking.",
+              "start": 55.74,
+              "end": 57.58
+            }
+          ],
+          "channel": 1,
+          "num_words": 13,
+          "start": 52.86,
+          "end": 57.58
+        },
+        {
+          "sentences": [
+            {
+              "text": "Let's get your new patient appointment scheduled.",
+              "start": 60.9,
+              "end": 63.38
+            },
+            {
+              "text": "Do you have a specific provider you'd like to see, or are you open to the first available?",
+              "start": 63.46,
+              "end": 68.1
+            }
+          ],
+          "channel": 0,
+          "num_words": 25,
+          "start": 60.9,
+          "end": 68.1
+        },
+        {
+          "sentences": [
+            {
+              "text": "First available is fine.",
+              "start": 71.595,
+              "end": 73.435
+            },
+            {
+              "text": "I'm new and flexible.",
+              "start": 73.435,
+              "end": 74.715
+            }
+          ],
+          "channel": 1,
+          "num_words": 8,
+          "start": 71.595,
+          "end": 74.715
+        },
+        {
+          "sentences": [
+            {
+              "text": "We have openings for new patient appointments this coming Tuesday with Dugie Hauser.",
+              "start": 77.115005,
+              "end": 83.195
+            },
+            {
+              "text": "Would you like 11:15AM, 12PM, or 12:45PM?",
+              "start": 83.195,
+              "end": 86.795006
+            }
+          ],
+          "channel": 0,
+          "num_words": 20,
+          "start": 77.115005,
+          "end": 86.795006
+        },
+        {
+          "sentences": [
+            {
+              "text": "11:15AM.",
+              "start": 90.055,
+              "end": 91.41499
+            }
+          ],
+          "channel": 1,
+          "num_words": 1,
+          "start": 90.055,
+          "end": 91.41499
+        },
+        {
+          "sentences": [
+            {
+              "text": "You're booked for Tuesday, August 25 at 11:15AM with Judy Hauser at Pivot Point Orthopedic.",
+              "start": 97.520004,
+              "end": 104.880005
+            },
+            {
+              "text": "Please bring your photo ID, insurance card, a list of current medications, and any imaging discs if you have them.",
+              "start": 105.325005,
+              "end": 113.005005
+            },
+            {
+              "text": "Is there anything else I could help you with?",
+              "start": 113.245,
+              "end": 114.765
+            }
+          ],
+          "channel": 0,
+          "num_words": 44,
+          "start": 97.520004,
+          "end": 114.765
+        },
+        {
+          "sentences": [
+            {
+              "text": "Got it.",
+              "start": 118.005005,
+              "end": 118.885
+            },
+            {
+              "text": "I'm Dana Whitfield.",
+              "start": 118.965004,
+              "end": 120.565
+            },
+            {
+              "text": "The appointment is Tuesday, August 25 at 11:15.",
+              "start": 120.565,
+              "end": 124.805
+            },
+            {
+              "text": "I'll bring those items.",
+              "start": 124.965004,
+              "end": 126.165
+            },
+            {
+              "text": "Thanks.",
+              "start": 126.770004,
+              "end": 127.170006
+            }
+          ],
+          "channel": 1,
+          "num_words": 18,
+          "start": 118.005005,
+          "end": 127.170006
+        },
+        {
+          "sentences": [
+            {
+              "text": "You're all set for your appointment.",
+              "start": 130.03,
+              "end": 131.95
+            },
+            {
+              "text": "If you need anything else, just let us know.",
+              "start": 132.11,
+              "end": 134.27
+            },
+            {
+              "text": "Have a great day.",
+              "start": 134.34999,
+              "end": 135.23
+            }
+          ],
+          "channel": 0,
+          "num_words": 19,
+          "start": 130.03,
+          "end": 135.23
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "call_id": "campaign/call-02",
+  "extracted_at": "2026-08-23T15:56:32.569754+00:00",
+  "model": "gpt-5.4-mini",
+  "returned_counts": {
+    "facts": 1,
+    "capabilities": 2,
+    "claims": 0,
+    "promises": 0,
+    "entities": 1
+  },
+  "raw": {
+    "facts": [
+      {
+        "slot": "services",
+        "value": "To cancel an appointment, a patient profile is needed.",
+        "at": "0:38"
+      }
+    ],
+    "capabilities": [
+      {
+        "text": "I can help with that.",
+        "ability": "help cancel appointment",
+        "can": true,
+        "at": "0:21"
+      },
+      {
+        "text": "To cancel an appointment, I do need a patient profile.",
+        "ability": "cancel without profile",
+        "can": false,
+        "at": "0:38"
+      }
+    ],
+    "claims": [],
+    "promises": [],
+    "entities": [
+      {
+        "name": "Pivot Point Orthopedic",
+        "kind": "location"
+      }
+    ]
+  },
+  "applied": [
+    "oracle: services filled from campaign/call-02 at 0:38",
+    "capability: cap-05 help cancel appointment can=True",
+    "capability: cap-06 cancel without profile can=False",
+    "frontier: Pivot Point Orthopedic (location) unprobed"
+  ],
+  "skipped": []
+}

@@ -1,0 +1,106 @@
+{
+  "call_id": "campaign/call-05",
+  "extracted_at": "2026-08-23T16:42:01.783698+00:00",
+  "model": "gpt-5.4-mini",
+  "returned_counts": {
+    "facts": 1,
+    "capabilities": 2,
+    "claims": 0,
+    "promises": 5,
+    "entities": 3
+  },
+  "raw": {
+    "facts": [
+      {
+        "slot": "providers",
+        "value": "Judy Hauser sees patients here.",
+        "at": "0:06"
+      }
+    ],
+    "capabilities": [
+      {
+        "text": "I can't proceed further right now, but I can make sure our clinic support team follows up with you.",
+        "ability": "make support follow up",
+        "can": true,
+        "at": "1:33"
+      },
+      {
+        "text": "I don't have access to view or share the details in your record directly.",
+        "ability": "view record details",
+        "can": false,
+        "at": "2:29"
+      }
+    ],
+    "claims": [],
+    "promises": [
+      {
+        "text": "I can make sure our clinic support team follows up with you.",
+        "action": "have support team follow up",
+        "at": "1:33"
+      },
+      {
+        "text": "If you'd like, I could have the support team reach out to help fix this.",
+        "action": "have support team reach out",
+        "at": "2:11"
+      },
+      {
+        "text": "The clinic support team will need to look into it and help you update or confirm your details.",
+        "action": "connect support team for follow-up",
+        "at": "2:36"
+      },
+      {
+        "text": "Would you like me to connect you to them now?",
+        "action": "connect to support team",
+        "at": "2:46"
+      },
+      {
+        "text": "Transfer you now. Thank you.",
+        "action": "transfer to support team",
+        "at": "2:54"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Pivot Point Orthopaedics",
+        "kind": "location"
+      },
+      {
+        "name": "Pretty Good AI",
+        "kind": "other"
+      },
+      {
+        "name": "Judy Hauser",
+        "kind": "provider"
+      }
+    ]
+  },
+  "applied": [
+    "oracle: providers restated consistently (times_stated=3)",
+    "promise: promise-05 at 1:33 (have support team follow up)",
+    "promise: promise-06 at 2:11 (have support team reach out)",
+    "promise: promise-07 at 2:36 (connect support team for follow-up)",
+    "promise: promise-08 at 2:46 (connect to support team)",
+    "promise: promise-09 at 2:54 (transfer to support team)",
+    "capability: cap-08 make support follow up can=True",
+    "capability: cap-09 view record details can=False",
+    "frontier: Pretty Good AI (other) unprobed"
+  ],
+  "skipped": [
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pivot Point Orthopaedics",
+        "kind": "location"
+      }
+    },
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Judy Hauser",
+        "kind": "provider"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4710 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "01a03ac8-8ce4-7ab3-93fe-156322f5dcc3",
+    "sha256": "a76c006f2c385ba3f74bc73716693a5c49aed2fcea2fa691fef6de38cb8aa927",
+    "created": "2026-08-25 21:16:57.179000+00:00",
+    "duration": 135.85594,
+    "channels": 2,
+    "models": [
+      "2187e11a-3532-4498-b076-81fa530bdd49"
+    ],
+    "model_info": {
+      "2187e11a-3532-4498-b076-81fa530bdd49": {
+        "name": "general-nova-3",
+        "version": "2025-07-31.0",
+        "arch": "nova-3"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "This call may be recorded for quality and training purposes. Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today? Can you please provide your date of birth? Just to confirm, I have your name as Dana Whitfield and your date of birth as 03/14/1988. Is that correct? Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Just let me know. No problem. Could you please spell out your first and last name for me and confirm your date of birth one more time? Thanks for confirming. I still can't find your record in our system. I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to have them contact you? Transferring you now. Thank you. Hello. You've reached the Pretty Good AI test line. Goodbye.",
+            "confidence": 1.0,
+            "words": [
+              {
+                "word": "this",
+                "start": 0.0,
+                "end": 0.39999998,
+                "confidence": 0.99902344,
+                "punctuated_word": "This"
+              },
+              {
+                "word": "call",
+                "start": 0.39999998,
+                "end": 0.71999997,
+                "confidence": 1.0,
+                "punctuated_word": "call"
+              },
+              {
+                "word": "may",
+                "start": 0.71999997,
+                "end": 0.96,
+                "confidence": 0.9980469,
+                "punctuated_word": "may"
+              },
+              {
+                "word": "be",
+                "start": 0.96,
+                "end": 1.12,
+                "confidence": 1.0,
+                "punctuated_word": "be"
+              },
+              {
+                "word": "recorded",
+                "start": 1.12,
+                "end": 1.4399999,
+                "confidence": 1.0,
+                "punctuated_word": "recorded"
+              },
+              {
+                "word": "for",
+                "start": 1.4399999,
+                "end": 1.76,
+                "confidence": 0.99902344,
+                "punctuated_word": "for"
+              },
+              {
+                "word": "quality",
+                "start": 1.76,
+                "end": 2.1599998,
+                "confidence": 1.0,
+                "punctuated_word": "quality"
+              },
+              {
+                "word": "and",
+                "start": 2.1599998,
+                "end": 2.3999999,
+                "confidence": 1.0,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "training",
+                "start": 2.3999999,
+                "end": 2.8,
+                "confidence": 1.0,
+                "punctuated_word": "training"
+              },
+              {
+                "word": "purposes",
+                "start": 2.8,
+                "end": 3.6,
+                "confidence": 0.99853516,
+                "punctuated_word": "purposes."
+              },
+              {
+                "word": "thanks",
+                "start": 3.9199998,
+                "end": 5.04,
+                "confidence": 0.8461914,
+                "punctuated_word": "Thanks"
+              },
+              {
+                "word": "for",
+                "start": 6.8799996,
+                "end": 7.12,
+                "confidence": 1.0,
+                "punctuated_word": "for"
+              },
+              {
+                "word": "calling",
+                "start": 7.12,
+                "end": 7.3599997,
+                "confidence": 0.99902344,
+                "punctuated_word": "calling"
+              },
+              {
+                "word": "pivot",
+                "start": 7.3599997,
+                "end": 7.7599998,
+                "confidence": 0.9970703,
+                "punctuated_word": "Pivot"
+              },
+              {
+                "word": "point",
+                "start": 7.7599998,
+                "end": 8.0,
+                "confidence": 0.8461914,
+                "punctuated_word": "Point"
+              },
+              {
+                "word": "orthopedics",
+                "start": 8.0,
+                "end": 8.959999,
+                "confidence": 0.84472656,
+                "punctuated_word": "Orthopedics,"
+              },
+              {
+                "word": "part",
+                "start": 9.12,
+                "end": 9.36,
+                "confidence": 0.99902344,
+                "punctuated_word": "part"
+              },
+              {
+                "word": "of",
+                "start": 9.36,
+                "end": 9.679999,
+                "confidence": 1.0,
+                "punctuated_word": "of"
+              },
+              {
+                "word": "pretty",
+                "start": 9.679999,
+                "end": 10.08,
+                "confidence": 0.82470703,
+                "punctuated_word": "Pretty"
+              },
+              {
+                "word": "good",
+                "start": 10.08,
+                "end": 10.639999,
+                "confidence": 0.6484375,
+                "punctuated_word": "Good"
+              },
+              {
+                "word": "ai",
+                "start": 10.719999,
+                "end": 11.36,
+                "confidence": 0.9797363,
+                "punctuated_word": "AI."
+              },
+              {
+                "word": "how",
+                "start": 11.36,
+                "end": 11.679999,
+                "confidence": 1.0,
+                "punctuated_word": "How"
+              },
+              {
+                "word": "may",
+                "start": 11.679999,
+                "end": 11.84,
+                "confidence": 1.0,
+                "punctuated_word": "may"
+              },
+              {
+                "word": "i",
+                "start": 11.84,
+                "end": 11.92,
+                "confidence": 1.0,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "help",
+                "start": 11.92,
+                "end": 12.08,
+                "confidence": 1.0,
+                "punctuated_word": "help"
+              },
+              {
+                "word": "you",
+                "start": 12.08,
+                "end": 12.24,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "today",
+                "start": 12.24,
+                "end": 12.559999,
+                "confidence": 1.0,
+                "punctuated_word": "today?"
+              },
+              {
+                "word": "can",
+                "start": 23.045,
+                "end": 23.365,
+                "confidence": 1.0,
+                "punctuated_word": "Can"
+              },
+              {
+                "word": "you",
+                "start": 23.365,
+                "end": 23.445,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "please",
+                "start": 23.445,
+                "end": 23.685,
+                "confidence": 1.0,
+                "punctuated_word": "please"
+              },
+              {
+                "word": "provide",
+                "start": 23.685,
+                "end": 24.005001,
+                "confidence": 1.0,
+                "punctuated_word": "provide"
+              },
+              {
+                "word": "your",
+                "start": 24.005001,
+                "end": 24.165,
+                "confidence": 1.0,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "date",
+                "start": 24.165,
+                "end": 24.404999,
+                "confidence": 1.0,
+                "punctuated_word": "date"
+              },
+              {
+                "word": "of",
+                "start": 24.404999,
+                "end": 24.564999,
+                "confidence": 1.0,
+                "punctuated_word": "of"
+              },
+              {
+                "word": "birth",
+                "start": 24.564999,
+                "end": 24.885,
+                "confidence": 0.99902344,
+                "punctuated_word": "birth?"
+              },
+              {
+                "word": "just",
+                "start": 33.489998,
+                "end": 33.81,
+                "confidence": 1.0,
+                "punctuated_word": "Just"
+              },
+              {
+                "word": "to",
+                "start": 33.81,
+                "end": 33.97,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "confirm",
+                "start": 33.97,
+                "end": 34.61,
+                "confidence": 0.9980469,
+                "punctuated_word": "confirm,"
+              },
+              {
+                "word": "i",
+                "start": 34.61,
+                "end": 34.85,
+                "confidence": 1.0,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "have",
+                "start": 34.85,
+                "end": 35.09,
+                "confidence": 1.0,
+                "punctuated_word": "have"
+              },
+              {
+                "word": "your",
+                "start": 35.09,
+                "end": 35.25,
+                "confidence": 1.0,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "name",
+                "start": 35.25,
+                "end": 35.489998,
+                "confidence": 1.0,
+                "punctuated_word": "name"
+              },
+              {
+                "word": "as",
+                "start": 35.489998,
+                "end": 35.81,
+                "confidence": 0.99902344,
+                "punctuated_word": "as"
+              },
+              {
+                "word": "dana",
+                "start": 35.81,
+                "end": 36.21,
+                "confidence": 0.9980469,
+                "punctuated_word": "Dana"
+              },
+              {
+                "word": "whitfield",
+                "start": 36.21,
+                "end": 36.77,
+                "confidence": 0.8876953,
+                "punctuated_word": "Whitfield"
+              },
+              {
+                "word": "and",
+                "start": 36.77,
+                "end": 37.25,
+                "confidence": 0.8496094,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "your",
+                "start": 37.25,
+                "end": 37.489998,
+                "confidence": 1.0,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "date",
+                "start": 37.489998,
+                "end": 37.65,
+                "confidence": 1.0,
+                "punctuated_word": "date"
+              },
+              {
+                "word": "of",
+                "start": 37.65,
+                "end": 37.809998,
+                "confidence": 0.99902344,
+                "punctuated_word": "of"
+              },
+              {
+                "word": "birth",
+                "start": 37.809998,
+                "end": 38.05,
+                "confidence": 1.0,
+                "punctuated_word": "birth"
+              },
+              {
+                "word": "as",
+                "start": 38.05,
+                "end": 38.37,
+                "confidence": 0.99902344,
+                "punctuated_word": "as"
+              },
+              {
+                "word": "03/14/1988",
+                "start": 38.37,
+                "end": 41.09,
+                "confidence": 0.996875,
+                "punctuated_word": "03/14/1988."
+              },
+              {
+                "word": "is",
+                "start": 41.09,
+                "end": 41.41,
+                "confidence": 0.99902344,
+                "punctuated_word": "Is"
+              },
+              {
+                "word": "that",
+                "start": 41.41,
+                "end": 41.489998,
+                "confidence": 1.0,
+                "punctuated_word": "that"
+              },
+              {
+                "word": "correct",
+                "start": 41.489998,
+                "end": 41.89,
+                "confidence": 1.0,
+                "punctuated_word": "correct?"
+              },
+              {
+                "word": "would",
+                "start": 53.265,
+                "end": 53.505,
+                "confidence": 0.99902344,
+                "punctuated_word": "Would"
+              },
+              {
+                "word": "you",
+                "start": 53.505,
+                "end": 53.665,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "like",
+                "start": 53.665,
+                "end": 53.825,
+                "confidence": 1.0,
+                "punctuated_word": "like"
+              },
+              {
+                "word": "to",
+                "start": 53.825,
+                "end": 53.985,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "use",
+                "start": 53.985,
+                "end": 54.145,
+                "confidence": 1.0,
+                "punctuated_word": "use"
+              },
+              {
+                "word": "your",
+                "start": 54.145,
+                "end": 54.305,
+                "confidence": 1.0,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "phone",
+                "start": 54.305,
+                "end": 54.545002,
+                "confidence": 1.0,
+                "punctuated_word": "phone"
+              },
+              {
+                "word": "number",
+                "start": 54.545002,
+                "end": 54.785004,
+                "confidence": 1.0,
+                "punctuated_word": "number"
+              },
+              {
+                "word": "to",
+                "start": 54.785004,
+                "end": 54.945,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "look",
+                "start": 54.945,
+                "end": 55.105003,
+                "confidence": 1.0,
+                "punctuated_word": "look"
+              },
+              {
+                "word": "up",
+                "start": 55.105003,
+                "end": 55.265,
+                "confidence": 0.99902344,
+                "punctuated_word": "up"
+              },
+              {
+                "word": "your",
+                "start": 55.265,
+                "end": 55.425003,
+                "confidence": 1.0,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "record",
+                "start": 55.425003,
+                "end": 55.745003,
+                "confidence": 0.99560547,
+                "punctuated_word": "record?"
+              },
+              {
+                "word": "if",
+                "start": 56.120003,
+                "end": 56.440002,
+                "confidence": 1.0,
+                "punctuated_word": "If"
+              },
+              {
+                "word": "so",
+                "start": 56.440002,
+                "end": 56.84,
+                "confidence": 0.9995117,
+                "punctuated_word": "so,"
+              },
+              {
+                "word": "please",
+                "start": 56.84,
+                "end": 57.0,
+                "confidence": 1.0,
+                "punctuated_word": "please"
+              },
+              {
+                "word": "provide",
+                "start": 57.0,
+                "end": 57.32,
+                "confidence": 1.0,
+                "punctuated_word": "provide"
+              },
+              {
+                "word": "the",
+                "start": 57.32,
+                "end": 57.48,
+                "confidence": 1.0,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "number",
+                "start": 57.48,
+                "end": 57.72,
+                "confidence": 1.0,
+                "punctuated_word": "number"
+              },
+              {
+                "word": "you",
+                "start": 57.72,
+                "end": 57.88,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "have",
+                "start": 57.88,
+                "end": 58.04,
+                "confidence": 1.0,
+                "punctuated_word": "have"
+              },
+              {
+                "word": "on",
+                "start": 58.04,
+                "end": 58.280003,
+                "confidence": 1.0,
+                "punctuated_word": "on"
+              },
+              {
+                "word": "file",
+                "start": 58.280003,
+                "end": 58.52,
+                "confidence": 1.0,
+                "punctuated_word": "file"
+              },
+              {
+                "word": "with",
+                "start": 58.52,
+                "end": 58.760002,
+                "confidence": 1.0,
+                "punctuated_word": "with"
+              },
+              {
+                "word": "us",
+                "start": 58.760002,
+                "end": 59.24,
+                "confidence": 0.9995117,
+                "punctuated_word": "us."
+              },
+              {
+                "word": "if",
+                "start": 59.24,
+                "end": 59.56,
+                "confidence": 0.99902344,
+                "punctuated_word": "If"
+              },
+              {
+                "word": "you're",
+                "start": 59.56,
+                "end": 59.8,
+                "confidence": 1.0,
+                "punctuated_word": "you're"
+              },
+              {
+                "word": "not",
+                "start": 59.8,
+                "end": 59.96,
+                "confidence": 1.0,
+                "punctuated_word": "not"
+              },
+              {
+                "word": "sure",
+                "start": 59.96,
+                "end": 60.6,
+                "confidence": 0.9970703,
+                "punctuated_word": "sure,"
+              },
+              {
+                "word": "i",
+                "start": 60.600002,
+                "end": 60.760002,
+                "confidence": 1.0,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "can",
+                "start": 60.760002,
+                "end": 60.920002,
+                "confidence": 1.0,
+                "punctuated_word": "can"
+              },
+              {
+                "word": "confirm",
+                "start": 60.920002,
+                "end": 61.32,
+                "confidence": 1.0,
+                "punctuated_word": "confirm"
+              },
+              {
+                "word": "your",
+                "start": 61.32,
+                "end": 61.64,
+                "confidence": 1.0,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "name",
+                "start": 61.64,
+                "end": 61.8,
+                "confidence": 1.0,
+                "punctuated_word": "name"
+              },
+              {
+                "word": "and",
+                "start": 61.8,
+                "end": 61.96,
+                "confidence": 1.0,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "date",
+                "start": 61.96,
+                "end": 62.2,
+                "confidence": 1.0,
+                "punctuated_word": "date"
+              },
+              {
+                "word": "of",
+                "start": 62.2,
+                "end": 62.36,
+                "confidence": 1.0,
+                "punctuated_word": "of"
+              },
+              {
+                "word": "birth",
+                "start": 62.36,
+                "end": 62.600002,
+                "confidence": 1.0,
+                "punctuated_word": "birth"
+              },
+              {
+                "word": "again",
+                "start": 62.600002,
+                "end": 63.24,
+                "confidence": 0.9914551,
+                "punctuated_word": "again."
+              },
+              {
+                "word": "just",
+                "start": 63.4,
+                "end": 63.72,
+                "confidence": 1.0,
+                "punctuated_word": "Just"
+              },
+              {
+                "word": "let",
+                "start": 63.72,
+                "end": 63.96,
+                "confidence": 1.0,
+                "punctuated_word": "let"
+              },
+              {
+                "word": "me",
+                "start": 63.96,
+                "end": 64.12,
+                "confidence": 1.0,
+                "punctuated_word": "me"
+              },
+              {
+                "word": "know",
+                "start": 64.12,
+                "end": 64.36,
+                "confidence": 1.0,
+                "punctuated_word": "know."
+              },
+              {
+                "word": "no",
+                "start": 78.765,
+                "end": 79.085,
+                "confidence": 0.9941406,
+                "punctuated_word": "No"
+              },
+              {
+                "word": "problem",
+                "start": 79.085,
+                "end": 79.725,
+                "confidence": 1.0,
+                "punctuated_word": "problem."
+              },
+              {
+                "word": "could",
+                "start": 79.885,
+                "end": 80.205,
+                "confidence": 1.0,
+                "punctuated_word": "Could"
+              },
+              {
+                "word": "you",
+                "start": 80.205,
+                "end": 80.285,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "please",
+                "start": 80.285,
+                "end": 80.525,
+                "confidence": 1.0,
+                "punctuated_word": "please"
+              },
+              {
+                "word": "spell",
+                "start": 80.525,
+                "end": 80.765,
+                "confidence": 0.9902344,
+                "punctuated_word": "spell"
+              },
+              {
+                "word": "out",
+                "start": 80.765,
+                "end": 80.925,
+                "confidence": 1.0,
+                "punctuated_word": "out"
+              },
+              {
+                "word": "your",
+                "start": 80.925,
+                "end": 81.165,
+                "confidence": 1.0,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "first",
+                "start": 81.165,
+                "end": 81.325,
+                "confidence": 1.0,
+                "punctuated_word": "first"
+              },
+              {
+                "word": "and",
+                "start": 81.325,
+                "end": 81.565,
+                "confidence": 1.0,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "last",
+                "start": 81.565,
+                "end": 81.805,
+                "confidence": 1.0,
+                "punctuated_word": "last"
+              },
+              {
+                "word": "name",
+                "start": 81.805,
+                "end": 81.965,
+                "confidence": 1.0,
+                "punctuated_word": "name"
+              },
+              {
+                "word": "for",
+                "start": 81.965,
+                "end": 82.205,
+                "confidence": 1.0,
+                "punctuated_word": "for"
+              },
+              {
+                "word": "me",
+                "start": 82.205,
+                "end": 82.365,
+                "confidence": 1.0,
+                "punctuated_word": "me"
+              },
+              {
+                "word": "and",
+                "start": 82.365,
+                "end": 82.605,
+                "confidence": 0.91503906,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "confirm",
+                "start": 82.605,
+                "end": 83.005,
+                "confidence": 1.0,
+                "punctuated_word": "confirm"
+              },
+              {
+                "word": "your",
+                "start": 83.005,
+                "end": 83.165,
+                "confidence": 1.0,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "date",
+                "start": 83.165,
+                "end": 83.405,
+                "confidence": 1.0,
+                "punctuated_word": "date"
+              },
+              {
+                "word": "of",
+                "start": 83.405,
+                "end": 83.485,
+                "confidence": 0.99902344,
+                "punctuated_word": "of"
+              },
+              {
+                "word": "birth",
+                "start": 83.485,
+                "end": 83.725,
+                "confidence": 1.0,
+                "punctuated_word": "birth"
+              },
+              {
+                "word": "one",
+                "start": 83.725,
+                "end": 83.965,
+                "confidence": 1.0,
+                "punctuated_word": "one"
+              },
+              {
+                "word": "more",
+                "start": 83.965,
+                "end": 84.205,
+                "confidence": 1.0,
+                "punctuated_word": "more"
+              },
+              {
+                "word": "time",
+                "start": 84.205,
+                "end": 84.445,
+                "confidence": 0.9975586,
+                "punctuated_word": "time?"
+              },
+              {
+                "word": "thanks",
+                "start": 97.935,
+                "end": 98.335,
+                "confidence": 0.98095703,
+                "punctuated_word": "Thanks"
+              },
+              {
+                "word": "for",
+                "start": 98.335,
+                "end": 98.575,
+                "confidence": 1.0,
+                "punctuated_word": "for"
+              },
+              {
+                "word": "confirming",
+                "start": 98.575,
+                "end": 99.375,
+                "confidence": 1.0,
+                "punctuated_word": "confirming."
+              },
+              {
+                "word": "i",
+                "start": 99.454994,
+                "end": 99.695,
+                "confidence": 1.0,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "still",
+                "start": 99.695,
+                "end": 99.935,
+                "confidence": 1.0,
+                "punctuated_word": "still"
+              },
+              {
+                "word": "can't",
+                "start": 99.935,
+                "end": 100.174995,
+                "confidence": 1.0,
+                "punctuated_word": "can't"
+              },
+              {
+                "word": "find",
+                "start": 100.174995,
+                "end": 100.415,
+                "confidence": 1.0,
+                "punctuated_word": "find"
+              },
+              {
+                "word": "your",
+                "start": 100.415,
+                "end": 100.575,
+                "confidence": 1.0,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "record",
+                "start": 100.575,
+                "end": 100.895,
+                "confidence": 1.0,
+                "punctuated_word": "record"
+              },
+              {
+                "word": "in",
+                "start": 100.895,
+                "end": 101.055,
+                "confidence": 1.0,
+                "punctuated_word": "in"
+              },
+              {
+                "word": "our",
+                "start": 101.055,
+                "end": 101.215,
+                "confidence": 1.0,
+                "punctuated_word": "our"
+              },
+              {
+                "word": "system",
+                "start": 101.215,
+                "end": 101.935,
+                "confidence": 1.0,
+                "punctuated_word": "system."
+              },
+              {
+                "word": "i",
+                "start": 101.935,
+                "end": 102.255,
+                "confidence": 1.0,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "can't",
+                "start": 102.255,
+                "end": 102.575,
+                "confidence": 0.9995117,
+                "punctuated_word": "can't"
+              },
+              {
+                "word": "proceed",
+                "start": 102.575,
+                "end": 102.895,
+                "confidence": 1.0,
+                "punctuated_word": "proceed"
+              },
+              {
+                "word": "further",
+                "start": 102.895,
+                "end": 103.295,
+                "confidence": 1.0,
+                "punctuated_word": "further"
+              },
+              {
+                "word": "right",
+                "start": 103.295,
+                "end": 103.615,
+                "confidence": 1.0,
+                "punctuated_word": "right"
+              },
+              {
+                "word": "now",
+                "start": 103.615,
+                "end": 103.935,
+                "confidence": 0.9914551,
+                "punctuated_word": "now,"
+              },
+              {
+                "word": "but",
+                "start": 103.935,
+                "end": 104.095,
+                "confidence": 1.0,
+                "punctuated_word": "but"
+              },
+              {
+                "word": "i",
+                "start": 104.095,
+                "end": 104.255,
+                "confidence": 1.0,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "can",
+                "start": 104.255,
+                "end": 104.415,
+                "confidence": 1.0,
+                "punctuated_word": "can"
+              },
+              {
+                "word": "make",
+                "start": 104.415,
+                "end": 104.575,
+                "confidence": 1.0,
+                "punctuated_word": "make"
+              },
+              {
+                "word": "sure",
+                "start": 104.575,
+                "end": 104.735,
+                "confidence": 1.0,
+                "punctuated_word": "sure"
+              },
+              {
+                "word": "our",
+                "start": 104.735,
+                "end": 104.975,
+                "confidence": 0.9838867,
+                "punctuated_word": "our"
+              },
+              {
+                "word": "clinic",
+                "start": 104.975,
+                "end": 105.295,
+                "confidence": 0.9951172,
+                "punctuated_word": "clinic"
+              },
+              {
+                "word": "support",
+                "start": 105.295,
+                "end": 105.615,
+                "confidence": 0.99902344,
+                "punctuated_word": "support"
+              },
+              {
+                "word": "team",
+                "start": 105.615,
+                "end": 105.854996,
+                "confidence": 1.0,
+                "punctuated_word": "team"
+              },
+              {
+                "word": "follows",
+                "start": 105.854996,
+                "end": 106.174995,
+                "confidence": 0.99902344,
+                "punctuated_word": "follows"
+              },
+              {
+                "word": "up",
+                "start": 106.174995,
+                "end": 106.41499,
+                "confidence": 0.99609375,
+                "punctuated_word": "up"
+              },
+              {
+                "word": "with",
+                "start": 106.41499,
+                "end": 106.575,
+                "confidence": 1.0,
+                "punctuated_word": "with"
+              },
+              {
+                "word": "you",
+                "start": 106.575,
+                "end": 107.134995,
+                "confidence": 1.0,
+                "punctuated_word": "you."
+              },
+              {
+                "word": "would",
+                "start": 107.134995,
+                "end": 107.454994,
+                "confidence": 1.0,
+                "punctuated_word": "Would"
+              },
+              {
+                "word": "you",
+                "start": 107.454994,
+                "end": 107.534996,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "like",
+                "start": 107.534996,
+                "end": 107.695,
+                "confidence": 1.0,
+                "punctuated_word": "like"
+              },
+              {
+                "word": "me",
+                "start": 107.695,
+                "end": 107.854996,
+                "confidence": 1.0,
+                "punctuated_word": "me"
+              },
+              {
+                "word": "to",
+                "start": 107.854996,
+                "end": 107.935,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "have",
+                "start": 107.935,
+                "end": 108.095,
+                "confidence": 1.0,
+                "punctuated_word": "have"
+              },
+              {
+                "word": "them",
+                "start": 108.095,
+                "end": 108.255,
+                "confidence": 0.99902344,
+                "punctuated_word": "them"
+              },
+              {
+                "word": "contact",
+                "start": 108.255,
+                "end": 108.575,
+                "confidence": 1.0,
+                "punctuated_word": "contact"
+              },
+              {
+                "word": "you",
+                "start": 108.575,
+                "end": 108.895,
+                "confidence": 1.0,
+                "punctuated_word": "you?"
+              },
+              {
+                "word": "transferring",
+                "start": 124.329994,
+                "end": 125.049995,
+                "confidence": 0.9916992,
+                "punctuated_word": "Transferring"
+              },
+              {
+                "word": "you",
+                "start": 125.049995,
+                "end": 125.13,
+                "confidence": 0.96972656,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "now",
+                "start": 125.13,
+                "end": 125.369995,
+                "confidence": 0.99902344,
+                "punctuated_word": "now."
+              },
+              {
+                "word": "thank",
+                "start": 125.369995,
+                "end": 125.61,
+                "confidence": 1.0,
+                "punctuated_word": "Thank"
+              },
+              {
+                "word": "you",
+                "start": 125.61,
+                "end": 125.77,
+                "confidence": 1.0,
+                "punctuated_word": "you."
+              },
+              {
+                "word": "hello",
+                "start": 127.64088,
+                "end": 128.36087,
+                "confidence": 0.99853516,
+                "punctuated_word": "Hello."
+              },
+              {
+                "word": "you've",
+                "start": 128.36087,
+                "end": 128.76088,
+                "confidence": 1.0,
+                "punctuated_word": "You've"
+              },
+              {
+                "word": "reached",
+                "start": 128.76088,
+                "end": 129.00087,
+                "confidence": 1.0,
+                "punctuated_word": "reached"
+              },
+              {
+                "word": "the",
+                "start": 129.00087,
+                "end": 129.16087,
+                "confidence": 0.92578125,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "pretty",
+                "start": 129.16087,
+                "end": 129.40088,
+                "confidence": 0.88427734,
+                "punctuated_word": "Pretty"
+              },
+              {
+                "word": "good",
+                "start": 129.40088,
+                "end": 129.56087,
+                "confidence": 0.7915039,
+                "punctuated_word": "Good"
+              },
+              {
+                "word": "ai",
+                "start": 129.56087,
+                "end": 130.04088,
+                "confidence": 0.9716797,
+                "punctuated_word": "AI"
+              },
+              {
+                "word": "test",
+                "start": 130.04088,
+                "end": 130.28087,
+                "confidence": 0.87060547,
+                "punctuated_word": "test"
+              },
+              {
+                "word": "line",
+                "start": 130.28087,
+                "end": 130.84088,
+                "confidence": 0.9980469,
+                "punctuated_word": "line."
+              },
+              {
+                "word": "goodbye",
+                "start": 130.84088,
+                "end": 131.16087,
+                "confidence": 0.9995117,
+                "punctuated_word": "Goodbye."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nThis call may be recorded for quality and training purposes. Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today? Can you please provide your date of birth? Just to confirm, I have your name as Dana Whitfield and your date of birth as 03/14/1988.\n\nIs that correct? Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Just let me know.\n\nNo problem. Could you please spell out your first and last name for me and confirm your date of birth one more time? Thanks for confirming. I still can't find your record in our system. I can't proceed further right now, but I can make sure our clinic support team follows up with you.\n\nWould you like me to have them contact you? Transferring you now. Thank you. Hello. You've reached the Pretty Good AI test line.\n\nGoodbye.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "This call may be recorded for quality and training purposes.",
+                      "start": 0.0,
+                      "end": 3.6
+                    },
+                    {
+                      "text": "Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI.",
+                      "start": 3.9199998,
+                      "end": 11.36
+                    },
+                    {
+                      "text": "How may I help you today?",
+                      "start": 11.36,
+                      "end": 12.559999
+                    },
+                    {
+                      "text": "Can you please provide your date of birth?",
+                      "start": 23.045,
+                      "end": 24.885
+                    },
+                    {
+                      "text": "Just to confirm, I have your name as Dana Whitfield and your date of birth as 03/14/1988.",
+                      "start": 33.489998,
+                      "end": 41.09
+                    }
+                  ],
+                  "num_words": 52,
+                  "start": 0.0,
+                  "end": 41.09
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "Is that correct?",
+                      "start": 41.09,
+                      "end": 41.89
+                    },
+                    {
+                      "text": "Would you like to use your phone number to look up your record?",
+                      "start": 53.265,
+                      "end": 55.745003
+                    },
+                    {
+                      "text": "If so, please provide the number you have on file with us.",
+                      "start": 56.120003,
+                      "end": 59.24
+                    },
+                    {
+                      "text": "If you're not sure, I can confirm your name and date of birth again.",
+                      "start": 59.24,
+                      "end": 63.24
+                    },
+                    {
+                      "text": "Just let me know.",
+                      "start": 63.4,
+                      "end": 64.36
+                    }
+                  ],
+                  "num_words": 46,
+                  "start": 41.09,
+                  "end": 64.36
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "No problem.",
+                      "start": 78.765,
+                      "end": 79.725
+                    },
+                    {
+                      "text": "Could you please spell out your first and last name for me and confirm your date of birth one more time?",
+                      "start": 79.885,
+                      "end": 84.445
+                    },
+                    {
+                      "text": "Thanks for confirming.",
+                      "start": 97.935,
+                      "end": 99.375
+                    },
+                    {
+                      "text": "I still can't find your record in our system.",
+                      "start": 99.454994,
+                      "end": 101.935
+                    },
+                    {
+                      "text": "I can't proceed further right now, but I can make sure our clinic support team follows up with you.",
+                      "start": 101.935,
+                      "end": 107.134995
+                    }
+                  ],
+                  "num_words": 54,
+                  "start": 78.765,
+                  "end": 107.134995
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "Would you like me to have them contact you?",
+                      "start": 107.134995,
+                      "end": 108.895
+                    },
+                    {
+                      "text": "Transferring you now.",
+                      "start": 124.329994,
+                      "end": 125.369995
+                    },
+                    {
+                      "text": "Thank you.",
+                      "start": 125.369995,
+                      "end": 125.77
+                    },
+                    {
+                      "text": "Hello.",
+                      "start": 127.64088,
+                      "end": 128.36087
+                    },
+                    {
+                      "text": "You've reached the Pretty Good AI test line.",
+                      "start": 128.36087,
+                      "end": 130.84088
+                    }
+                  ],
+                  "num_words": 23,
+                  "start": 107.134995,
+                  "end": 130.84088
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "Goodbye.",
+                      "start": 130.84088,
+                      "end": 131.16087
+                    }
+                  ],
+                  "num_words": 1,
+                  "start": 130.84088,
+                  "end": 131.16087
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "transcript": "I'm Dana Whitfield. I called to confirm the time of an appointment. What's on file for me? My date of birth is 03/14/1988. Yes. That's correct. I don't have the phone number for you right now. If you can look it up another way, that would help. If not, I can get the date of birth again. Dana Whitfield. Date of birth, 03/14/1988. Yes, please. It'd be great if the support team reaches out. I'd like to confirm they can find me or help get the record sorted. Goodbye. If you need anything else, you know where to reach me.",
+            "confidence": 1.0,
+            "words": [
+              {
+                "word": "i'm",
+                "start": 15.295,
+                "end": 15.695,
+                "confidence": 0.9995117,
+                "punctuated_word": "I'm"
+              },
+              {
+                "word": "dana",
+                "start": 15.695,
+                "end": 16.015,
+                "confidence": 0.9980469,
+                "punctuated_word": "Dana"
+              },
+              {
+                "word": "whitfield",
+                "start": 16.015,
+                "end": 16.895,
+                "confidence": 0.9820964,
+                "punctuated_word": "Whitfield."
+              },
+              {
+                "word": "i",
+                "start": 16.895,
+                "end": 17.135,
+                "confidence": 1.0,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "called",
+                "start": 17.135,
+                "end": 17.455,
+                "confidence": 0.99609375,
+                "punctuated_word": "called"
+              },
+              {
+                "word": "to",
+                "start": 17.455,
+                "end": 17.615,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "confirm",
+                "start": 17.615,
+                "end": 17.855,
+                "confidence": 1.0,
+                "punctuated_word": "confirm"
+              },
+              {
+                "word": "the",
+                "start": 17.855,
+                "end": 18.095001,
+                "confidence": 1.0,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "time",
+                "start": 18.095001,
+                "end": 18.255001,
+                "confidence": 1.0,
+                "punctuated_word": "time"
+              },
+              {
+                "word": "of",
+                "start": 18.255001,
+                "end": 18.415,
+                "confidence": 1.0,
+                "punctuated_word": "of"
+              },
+              {
+                "word": "an",
+                "start": 18.415,
+                "end": 18.575,
+                "confidence": 1.0,
+                "punctuated_word": "an"
+              },
+              {
+                "word": "appointment",
+                "start": 18.575,
+                "end": 19.215,
+                "confidence": 1.0,
+                "punctuated_word": "appointment."
+              },
+              {
+                "word": "what's",
+                "start": 19.375,
+                "end": 19.775,
+                "confidence": 1.0,
+                "punctuated_word": "What's"
+              },
+              {
+                "word": "on",
+                "start": 19.775,
+                "end": 19.935,
+                "confidence": 1.0,
+                "punctuated_word": "on"
+              },
+              {
+                "word": "file",
+                "start": 19.935,
+                "end": 20.175,
+                "confidence": 1.0,
+                "punctuated_word": "file"
+              },
+              {
+                "word": "for",
+                "start": 20.175,
+                "end": 20.415,
+                "confidence": 0.99902344,
+                "punctuated_word": "for"
+              },
+              {
+                "word": "me",
+                "start": 20.415,
+                "end": 20.575,
+                "confidence": 1.0,
+                "punctuated_word": "me?"
+              },
+              {
+                "word": "my",
+                "start": 25.710001,
+                "end": 26.03,
+                "confidence": 1.0,
+                "punctuated_word": "My"
+              },
+              {
+                "word": "date",
+                "start": 26.03,
+                "end": 26.35,
+                "confidence": 1.0,
+                "punctuated_word": "date"
+              },
+              {
+                "word": "of",
+                "start": 26.35,
+                "end": 26.43,
+                "confidence": 0.99902344,
+                "punctuated_word": "of"
+              },
+              {
+                "word": "birth",
+                "start": 26.43,
+                "end": 26.75,
+                "confidence": 1.0,
+                "punctuated_word": "birth"
+              },
+              {
+                "word": "is",
+                "start": 26.75,
+                "end": 26.990002,
+                "confidence": 1.0,
+                "punctuated_word": "is"
+              },
+              {
+                "word": "03/14/1988",
+                "start": 26.990002,
+                "end": 29.150002,
+                "confidence": 0.9989258,
+                "punctuated_word": "03/14/1988."
+              },
+              {
+                "word": "yes",
+                "start": 46.045,
+                "end": 46.844997,
+                "confidence": 0.9975586,
+                "punctuated_word": "Yes."
+              },
+              {
+                "word": "that's",
+                "start": 46.844997,
+                "end": 47.245,
+                "confidence": 0.9995117,
+                "punctuated_word": "That's"
+              },
+              {
+                "word": "correct",
+                "start": 47.245,
+                "end": 47.644997,
+                "confidence": 1.0,
+                "punctuated_word": "correct."
+              },
+              {
+                "word": "i",
+                "start": 67.835,
+                "end": 68.475,
+                "confidence": 0.9838867,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "don't",
+                "start": 68.475,
+                "end": 68.795,
+                "confidence": 0.9995117,
+                "punctuated_word": "don't"
+              },
+              {
+                "word": "have",
+                "start": 68.795,
+                "end": 69.035,
+                "confidence": 1.0,
+                "punctuated_word": "have"
+              },
+              {
+                "word": "the",
+                "start": 69.035,
+                "end": 69.195,
+                "confidence": 0.9941406,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "phone",
+                "start": 69.195,
+                "end": 69.435,
+                "confidence": 1.0,
+                "punctuated_word": "phone"
+              },
+              {
+                "word": "number",
+                "start": 69.435,
+                "end": 69.675,
+                "confidence": 1.0,
+                "punctuated_word": "number"
+              },
+              {
+                "word": "for",
+                "start": 69.675,
+                "end": 69.835,
+                "confidence": 1.0,
+                "punctuated_word": "for"
+              },
+              {
+                "word": "you",
+                "start": 69.835,
+                "end": 69.995,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "right",
+                "start": 69.995,
+                "end": 70.235,
+                "confidence": 1.0,
+                "punctuated_word": "right"
+              },
+              {
+                "word": "now",
+                "start": 70.235,
+                "end": 70.715004,
+                "confidence": 1.0,
+                "punctuated_word": "now."
+              },
+              {
+                "word": "if",
+                "start": 70.795,
+                "end": 71.035,
+                "confidence": 1.0,
+                "punctuated_word": "If"
+              },
+              {
+                "word": "you",
+                "start": 71.035,
+                "end": 71.115,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "can",
+                "start": 71.115,
+                "end": 71.275,
+                "confidence": 0.9941406,
+                "punctuated_word": "can"
+              },
+              {
+                "word": "look",
+                "start": 71.275,
+                "end": 71.435,
+                "confidence": 1.0,
+                "punctuated_word": "look"
+              },
+              {
+                "word": "it",
+                "start": 71.435,
+                "end": 71.515,
+                "confidence": 1.0,
+                "punctuated_word": "it"
+              },
+              {
+                "word": "up",
+                "start": 71.515,
+                "end": 71.675,
+                "confidence": 1.0,
+                "punctuated_word": "up"
+              },
+              {
+                "word": "another",
+                "start": 71.675,
+                "end": 71.915,
+                "confidence": 0.99902344,
+                "punctuated_word": "another"
+              },
+              {
+                "word": "way",
+                "start": 71.915,
+                "end": 72.395004,
+                "confidence": 0.9975586,
+                "punctuated_word": "way,"
+              },
+              {
+                "word": "that",
+                "start": 72.395004,
+                "end": 72.555,
+                "confidence": 1.0,
+                "punctuated_word": "that"
+              },
+              {
+                "word": "would",
+                "start": 72.555,
+                "end": 72.715,
+                "confidence": 1.0,
+                "punctuated_word": "would"
+              },
+              {
+                "word": "help",
+                "start": 72.715,
+                "end": 73.275,
+                "confidence": 1.0,
+                "punctuated_word": "help."
+              },
+              {
+                "word": "if",
+                "start": 73.355,
+                "end": 73.675,
+                "confidence": 1.0,
+                "punctuated_word": "If"
+              },
+              {
+                "word": "not",
+                "start": 73.675,
+                "end": 73.995,
+                "confidence": 0.9995117,
+                "punctuated_word": "not,"
+              },
+              {
+                "word": "i",
+                "start": 74.43,
+                "end": 74.67,
+                "confidence": 1.0,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "can",
+                "start": 74.67,
+                "end": 74.83,
+                "confidence": 1.0,
+                "punctuated_word": "can"
+              },
+              {
+                "word": "get",
+                "start": 74.83,
+                "end": 74.99,
+                "confidence": 0.8774414,
+                "punctuated_word": "get"
+              },
+              {
+                "word": "the",
+                "start": 74.99,
+                "end": 75.15,
+                "confidence": 1.0,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "date",
+                "start": 75.15,
+                "end": 75.31,
+                "confidence": 1.0,
+                "punctuated_word": "date"
+              },
+              {
+                "word": "of",
+                "start": 75.31,
+                "end": 75.39,
+                "confidence": 0.99902344,
+                "punctuated_word": "of"
+              },
+              {
+                "word": "birth",
+                "start": 75.39,
+                "end": 75.63,
+                "confidence": 1.0,
+                "punctuated_word": "birth"
+              },
+              {
+                "word": "again",
+                "start": 75.63,
+                "end": 75.95,
+                "confidence": 0.9970703,
+                "punctuated_word": "again."
+              },
+              {
+                "word": "dana",
+                "start": 87.885,
+                "end": 88.525,
+                "confidence": 0.9838867,
+                "punctuated_word": "Dana"
+              },
+              {
+                "word": "whitfield",
+                "start": 88.525,
+                "end": 89.405,
+                "confidence": 0.9840495,
+                "punctuated_word": "Whitfield."
+              },
+              {
+                "word": "date",
+                "start": 89.565,
+                "end": 89.805,
+                "confidence": 1.0,
+                "punctuated_word": "Date"
+              },
+              {
+                "word": "of",
+                "start": 89.805,
+                "end": 89.965,
+                "confidence": 1.0,
+                "punctuated_word": "of"
+              },
+              {
+                "word": "birth",
+                "start": 89.965,
+                "end": 90.525,
+                "confidence": 0.9838867,
+                "punctuated_word": "birth,"
+              },
+              {
+                "word": "03/14/1988",
+                "start": 90.525,
+                "end": 92.765,
+                "confidence": 0.96875,
+                "punctuated_word": "03/14/1988."
+              },
+              {
+                "word": "yes",
+                "start": 111.835,
+                "end": 112.555,
+                "confidence": 0.9980469,
+                "punctuated_word": "Yes,"
+              },
+              {
+                "word": "please",
+                "start": 112.555,
+                "end": 112.955,
+                "confidence": 1.0,
+                "punctuated_word": "please."
+              },
+              {
+                "word": "it'd",
+                "start": 112.955,
+                "end": 113.354996,
+                "confidence": 0.9641113,
+                "punctuated_word": "It'd"
+              },
+              {
+                "word": "be",
+                "start": 113.354996,
+                "end": 113.515,
+                "confidence": 0.99902344,
+                "punctuated_word": "be"
+              },
+              {
+                "word": "great",
+                "start": 113.515,
+                "end": 113.755,
+                "confidence": 1.0,
+                "punctuated_word": "great"
+              },
+              {
+                "word": "if",
+                "start": 113.755,
+                "end": 113.915,
+                "confidence": 0.9980469,
+                "punctuated_word": "if"
+              },
+              {
+                "word": "the",
+                "start": 113.915,
+                "end": 113.994995,
+                "confidence": 1.0,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "support",
+                "start": 113.994995,
+                "end": 114.314995,
+                "confidence": 1.0,
+                "punctuated_word": "support"
+              },
+              {
+                "word": "team",
+                "start": 114.314995,
+                "end": 114.555,
+                "confidence": 1.0,
+                "punctuated_word": "team"
+              },
+              {
+                "word": "reaches",
+                "start": 114.555,
+                "end": 114.875,
+                "confidence": 1.0,
+                "punctuated_word": "reaches"
+              },
+              {
+                "word": "out",
+                "start": 114.875,
+                "end": 115.435,
+                "confidence": 0.9995117,
+                "punctuated_word": "out."
+              },
+              {
+                "word": "i'd",
+                "start": 115.435,
+                "end": 115.835,
+                "confidence": 0.99609375,
+                "punctuated_word": "I'd"
+              },
+              {
+                "word": "like",
+                "start": 115.835,
+                "end": 115.915,
+                "confidence": 1.0,
+                "punctuated_word": "like"
+              },
+              {
+                "word": "to",
+                "start": 115.915,
+                "end": 116.075,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "confirm",
+                "start": 116.075,
+                "end": 116.314995,
+                "confidence": 1.0,
+                "punctuated_word": "confirm"
+              },
+              {
+                "word": "they",
+                "start": 116.314995,
+                "end": 116.555,
+                "confidence": 0.9941406,
+                "punctuated_word": "they"
+              },
+              {
+                "word": "can",
+                "start": 116.555,
+                "end": 116.715,
+                "confidence": 1.0,
+                "punctuated_word": "can"
+              },
+              {
+                "word": "find",
+                "start": 116.715,
+                "end": 116.955,
+                "confidence": 0.9980469,
+                "punctuated_word": "find"
+              },
+              {
+                "word": "me",
+                "start": 116.955,
+                "end": 117.115,
+                "confidence": 0.99902344,
+                "punctuated_word": "me"
+              },
+              {
+                "word": "or",
+                "start": 117.115,
+                "end": 117.354996,
+                "confidence": 0.98535156,
+                "punctuated_word": "or"
+              },
+              {
+                "word": "help",
+                "start": 117.354996,
+                "end": 117.515,
+                "confidence": 0.99902344,
+                "punctuated_word": "help"
+              },
+              {
+                "word": "get",
+                "start": 117.515,
+                "end": 117.674995,
+                "confidence": 0.99121094,
+                "punctuated_word": "get"
+              },
+              {
+                "word": "the",
+                "start": 117.674995,
+                "end": 117.835,
+                "confidence": 1.0,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "record",
+                "start": 117.835,
+                "end": 118.075,
+                "confidence": 0.8774414,
+                "punctuated_word": "record"
+              },
+              {
+                "word": "sorted",
+                "start": 118.075,
+                "end": 118.395,
+                "confidence": 0.99902344,
+                "punctuated_word": "sorted."
+              },
+              {
+                "word": "goodbye",
+                "start": 132.33,
+                "end": 133.05,
+                "confidence": 0.9970703,
+                "punctuated_word": "Goodbye."
+              },
+              {
+                "word": "if",
+                "start": 133.20999,
+                "end": 133.53,
+                "confidence": 1.0,
+                "punctuated_word": "If"
+              },
+              {
+                "word": "you",
+                "start": 133.53,
+                "end": 133.61,
+                "confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "need",
+                "start": 133.61,
+                "end": 133.77,
+                "confidence": 1.0,
+                "punctuated_word": "need"
+              },
+              {
+                "word": "anything",
+                "start": 133.77,
+                "end": 134.17,
+                "confidence": 1.0,
+                "punctuated_word": "anything"
+              },
+              {
+                "word": "else",
+                "start": 134.17,
+                "end": 134.56999,
+                "confidence": 0.99902344,
+                "punctuated_word": "else,"
+              },
+              {
+                "word": "you",
+                "start": 134.56999,
+                "end": 134.73,
+                "confidence": 0.9980469,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "know",
+                "start": 134.73,
+                "end": 134.89,
+                "confidence": 0.9980469,
+                "punctuated_word": "know"
+              },
+              {
+                "word": "where",
+                "start": 134.89,
+                "end": 134.97,
+                "confidence": 0.98828125,
+                "punctuated_word": "where"
+              },
+              {
+                "word": "to",
+                "start": 134.97,
+                "end": 135.13,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "reach",
+                "start": 135.13,
+                "end": 135.29,
+                "confidence": 1.0,
+                "punctuated_word": "reach"
+              },
+              {
+                "word": "me",
+                "start": 135.29,
+                "end": 135.53,
+                "confidence": 1.0,
+                "punctuated_word": "me."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nI'm Dana Whitfield. I called to confirm the time of an appointment. What's on file for me? My date of birth is 03/14/1988. Yes.\n\nThat's correct. I don't have the phone number for you right now. If you can look it up another way, that would help. If not, I can get the date of birth again. Dana Whitfield.\n\nDate of birth, 03/14/1988. Yes, please. It'd be great if the support team reaches out. I'd like to confirm they can find me or help get the record sorted. Goodbye.\n\nIf you need anything else, you know where to reach me.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "I'm Dana Whitfield.",
+                      "start": 15.295,
+                      "end": 16.895
+                    },
+                    {
+                      "text": "I called to confirm the time of an appointment.",
+                      "start": 16.895,
+                      "end": 19.215
+                    },
+                    {
+                      "text": "What's on file for me?",
+                      "start": 19.375,
+                      "end": 20.575
+                    },
+                    {
+                      "text": "My date of birth is 03/14/1988.",
+                      "start": 25.710001,
+                      "end": 29.150002
+                    },
+                    {
+                      "text": "Yes.",
+                      "start": 46.045,
+                      "end": 46.844997
+                    }
+                  ],
+                  "num_words": 24,
+                  "start": 15.295,
+                  "end": 46.844997
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "That's correct.",
+                      "start": 46.844997,
+                      "end": 47.644997
+                    },
+                    {
+                      "text": "I don't have the phone number for you right now.",
+                      "start": 67.835,
+                      "end": 70.715004
+                    },
+                    {
+                      "text": "If you can look it up another way, that would help.",
+                      "start": 70.795,
+                      "end": 73.275
+                    },
+                    {
+                      "text": "If not, I can get the date of birth again.",
+                      "start": 73.355,
+                      "end": 75.95
+                    },
+                    {
+                      "text": "Dana Whitfield.",
+                      "start": 87.885,
+                      "end": 89.405
+                    }
+                  ],
+                  "num_words": 35,
+                  "start": 46.844997,
+                  "end": 89.405
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "Date of birth, 03/14/1988.",
+                      "start": 89.565,
+                      "end": 92.765
+                    },
+                    {
+                      "text": "Yes, please.",
+                      "start": 111.835,
+                      "end": 112.955
+                    },
+                    {
+                      "text": "It'd be great if the support team reaches out.",
+                      "start": 112.955,
+                      "end": 115.435
+                    },
+                    {
+                      "text": "I'd like to confirm they can find me or help get the record sorted.",
+                      "start": 115.435,
+                      "end": 118.395
+                    },
+                    {
+                      "text": "Goodbye.",
+                      "start": 132.33,
+                      "end": 133.05
+                    }
+                  ],
+                  "num_words": 30,
+                  "start": 89.565,
+                  "end": 133.05
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "If you need anything else, you know where to reach me.",
+                      "start": 133.20999,
+                      "end": 135.53
+                    }
+                  ],
+                  "num_words": 11,
+                  "start": 133.20999,
+                  "end": 135.53
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "utterances": [
+      {
+        "start": 0.0,
+        "end": 3.6,
+        "confidence": 0.9994629,
+        "channel": 0,
+        "transcript": "This call may be recorded for quality and training purposes.",
+        "words": [
+          {
+            "word": "this",
+            "start": 0.0,
+            "end": 0.39999998,
+            "confidence": 0.99902344,
+            "punctuated_word": "This"
+          },
+          {
+            "word": "call",
+            "start": 0.39999998,
+            "end": 0.71999997,
+            "confidence": 1.0,
+            "punctuated_word": "call"
+          },
+          {
+            "word": "may",
+            "start": 0.71999997,
+            "end": 0.96,
+            "confidence": 0.9980469,
+            "punctuated_word": "may"
+          },
+          {
+            "word": "be",
+            "start": 0.96,
+            "end": 1.12,
+            "confidence": 1.0,
+            "punctuated_word": "be"
+          },
+          {
+            "word": "recorded",
+            "start": 1.12,
+            "end": 1.4399999,
+            "confidence": 1.0,
+            "punctuated_word": "recorded"
+          },
+          {
+            "word": "for",
+            "start": 1.4399999,
+            "end": 1.76,
+            "confidence": 0.99902344,
+            "punctuated_word": "for"
+          },
+          {
+            "word": "quality",
+            "start": 1.76,
+            "end": 2.1599998,
+            "confidence": 1.0,
+            "punctuated_word": "quality"
+          },
+          {
+            "word": "and",
+            "start": 2.1599998,
+            "end": 2.3999999,
+            "confidence": 1.0,
+            "punctuated_word": "and"
+          },
+          {
+            "word": "training",
+            "start": 2.3999999,
+            "end": 2.8,
+            "confidence": 1.0,
+            "punctuated_word": "training"
+          },
+          {
+            "word": "purposes",
+            "start": 2.8,
+            "end": 3.6,
+            "confidence": 0.99853516,
+            "punctuated_word": "purposes."
+          }
+        ],
+        "id": "4c6b99ac-e746-441f-8c9c-b42e0f00d0e3"
+      },
+      {
+        "start": 3.9199998,
+        "end": 5.04,
+        "confidence": 0.8461914,
+        "channel": 0,
+        "transcript": "Thanks",
+        "words": [
+          {
+            "word": "thanks",
+            "start": 3.9199998,
+            "end": 5.04,
+            "confidence": 0.8461914,
+            "punctuated_word": "Thanks"
+          }
+        ],
+        "id": "01b92a19-d653-4876-963c-90159ab6cff8"
+      },
+      {
+        "start": 6.8799996,
+        "end": 8.959999,
+        "confidence": 0.93740237,
+        "channel": 0,
+        "transcript": "for calling Pivot Point Orthopedics,",
+        "words": [
+          {
+            "word": "for",
+            "start": 6.8799996,
+            "end": 7.12,
+            "confidence": 1.0,
+            "punctuated_word": "for"
+          },
+          {
+            "word": "calling",
+            "start": 7.12,
+            "end": 7.3599997,
+            "confidence": 0.99902344,
+            "punctuated_word": "calling"
+          },
+          {
+            "word": "pivot",
+            "start": 7.3599997,
+            "end": 7.7599998,
+            "confidence": 0.9970703,
+            "punctuated_word": "Pivot"
+          },
+          {
+            "word": "point",
+            "start": 7.7599998,
+            "end": 8.0,
+            "confidence": 0.8461914,
+            "punctuated_word": "Point"
+          },
+          {
+            "word": "orthopedics",
+            "start": 8.0,
+            "end": 8.959999,
+            "confidence": 0.84472656,
+            "punctuated_word": "Orthopedics,"
+          }
+        ],
+        "id": "7d4d0333-aac3-41ff-9bb9-7b9e51edfba4"
+      },
+      {
+        "start": 9.12,
+        "end": 12.559999,
+        "confidence": 0.95017314,
+        "channel": 0,
+        "transcript": "part of Pretty Good AI. How may I help you today?",
+        "words": [
+          {
+            "word": "part",
+            "start": 9.12,
+            "end": 9.36,
+            "confidence": 0.99902344,
+            "punctuated_word": "part"
+          },
+          {
+            "word": "of",
+            "start": 9.36,
+            "end": 9.679999,
+            "confidence": 1.0,
+            "punctuated_word": "of"
+          },
+          {
+            "word": "pretty",
+            "start": 9.679999,
+            "end": 10.08,
+            "confidence": 0.82470703,
+            "punctuated_word": "Pretty"
+          },
+          {
+            "word": "good",
+            "start": 10.08,
+            "end": 10.639999,
+            "confidence": 0.6484375,
+            "punctuated_word": "Good"
+          },
+          {
+            "word": "ai",
+            "start": 10.719999,
+            "end": 11.36,
+            "confidence": 0.9797363,
+            "punctuated_word": "AI."
+          },
+          {
+            "word": "how",
+            "start": 11.36,
+            "end": 11.679999,
+            "confidence": 1.0,
+            "punctuated_word": "How"
+          },
+          {
+            "word": "may",
+            "start": 11.679999,
+            "end": 11.84,
+            "confidence": 1.0,
+            "punctuated_word": "may"
+          },
+          {
+            "word": "i",
+            "start": 11.84,
+            "end": 11.92,
+            "confidence": 1.0,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "help",
+            "start": 11.92,
+            "end": 12.08,
+            "confidence": 1.0,
+            "punctuated_word": "help"
+          },
+          {
+            "word": "you",
+            "start": 12.08,
+            "end": 12.24,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "today",
+            "start": 12.24,
+            "end": 12.559999,
+            "confidence": 1.0,
+            "punctuated_word": "today?"
+          }
+        ],
+        "id": "eb2724c5-072f-41ee-91b0-753ddc434ae4"
+      },
+      {
+        "start": 15.295,
+        "end": 16.895,
+        "confidence": 0.99321836,
+        "channel": 1,
+        "transcript": "I'm Dana Whitfield.",
+        "words": [
+          {
+            "word": "i'm",
+            "start": 15.295,
+            "end": 15.695,
+            "confidence": 0.9995117,
+            "punctuated_word": "I'm"
+          },
+          {
+            "word": "dana",
+            "start": 15.695,
+            "end": 16.015,
+            "confidence": 0.9980469,
+            "punctuated_word": "Dana"
+          },
+          {
+            "word": "whitfield",
+            "start": 16.015,
+            "end": 16.895,
+            "confidence": 0.9820964,
+            "punctuated_word": "Whitfield."
+          }
+        ],
+        "id": "9f78463f-32ea-4158-9bc9-294cc7a91826"
+      },
+      {
+        "start": 16.895,
+        "end": 20.575,
+        "confidence": 0.99965125,
+        "channel": 1,
+        "transcript": "I called to confirm the time of an appointment. What's on file for me?",
+        "words": [
+          {
+            "word": "i",
+            "start": 16.895,
+            "end": 17.135,
+            "confidence": 1.0,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "called",
+            "start": 17.135,
+            "end": 17.455,
+            "confidence": 0.99609375,
+            "punctuated_word": "called"
+          },
+          {
+            "word": "to",
+            "start": 17.455,
+            "end": 17.615,
+            "confidence": 1.0,
+            "punctuated_word": "to"
+          },
+          {
+            "word": "confirm",
+            "start": 17.615,
+            "end": 17.855,
+            "confidence": 1.0,
+            "punctuated_word": "confirm"
+          },
+          {
+            "word": "the",
+            "start": 17.855,
+            "end": 18.095001,
+            "confidence": 1.0,
+            "punctuated_word": "the"
+          },
+          {
+            "word": "time",
+            "start": 18.095001,
+            "end": 18.255001,
+            "confidence": 1.0,
+            "punctuated_word": "time"
+          },
+          {
+            "word": "of",
+            "start": 18.255001,
+            "end": 18.415,
+            "confidence": 1.0,
+            "punctuated_word": "of"
+          },
+          {
+            "word": "an",
+            "start": 18.415,
+            "end": 18.575,
+            "confidence": 1.0,
+            "punctuated_word": "an"
+          },
+          {
+            "word": "appointment",
+            "start": 18.575,
+            "end": 19.215,
+            "confidence": 1.0,
+            "punctuated_word": "appointment."
+          },
+          {
+            "word": "what's",
+            "start": 19.375,
+            "end": 19.775,
+            "confidence": 1.0,
+            "punctuated_word": "What's"
+          },
+          {
+            "word": "on",
+            "start": 19.775,
+            "end": 19.935,
+            "confidence": 1.0,
+            "punctuated_word": "on"
+          },
+          {
+            "word": "file",
+            "start": 19.935,
+            "end": 20.175,
+            "confidence": 1.0,
+            "punctuated_word": "file"
+          },
+          {
+            "word": "for",
+            "start": 20.175,
+            "end": 20.415,
+            "confidence": 0.99902344,
+            "punctuated_word": "for"
+          },
+          {
+            "word": "me",
+            "start": 20.415,
+            "end": 20.575,
+            "confidence": 1.0,
+            "punctuated_word": "me?"
+          }
+        ],
+        "id": "c6969600-0f4f-4d76-9ab1-28264d099417"
+      },
+      {
+        "start": 23.045,
+        "end": 24.885,
+        "confidence": 0.9998779,
+        "channel": 0,
+        "transcript": "Can you please provide your date of birth?",
+        "words": [
+          {
+            "word": "can",
+            "start": 23.045,
+            "end": 23.365,
+            "confidence": 1.0,
+            "punctuated_word": "Can"
+          },
+          {
+            "word": "you",
+            "start": 23.365,
+            "end": 23.445,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "please",
+            "start": 23.445,
+            "end": 23.685,
+            "confidence": 1.0,
+            "punctuated_word": "please"
+          },
+          {
+            "word": "provide",
+            "start": 23.685,
+            "end": 24.005001,
+            "confidence": 1.0,
+            "punctuated_word": "provide"
+          },
+          {
+            "word": "your",
+            "start": 24.005001,
+            "end": 24.165,
+            "confidence": 1.0,
+            "punctuated_word": "your"
+          },
+          {
+            "word": "date",
+            "start": 24.165,
+            "end": 24.404999,
+            "confidence": 1.0,
+            "punctuated_word": "date"
+          },
+          {
+            "word": "of",
+            "start": 24.404999,
+            "end": 24.564999,
+            "confidence": 1.0,
+            "punctuated_word": "of"
+          },
+          {
+            "word": "birth",
+            "start": 24.564999,
+            "end": 24.885,
+            "confidence": 0.99902344,
+            "punctuated_word": "birth?"
+          }
+        ],
+        "id": "d2397a87-f37e-4bf9-99eb-36d6b87cdc06"
+      },
+      {
+        "start": 25.710001,
+        "end": 29.150002,
+        "confidence": 0.99965817,
+        "channel": 1,
+        "transcript": "My date of birth is 03/14/1988.",
+        "words": [
+          {
+            "word": "my",
+            "start": 25.710001,
+            "end": 26.03,
+            "confidence": 1.0,
+            "punctuated_word": "My"
+          },
+          {
+            "word": "date",
+            "start": 26.03,
+            "end": 26.35,
+            "confidence": 1.0,
+            "punctuated_word": "date"
+          },
+          {
+            "word": "of",
+            "start": 26.35,
+            "end": 26.43,
+            "confidence": 0.99902344,
+            "punctuated_word": "of"
+          },
+          {
+            "word": "birth",
+            "start": 26.43,
+            "end": 26.75,
+            "confidence": 1.0,
+            "punctuated_word": "birth"
+          },
+          {
+            "word": "is",
+            "start": 26.75,
+            "end": 26.990002,
+            "confidence": 1.0,
+            "punctuated_word": "is"
+          },
+          {
+            "word": "03/14/1988",
+            "start": 26.990002,
+            "end": 29.150002,
+            "confidence": 0.9989258,
+            "punctuated_word": "03/14/1988."
+          }
+        ],
+        "id": "c3f73656-31b4-412d-8aeb-4ebc9e5e3170"
+      },
+      {
+        "start": 33.489998,
+        "end": 41.09,
+        "confidence": 0.98396146,
+        "channel": 0,
+        "transcript": "Just to confirm, I have your name as Dana Whitfield and your date of birth as 03/14/1988.",
+        "words": [
+          {
+            "word": "just",
+            "start": 33.489998,
+            "end": 33.81,
+            "confidence": 1.0,
+            "punctuated_word": "Just"
+          },
+          {
+            "word": "to",
+            "start": 33.81,
+            "end": 33.97,
+            "confidence": 1.0,
+            "punctuated_word": "to"
+          },
+          {
+            "word": "confirm",
+            "start": 33.97,
+            "end": 34.61,
+            "confidence": 0.9980469,
+            "punctuated_word": "confirm,"
+          },
+          {
+            "word": "i",
+            "start": 34.61,
+            "end": 34.85,
+            "confidence": 1.0,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "have",
+            "start": 34.85,
+            "end": 35.09,
+            "confidence": 1.0,
+            "punctuated_word": "have"
+          },
+          {
+            "word": "your",
+            "start": 35.09,
+            "end": 35.25,
+            "confidence": 1.0,
+            "punctuated_word": "your"
+          },
+          {
+            "word": "name",
+            "start": 35.25,
+            "end": 35.489998,
+            "confidence": 1.0,
+            "punctuated_word": "name"
+          },
+          {
+            "word": "as",
+            "start": 35.489998,
+            "end": 35.81,
+            "confidence": 0.99902344,
+            "punctuated_word": "as"
+          },
+          {
+            "word": "dana",
+            "start": 35.81,
+            "end": 36.21,
+            "confidence": 0.9980469,
+            "punctuated_word": "Dana"
+          },
+          {
+            "word": "whitfield",
+            "start": 36.21,
+            "end": 36.77,
+            "confidence": 0.8876953,
+            "punctuated_word": "Whitfield"
+          },
+          {
+            "word": "and",
+            "start": 36.77,
+            "end": 37.25,
+            "confidence": 0.8496094,
+            "punctuated_word": "and"
+          },
+          {
+            "word": "your",
+            "start": 37.25,
+            "end": 37.489998,
+            "confidence": 1.0,
+            "punctuated_word": "your"
+          },
+          {
+            "word": "date",
+            "start": 37.489998,
+            "end": 37.65,
+            "confidence": 1.0,
+            "punctuated_word": "date"
+          },
+          {
+            "word": "of",
+            "start": 37.65,
+            "end": 37.809998,
+            "confidence": 0.99902344,
+            "punctuated_word": "of"
+          },
+          {
+            "word": "birth",
+            "start": 37.809998,
+            "end": 38.05,
+            "confidence": 1.0,
+            "punctuated_word": "birth"
+          },
+          {
+            "word": "as",
+            "start": 38.05,
+            "end": 38.37,
+            "confidence": 0.99902344,
+            "punctuated_word": "as"
+          },
+          {
+            "word": "03/14/1988",
+            "start": 38.37,
+            "end": 41.09,
+            "confidence": 0.996875,
+            "punctuated_word": "03/14/1988."
+          }
+        ],
+        "id": "196afb44-54b2-4cf8-9dcd-47f072a0a662"
+      },
+      {
+        "start": 41.09,
+        "end": 41.89,
+        "confidence": 0.9996745,
+        "channel": 0,
+        "transcript": "Is that correct?",
+        "words": [
+          {
+            "word": "is",
+            "start": 41.09,
+            "end": 41.41,
+            "confidence": 0.99902344,
+            "punctuated_word": "Is"
+          },
+          {
+            "word": "that",
+            "start": 41.41,
+            "end": 41.489998,
+            "confidence": 1.0,
+            "punctuated_word": "that"
+          },
+          {
+            "word": "correct",
+            "start": 41.489998,
+            "end": 41.89,
+            "confidence": 1.0,
+            "punctuated_word": "correct?"
+          }
+        ],
+        "id": "def4efe9-3562-48a8-8243-72d287a46597"
+      },
+      {
+        "start": 46.045,
+        "end": 47.644997,
+        "confidence": 0.99902344,
+        "channel": 1,
+        "transcript": "Yes. That's correct.",
+        "words": [
+          {
+            "word": "yes",
+            "start": 46.045,
+            "end": 46.844997,
+            "confidence": 0.9975586,
+            "punctuated_word": "Yes."
+          },
+          {
+            "word": "that's",
+            "start": 46.844997,
+            "end": 47.245,
+            "confidence": 0.9995117,
+            "punctuated_word": "That's"
+          },
+          {
+            "word": "correct",
+            "start": 47.245,
+            "end": 47.644997,
+            "confidence": 1.0,
+            "punctuated_word": "correct."
+          }
+        ],
+        "id": "d56525ea-9c03-435c-9d3f-32bcc62716a7"
+      },
+      {
+        "start": 53.265,
+        "end": 64.36,
+        "confidence": 0.9995401,
+        "channel": 0,
+        "transcript": "Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Just let me know.",
+        "words": [
+          {
+            "word": "would",
+            "start": 53.265,
+            "end": 53.505,
+            "confidence": 0.99902344,
+            "punctuated_word": "Would"
+          },
+          {
+            "word": "you",
+            "start": 53.505,
+            "end": 53.665,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "like",
+            "start": 53.665,
+            "end": 53.825,
+            "confidence": 1.0,
+            "punctuated_word": "like"
+          },
+          {
+            "word": "to",
+            "start": 53.825,
+            "end": 53.985,
+            "confidence": 1.0,
+            "punctuated_word": "to"
+          },
+          {
+            "word": "use",
+            "start": 53.985,
+            "end": 54.145,
+            "confidence": 1.0,
+            "punctuated_word": "use"
+          },
+          {
+            "word": "your",
+            "start": 54.145,
+            "end": 54.305,
+            "confidence": 1.0,
+            "punctuated_word": "your"
+          },
+          {
+            "word": "phone",
+            "start": 54.305,
+            "end": 54.545002,
+            "confidence": 1.0,
+            "punctuated_word": "phone"
+          },
+          {
+            "word": "number",
+            "start": 54.545002,
+            "end": 54.785004,
+            "confidence": 1.0,
+            "punctuated_word": "number"
+          },
+          {
+            "word": "to",
+            "start": 54.785004,
+            "end": 54.945,
+            "confidence": 1.0,
+            "punctuated_word": "to"
+          },
+          {
+            "word": "look",
+            "start": 54.945,
+            "end": 55.105003,
+            "confidence": 1.0,
+            "punctuated_word": "look"
+          },
+          {
+            "word": "up",
+            "start": 55.105003,
+            "end": 55.265,
+            "confidence": 0.99902344,
+            "punctuated_word": "up"
+          },
+          {
+            "word": "your",
+            "start": 55.265,
+            "end": 55.425003,
+            "confidence": 1.0,
+            "punctuated_word": "your"
+          },
+          {
+            "word": "record",
+            "start": 55.425003,
+            "end": 55.745003,
+            "confidence": 0.99560547,
+            "punctuated_word": "record?"
+          },
+          {
+            "word": "if",
+            "start": 56.120003,
+            "end": 56.440002,
+            "confidence": 1.0,
+            "punctuated_word": "If"
+          },
+          {
+            "word": "so",
+            "start": 56.440002,
+            "end": 56.84,
+            "confidence": 0.9995117,
+            "punctuated_word": "so,"
+          },
+          {
+            "word": "please",
+            "start": 56.84,
+            "end": 57.0,
+            "confidence": 1.0,
+            "punctuated_word": "please"
+          },
+          {
+            "word": "provide",
+            "start": 57.0,
+            "end": 57.32,
+            "confidence": 1.0,
+            "punctuated_word": "provide"
+          },
+          {
+            "word": "the",
+            "start": 57.32,
+            "end": 57.48,
+            "confidence": 1.0,
+            "punctuated_word": "the"
+          },
+          {
+            "word": "number",
+            "start": 57.48,
+            "end": 57.72,
+            "confidence": 1.0,
+            "punctuated_word": "number"
+          },
+          {
+            "word": "you",
+            "start": 57.72,
+            "end": 57.88,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "have",
+            "start": 57.88,
+            "end": 58.04,
+            "confidence": 1.0,
+            "punctuated_word": "have"
+          },
+          {
+            "word": "on",
+            "start": 58.04,
+            "end": 58.280003,
+            "confidence": 1.0,
+            "punctuated_word": "on"
+          },
+          {
+            "word": "file",
+            "start": 58.280003,
+            "end": 58.52,
+            "confidence": 1.0,
+            "punctuated_word": "file"
+          },
+          {
+            "word": "with",
+            "start": 58.52,
+            "end": 58.760002,
+            "confidence": 1.0,
+            "punctuated_word": "with"
+          },
+          {
+            "word": "us",
+            "start": 58.760002,
+            "end": 59.24,
+            "confidence": 0.9995117,
+            "punctuated_word": "us."
+          },
+          {
+            "word": "if",
+            "start": 59.24,
+            "end": 59.56,
+            "confidence": 0.99902344,
+            "punctuated_word": "If"
+          },
+          {
+            "word": "you're",
+            "start": 59.56,
+            "end": 59.8,
+            "confidence": 1.0,
+            "punctuated_word": "you're"
+          },
+          {
+            "word": "not",
+            "start": 59.8,
+            "end": 59.96,
+            "confidence": 1.0,
+            "punctuated_word": "not"
+          },
+          {
+            "word": "sure",
+            "start": 59.96,
+            "end": 60.6,
+            "confidence": 0.9970703,
+            "punctuated_word": "sure,"
+          },
+          {
+            "word": "i",
+            "start": 60.600002,
+            "end": 60.760002,
+            "confidence": 1.0,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "can",
+            "start": 60.760002,
+            "end": 60.920002,
+            "confidence": 1.0,
+            "punctuated_word": "can"
+          },
+          {
+            "word": "confirm",
+            "start": 60.920002,
+            "end": 61.32,
+            "confidence": 1.0,
+            "punctuated_word": "confirm"
+          },
+          {
+            "word": "your",
+            "start": 61.32,
+            "end": 61.64,
+            "confidence": 1.0,
+            "punctuated_word": "your"
+          },
+          {
+            "word": "name",
+            "start": 61.64,
+            "end": 61.8,
+            "confidence": 1.0,
+            "punctuated_word": "name"
+          },
+          {
+            "word": "and",
+            "start": 61.8,
+            "end": 61.96,
+            "confidence": 1.0,
+            "punctuated_word": "and"
+          },
+          {
+            "word": "date",
+            "start": 61.96,
+            "end": 62.2,
+            "confidence": 1.0,
+            "punctuated_word": "date"
+          },
+          {
+            "word": "of",
+            "start": 62.2,
+            "end": 62.36,
+            "confidence": 1.0,
+            "punctuated_word": "of"
+          },
+          {
+            "word": "birth",
+            "start": 62.36,
+            "end": 62.600002,
+            "confidence": 1.0,
+            "punctuated_word": "birth"
+          },
+          {
+            "word": "again",
+            "start": 62.600002,
+            "end": 63.24,
+            "confidence": 0.9914551,
+            "punctuated_word": "again."
+          },
+          {
+            "word": "just",
+            "start": 63.4,
+            "end": 63.72,
+            "confidence": 1.0,
+            "punctuated_word": "Just"
+          },
+          {
+            "word": "let",
+            "start": 63.72,
+            "end": 63.96,
+            "confidence": 1.0,
+            "punctuated_word": "let"
+          },
+          {
+            "word": "me",
+            "start": 63.96,
+            "end": 64.12,
+            "confidence": 1.0,
+            "punctuated_word": "me"
+          },
+          {
+            "word": "know",
+            "start": 64.12,
+            "end": 64.36,
+            "confidence": 1.0,
+            "punctuated_word": "know."
+          }
+        ],
+        "id": "a22d47f4-e430-4352-9aa4-91e0e3767d55"
+      },
+      {
+        "start": 67.835,
+        "end": 75.95,
+        "confidence": 0.9948809,
+        "channel": 1,
+        "transcript": "I don't have the phone number for you right now. If you can look it up another way, that would help. If not, I can get the date of birth again.",
+        "words": [
+          {
+            "word": "i",
+            "start": 67.835,
+            "end": 68.475,
+            "confidence": 0.9838867,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "don't",
+            "start": 68.475,
+            "end": 68.795,
+            "confidence": 0.9995117,
+            "punctuated_word": "don't"
+          },
+          {
+            "word": "have",
+            "start": 68.795,
+            "end": 69.035,
+            "confidence": 1.0,
+            "punctuated_word": "have"
+          },
+          {
+            "word": "the",
+            "start": 69.035,
+            "end": 69.195,
+            "confidence": 0.9941406,
+            "punctuated_word": "the"
+          },
+          {
+            "word": "phone",
+            "start": 69.195,
+            "end": 69.435,
+            "confidence": 1.0,
+            "punctuated_word": "phone"
+          },
+          {
+            "word": "number",
+            "start": 69.435,
+            "end": 69.675,
+            "confidence": 1.0,
+            "punctuated_word": "number"
+          },
+          {
+            "word": "for",
+            "start": 69.675,
+            "end": 69.835,
+            "confidence": 1.0,
+            "punctuated_word": "for"
+          },
+          {
+            "word": "you",
+            "start": 69.835,
+            "end": 69.995,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "right",
+            "start": 69.995,
+            "end": 70.235,
+            "confidence": 1.0,
+            "punctuated_word": "right"
+          },
+          {
+            "word": "now",
+            "start": 70.235,
+            "end": 70.715004,
+            "confidence": 1.0,
+            "punctuated_word": "now."
+          },
+          {
+            "word": "if",
+            "start": 70.795,
+            "end": 71.035,
+            "confidence": 1.0,
+            "punctuated_word": "If"
+          },
+          {
+            "word": "you",
+            "start": 71.035,
+            "end": 71.115,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "can",
+            "start": 71.115,
+            "end": 71.275,
+            "confidence": 0.9941406,
+            "punctuated_word": "can"
+          },
+          {
+            "word": "look",
+            "start": 71.275,
+            "end": 71.435,
+            "confidence": 1.0,
+            "punctuated_word": "look"
+          },
+          {
+            "word": "it",
+            "start": 71.435,
+            "end": 71.515,
+            "confidence": 1.0,
+            "punctuated_word": "it"
+          },
+          {
+            "word": "up",
+            "start": 71.515,
+            "end": 71.675,
+            "confidence": 1.0,
+            "punctuated_word": "up"
+          },
+          {
+            "word": "another",
+            "start": 71.675,
+            "end": 71.915,
+            "confidence": 0.99902344,
+            "punctuated_word": "another"
+          },
+          {
+            "word": "way",
+            "start": 71.915,
+            "end": 72.395004,
+            "confidence": 0.9975586,
+            "punctuated_word": "way,"
+          },
+          {
+            "word": "that",
+            "start": 72.395004,
+            "end": 72.555,
+            "confidence": 1.0,
+            "punctuated_word": "that"
+          },
+          {
+            "word": "would",
+            "start": 72.555,
+            "end": 72.715,
+            "confidence": 1.0,
+            "punctuated_word": "would"
+          },
+          {
+            "word": "help",
+            "start": 72.715,
+            "end": 73.275,
+            "confidence": 1.0,
+            "punctuated_word": "help."
+          },
+          {
+            "word": "if",
+            "start": 73.355,
+            "end": 73.675,
+            "confidence": 1.0,
+            "punctuated_word": "If"
+          },
+          {
+            "word": "not",
+            "start": 73.675,
+            "end": 73.995,
+            "confidence": 0.9995117,
+            "punctuated_word": "not,"
+          },
+          {
+            "word": "i",
+            "start": 74.43,
+            "end": 74.67,
+            "confidence": 1.0,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "can",
+            "start": 74.67,
+            "end": 74.83,
+            "confidence": 1.0,
+            "punctuated_word": "can"
+          },
+          {
+            "word": "get",
+            "start": 74.83,
+            "end": 74.99,
+            "confidence": 0.8774414,
+            "punctuated_word": "get"
+          },
+          {
+            "word": "the",
+            "start": 74.99,
+            "end": 75.15,
+            "confidence": 1.0,
+            "punctuated_word": "the"
+          },
+          {
+            "word": "date",
+            "start": 75.15,
+            "end": 75.31,
+            "confidence": 1.0,
+            "punctuated_word": "date"
+          },
+          {
+            "word": "of",
+            "start": 75.31,
+            "end": 75.39,
+            "confidence": 0.99902344,
+            "punctuated_word": "of"
+          },
+          {
+            "word": "birth",
+            "start": 75.39,
+            "end": 75.63,
+            "confidence": 1.0,
+            "punctuated_word": "birth"
+          },
+          {
+            "word": "again",
+            "start": 75.63,
+            "end": 75.95,
+            "confidence": 0.9970703,
+            "punctuated_word": "again."
+          }
+        ],
+        "id": "1f1d9e5f-71a9-41cd-8a7a-cf370d20d7a4"
+      },
+      {
+        "start": 78.765,
+        "end": 79.725,
+        "confidence": 0.9970703,
+        "channel": 0,
+        "transcript": "No problem.",
+        "words": [
+          {
+            "word": "no",
+            "start": 78.765,
+            "end": 79.085,
+            "confidence": 0.9941406,
+            "punctuated_word": "No"
+          },
+          {
+            "word": "problem",
+            "start": 79.085,
+            "end": 79.725,
+            "confidence": 1.0,
+            "punctuated_word": "problem."
+          }
+        ],
+        "id": "b1fecee1-cf65-49b0-996d-1788152db0d2"
+      },
+      {
+        "start": 79.885,
+        "end": 84.445,
+        "confidence": 0.99532646,
+        "channel": 0,
+        "transcript": "Could you please spell out your first and last name for me and confirm your date of birth one more time?",
+        "words": [
+          {
+            "word": "could",
+            "start": 79.885,
+            "end": 80.205,
+            "confidence": 1.0,
+            "punctuated_word": "Could"
+          },
+          {
+            "word": "you",
+            "start": 80.205,
+            "end": 80.285,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "please",
+            "start": 80.285,
+            "end": 80.525,
+            "confidence": 1.0,
+            "punctuated_word": "please"
+          },
+          {
+            "word": "spell",
+            "start": 80.525,
+            "end": 80.765,
+            "confidence": 0.9902344,
+            "punctuated_word": "spell"
+          },
+          {
+            "word": "out",
+            "start": 80.765,
+            "end": 80.925,
+            "confidence": 1.0,
+            "punctuated_word": "out"
+          },
+          {
+            "word": "your",
+            "start": 80.925,
+            "end": 81.165,
+            "confidence": 1.0,
+            "punctuated_word": "your"
+          },
+          {
+            "word": "first",
+            "start": 81.165,
+            "end": 81.325,
+            "confidence": 1.0,
+            "punctuated_word": "first"
+          },
+          {
+            "word": "and",
+            "start": 81.325,
+            "end": 81.565,
+            "confidence": 1.0,
+            "punctuated_word": "and"
+          },
+          {
+            "word": "last",
+            "start": 81.565,
+            "end": 81.805,
+            "confidence": 1.0,
+            "punctuated_word": "last"
+          },
+          {
+            "word": "name",
+            "start": 81.805,
+            "end": 81.965,
+            "confidence": 1.0,
+            "punctuated_word": "name"
+          },
+          {
+            "word": "for",
+            "start": 81.965,
+            "end": 82.205,
+            "confidence": 1.0,
+            "punctuated_word": "for"
+          },
+          {
+            "word": "me",
+            "start": 82.205,
+            "end": 82.365,
+            "confidence": 1.0,
+            "punctuated_word": "me"
+          },
+          {
+            "word": "and",
+            "start": 82.365,
+            "end": 82.605,
+            "confidence": 0.91503906,
+            "punctuated_word": "and"
+          },
+          {
+            "word": "confirm",
+            "start": 82.605,
+            "end": 83.005,
+            "confidence": 1.0,
+            "punctuated_word": "confirm"
+          },
+          {
+            "word": "your",
+            "start": 83.005,
+            "end": 83.165,
+            "confidence": 1.0,
+            "punctuated_word": "your"
+          },
+          {
+            "word": "date",
+            "start": 83.165,
+            "end": 83.405,
+            "confidence": 1.0,
+            "punctuated_word": "date"
+          },
+          {
+            "word": "of",
+            "start": 83.405,
+            "end": 83.485,
+            "confidence": 0.99902344,
+            "punctuated_word": "of"
+          },
+          {
+            "word": "birth",
+            "start": 83.485,
+            "end": 83.725,
+            "confidence": 1.0,
+            "punctuated_word": "birth"
+          },
+          {
+            "word": "one",
+            "start": 83.725,
+            "end": 83.965,
+            "confidence": 1.0,
+            "punctuated_word": "one"
+          },
+          {
+            "word": "more",
+            "start": 83.965,
+            "end": 84.205,
+            "confidence": 1.0,
+            "punctuated_word": "more"
+          },
+          {
+            "word": "time",
+            "start": 84.205,
+            "end": 84.445,
+            "confidence": 0.9975586,
+            "punctuated_word": "time?"
+          }
+        ],
+        "id": "b488dedb-4769-4f79-a57b-1495c7bc5935"
+      },
+      {
+        "start": 87.885,
+        "end": 89.405,
+        "confidence": 0.98396814,
+        "channel": 1,
+        "transcript": "Dana Whitfield.",
+        "words": [
+          {
+            "word": "dana",
+            "start": 87.885,
+            "end": 88.525,
+            "confidence": 0.9838867,
+            "punctuated_word": "Dana"
+          },
+          {
+            "word": "whitfield",
+            "start": 88.525,
+            "end": 89.405,
+            "confidence": 0.9840495,
+            "punctuated_word": "Whitfield."
+          }
+        ],
+        "id": "e75aa4df-cd12-4407-b417-8af7980d305f"
+      },
+      {
+        "start": 89.565,
+        "end": 92.765,
+        "confidence": 0.9881592,
+        "channel": 1,
+        "transcript": "Date of birth, 03/14/1988.",
+        "words": [
+          {
+            "word": "date",
+            "start": 89.565,
+            "end": 89.805,
+            "confidence": 1.0,
+            "punctuated_word": "Date"
+          },
+          {
+            "word": "of",
+            "start": 89.805,
+            "end": 89.965,
+            "confidence": 1.0,
+            "punctuated_word": "of"
+          },
+          {
+            "word": "birth",
+            "start": 89.965,
+            "end": 90.525,
+            "confidence": 0.9838867,
+            "punctuated_word": "birth,"
+          },
+          {
+            "word": "03/14/1988",
+            "start": 90.525,
+            "end": 92.765,
+            "confidence": 0.96875,
+            "punctuated_word": "03/14/1988."
+          }
+        ],
+        "id": "aa124e81-106b-405f-bec8-d374a7acbf3d"
+      },
+      {
+        "start": 97.935,
+        "end": 99.375,
+        "confidence": 0.99365234,
+        "channel": 0,
+        "transcript": "Thanks for confirming.",
+        "words": [
+          {
+            "word": "thanks",
+            "start": 97.935,
+            "end": 98.335,
+            "confidence": 0.98095703,
+            "punctuated_word": "Thanks"
+          },
+          {
+            "word": "for",
+            "start": 98.335,
+            "end": 98.575,
+            "confidence": 1.0,
+            "punctuated_word": "for"
+          },
+          {
+            "word": "confirming",
+            "start": 98.575,
+            "end": 99.375,
+            "confidence": 1.0,
+            "punctuated_word": "confirming."
+          }
+        ],
+        "id": "f8ac203b-6a1f-4e3c-8ad0-cc74c5ee4586"
+      },
+      {
+        "start": 99.454994,
+        "end": 108.895,
+        "confidence": 0.99900365,
+        "channel": 0,
+        "transcript": "I still can't find your record in our system. I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to have them contact you?",
+        "words": [
+          {
+            "word": "i",
+            "start": 99.454994,
+            "end": 99.695,
+            "confidence": 1.0,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "still",
+            "start": 99.695,
+            "end": 99.935,
+            "confidence": 1.0,
+            "punctuated_word": "still"
+          },
+          {
+            "word": "can't",
+            "start": 99.935,
+            "end": 100.174995,
+            "confidence": 1.0,
+            "punctuated_word": "can't"
+          },
+          {
+            "word": "find",
+            "start": 100.174995,
+            "end": 100.415,
+            "confidence": 1.0,
+            "punctuated_word": "find"
+          },
+          {
+            "word": "your",
+            "start": 100.415,
+            "end": 100.575,
+            "confidence": 1.0,
+            "punctuated_word": "your"
+          },
+          {
+            "word": "record",
+            "start": 100.575,
+            "end": 100.895,
+            "confidence": 1.0,
+            "punctuated_word": "record"
+          },
+          {
+            "word": "in",
+            "start": 100.895,
+            "end": 101.055,
+            "confidence": 1.0,
+            "punctuated_word": "in"
+          },
+          {
+            "word": "our",
+            "start": 101.055,
+            "end": 101.215,
+            "confidence": 1.0,
+            "punctuated_word": "our"
+          },
+          {
+            "word": "system",
+            "start": 101.215,
+            "end": 101.935,
+            "confidence": 1.0,
+            "punctuated_word": "system."
+          },
+          {
+            "word": "i",
+            "start": 101.935,
+            "end": 102.255,
+            "confidence": 1.0,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "can't",
+            "start": 102.255,
+            "end": 102.575,
+            "confidence": 0.9995117,
+            "punctuated_word": "can't"
+          },
+          {
+            "word": "proceed",
+            "start": 102.575,
+            "end": 102.895,
+            "confidence": 1.0,
+            "punctuated_word": "proceed"
+          },
+          {
+            "word": "further",
+            "start": 102.895,
+            "end": 103.295,
+            "confidence": 1.0,
+            "punctuated_word": "further"
+          },
+          {
+            "word": "right",
+            "start": 103.295,
+            "end": 103.615,
+            "confidence": 1.0,
+            "punctuated_word": "right"
+          },
+          {
+            "word": "now",
+            "start": 103.615,
+            "end": 103.935,
+            "confidence": 0.9914551,
+            "punctuated_word": "now,"
+          },
+          {
+            "word": "but",
+            "start": 103.935,
+            "end": 104.095,
+            "confidence": 1.0,
+            "punctuated_word": "but"
+          },
+          {
+            "word": "i",
+            "start": 104.095,
+            "end": 104.255,
+            "confidence": 1.0,
+            "punctuated_word": "I"
+          },
+          {
+            "word": "can",
+            "start": 104.255,
+            "end": 104.415,
+            "confidence": 1.0,
+            "punctuated_word": "can"
+          },
+          {
+            "word": "make",
+            "start": 104.415,
+            "end": 104.575,
+            "confidence": 1.0,
+            "punctuated_word": "make"
+          },
+          {
+            "word": "sure",
+            "start": 104.575,
+            "end": 104.735,
+            "confidence": 1.0,
+            "punctuated_word": "sure"
+          },
+          {
+            "word": "our",
+            "start": 104.735,
+            "end": 104.975,
+            "confidence": 0.9838867,
+            "punctuated_word": "our"
+          },
+          {
+            "word": "clinic",
+            "start": 104.975,
+            "end": 105.295,
+            "confidence": 0.9951172,
+            "punctuated_word": "clinic"
+          },
+          {
+            "word": "support",
+            "start": 105.295,
+            "end": 105.615,
+            "confidence": 0.99902344,
+            "punctuated_word": "support"
+          },
+          {
+            "word": "team",
+            "start": 105.615,
+            "end": 105.854996,
+            "confidence": 1.0,
+            "punctuated_word": "team"
+          },
+          {
+            "word": "follows",
+            "start": 105.854996,
+            "end": 106.174995,
+            "confidence": 0.99902344,
+            "punctuated_word": "follows"
+          },
+          {
+            "word": "up",
+            "start": 106.174995,
+            "end": 106.41499,
+            "confidence": 0.99609375,
+            "punctuated_word": "up"
+          },
+          {
+            "word": "with",
+            "start": 106.41499,
+            "end": 106.575,
+            "confidence": 1.0,
+            "punctuated_word": "with"
+          },
+          {
+            "word": "you",
+            "start": 106.575,
+            "end": 107.134995,
+            "confidence": 1.0,
+            "punctuated_word": "you."
+          },
+          {
+            "word": "would",
+            "start": 107.134995,
+            "end": 107.454994,
+            "confidence": 1.0,
+            "punctuated_word": "Would"
+          },
+          {
+            "word": "you",
+            "start": 107.454994,
+            "end": 107.534996,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "like",
+            "start": 107.534996,
+            "end": 107.695,
+            "confidence": 1.0,
+            "punctuated_word": "like"
+          },
+          {
+            "word": "me",
+            "start": 107.695,
+            "end": 107.854996,
+            "confidence": 1.0,
+            "punctuated_word": "me"
+          },
+          {
+            "word": "to",
+            "start": 107.854996,
+            "end": 107.935,
+            "confidence": 1.0,
+            "punctuated_word": "to"
+          },
+          {
+            "word": "have",
+            "start": 107.935,
+            "end": 108.095,
+            "confidence": 1.0,
+            "punctuated_word": "have"
+          },
+          {
+            "word": "them",
+            "start": 108.095,
+            "end": 108.255,
+            "confidence": 0.99902344,
+            "punctuated_word": "them"
+          },
+          {
+            "word": "contact",
+            "start": 108.255,
+            "end": 108.575,
+            "confidence": 1.0,
+            "punctuated_word": "contact"
+          },
+          {
+            "word": "you",
+            "start": 108.575,
+            "end": 108.895,
+            "confidence": 1.0,
+            "punctuated_word": "you?"
+          }
+        ],
+        "id": "4667f67b-2137-4db5-af6e-66505d98d587"
+      },
+      {
+        "start": 111.835,
+        "end": 118.395,
+        "confidence": 0.9919238,
+        "channel": 1,
+        "transcript": "Yes, please. It'd be great if the support team reaches out. I'd like to confirm they can find me or help get the record sorted.",
+        "words": [
+          {
+            "word": "yes",
+            "start": 111.835,
+            "end": 112.555,
+            "confidence": 0.9980469,
+            "punctuated_word": "Yes,"
+          },
+          {
+            "word": "please",
+            "start": 112.555,
+            "end": 112.955,
+            "confidence": 1.0,
+            "punctuated_word": "please."
+          },
+          {
+            "word": "it'd",
+            "start": 112.955,
+            "end": 113.354996,
+            "confidence": 0.9641113,
+            "punctuated_word": "It'd"
+          },
+          {
+            "word": "be",
+            "start": 113.354996,
+            "end": 113.515,
+            "confidence": 0.99902344,
+            "punctuated_word": "be"
+          },
+          {
+            "word": "great",
+            "start": 113.515,
+            "end": 113.755,
+            "confidence": 1.0,
+            "punctuated_word": "great"
+          },
+          {
+            "word": "if",
+            "start": 113.755,
+            "end": 113.915,
+            "confidence": 0.9980469,
+            "punctuated_word": "if"
+          },
+          {
+            "word": "the",
+            "start": 113.915,
+            "end": 113.994995,
+            "confidence": 1.0,
+            "punctuated_word": "the"
+          },
+          {
+            "word": "support",
+            "start": 113.994995,
+            "end": 114.314995,
+            "confidence": 1.0,
+            "punctuated_word": "support"
+          },
+          {
+            "word": "team",
+            "start": 114.314995,
+            "end": 114.555,
+            "confidence": 1.0,
+            "punctuated_word": "team"
+          },
+          {
+            "word": "reaches",
+            "start": 114.555,
+            "end": 114.875,
+            "confidence": 1.0,
+            "punctuated_word": "reaches"
+          },
+          {
+            "word": "out",
+            "start": 114.875,
+            "end": 115.435,
+            "confidence": 0.9995117,
+            "punctuated_word": "out."
+          },
+          {
+            "word": "i'd",
+            "start": 115.435,
+            "end": 115.835,
+            "confidence": 0.99609375,
+            "punctuated_word": "I'd"
+          },
+          {
+            "word": "like",
+            "start": 115.835,
+            "end": 115.915,
+            "confidence": 1.0,
+            "punctuated_word": "like"
+          },
+          {
+            "word": "to",
+            "start": 115.915,
+            "end": 116.075,
+            "confidence": 1.0,
+            "punctuated_word": "to"
+          },
+          {
+            "word": "confirm",
+            "start": 116.075,
+            "end": 116.314995,
+            "confidence": 1.0,
+            "punctuated_word": "confirm"
+          },
+          {
+            "word": "they",
+            "start": 116.314995,
+            "end": 116.555,
+            "confidence": 0.9941406,
+            "punctuated_word": "they"
+          },
+          {
+            "word": "can",
+            "start": 116.555,
+            "end": 116.715,
+            "confidence": 1.0,
+            "punctuated_word": "can"
+          },
+          {
+            "word": "find",
+            "start": 116.715,
+            "end": 116.955,
+            "confidence": 0.9980469,
+            "punctuated_word": "find"
+          },
+          {
+            "word": "me",
+            "start": 116.955,
+            "end": 117.115,
+            "confidence": 0.99902344,
+            "punctuated_word": "me"
+          },
+          {
+            "word": "or",
+            "start": 117.115,
+            "end": 117.354996,
+            "confidence": 0.98535156,
+            "punctuated_word": "or"
+          },
+          {
+            "word": "help",
+            "start": 117.354996,
+            "end": 117.515,
+            "confidence": 0.99902344,
+            "punctuated_word": "help"
+          },
+          {
+            "word": "get",
+            "start": 117.515,
+            "end": 117.674995,
+            "confidence": 0.99121094,
+            "punctuated_word": "get"
+          },
+          {
+            "word": "the",
+            "start": 117.674995,
+            "end": 117.835,
+            "confidence": 1.0,
+            "punctuated_word": "the"
+          },
+          {
+            "word": "record",
+            "start": 117.835,
+            "end": 118.075,
+            "confidence": 0.8774414,
+            "punctuated_word": "record"
+          },
+          {
+            "word": "sorted",
+            "start": 118.075,
+            "end": 118.395,
+            "confidence": 0.99902344,
+            "punctuated_word": "sorted."
+          }
+        ],
+        "id": "ea1ffe05-c9fd-41bc-b2a4-6d3ab5876f3c"
+      },
+      {
+        "start": 124.329994,
+        "end": 125.77,
+        "confidence": 0.99208987,
+        "channel": 0,
+        "transcript": "Transferring you now. Thank you.",
+        "words": [
+          {
+            "word": "transferring",
+            "start": 124.329994,
+            "end": 125.049995,
+            "confidence": 0.9916992,
+            "punctuated_word": "Transferring"
+          },
+          {
+            "word": "you",
+            "start": 125.049995,
+            "end": 125.13,
+            "confidence": 0.96972656,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "now",
+            "start": 125.13,
+            "end": 125.369995,
+            "confidence": 0.99902344,
+            "punctuated_word": "now."
+          },
+          {
+            "word": "thank",
+            "start": 125.369995,
+            "end": 125.61,
+            "confidence": 1.0,
+            "punctuated_word": "Thank"
+          },
+          {
+            "word": "you",
+            "start": 125.61,
+            "end": 125.77,
+            "confidence": 1.0,
+            "punctuated_word": "you."
+          }
+        ],
+        "id": "ff8b59ff-8778-4b50-9786-36370fb02acb"
+      },
+      {
+        "start": 127.64088,
+        "end": 131.16087,
+        "confidence": 0.94399416,
+        "channel": 0,
+        "transcript": "Hello. You've reached the Pretty Good AI test line. Goodbye.",
+        "words": [
+          {
+            "word": "hello",
+            "start": 127.64088,
+            "end": 128.36087,
+            "confidence": 0.99853516,
+            "punctuated_word": "Hello."
+          },
+          {
+            "word": "you've",
+            "start": 128.36087,
+            "end": 128.76088,
+            "confidence": 1.0,
+            "punctuated_word": "You've"
+          },
+          {
+            "word": "reached",
+            "start": 128.76088,
+            "end": 129.00087,
+            "confidence": 1.0,
+            "punctuated_word": "reached"
+          },
+          {
+            "word": "the",
+            "start": 129.00087,
+            "end": 129.16087,
+            "confidence": 0.92578125,
+            "punctuated_word": "the"
+          },
+          {
+            "word": "pretty",
+            "start": 129.16087,
+            "end": 129.40088,
+            "confidence": 0.88427734,
+            "punctuated_word": "Pretty"
+          },
+          {
+            "word": "good",
+            "start": 129.40088,
+            "end": 129.56087,
+            "confidence": 0.7915039,
+            "punctuated_word": "Good"
+          },
+          {
+            "word": "ai",
+            "start": 129.56087,
+            "end": 130.04088,
+            "confidence": 0.9716797,
+            "punctuated_word": "AI"
+          },
+          {
+            "word": "test",
+            "start": 130.04088,
+            "end": 130.28087,
+            "confidence": 0.87060547,
+            "punctuated_word": "test"
+          },
+          {
+            "word": "line",
+            "start": 130.28087,
+            "end": 130.84088,
+            "confidence": 0.9980469,
+            "punctuated_word": "line."
+          },
+          {
+            "word": "goodbye",
+            "start": 130.84088,
+            "end": 131.16087,
+            "confidence": 0.9995117,
+            "punctuated_word": "Goodbye."
+          }
+        ],
+        "id": "7b3a54eb-4336-4683-be01-92146e893f7a"
+      },
+      {
+        "start": 132.33,
+        "end": 133.05,
+        "confidence": 0.9970703,
+        "channel": 1,
+        "transcript": "Goodbye.",
+        "words": [
+          {
+            "word": "goodbye",
+            "start": 132.33,
+            "end": 133.05,
+            "confidence": 0.9970703,
+            "punctuated_word": "Goodbye."
+          }
+        ],
+        "id": "a3cbe471-fa7b-4e44-9782-8daaa667960d"
+      },
+      {
+        "start": 133.20999,
+        "end": 135.53,
+        "confidence": 0.99849075,
+        "channel": 1,
+        "transcript": "If you need anything else, you know where to reach me.",
+        "words": [
+          {
+            "word": "if",
+            "start": 133.20999,
+            "end": 133.53,
+            "confidence": 1.0,
+            "punctuated_word": "If"
+          },
+          {
+            "word": "you",
+            "start": 133.53,
+            "end": 133.61,
+            "confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "need",
+            "start": 133.61,
+            "end": 133.77,
+            "confidence": 1.0,
+            "punctuated_word": "need"
+          },
+          {
+            "word": "anything",
+            "start": 133.77,
+            "end": 134.17,
+            "confidence": 1.0,
+            "punctuated_word": "anything"
+          },
+          {
+            "word": "else",
+            "start": 134.17,
+            "end": 134.56999,
+            "confidence": 0.99902344,
+            "punctuated_word": "else,"
+          },
+          {
+            "word": "you",
+            "start": 134.56999,
+            "end": 134.73,
+            "confidence": 0.9980469,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "know",
+            "start": 134.73,
+            "end": 134.89,
+            "confidence": 0.9980469,
+            "punctuated_word": "know"
+          },
+          {
+            "word": "where",
+            "start": 134.89,
+            "end": 134.97,
+            "confidence": 0.98828125,
+            "punctuated_word": "where"
+          },
+          {
+            "word": "to",
+            "start": 134.97,
+            "end": 135.13,
+            "confidence": 1.0,
+            "punctuated_word": "to"
+          },
+          {
+            "word": "reach",
+            "start": 135.13,
+            "end": 135.29,
+            "confidence": 1.0,
+            "punctuated_word": "reach"
+          },
+          {
+            "word": "me",
+            "start": 135.29,
+            "end": 135.53,
+            "confidence": 1.0,
+            "punctuated_word": "me."
+          }
+        ],
+        "id": "46f0b2b3-fe31-4986-93ca-00363988402b"
+      }
+    ],
+    "paragraphs": {
+      "transcript": "\nChannel 0: This call may be recorded for quality and training purposes. Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?\n\nChannel 1: I'm Dana Whitfield. I called to confirm the time of an appointment. What's on file for me?\n\nChannel 0: Can you please provide your date of birth?\n\nChannel 1: My date of birth is 03/14/1988.\n\nChannel 0: Just to confirm, I have your name as Dana Whitfield and your date of birth as 03/14/1988. Is that correct?\n\nChannel 1: Yes. That's correct.\n\nChannel 0: Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Just let me know.\n\nChannel 1: I don't have the phone number for you right now. If you can look it up another way, that would help. If not, I can get the date of birth again.\n\nChannel 0: No problem. Could you please spell out your first and last name for me and confirm your date of birth one more time?\n\nChannel 1: Dana Whitfield. Date of birth, 03/14/1988.\n\nChannel 0: Thanks for confirming. I still can't find your record in our system. I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to have them contact you?\n\nChannel 1: Yes, please. It'd be great if the support team reaches out. I'd like to confirm they can find me or help get the record sorted.\n\nChannel 0: Transferring you now. Thank you. Hello. You've reached the Pretty Good AI test line. Goodbye.\n\nChannel 1: Goodbye. If you need anything else, you know where to reach me.",
+      "paragraphs": [
+        {
+          "sentences": [
+            {
+              "text": "This call may be recorded for quality and training purposes.",
+              "start": 0.0,
+              "end": 3.6
+            },
+            {
+              "text": "Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI.",
+              "start": 3.9199998,
+              "end": 11.36
+            },
+            {
+              "text": "How may I help you today?",
+              "start": 11.36,
+              "end": 12.559999
+            }
+          ],
+          "channel": 0,
+          "num_words": 27,
+          "start": 0.0,
+          "end": 12.559999
+        },
+        {
+          "sentences": [
+            {
+              "text": "I'm Dana Whitfield.",
+              "start": 15.295,
+              "end": 16.895
+            },
+            {
+              "text": "I called to confirm the time of an appointment.",
+              "start": 16.895,
+              "end": 19.215
+            },
+            {
+              "text": "What's on file for me?",
+              "start": 19.375,
+              "end": 20.575
+            }
+          ],
+          "channel": 1,
+          "num_words": 17,
+          "start": 15.295,
+          "end": 20.575
+        },
+        {
+          "sentences": [
+            {
+              "text": "Can you please provide your date of birth?",
+              "start": 23.045,
+              "end": 24.885
+            }
+          ],
+          "channel": 0,
+          "num_words": 8,
+          "start": 23.045,
+          "end": 24.885
+        },
+        {
+          "sentences": [
+            {
+              "text": "My date of birth is 03/14/1988.",
+              "start": 25.710001,
+              "end": 29.150002
+            }
+          ],
+          "channel": 1,
+          "num_words": 6,
+          "start": 25.710001,
+          "end": 29.150002
+        },
+        {
+          "sentences": [
+            {
+              "text": "Just to confirm, I have your name as Dana Whitfield and your date of birth as 03/14/1988.",
+              "start": 33.489998,
+              "end": 41.09
+            },
+            {
+              "text": "Is that correct?",
+              "start": 41.09,
+              "end": 41.89
+            }
+          ],
+          "channel": 0,
+          "num_words": 20,
+          "start": 33.489998,
+          "end": 41.89
+        },
+        {
+          "sentences": [
+            {
+              "text": "Yes.",
+              "start": 46.045,
+              "end": 46.844997
+            },
+            {
+              "text": "That's correct.",
+              "start": 46.844997,
+              "end": 47.644997
+            }
+          ],
+          "channel": 1,
+          "num_words": 3,
+          "start": 46.045,
+          "end": 47.644997
+        },
+        {
+          "sentences": [
+            {
+              "text": "Would you like to use your phone number to look up your record?",
+              "start": 53.265,
+              "end": 55.745003
+            },
+            {
+              "text": "If so, please provide the number you have on file with us.",
+              "start": 56.120003,
+              "end": 59.24
+            },
+            {
+              "text": "If you're not sure, I can confirm your name and date of birth again.",
+              "start": 59.24,
+              "end": 63.24
+            },
+            {
+              "text": "Just let me know.",
+              "start": 63.4,
+              "end": 64.36
+            }
+          ],
+          "channel": 0,
+          "num_words": 43,
+          "start": 53.265,
+          "end": 64.36
+        },
+        {
+          "sentences": [
+            {
+              "text": "I don't have the phone number for you right now.",
+              "start": 67.835,
+              "end": 70.715004
+            },
+            {
+              "text": "If you can look it up another way, that would help.",
+              "start": 70.795,
+              "end": 73.275
+            },
+            {
+              "text": "If not, I can get the date of birth again.",
+              "start": 73.355,
+              "end": 75.95
+            }
+          ],
+          "channel": 1,
+          "num_words": 31,
+          "start": 67.835,
+          "end": 75.95
+        },
+        {
+          "sentences": [
+            {
+              "text": "No problem.",
+              "start": 78.765,
+              "end": 79.725
+            },
+            {
+              "text": "Could you please spell out your first and last name for me and confirm your date of birth one more time?",
+              "start": 79.885,
+              "end": 84.445
+            }
+          ],
+          "channel": 0,
+          "num_words": 23,
+          "start": 78.765,
+          "end": 84.445
+        },
+        {
+          "sentences": [
+            {
+              "text": "Dana Whitfield.",
+              "start": 87.885,
+              "end": 89.405
+            },
+            {
+              "text": "Date of birth, 03/14/1988.",
+              "start": 89.565,
+              "end": 92.765
+            }
+          ],
+          "channel": 1,
+          "num_words": 6,
+          "start": 87.885,
+          "end": 92.765
+        },
+        {
+          "sentences": [
+            {
+              "text": "Thanks for confirming.",
+              "start": 97.935,
+              "end": 99.375
+            },
+            {
+              "text": "I still can't find your record in our system.",
+              "start": 99.454994,
+              "end": 101.935
+            },
+            {
+              "text": "I can't proceed further right now, but I can make sure our clinic support team follows up with you.",
+              "start": 101.935,
+              "end": 107.134995
+            },
+            {
+              "text": "Would you like me to have them contact you?",
+              "start": 107.134995,
+              "end": 108.895
+            }
+          ],
+          "channel": 0,
+          "num_words": 40,
+          "start": 97.935,
+          "end": 108.895
+        },
+        {
+          "sentences": [
+            {
+              "text": "Yes, please.",
+              "start": 111.835,
+              "end": 112.955
+            },
+            {
+              "text": "It'd be great if the support team reaches out.",
+              "start": 112.955,
+              "end": 115.435
+            },
+            {
+              "text": "I'd like to confirm they can find me or help get the record sorted.",
+              "start": 115.435,
+              "end": 118.395
+            }
+          ],
+          "channel": 1,
+          "num_words": 25,
+          "start": 111.835,
+          "end": 118.395
+        },
+        {
+          "sentences": [
+            {
+              "text": "Transferring you now.",
+              "start": 124.329994,
+              "end": 125.369995
+            },
+            {
+              "text": "Thank you.",
+              "start": 125.369995,
+              "end": 125.77
+            },
+            {
+              "text": "Hello.",
+              "start": 127.64088,
+              "end": 128.36087
+            },
+            {
+              "text": "You've reached the Pretty Good AI test line.",
+              "start": 128.36087,
+              "end": 130.84088
+            },
+            {
+              "text": "Goodbye.",
+              "start": 130.84088,
+              "end": 131.16087
+            }
+          ],
+          "channel": 0,
+          "num_words": 15,
+          "start": 124.329994,
+          "end": 131.16087
+        },
+        {
+          "sentences": [
+            {
+              "text": "Goodbye.",
+              "start": 132.33,
+              "end": 133.05
+            },
+            {
+              "text": "If you need anything else, you know where to reach me.",
+              "start": 133.20999,
+              "end": 135.53
+            }
+          ],
+          "channel": 1,
+          "num_words": 12,
+          "start": 132.33,
+          "end": 135.53
+        }
+      ]
+    }
+  }
+}

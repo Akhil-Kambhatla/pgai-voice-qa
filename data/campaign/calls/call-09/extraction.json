@@ -1,0 +1,82 @@
+{
+  "call_id": "campaign/call-09",
+  "extracted_at": "2026-08-23T23:22:25.521916+00:00",
+  "model": "gpt-5.4-mini",
+  "returned_counts": {
+    "facts": 0,
+    "capabilities": 2,
+    "claims": 0,
+    "promises": 3,
+    "entities": 2
+  },
+  "raw": {
+    "facts": [],
+    "capabilities": [
+      {
+        "text": "I can't proceed further right now, but I can make sure our clinic support team follows up with you.",
+        "ability": "proceed further",
+        "can": false,
+        "at": "1:59"
+      },
+      {
+        "text": "I can't proceed further right now, but I can make sure our clinic support team follows up with you.",
+        "ability": "clinic support follow-up",
+        "can": true,
+        "at": "1:59"
+      }
+    ],
+    "claims": [],
+    "promises": [
+      {
+        "text": "I can make sure our clinic support team follows up with you.",
+        "action": "make sure clinic support follows up",
+        "at": "1:59"
+      },
+      {
+        "text": "Would you like me to connect you to our patient support team?",
+        "action": "connect to patient support team",
+        "at": "1:59"
+      },
+      {
+        "text": "Transferring you now.",
+        "action": "transfer call",
+        "at": "2:11"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Pivot Point Orthopedics",
+        "kind": "location"
+      },
+      {
+        "name": "Pretty Good AI",
+        "kind": "other"
+      }
+    ]
+  },
+  "applied": [
+    "promise: promise-12 at 1:59 (make sure clinic support follows up)",
+    "promise: promise-13 at 1:59 (connect to patient support team)",
+    "promise: promise-14 at 2:11 (transfer call)",
+    "capability: cap-18 proceed further can=False",
+    "capability: cap-19 clinic support follow-up can=True"
+  ],
+  "skipped": [
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pivot Point Orthopedics",
+        "kind": "location"
+      }
+    },
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pretty Good AI",
+        "kind": "other"
+      }
+    }
+  ]
+}

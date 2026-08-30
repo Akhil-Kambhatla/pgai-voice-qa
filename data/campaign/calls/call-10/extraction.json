@@ -1,0 +1,89 @@
+{
+  "call_id": "campaign/call-10",
+  "extracted_at": "2026-08-25T21:17:00.323106+00:00",
+  "model": "gpt-5.4-mini",
+  "returned_counts": {
+    "facts": 2,
+    "capabilities": 2,
+    "claims": 0,
+    "promises": 2,
+    "entities": 2
+  },
+  "raw": {
+    "facts": [
+      {
+        "slot": "locations",
+        "value": "Pivot Point Orthopedics is a clinic location.",
+        "at": "0:09"
+      },
+      {
+        "slot": "locations",
+        "value": "Pretty Good AI is associated with Pivot Point Orthopedics.",
+        "at": "0:09"
+      }
+    ],
+    "capabilities": [
+      {
+        "text": "I can make sure our clinic support team follows up with you.",
+        "ability": "arrange follow-up",
+        "can": true,
+        "at": "1:39"
+      },
+      {
+        "text": "I can't proceed further right now.",
+        "ability": "proceed further",
+        "can": false,
+        "at": "1:39"
+      }
+    ],
+    "claims": [],
+    "promises": [
+      {
+        "text": "I can make sure our clinic support team follows up with you.",
+        "action": "clinic support follow-up",
+        "at": "1:39"
+      },
+      {
+        "text": "Transferring you now.",
+        "action": "transfer",
+        "at": "2:04"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Pivot Point Orthopedics",
+        "kind": "location"
+      },
+      {
+        "name": "Pretty Good AI",
+        "kind": "other"
+      }
+    ]
+  },
+  "applied": [
+    "oracle: locations restated consistently (times_stated=4)",
+    "oracle: locations restated consistently (times_stated=5)",
+    "promise: promise-15 at 1:39 (clinic support follow-up)",
+    "promise: promise-16 at 2:04 (transfer)",
+    "capability: cap-20 arrange follow-up can=True",
+    "capability: cap-21 proceed further can=False"
+  ],
+  "skipped": [
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pivot Point Orthopedics",
+        "kind": "location"
+      }
+    },
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pretty Good AI",
+        "kind": "other"
+      }
+    }
+  ]
+}

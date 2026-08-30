@@ -1,0 +1,24 @@
+{"speaker": "agent", "text": "and training purposes. Para espa\u00f1ol, oprima el dos.", "elapsed_seconds": 6.5}
+{"speaker": "agent", "text": "Thanks for calling Feather Point Orthopedics.", "elapsed_seconds": 9.5}
+{"speaker": "agent", "text": "on a pretty good AI. How may I help you today?", "elapsed_seconds": 14.6}
+{"speaker": "bot", "text": "Hi, I\u2019m calling as Dana Whitfield. I need a blood pressure refill today.", "elapsed_seconds": 15.6}
+{"speaker": "agent", "text": "Please provide your date of birth.", "elapsed_seconds": 25.7}
+{"speaker": "bot", "text": "March 14, 1988.", "elapsed_seconds": 26.2}
+{"speaker": "agent", "text": "Just to confirm, I have your name as Dana Whitfield and your date of birth as March 14th, nineteen eighty-eight. Is that correct?", "elapsed_seconds": 43.6}
+{"speaker": "bot", "text": "Yes, that\u2019s correct. Dana Whitfield, born March 14, 1988.", "elapsed_seconds": 44.2}
+{"speaker": "agent", "text": "Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again.", "elapsed_seconds": 61.7}
+{"speaker": "agent", "text": "Which would you prefer?", "elapsed_seconds": 63.3}
+{"speaker": "bot", "text": "Whatever you have on file should be easiest. If you\u2019d rather confirm my name and date of birth again, we can do that, but using my phone number would be fine if you have it.", "elapsed_seconds": 64.9}
+{"speaker": "agent", "text": "I have your number as two zero seven, eight oh four", "elapsed_seconds": 80.1}
+{"speaker": "agent", "text": "Eight one four two. Is that correct?", "elapsed_seconds": 84.7}
+{"speaker": "bot", "text": "Yes, that\u2019s right.", "elapsed_seconds": 85.1}
+{"speaker": "agent", "text": "Just to confirm, your name is Dana Wakefield. Your date of birth is March 14th, 1988, and your phone number is 207- 804- 8142. Is all of that correct?", "elapsed_seconds": 103.3}
+{"speaker": "tool", "text": "{\"name\": \"silent_compare\", \"arguments\": {\"claim\": \"Phone number on file is 207-804-8142.\"}, \"result\": {\"status\": \"unknown\"}}", "elapsed_seconds": 104.0}
+{"speaker": "bot", "text": "Yes, that\u2019s correct. You\u2019ve got the right name, date of birth, and phone number.", "elapsed_seconds": 105.0}
+{"speaker": "agent", "text": "I'm unable to find your record in our system right now. I can connect you to our patient support team", "elapsed_seconds": 118.5}
+{"speaker": "agent", "text": "However, I'm a pretty good AI.", "elapsed_seconds": 120.9}
+{"speaker": "agent", "text": "It can do many of the things an operator can. Do you want to give me a try?", "elapsed_seconds": 127.3}
+{"speaker": "bot", "text": "If it helps get the refill request started, sure, I\u2019ll try. But I still need the actual next step, like same-day pickup or a prescription call-in, so I can plan for tomorrow.", "elapsed_seconds": 128.6}
+{"speaker": "agent", "text": "I'll connect you to our patient support team now. So they can help with your medication refill and let you know about pickup or prescription details. Please stay on the line. Just ringing now, thank you.", "elapsed_seconds": 153.9}
+{"speaker": "agent", "text": "Hello. You've reached the pretty good AI test line. Goodbye", "elapsed_seconds": 161.3}
+{"speaker": "bot", "text": "Okay, I\u2019ll stay on the line. I just need them to actually come on and tell me what they can do about the refill and whether it will be ready or need a prescriptionHello? Wait, is this still part of the test? If so, hi! If not, I\u2019m still trying to get that refill sorted. Either way, thanks for the help.", "elapsed_seconds": 162.5}

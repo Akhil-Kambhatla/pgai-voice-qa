@@ -1,0 +1,70 @@
+{
+  "call_id": "campaign/call-06",
+  "extracted_at": "2026-08-23T17:14:43.022081+00:00",
+  "model": "gpt-5.4-mini",
+  "returned_counts": {
+    "facts": 0,
+    "capabilities": 2,
+    "claims": 0,
+    "promises": 1,
+    "entities": 2
+  },
+  "raw": {
+    "facts": [],
+    "capabilities": [
+      {
+        "text": "I can connect you to our patient support team.",
+        "ability": "connect to patient support",
+        "can": true,
+        "at": "1:58"
+      },
+      {
+        "text": "I'm a pretty good AI and can do many of the things an operator can.",
+        "ability": "do operator tasks",
+        "can": true,
+        "at": "1:58"
+      }
+    ],
+    "claims": [],
+    "promises": [
+      {
+        "text": "Transferring you now.",
+        "action": "transfer to patient support",
+        "at": "2:12"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Pivot Point Orthopaedics",
+        "kind": "location"
+      },
+      {
+        "name": "Pretty Good AI",
+        "kind": "other"
+      }
+    ]
+  },
+  "applied": [
+    "promise: promise-10 at 2:12 (transfer to patient support)",
+    "capability: cap-10 connect to patient support can=True",
+    "capability: cap-11 do operator tasks can=True"
+  ],
+  "skipped": [
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pivot Point Orthopaedics",
+        "kind": "location"
+      }
+    },
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pretty Good AI",
+        "kind": "other"
+      }
+    }
+  ]
+}

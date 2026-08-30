@@ -1,0 +1,226 @@
+[
+  {
+    "id": "cap-01",
+    "text": "You do not need to create a profile or give your name just to check the clinic's past hours.",
+    "ability": "past hours lookup",
+    "can": true,
+    "call_id": "campaign/call-01",
+    "at": "0:25"
+  },
+  {
+    "id": "cap-02",
+    "text": "I do not have access to the clinic's past hours directly.",
+    "ability": "past hours lookup",
+    "can": false,
+    "call_id": "campaign/call-01",
+    "at": "1:18"
+  },
+  {
+    "id": "cap-03",
+    "text": "The clinic staff can confirm which dates were closed.",
+    "ability": "closed date confirmation",
+    "can": true,
+    "call_id": "campaign/call-01",
+    "at": "1:41"
+  },
+  {
+    "id": "cap-04",
+    "text": "I'll connect you to our clinic support team so they can help confirm the schedule for August 18.",
+    "ability": "connect to support",
+    "can": true,
+    "call_id": "campaign/call-01",
+    "at": "2:03"
+  },
+  {
+    "id": "cap-05",
+    "text": "I can help with that.",
+    "ability": "help cancel appointment",
+    "can": true,
+    "call_id": "campaign/call-02",
+    "at": "0:21"
+  },
+  {
+    "id": "cap-06",
+    "text": "To cancel an appointment, I do need a patient profile.",
+    "ability": "cancel without profile",
+    "can": false,
+    "call_id": "campaign/call-02",
+    "at": "0:38"
+  },
+  {
+    "id": "cap-07",
+    "text": "To schedule a new patient appointment, you'll need a demo patient profile.",
+    "ability": "schedule new patient appointment",
+    "can": false,
+    "call_id": "campaign/call-04",
+    "at": "0:22"
+  },
+  {
+    "id": "cap-08",
+    "text": "I can't proceed further right now, but I can make sure our clinic support team follows up with you.",
+    "ability": "make support follow up",
+    "can": true,
+    "call_id": "campaign/call-05",
+    "at": "1:33"
+  },
+  {
+    "id": "cap-09",
+    "text": "I don't have access to view or share the details in your record directly.",
+    "ability": "view record details",
+    "can": false,
+    "call_id": "campaign/call-05",
+    "at": "2:29"
+  },
+  {
+    "id": "cap-10",
+    "text": "I can connect you to our patient support team.",
+    "ability": "connect to patient support",
+    "can": true,
+    "call_id": "campaign/call-06",
+    "at": "1:58"
+  },
+  {
+    "id": "cap-11",
+    "text": "I'm a pretty good AI and can do many of the things an operator can.",
+    "ability": "do operator tasks",
+    "can": true,
+    "call_id": "campaign/call-06",
+    "at": "1:58"
+  },
+  {
+    "id": "cap-12",
+    "text": "Let me check on Aetna insurance for you.",
+    "ability": "check insurance",
+    "can": true,
+    "call_id": "campaign/call-07",
+    "at": "0:43"
+  },
+  {
+    "id": "cap-13",
+    "text": "To accurately confirm if your specific Aetna plan is accepted, I do need the member ID or more details from your card.",
+    "ability": "confirm coverage",
+    "can": false,
+    "call_id": "campaign/call-07",
+    "at": "2:30"
+  },
+  {
+    "id": "cap-14",
+    "text": "When you have your card, I can check for you right away.",
+    "ability": "check coverage",
+    "can": true,
+    "call_id": "campaign/call-07",
+    "at": "2:30"
+  },
+  {
+    "id": "cap-15",
+    "text": "I'm unable to find your record in our system right now.",
+    "ability": "find record",
+    "can": false,
+    "call_id": "campaign/call-08",
+    "at": "1:52"
+  },
+  {
+    "id": "cap-16",
+    "text": "I can connect you to our patient support team.",
+    "ability": "connect to support",
+    "can": true,
+    "call_id": "campaign/call-08",
+    "at": "1:52"
+  },
+  {
+    "id": "cap-17",
+    "text": "I'm a pretty good AI and can do many of the things an operator can.",
+    "ability": "do operator tasks",
+    "can": true,
+    "call_id": "campaign/call-08",
+    "at": "1:58"
+  },
+  {
+    "id": "cap-18",
+    "text": "I can't proceed further right now, but I can make sure our clinic support team follows up with you.",
+    "ability": "proceed further",
+    "can": false,
+    "call_id": "campaign/call-09",
+    "at": "1:59"
+  },
+  {
+    "id": "cap-19",
+    "text": "I can't proceed further right now, but I can make sure our clinic support team follows up with you.",
+    "ability": "clinic support follow-up",
+    "can": true,
+    "call_id": "campaign/call-09",
+    "at": "1:59"
+  },
+  {
+    "id": "cap-20",
+    "text": "I can make sure our clinic support team follows up with you.",
+    "ability": "arrange follow-up",
+    "can": true,
+    "call_id": "campaign/call-10",
+    "at": "1:39"
+  },
+  {
+    "id": "cap-21",
+    "text": "I can't proceed further right now.",
+    "ability": "proceed further",
+    "can": false,
+    "call_id": "campaign/call-10",
+    "at": "1:39"
+  },
+  {
+    "id": "cap-22",
+    "text": "I can help with your follow-up.",
+    "ability": "help with follow-up",
+    "can": true,
+    "call_id": "campaign/call-11",
+    "at": "0:24"
+  },
+  {
+    "id": "cap-23",
+    "text": "I still can't access your record.",
+    "ability": "access record",
+    "can": false,
+    "call_id": "campaign/call-11",
+    "at": "2:11"
+  },
+  {
+    "id": "cap-24",
+    "text": "Can't proceed further right now, but I can make sure our clinic support team follows up with you.",
+    "ability": "clinic follow-up",
+    "can": true,
+    "call_id": "campaign/call-11",
+    "at": "2:13"
+  },
+  {
+    "id": "cap-25",
+    "text": "I'm not able to see which phone number is on file for you.",
+    "ability": "see phone number",
+    "can": false,
+    "call_id": "campaign/call-11",
+    "at": "2:35"
+  },
+  {
+    "id": "cap-26",
+    "text": "I'll connect you to our patient support team so they can help you directly.",
+    "ability": "connect to support",
+    "can": true,
+    "call_id": "campaign/call-11",
+    "at": "2:35"
+  },
+  {
+    "id": "cap-27",
+    "text": "I'm unable to locate your record in our system right now.",
+    "ability": "locate record",
+    "can": false,
+    "call_id": "campaign/call-12",
+    "at": "1:53"
+  },
+  {
+    "id": "cap-28",
+    "text": "I can help with your insurance question.",
+    "ability": "insurance help",
+    "can": true,
+    "call_id": "campaign/call-13",
+    "at": "2:46"
+  }
+]

@@ -1,0 +1,94 @@
+{
+  "call_id": "campaign/call-01",
+  "extracted_at": "2026-08-23T15:56:30.815839+00:00",
+  "model": "gpt-5.4-mini",
+  "returned_counts": {
+    "facts": 1,
+    "capabilities": 4,
+    "claims": 0,
+    "promises": 4,
+    "entities": 2
+  },
+  "raw": {
+    "facts": [
+      {
+        "slot": "locations",
+        "value": "Pivot Point Orthopaedics is a clinic location.",
+        "at": "0:08"
+      }
+    ],
+    "capabilities": [
+      {
+        "text": "You do not need to create a profile or give your name just to check the clinic's past hours.",
+        "ability": "past hours lookup",
+        "can": true,
+        "at": "0:25"
+      },
+      {
+        "text": "I do not have access to the clinic's past hours directly.",
+        "ability": "past hours lookup",
+        "can": false,
+        "at": "1:18"
+      },
+      {
+        "text": "The clinic staff can confirm which dates were closed.",
+        "ability": "closed date confirmation",
+        "can": true,
+        "at": "1:41"
+      },
+      {
+        "text": "I'll connect you to our clinic support team so they can help confirm the schedule for August 18.",
+        "ability": "connect to support",
+        "can": true,
+        "at": "2:03"
+      }
+    ],
+    "claims": [],
+    "promises": [
+      {
+        "text": "I'll help you with that.",
+        "action": "help with hours lookup",
+        "at": "0:42"
+      },
+      {
+        "text": "I'll provide the information.",
+        "action": "provide hours information",
+        "at": "1:06"
+      },
+      {
+        "text": "If you'd like, I can let them know you need this information and have them follow-up with you.",
+        "action": "notify staff and follow up",
+        "at": "1:45"
+      },
+      {
+        "text": "I'll connect you to our clinic support team so they can help confirm the schedule for August 18.",
+        "action": "connect to clinic support",
+        "at": "2:03"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Pivot Point Orthopaedics",
+        "kind": "location"
+      },
+      {
+        "name": "clinic support team",
+        "kind": "other"
+      }
+    ]
+  },
+  "applied": [
+    "oracle: locations filled from campaign/call-01 at 0:08",
+    "promise: promise-01 at 0:42 (help with hours lookup)",
+    "promise: promise-02 at 1:06 (provide hours information)",
+    "promise: promise-03 at 1:45 (notify staff and follow up)",
+    "promise: promise-04 at 2:03 (connect to clinic support)",
+    "capability: cap-01 past hours lookup can=True",
+    "capability: cap-02 past hours lookup can=False",
+    "capability: cap-03 closed date confirmation can=True",
+    "capability: cap-04 connect to support can=True",
+    "frontier: Pivot Point Orthopaedics (location) unprobed",
+    "frontier: clinic support team (other) unprobed"
+  ],
+  "skipped": []
+}

@@ -1,0 +1,29 @@
+[00:00] AGENT: This call may be recorded for quality and training purposes.
+[00:04] AGENT: Thanks
+[00:06] AGENT: for calling Pivot Point Orthopedics,
+[00:09] AGENT: part of Pretty Good AI. How may I help you today?
+[00:15] BOT: Up here, I need a time sensitive prescription issue sorted before the weekend.
+[00:23] AGENT: I see you're calling from the number we have on file. Am I speaking with Dana?
+[00:30] BOT: Yes.
+[00:31] BOT: I need to speak with Dana if she's available.
+[00:33] BOT: I'm Robert, but I'm billed as Bob.
+[00:38] AGENT: Please provide your full name and date of birth.
+[00:43] BOT: Robert Ostrowski.
+[00:44] BOT: Date of birth, 08/22/1951.
+[00:51] AGENT: Just to confirm,
+[00:53] AGENT: I have your name as Robert Ostrowski
+[00:56] AGENT: and your date of birth as
+[00:58] AGENT: 08/22/1951.
+[01:01] AGENT: Is Just to confirm, I have your name as Robert Ostrowski and your date of birth as 08/22/1951.
+[01:08] AGENT: Is that correct?
+[01:09] AGENT: If so, could you please spell your last name for me?
+[01:16] BOT: Yes.
+[01:17] BOT: That's correct. My last name is spelled o s t r o w s k I. I need help with a prescription issue, though. What's the next step?
+[01:28] AGENT: Would you like me to look up your record using your phone number on file? If so, please provide the number you have listed with us. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?
+[01:42] BOT: Name and date of birth is fine. I don't wanna give out the number unless it's necessary.
+[01:53] AGENT: I'm unable to locate your record in our system right now. I'll connect you to our patient support team so they can help with your prescription issue. Please stay on the line.
+[02:03] AGENT: Transferring you now. Thank you.
+[02:05] BOT: Okay.
+[02:06] AGENT: Hello.
+[02:07] AGENT: You've reached the Pretty Good AI test line.
+[02:10] AGENT: Goodbye.

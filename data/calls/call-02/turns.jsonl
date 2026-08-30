@@ -1,0 +1,7 @@
+{"speaker": "bot", "text": "Hi, sorry\u2014are you this clinic, and are you still open right now?", "elapsed_seconds": 6.2}
+{"speaker": "bot", "text": "Thanks. Is this the clinic I\u2019m calling? And are you still open tonight?", "elapsed_seconds": 7.8}
+{"speaker": "tool", "text": "{\"name\": \"check_fact\", \"arguments\": {\"claim\": \"Our office timing is from 9 AM to 5 PM, Monday through Friday, and we\\u2019re closed on the weekends.\"}, \"result\": {\"status\": \"unknown\"}}", "elapsed_seconds": 28.0}
+{"speaker": "bot", "text": "Okay, let me make sure I\u2019ve got that clearly. I just need a moment to repeat what you said.", "elapsed_seconds": 28.0}
+{"speaker": "bot", "text": "Okay, so you\u2019re closed tonight. Your hours are Monday through Friday, 9 AM to 5 PM, and weekends are closed. Did I hear that right?", "elapsed_seconds": 34.8}
+{"speaker": "tool", "text": "{\"name\": \"end_call\", \"arguments\": {\"reason\": \"The clinic is closed tonight; their regular hours are Monday through Friday, 9 AM to 5 PM, and closed on weekends.\"}, \"result\": {\"status\": \"ending\"}}", "elapsed_seconds": 44.8}
+{"speaker": "bot", "text": "Thanks so much. I\u2019ll call back tomorrow. Take care.", "elapsed_seconds": 45.4}

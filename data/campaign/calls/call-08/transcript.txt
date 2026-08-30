@@ -1,0 +1,44 @@
+[00:00] AGENT: This call may be recorded for quality and training purposes.
+[00:04] AGENT: Thanks
+[00:07] AGENT: for calling Pivot Point Orthopaedics,
+[00:09] AGENT: part of Pretty Good AI.
+[00:11] AGENT: How may I help you today?
+[00:15] BOT: Hi.
+[00:16] BOT: I'm calling as Dana Whitfield.
+[00:19] BOT: I need a blood pressure refill today.
+[00:23] AGENT: Please provide your date of birth.
+[00:26] BOT: 03/14/1988.
+[00:33] AGENT: Just to confirm, I have your name as Dana Whitfield and your date of birth as 03/14/1988.
+[00:40] AGENT: Is that correct?
+[00:44] BOT: Yes. That's correct. Dana Whitfield, born 03/14/1988.
+[00:52] AGENT: Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?
+[01:04] BOT: Whatever you have on file should be easiest.
+[01:07] BOT: If you'd rather confirm my name and date of birth again, we can do that. But using my phone number would be fine if you have it.
+[01:16] AGENT: I have your number as (207)
+[01:18] AGENT: 804-8142.
+[01:21] AGENT: Is that correct?
+[01:25] BOT: Yes.
+[01:26] BOT: That's right.
+[01:30] AGENT: Just to confirm, your name is Dana Whitfield.
+[01:33] AGENT: Your date of birth is 03/14/1988,
+[01:36] AGENT: and your phone number is (207)
+[01:39] AGENT: 804-8142.
+[01:41] AGENT: Is all of that correct?
+[01:44] BOT: Yes.
+[01:45] BOT: That's correct. You've got the right name, date of birth, and phone number.
+[01:52] AGENT: I'm unable to find your record in our system right now. I can connect you to our patient support team.
+[01:58] AGENT: However, I'm a pretty good AI
+[02:00] AGENT: and can do many of the things an operator can. Do you wanna give me a try?
+[02:07] BOT: If it helps get the refill request started,
+[02:10] BOT: sure. I'll try. But I still need the actual next step, like same day pickup or a prescription call in, so I can plan for tomorrow.
+[02:22] AGENT: I'll connect you to our patient support team now
+[02:25] AGENT: so they can help with your medication refill and let you know about pickup or prescription details.
+[02:30] AGENT: Please stay on the line.
+[02:32] AGENT: Transferring you now. Thank you.
+[02:34] BOT: Okay.
+[02:35] AGENT: Hello.
+[02:36] AGENT: You've reached the Pretty Good AI test line. Goodbye.
+[02:42] BOT: Hello?
+[02:43] BOT: Wait. Is this still part of the test? If so, hi.
+[02:47] BOT: If not, I'm still trying to get that refill sorted.
+[02:50] BOT: Either way, thanks for the help.

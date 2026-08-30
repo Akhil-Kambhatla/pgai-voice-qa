@@ -1,0 +1,30 @@
+{
+  "call_id": "call-13",
+  "scenario_id": "10-holiday-cancel-reread",
+  "axes": {
+    "intent": "cancel",
+    "identity": "elena",
+    "temporal": "holiday",
+    "cooperation": "self_correcting",
+    "delivery": "clean",
+    "register": "frustrated",
+    "continuity": "references_prior",
+    "curveball": "urgency_mention"
+  },
+  "identity": "elena",
+  "telnyx_sid": "v3:_2bttIteTddELeiMGKpF5W6LmR-AtSFGk773BNBbyMeGjreCXw8NLA",
+  "to": "+17325939363",
+  "from": "+12078048142",
+  "placed_at": "2026-08-20T13:52:19.962227+00:00",
+  "session_config": {
+    "type": "semantic_vad",
+    "eagerness": "low"
+  },
+  "status_events": [],
+  "recording": {
+    "sid": "ab033e95-407f-4f88-aa70-ddae3fe851cc",
+    "start_time": "Thu, 20 Aug 2026 13:52:36 +0000",
+    "duration": 5,
+    "channels": 2
+  }
+}

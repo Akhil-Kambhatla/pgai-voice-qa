@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Akid",
+    "kind": "other",
+    "mentioned_in": "call-06",
+    "probed": false
+  },
+  {
+    "name": "Wheaton's Clinic",
+    "kind": "location",
+    "mentioned_in": "call-06",
+    "probed": false
+  }
+]

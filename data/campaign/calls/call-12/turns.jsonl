@@ -1,0 +1,19 @@
+{"speaker": "agent", "text": "Para espa\u00f1ol oprima el dos.", "elapsed_seconds": 5.8}
+{"speaker": "agent", "text": "Thanks for calling Pivot Point Orthopedics.", "elapsed_seconds": 8.4}
+{"speaker": "agent", "text": "Part of pretty good AI. How may I help you today?", "elapsed_seconds": 13.6}
+{"speaker": "bot", "text": "Bob here. I need a time-sensitive prescription issue sorted before the weekend.", "elapsed_seconds": 14.4}
+{"speaker": "agent", "text": "I see you're calling from the number we have on file. Can I speak with Dana?", "elapsed_seconds": 28.9}
+{"speaker": "bot", "text": "Yes, I need to speak with Dana if she\u2019s available. I\u2019m Robert, but I\u2019m billed as Bob.", "elapsed_seconds": 29.6}
+{"speaker": "agent", "text": "Please provide your full name and day of birth.", "elapsed_seconds": 41.4}
+{"speaker": "bot", "text": "Robert Ostrowski. Date of birth: August 22, 1951.", "elapsed_seconds": 42.3}
+{"speaker": "agent", "text": "Just to confirm, I have your name as Robert Ostrowski and your date of birth as August twenty second, nineteen fifty-one. Just to confirm, I have your name as Robert Ostrowski and your date of birth as August twenty second, nineteen fifty-one. Is that correct? If so, could you please spell your last name for me?", "elapsed_seconds": 73.8}
+{"speaker": "tool", "text": "{\"name\": \"silent_compare\", \"arguments\": {\"claim\": \"Name Robert Ostrowski, date of birth August 22, 1951.\"}, \"result\": {\"status\": \"unknown\"}}", "elapsed_seconds": 74.8}
+{"speaker": "bot", "text": "Yes, that\u2019s correct. My last name is spelled O-S-T-R-O-W-S-K-I. I need help with a prescription issue, though\u2014what\u2019s the next step?", "elapsed_seconds": 76.8}
+{"speaker": "agent", "text": "Would you like me to look up your record using your phone number on file?", "elapsed_seconds": 91.2}
+{"speaker": "agent", "text": "If so, please provide the number you have listed with us. If you're not sure, I can confirm your name and date of birth again.", "elapsed_seconds": 97.9}
+{"speaker": "agent", "text": "Which would you prefer?", "elapsed_seconds": 100.9}
+{"speaker": "bot", "text": "Name and date of birth is fine. I don\u2019t want to give out the number unless it\u2019s necessary.", "elapsed_seconds": 101.8}
+{"speaker": "agent", "text": "I'm unable to locate your record in our system right now. I'll connect you to our patient support team so they can help with your prescription issue. Please stay on the line. Transferring you now, thank you", "elapsed_seconds": 124.3}
+{"speaker": "agent", "text": "Hello, you've reached the Pretty Good AI test line.", "elapsed_seconds": 129.3}
+{"speaker": "agent", "text": "Goodbye.", "elapsed_seconds": 130.3}
+{"speaker": "tool", "text": "{\"name\": \"hang_up\", \"arguments\": {\"reason\": \"Call ended. No further instruction or response needed.\"}, \"result\": {\"hangup\": \"denied\", \"unmet\": [\"goal\"]}}", "elapsed_seconds": 133.4}

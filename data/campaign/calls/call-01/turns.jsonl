@@ -1,0 +1,22 @@
+{"speaker": "agent", "text": "Para espa\u00f1ol oprima el dos.", "elapsed_seconds": 5.6}
+{"speaker": "agent", "text": "Thank you for calling Pivot Point Orthopedics. Would you like to create a demo patient profile? I just need your first and last name to get started.", "elapsed_seconds": 14.5}
+{"speaker": "bot", "text": "I just need to check past-day hours. Do I really need to create a profile and give my name for that?", "elapsed_seconds": 15.8}
+{"speaker": "agent", "text": "You do not need to create a profile or give your name just to check the clinic's past hours. What specific day would you like to know the hours for?", "elapsed_seconds": 32.7}
+{"speaker": "bot", "text": "I\u2019m trying to figure out another date\u2014what\u2019s the specific day you\u2019re checking?", "elapsed_seconds": 33.5}
+{"speaker": "agent", "text": "And that checked any specific day yet. Please let me know which date you want to know the clinic hours for.", "elapsed_seconds": 48.0}
+{"speaker": "agent", "text": "And I'll help you with that.", "elapsed_seconds": 49.6}
+{"speaker": "bot", "text": "I\u2019m asking again for a date. What day do you want to check the clinic's hours for?", "elapsed_seconds": 50.2}
+{"speaker": "agent", "text": "I do not need to check for myself. I am here to help you. Please tell me the date you want to know the clinic's hours for. And I'll provide the information.", "elapsed_seconds": 66.8}
+{"speaker": "bot", "text": "Okay, I want to check August 18, 2026. Can you tell me the hours for that day?", "elapsed_seconds": 68.3}
+{"speaker": "agent", "text": "I do not have access to the clinics past hours directly. For details about August 18th, I recommend contacting the clinic staff at the booth or checking posted information.", "elapsed_seconds": 88.9}
+{"speaker": "agent", "text": "If you need anything else", "elapsed_seconds": 90.7}
+{"speaker": "agent", "text": "Let me know.", "elapsed_seconds": 92.0}
+{"speaker": "bot", "text": "No, that\u2019s fine. But can\u2019t the staff confirm which date on the schedule was closed?", "elapsed_seconds": 92.6}
+{"speaker": "agent", "text": "The clinic staff can confirm which dates were closed. If you'd like, I can let them know you need this information and have them follow up with you. Would you like me to do that?", "elapsed_seconds": 109.7}
+{"speaker": "bot", "text": "Yes, that would be helpful, if you can pass along that I\u2019m asking about August 18, 2026. Do they need anything else from me?", "elapsed_seconds": 110.9}
+{"speaker": "agent", "text": "No other information is needed right now. I'll connect you to our clinic support team so they can help confirm the schedule for August eighteenth. Please stay on the line.", "elapsed_seconds": 131.2}
+{"speaker": "agent", "text": "Pressing you now. Thank you.", "elapsed_seconds": 133.2}
+{"speaker": "bot", "text": "Okay\u2014I\u2019ll stay on the line and wait for them to help confirm the schedule.", "elapsed_seconds": 133.5}
+{"speaker": "agent", "text": "Hello, you've reached the pretty good AI test line. Goodbye", "elapsed_seconds": 138.5}
+{"speaker": "tool", "text": "{\"name\": \"hang_up\", \"arguments\": {\"reason\": \"The call seems to have ended with a test placeholder message; no further information was provided about the clinic schedule.\"}, \"result\": {\"hangup\": \"denied\", \"still_want\": [\"He has the clinic's hours for the past day he asked about, or he knows clearly that they cannot confirm them and what the correct next step is.\"]}}", "elapsed_seconds": 140.8}
+{"speaker": "bot", "text": "That\u2019s all I can use here. I still need to know if they can confirm the hours for August 18, or if they need a different way to help.", "elapsed_seconds": 142.1}

@@ -1,0 +1,32 @@
+[00:00] AGENT: This call may be recorded for quality and training purposes.
+[00:04] AGENT: Thank
+[00:07] AGENT: you for calling Pivot Point Orthopedics.
+[00:09] AGENT: Would you like to create a demo patient profile?
+[00:12] AGENT: I just need your first and last name to get started.
+[00:15] BOT: I'm not looking to demo anything. I need a new patient appointment.
+[00:22] AGENT: To schedule a new patient appointment, you'll need a demo patient profile.
+[00:26] AGENT: Would you like to create one now? I just need your first and last name.
+[00:32] BOT: Dana Whitfield.
+[00:42] AGENT: Your patient profile is set up, and your date of birth is 07/04/2000
+[00:46] AGENT: for demo purposes.
+[00:48] AGENT: How can I help you today?
+[00:52] BOT: That's a demo profile,
+[00:54] BOT: not mine. I need a real new patient booking.
+[01:00] AGENT: Let's get your new patient appointment scheduled.
+[01:03] AGENT: Do you have a specific provider you'd like to see, or are you open to the first available?
+[01:11] BOT: First available is fine. I'm new and flexible.
+[01:17] AGENT: We have openings for new patient appointments this coming Tuesday
+[01:21] AGENT: with Dugie Hauser. Would you like 11:15AM,
+[01:25] AGENT: 12PM, or 12:45PM?
+[01:30] BOT: 11:15AM.
+[01:37] AGENT: You're booked for Tuesday, August 25 at 11:15AM
+[01:42] AGENT: with Judy Hauser at Pivot Point Orthopedic.
+[01:45] AGENT: Please bring your photo ID, insurance card, a list of current medications,
+[01:50] AGENT: and any imaging discs if you have them.
+[01:53] AGENT: Is there anything else I could help you with?
+[01:58] BOT: Got it. I'm Dana Whitfield.
+[02:00] BOT: The appointment is Tuesday, August 25 at 11:15.
+[02:04] BOT: I'll bring those items.
+[02:06] BOT: Thanks.
+[02:10] AGENT: You're all set for your appointment.
+[02:12] AGENT: If you need anything else, just let us know. Have a great day.

@@ -1,0 +1,5 @@
+[00:07] BOT: Hello?
+[00:13] BOT: Hello?
+[00:16] BOT: Hi.
+[00:18] BOT: Bye.
+[00:19] BOT: What's up?

@@ -1,0 +1,37 @@
+[00:00] AGENT: This call may be recorded for quality and training purposes.
+[00:04] AGENT: Thank
+[00:08] AGENT: you for calling Pivot Point Orthopaedics.
+[00:10] AGENT: Would you like to create a demo patient profile?
+[00:13] AGENT: I just need your first and last name to get started.
+[00:17] BOT: I just need to check past pay hours.
+[00:20] BOT: Do I really need to create a profile and give my name for that?
+[00:25] AGENT: You do not need to create a profile or give your name just to check the clinic's past hours.
+[00:31] AGENT: What specific day would you like to know the hours for?
+[00:35] BOT: I'm trying to figure out another date. What's the specific day you're checking?
+[00:42] AGENT: I've not checked any specific day yet. Please let me know which date you wanna know the clinic hours for,
+[00:49] AGENT: and I'll help you with that.
+[00:51] BOT: I'm asking again for a date. What day do you wanna check the clinic's hours for?
+[00:58] AGENT: I do not need to check for myself.
+[01:01] AGENT: I am here to help you. Please tell me the date you want to know the clinic's hours for,
+[01:06] AGENT: and I'll provide the information.
+[01:09] BOT: Okay.
+[01:10] BOT: I want to check 08/18/2026.
+[01:13] BOT: Can you tell me the hours for that day?
+[01:18] AGENT: I do not have access to the clinic's
+[01:21] AGENT: past hours directly.
+[01:23] AGENT: For details about August 18, I recommend contacting the clinic staff at the booth or checking posted information.
+[01:30] AGENT: If you need anything else,
+[01:32] AGENT: let me know.
+[01:34] BOT: No. That's fine. But can't the staff confirm which date on the schedule was closed?
+[01:41] AGENT: The clinic staff can confirm which dates were closed.
+[01:45] AGENT: If you'd like, I can let them know you need this information and have them follow-up with you. Would you like me to do that?
+[01:52] BOT: Yes. That would be helpful if you can pass along that I'm asking about August
+[01:56] BOT: '66.
+[01:58] BOT: Do they need anything else from me?
+[02:03] AGENT: No other information is needed right now. I'll connect you to our clinic support team so they can help confirm the schedule for August 18.
+[02:11] AGENT: Please stay on the line.
+[02:12] AGENT: Transferring you now. Thank you.
+[02:15] BOT: Okay.
+[02:15] AGENT: Hello.
+[02:16] AGENT: You've reached the Pretty Good AI test line. Goodbye.
+[02:23] BOT: That's all I can use here. I still need to know if they can confirm the hours for August 18 or if they need a different way to help.

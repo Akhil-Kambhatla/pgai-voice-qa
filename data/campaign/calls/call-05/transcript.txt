@@ -1,0 +1,41 @@
+[00:00] AGENT: This call may be recorded for quality and training purposes.
+[00:04] AGENT: Thanks
+[00:06] AGENT: for calling Pivot Point Orthopaedics,
+[00:09] AGENT: part of Pretty Good AI.
+[00:11] AGENT: How may I help you today?
+[00:16] BOT: Hi. I'm looking for my appointment with Judy Hauser.
+[00:22] AGENT: I see you're calling from the number we have on file. Am I speaking with Dana?
+[00:27] BOT: Oh,
+[00:28] BOT: no. This is my phone. You may have an old number tied to the record.
+[00:32] BOT: My name is Elena Vasquez Moreau.
+[00:37] AGENT: Thanks a lot. Elena.
+[00:38] AGENT: Please provide your date of birth.
+[00:41] BOT: 11/07/1979.
+[00:47] AGENT: Just to confirm,
+[00:49] AGENT: I have your name as Elena Vasquez Marrow and your date of birth as 11/07/1979.
+[00:55] AGENT: Is that correct? If so, could you please spell your last name for me?
+[01:00] BOT: Vasquez
+[01:01] BOT: Morrow.
+[01:02] BOT: That's spelled v a s q u e z m o r e a u.
+[01:11] AGENT: Thank you. To make sure I have it right, your full name is Elena Vasquez Moreau, and your date of birth is 11/07/1979.
+[01:18] AGENT: Is that correct?
+[01:23] BOT: Yes.
+[01:24] BOT: That's correct. My full name is Elena Vasquez Morel, and my date of birth is 11/07/1979.
+[01:33] AGENT: I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to have them contact you about your appointment?
+[01:44] BOT: No. That's okay. I just want my appointment confirmed and the name read back correctly.
+[01:50] BOT: If it can't be, please let me know what's wrong with it so I can fix it.
+[01:56] AGENT: I wasn't able to find your record in the system,
+[01:59] AGENT: so I can't confirm your appointment or the name on file. It's possible your information doesn't match what we have, or there may be a typo in the records.
+[02:07] AGENT: You might wanna call the clinic directly to update your details.
+[02:11] AGENT: If you'd like, I could have the support team reach out to help fix this.
+[02:16] BOT: That's frustrating.
+[02:17] BOT: Yes. Please have the support team reach out to fix it. And if they look, could you tell me what name or details you have for me right now? I just wanna confirm what's wrong with it.
+[02:29] AGENT: I don't have access to view or share the details in your record directly.
+[02:33] AGENT: Since I couldn't find a match for your information,
+[02:36] AGENT: the clinic support team will need to look into it and help you update or confirm your details.
+[02:41] AGENT: They'll be able to tell you exactly what's on file and help fix any issues.
+[02:46] AGENT: Would you like me to connect you to them now?
+[02:50] BOT: Yes.
+[02:51] BOT: Please connect me to them. I want to confirm
+[02:54] AGENT: Transfer you now. Thank you.
+[02:58] AGENT: Hello. You've reached the pretty

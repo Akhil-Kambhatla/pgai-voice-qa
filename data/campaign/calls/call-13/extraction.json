@@ -1,0 +1,99 @@
+{
+  "call_id": "campaign/call-13",
+  "extracted_at": "2026-08-27T15:30:31.646739+00:00",
+  "model": "gpt-5.4-mini",
+  "returned_counts": {
+    "facts": 3,
+    "capabilities": 1,
+    "claims": 2,
+    "promises": 2,
+    "entities": 3
+  },
+  "raw": {
+    "facts": [
+      {
+        "slot": "locations",
+        "value": "Appointments are at Pivot Point Orthopedics.",
+        "at": "2:13"
+      },
+      {
+        "slot": "providers",
+        "value": "Dr. Judy Hauser sees patients here.",
+        "at": "1:24"
+      },
+      {
+        "slot": "providers",
+        "value": "Dr. Dugi Hauser sees patients here.",
+        "at": "2:13"
+      }
+    ],
+    "capabilities": [
+      {
+        "text": "I can help with your insurance question.",
+        "ability": "insurance help",
+        "can": true,
+        "at": "2:46"
+      }
+    ],
+    "claims": [
+      {
+        "text": "Yes. Your appointment is set for Tuesday, September 1 at 10:30AM with doctor Dugi Hauser at Pivot Point Orthopedics.",
+        "action": "booked appointment",
+        "at": "2:13"
+      },
+      {
+        "text": "I sent a text link to your number ending in 8142.",
+        "action": "sent text link",
+        "at": "3:39"
+      }
+    ],
+    "promises": [
+      {
+        "text": "I'll send you a text with a link to upload your insurance card when you have it ready.",
+        "action": "send insurance upload link",
+        "at": "3:06"
+      },
+      {
+        "text": "One moment while I connect you to our insurance support workflow.",
+        "action": "connect to insurance support workflow",
+        "at": "2:48"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Pivot Point Orthopedics",
+        "kind": "location"
+      },
+      {
+        "name": "Dr. Judy Hauser",
+        "kind": "provider"
+      },
+      {
+        "name": "Dr. Dugi Hauser",
+        "kind": "provider"
+      }
+    ]
+  },
+  "applied": [
+    "oracle: locations restated consistently (times_stated=6)",
+    "oracle: providers restated consistently (times_stated=4)",
+    "oracle: providers restated consistently (times_stated=5)",
+    "claim: claim-03 unverified (booked appointment)",
+    "claim: claim-04 unverified (sent text link)",
+    "promise: promise-23 at 3:06 (send insurance upload link)",
+    "promise: promise-24 at 2:48 (connect to insurance support workflow)",
+    "capability: cap-28 insurance help can=True",
+    "frontier: Dr. Judy Hauser (provider) unprobed",
+    "frontier: Dr. Dugi Hauser (provider) unprobed"
+  ],
+  "skipped": [
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pivot Point Orthopedics",
+        "kind": "location"
+      }
+    }
+  ]
+}

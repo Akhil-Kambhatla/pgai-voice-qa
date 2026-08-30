@@ -1,0 +1,49 @@
+[00:00] AGENT: This call may be recorded for quality and training purposes.
+[00:03] AGENT: Thanks
+[00:06] AGENT: for calling Pivot Point Orthopaedics,
+[00:09] AGENT: part of Pretty Good AI. How may I help you today?
+[00:15] BOT: Hi. I'm calling for a new orthopedic appointment.
+[00:18] BOT: My shoulder strain from lifting hasn't settled down. What days do you have available?
+[00:25] AGENT: Can you please provide your full name and date of birth?
+[00:29] BOT: My name is Achela Kambatla, and I was born in 2003.
+[00:35] AGENT: Could you please tell me your full date of birth, including the month and day?
+[00:42] BOT: My date of birth is 06/02/2003.
+[00:51] AGENT: Just to confirm, you're looking to book a new patient consultation for your shoulder strain. Is that correct?
+[00:59] BOT: Yes. That's correct. I'm a new patient, and I'm trying to book a consultation for my shoulder strain.
+[01:06] AGENT: Do you have a specific provider you'd like to see, or are you open to the first available appointment?
+[01:14] BOT: I am open to the first available appointment.
+[01:17] BOT: But if there's a specific provider or time that fits, I'd still prefer that.
+[01:24] AGENT: We have openings this coming Tuesday with doctor Judy Hauser.
+[01:28] AGENT: Do you have a preferred time of day like morning or afternoon?
+[01:35] BOT: Morning works for me, but I'm flexible if it's not available.
+[01:41] AGENT: The earliest available slot is Tuesday, September 1 at 10:30AM
+[01:46] AGENT: with doctor Judy Hauser.
+[01:48] AGENT: Would you like to book that time?
+[01:52] AGENT: The
+[01:57] BOT: Yes.
+[01:58] BOT: I
+[02:00] BOT: yes.
+[02:01] BOT: Please book that time. Just to confirm,
+[02:04] BOT: Tuesday, September 1 at 10:30AM
+[02:07] BOT: with doctor Doogie Howser. Is that correct?
+[02:13] AGENT: Yes. Your appointment is set for Tuesday, September 1 at 10:30AM
+[02:18] AGENT: with doctor Dugi Hauser at Pivot Point Orthopedics.
+[02:22] AGENT: Please bring your photo ID, insurance card, a list of current medications,
+[02:26] AGENT: and any imaging discs if you have them. Would you like a text message with your appointment details?
+[02:34] BOT: Yes. A text would be great. I'll bring my medication list and ID, and I'll look into any imaging I may have. Also, could you tell me if my insurance is accepted?
+[02:46] AGENT: I can help with your insurance question.
+[02:48] AGENT: One moment while I connect you to our insurance support workflow.
+[02:53] AGENT: Let me help with that. What is the name of your insurance company and plan?
+[02:59] BOT: I'm not sure yet. I don't have that information with me.
+[03:03] BOT: Could you tell me which insurance plan I should mention?
+[03:06] AGENT: No problem. You can update your insurance details later. I'll send you a text with a link to upload your insurance card when you have it ready.
+[03:15] AGENT: There is no insurance currently on file for you. Would you like to receive a text message at your number ending 8142
+[03:22] AGENT: to upload photos of your insurance card when you have it?
+[03:26] BOT: Yes.
+[03:26] BOT: That would be great. You can text me at the number ending in 8142.
+[03:31] BOT: I may need a bit to get it uploaded, but I'll take care of it when I've got it ready.
+[03:39] AGENT: I sent a text link to your number ending in 8142.
+[03:43] AGENT: When you have your insurance card ready, just use that link to upload photos of the front and back. If you need help with any part of the form, let me know.
+[03:56] BOT: Got it. Thanks.
+[03:57] BOT: I'll use that link when I have my insurance card ready.
+[04:00] BOT: Anything else I should know before Tuesday?

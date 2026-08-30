@@ -1,0 +1,43 @@
+{
+  "call_id": "campaign/call-03",
+  "extracted_at": "2026-08-23T15:56:33.791803+00:00",
+  "model": "gpt-5.4-mini",
+  "returned_counts": {
+    "facts": 1,
+    "capabilities": 0,
+    "claims": 0,
+    "promises": 0,
+    "entities": 1
+  },
+  "raw": {
+    "facts": [
+      {
+        "slot": "locations",
+        "value": "Pivot Point Orthopaedics.",
+        "at": "0:10"
+      }
+    ],
+    "capabilities": [],
+    "claims": [],
+    "promises": [],
+    "entities": [
+      {
+        "name": "Pivot Point Orthopaedics",
+        "kind": "location"
+      }
+    ]
+  },
+  "applied": [
+    "oracle: locations restated consistently (times_stated=2)"
+  ],
+  "skipped": [
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pivot Point Orthopaedics",
+        "kind": "location"
+      }
+    }
+  ]
+}

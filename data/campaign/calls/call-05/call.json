@@ -1,0 +1,58 @@
+{
+  "call_id": "call-05",
+  "scenario_id": "05-verify-booking-readback",
+  "axes": {
+    "intent": "out_of_scope",
+    "identity": "elena",
+    "temporal": "ambiguous",
+    "cooperation": "contradictory",
+    "delivery": "clean",
+    "register": "rushed",
+    "continuity": "verifies_claim",
+    "curveball": "none"
+  },
+  "identity": "elena",
+  "telnyx_sid": "v3:j0JUqhqCSog1NlgbH33JhJ4MNlZMzuf4t2heLtEajau4e2_ZNeBYdA",
+  "to": "+18054398008",
+  "from": "+12078048142",
+  "placed_at": "2026-08-23T16:04:32.110785+00:00",
+  "session_config": {
+    "type": "semantic_vad",
+    "eagerness": "high"
+  },
+  "status_events": [
+    {
+      "AccountSid": "cefd9136-3dd7-42eb-8685-3a4739851770",
+      "AnsweredTime": "2026-08-23T16:04:37.384744Z",
+      "CallControlId": "v3:j0JUqhqCSog1NlgbH33JhJ4MNlZMzuf4t2heLtEajau4e2_ZNeBYdA",
+      "CallDuration": "180",
+      "CallLegId": "542dbbec-9f0c-11f1-bfc1-02420a0df420",
+      "CallQualityStats": "{\"inbound\":{\"jitter_max_variance\":\"88.40\",\"jitter_packet_count\":\"0\",\"mos\":\"4.50\",\"packet_count\":\"9184\",\"skip_packet_count\":\"14\"},\"outbound\":{\"packet_count\":\"8958\",\"skip_packet_count\":\"0\"}}",
+      "CallSessionId": "542b0c9e-9f0c-11f1-8071-02420a0df420",
+      "CallSid": "v3:j0JUqhqCSog1NlgbH33JhJ4MNlZMzuf4t2heLtEajau4e2_ZNeBYdA",
+      "CallSidLegacy": "v3:j0JUqhqCSog1NlgbH33JhJ4MNlZMzuf4t2heLtEajau4e2_ZNeBYdA",
+      "CallStatus": "completed",
+      "CallbackSource": "call-progress-events",
+      "ConnectionId": "3028585572957422853",
+      "EndTime": "2026-08-23T16:07:37.664736Z",
+      "From": "+12078048142",
+      "HangupCause": "normal_clearing",
+      "HangupSource": "caller",
+      "OccurredAt": "2026-08-23T16:07:37.664736Z",
+      "OrganizationId": "",
+      "SequenceNumber": "0",
+      "SipHangupCause": "unspecified",
+      "StartTime": "2026-08-23T16:04:37.384744Z",
+      "Timestamp": "2026-08-23 16:07:37.854664Z",
+      "To": "+18054398008",
+      "UserId": "cefd9136-3dd7-42eb-8685-3a4739851770",
+      "received_at": "2026-08-23T16:07:37.895022+00:00"
+    }
+  ],
+  "recording": {
+    "sid": "a8e69b4d-45a9-42d4-a6f9-0de428629e91",
+    "start_time": "Sun, 23 Aug 2026 16:04:37 +0000",
+    "duration": 180,
+    "channels": 2
+  }
+}

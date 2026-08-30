@@ -1,0 +1,21 @@
+{"speaker": "agent", "text": "Quality and training purposes. Para espa\u00f1ol, oprima el dos.", "elapsed_seconds": 6.9}
+{"speaker": "agent", "text": "Thank you for calling Pivot Point Orthopedics. Would you like to create a demo patient profile? I see your first and last name to get started.", "elapsed_seconds": 15.2}
+{"speaker": "bot", "text": "Okay, thanks for the headsI\u2019m not looking to demo anything. I need a new patient appointment.", "elapsed_seconds": 15.9}
+{"speaker": "agent", "text": "To schedule a new patient appointment, you'll need a demo patient profile", "elapsed_seconds": 26.5}
+{"speaker": "agent", "text": "Would you like to create one now?", "elapsed_seconds": 28.3}
+{"speaker": "agent", "text": "I just need your first and last name", "elapsed_seconds": 32.2}
+{"speaker": "bot", "text": "Dana Whitfield.", "elapsed_seconds": 33.0}
+{"speaker": "agent", "text": "Your patient profile is set up and your date of birth is July 4th, 2000 for demo purposes. How can I help you today?", "elapsed_seconds": 52.3}
+{"speaker": "bot", "text": "That\u2019s a demo profile, not mine. I need a real new patient booking.", "elapsed_seconds": 53.3}
+{"speaker": "agent", "text": "Let's get your new patient appointment scheduled.", "elapsed_seconds": 63.7}
+{"speaker": "agent", "text": "Do you have a specific provider you'd like to see or are you open to the first available?", "elapsed_seconds": 70.6}
+{"speaker": "bot", "text": "First available is fine. I\u2019m new and flexible.", "elapsed_seconds": 71.7}
+{"speaker": "agent", "text": "We have openings for new patient appointments this coming Tuesday with Doogie Howser. Would you like 11:15 a.m., 12 p.m. or 12:45 p.m", "elapsed_seconds": 89.6}
+{"speaker": "bot", "text": "Eleven fifteen AM.", "elapsed_seconds": 90.0}
+{"speaker": "agent", "text": "You're booked for Tuesday, August 25th at 11:15 a.m. with Judy Hauser at Pivot Point Orthopedics. Please bring your photo ID, insurance card, a list of current medications, and any imaging discs if you have them. Is there anything else I can help you with?", "elapsed_seconds": 115.6}
+{"speaker": "tool", "text": "{\"name\": \"silent_compare\", \"arguments\": {\"claim\": \"Booked for Tuesday, August 25 at 11:15 AM with Dr. Dudi Hauser at PivotPoint Orthopedics.\"}, \"result\": {\"status\": \"unknown\"}}", "elapsed_seconds": 116.8}
+{"speaker": "tool", "text": "{\"name\": \"silent_compare\", \"arguments\": {\"claim\": \"Please bring your photo ID, insurance card, a list of current medications, and any imaging discs if you have them.\"}, \"result\": {\"status\": \"unknown\"}}", "elapsed_seconds": 117.3}
+{"speaker": "bot", "text": "Got it. I\u2019m Dana Whitfield. The appointment is Tuesday, August 25th at 11:15. I\u2019ll bring those items. Thanks.", "elapsed_seconds": 118.7}
+{"speaker": "agent", "text": "You're all set for your appointment. If you need anything else, just let us know.", "elapsed_seconds": 134.6}
+{"speaker": "agent", "text": "Have a great day", "elapsed_seconds": 137.8}
+{"speaker": "tool", "text": "{\"name\": \"hang_up\", \"arguments\": {\"reason\": \"Appointment arranged. No further questions.\"}, \"result\": {\"hangup\": \"ok\"}}", "elapsed_seconds": 138.6}

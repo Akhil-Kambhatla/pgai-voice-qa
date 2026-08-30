@@ -1,0 +1,10 @@
+[00:02] AGENT: Hi. This is Akhil's clinic.
+[00:06] BOT: Hi.
+[00:07] BOT: Sorry. Are you this clinic, and are you still open right now? Thanks.
+[00:11] BOT: Is this the clinic I'm calling? And are you still open tonight?
+[00:18] AGENT: No. We're not open tonight. Our office timings are from 9AM to 5PM from Monday through Friday, and we are closed on the weekends.
+[00:27] BOT: Okay. Let me make sure I've got that clearly. I just need a moment to repeat what you said.
+[00:34] BOT: Okay. So you're closed tonight. Your hours are Monday through Friday, 9AM to 5PM, and weekends are closed. Did I hear that right?
+[00:43] AGENT: Yeah.
+[00:45] BOT: Thanks so much. I'll call back tomorrow. Take care.
+[00:51] AGENT: Bye bye.

@@ -1,0 +1,62 @@
+{
+  "hours": {
+    "value": "We close at 5PM.",
+    "stated_in": "call-06",
+    "at": "0:32",
+    "times_stated": 2
+  },
+  "closed_days": {
+    "value": null,
+    "stated_in": null,
+    "at": null,
+    "times_stated": 0
+  },
+  "locations": {
+    "value": null,
+    "stated_in": null,
+    "at": null,
+    "times_stated": 0
+  },
+  "providers": {
+    "value": null,
+    "stated_in": null,
+    "at": null,
+    "times_stated": 0
+  },
+  "services": {
+    "value": null,
+    "stated_in": null,
+    "at": null,
+    "times_stated": 0
+  },
+  "insurers": {
+    "value": null,
+    "stated_in": null,
+    "at": null,
+    "times_stated": 0
+  },
+  "refill_policy": {
+    "value": null,
+    "stated_in": null,
+    "at": null,
+    "times_stated": 0
+  },
+  "cancel_window": {
+    "value": null,
+    "stated_in": null,
+    "at": null,
+    "times_stated": 0
+  },
+  "appointment_length": {
+    "value": null,
+    "stated_in": null,
+    "at": null,
+    "times_stated": 0
+  },
+  "holiday_schedule": {
+    "value": null,
+    "stated_in": null,
+    "at": null,
+    "times_stated": 0
+  }
+}

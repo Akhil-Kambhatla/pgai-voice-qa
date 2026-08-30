@@ -1,0 +1,258 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "01a01178-d6a3-7202-b471-bd52ca528a68",
+    "sha256": "29e51e3b1e8740f20438704677520a927e712aa540771a81d0d7d75703dec3c2",
+    "created": "2026-08-17 20:45:27.294000+00:00",
+    "duration": 23.795937,
+    "channels": 2,
+    "models": [
+      "2187e11a-3532-4498-b076-81fa530bdd49"
+    ],
+    "model_info": {
+      "2187e11a-3532-4498-b076-81fa530bdd49": {
+        "name": "general-nova-3",
+        "version": "2025-07-31.0",
+        "arch": "nova-3"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "Hello? Hello? Hi. Bye. What's up?",
+            "confidence": 0.99121094,
+            "words": [
+              {
+                "word": "hello",
+                "start": 7.04,
+                "end": 7.44,
+                "confidence": 0.9890137,
+                "punctuated_word": "Hello?"
+              },
+              {
+                "word": "hello",
+                "start": 13.080875,
+                "end": 13.960875,
+                "confidence": 0.9782715,
+                "punctuated_word": "Hello?"
+              },
+              {
+                "word": "hi",
+                "start": 16.760876,
+                "end": 17.480875,
+                "confidence": 0.9904785,
+                "punctuated_word": "Hi."
+              },
+              {
+                "word": "bye",
+                "start": 18.280874,
+                "end": 19.160873,
+                "confidence": 0.9941406,
+                "punctuated_word": "Bye."
+              },
+              {
+                "word": "what's",
+                "start": 19.960875,
+                "end": 20.440876,
+                "confidence": 0.99121094,
+                "punctuated_word": "What's"
+              },
+              {
+                "word": "up",
+                "start": 20.440876,
+                "end": 20.680874,
+                "confidence": 0.9946289,
+                "punctuated_word": "up?"
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nHello? Hello? Hi. Bye. What's up?",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "Hello?",
+                      "start": 7.04,
+                      "end": 7.44
+                    },
+                    {
+                      "text": "Hello?",
+                      "start": 13.080875,
+                      "end": 13.960875
+                    },
+                    {
+                      "text": "Hi.",
+                      "start": 16.760876,
+                      "end": 17.480875
+                    },
+                    {
+                      "text": "Bye.",
+                      "start": 18.280874,
+                      "end": 19.160873
+                    },
+                    {
+                      "text": "What's up?",
+                      "start": 19.960875,
+                      "end": 20.680874
+                    }
+                  ],
+                  "num_words": 6,
+                  "start": 7.04,
+                  "end": 20.680874
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "transcript": "",
+            "confidence": 0.0,
+            "words": [],
+            "paragraphs": {
+              "transcript": "\n",
+              "paragraphs": []
+            }
+          }
+        ]
+      }
+    ],
+    "utterances": [
+      {
+        "start": 7.04,
+        "end": 7.44,
+        "confidence": 0.9890137,
+        "channel": 0,
+        "transcript": "Hello?",
+        "words": [
+          {
+            "word": "hello",
+            "start": 7.04,
+            "end": 7.44,
+            "confidence": 0.9890137,
+            "punctuated_word": "Hello?"
+          }
+        ],
+        "id": "8bbe8d8e-e2f1-4ece-a377-f9270ff8bc47"
+      },
+      {
+        "start": 13.080875,
+        "end": 13.960875,
+        "confidence": 0.9782715,
+        "channel": 0,
+        "transcript": "Hello?",
+        "words": [
+          {
+            "word": "hello",
+            "start": 13.080875,
+            "end": 13.960875,
+            "confidence": 0.9782715,
+            "punctuated_word": "Hello?"
+          }
+        ],
+        "id": "e39733cf-43ac-4823-8619-e04ff0c08814"
+      },
+      {
+        "start": 16.760876,
+        "end": 17.480875,
+        "confidence": 0.9904785,
+        "channel": 0,
+        "transcript": "Hi.",
+        "words": [
+          {
+            "word": "hi",
+            "start": 16.760876,
+            "end": 17.480875,
+            "confidence": 0.9904785,
+            "punctuated_word": "Hi."
+          }
+        ],
+        "id": "76a89f29-db47-4066-87a3-2efd6d70736e"
+      },
+      {
+        "start": 18.280874,
+        "end": 19.160873,
+        "confidence": 0.9941406,
+        "channel": 0,
+        "transcript": "Bye.",
+        "words": [
+          {
+            "word": "bye",
+            "start": 18.280874,
+            "end": 19.160873,
+            "confidence": 0.9941406,
+            "punctuated_word": "Bye."
+          }
+        ],
+        "id": "d8a6b73a-e764-432d-9e5f-d5ef87cfd7a0"
+      },
+      {
+        "start": 19.960875,
+        "end": 20.680874,
+        "confidence": 0.9929199,
+        "channel": 0,
+        "transcript": "What's up?",
+        "words": [
+          {
+            "word": "what's",
+            "start": 19.960875,
+            "end": 20.440876,
+            "confidence": 0.99121094,
+            "punctuated_word": "What's"
+          },
+          {
+            "word": "up",
+            "start": 20.440876,
+            "end": 20.680874,
+            "confidence": 0.9946289,
+            "punctuated_word": "up?"
+          }
+        ],
+        "id": "d55eb97a-d747-40b1-89f4-335cb47c24b3"
+      }
+    ],
+    "paragraphs": {
+      "transcript": "\nChannel 0: Hello? Hello? Hi. Bye. What's up?",
+      "paragraphs": [
+        {
+          "sentences": [
+            {
+              "text": "Hello?",
+              "start": 7.04,
+              "end": 7.44
+            },
+            {
+              "text": "Hello?",
+              "start": 13.080875,
+              "end": 13.960875
+            },
+            {
+              "text": "Hi.",
+              "start": 16.760876,
+              "end": 17.480875
+            },
+            {
+              "text": "Bye.",
+              "start": 18.280874,
+              "end": 19.160873
+            },
+            {
+              "text": "What's up?",
+              "start": 19.960875,
+              "end": 20.680874
+            }
+          ],
+          "channel": 0,
+          "num_words": 6,
+          "start": 7.04,
+          "end": 20.680874
+        }
+      ]
+    }
+  }
+}

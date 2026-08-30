@@ -1,0 +1,24 @@
+[00:02] AGENT: Hi. My name is Richard.
+[00:05] AGENT: Welcome to Veterans Cleaning. How may I assist you?
+[00:17] BOT: Hi. I'm calling about a knee that's still bothering me. Are there openings this week?
+[00:25] AGENT: Sure.
+[00:26] AGENT: Which doctor would you
+[00:28] AGENT: want to see?
+[00:37] BOT: Do you have a specific doctor assigned for this? If you suggested a name, is that who I'm seeing?
+[00:46] AGENT: Sorry.
+[00:47] AGENT: I didn't understand you.
+[00:50] AGENT: Can you please provide the name of the doctor you wanna see?
+[00:56] BOT: I don't have any preference.
+[00:58] BOT: Which doctor would be available for me?
+[01:04] AGENT: What date are you free on?
+[01:08] BOT: Which dates do you have available?
+[01:13] AGENT: We can book you for doctor Sreya on the August 20 at 4PM.
+[01:23] BOT: Okay. That sounds good. But can you share the spelling of doctor Sreia and confirm the appointment is on August 20 at 4PM?
+[01:33] AGENT: The name of the doctor is s r e y a.
+[01:38] AGENT: That's the spelling. And,
+[01:41] AGENT: yes, the appointment is for August 20 at 4PM.
+[01:53] BOT: Okay.
+[01:54] BOT: Sreya, that's how you spell it, and August 20 at 4PM sounds booked.
+[02:03] AGENT: Yes.
+[02:05] AGENT: Do you have anything else that I can help you with?
+[02:08] BOT: No. Thanks. That's all.

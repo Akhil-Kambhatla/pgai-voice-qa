@@ -1,0 +1,42 @@
+[00:00] AGENT: This call may be recorded for quality and training purposes.
+[00:03] AGENT: Thanks
+[00:07] AGENT: for calling Pivot Point Orthopaedics,
+[00:09] AGENT: part of Pretty Good AI. How may I help you today?
+[00:15] BOT: Hi. I'm coming in for a follow-up for my knee. Do you have an available time next week, and what time is it?
+[00:24] AGENT: I can help with your follow-up. May I have your full name and date of birth?
+[00:31] BOT: Dana Whitfield.
+[00:32] BOT: 03/14/1988.
+[00:39] AGENT: Just to confirm,
+[00:40] AGENT: I have your name as Dana Whitfield, and your date of birth is 03/14/1988.
+[00:45] AGENT: Is that correct?
+[00:47] BOT: Yes.
+[00:48] BOT: That's right. Thanks.
+[00:52] AGENT: Thank you for confirming.
+[00:54] AGENT: One moment while I look up your information.
+[00:58] BOT: Thanks.
+[00:59] BOT: I can hold for a moment while you check that.
+[01:03] AGENT: Perfect.
+[01:04] AGENT: Please hold while I check your details.
+[01:09] BOT: Okay. I'll wait. Thanks.
+[01:14] AGENT: Thank you for your patience. I'll have your information shortly.
+[01:20] BOT: Okay.
+[01:21] BOT: I'll stay on the phone.
+[01:24] AGENT: Sounds good. I'll let you know as soon as I have your details.
+[01:28] BOT: Alright.
+[01:29] BOT: Sounds good. I'm ready when you are.
+[01:34] AGENT: Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, just let me know.
+[01:44] BOT: I don't have a phone number on hand for you to use. That's the only thing I'm missing right now, so I can't get it.
+[01:53] AGENT: No problem. Could you please spell out your first and last name and confirm your date of birth '1 more time?
+[02:00] BOT: Dana Whitfield.
+[02:02] BOT: Date of birth, 03/14/1988.
+[02:09] AGENT: Thank you for confirming.
+[02:11] AGENT: I still can't access your record.
+[02:13] AGENT: Can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to have them contact you about your follow-up appointment?
+[02:24] BOT: Yes, please. Have them contact me about the follow-up, but I don't know which number they have on file. Can you tell me what it is?
+[02:35] AGENT: I'm not able to see which phone number is on file for you. I'll connect you to our patient support team so they can help you directly.
+[02:42] AGENT: Please stay on the line. Transferring you now. Thank you.
+[02:46] BOT: Thanks.
+[02:47] BOT: Oh,
+[02:47] AGENT: Hello. You've reached the Pretty Good AI test line. Goodbye.
+[02:53] BOT: alright.
+[02:54] BOT: Sounds like I might have gotten routed somewhere else. If that was a test line, that's fine. I'll stop here.

@@ -1,0 +1,9 @@
+{"speaker": "bot", "text": "Hi, I\u2019m calling about a knee that\u2019s still bothering me. Are there openings this week?", "elapsed_seconds": 17.0}
+{"speaker": "bot", "text": "Do you have a specific doctor assigned for this? If you suggested a name, is that who I\u2019m seeing?", "elapsed_seconds": 37.1}
+{"speaker": "tool", "text": "{\"name\": \"silent_compare\", \"arguments\": {\"claim\": \"Please provide the name of the doctor you want to see.\"}, \"result\": {\"status\": \"unknown\"}}", "elapsed_seconds": 54.8}
+{"speaker": "bot", "text": "I don\u2019t have a preference. Which doctor would be available for me?", "elapsed_seconds": 55.9}
+{"speaker": "bot", "text": "Which dates do you have available?", "elapsed_seconds": 67.0}
+{"speaker": "tool", "text": "{\"name\": \"silent_compare\", \"arguments\": {\"claim\": \"We can book you for Dr. Sreya on the 20th of August at 4 PM.\"}, \"result\": {\"status\": \"unknown\"}}", "elapsed_seconds": 80.9}
+{"speaker": "bot", "text": "Okay, that sounds good, but can you share the spelling of Dr. Sreya and confirm the appointment is on August 20th at 4 PM?", "elapsed_seconds": 82.5}
+{"speaker": "bot", "text": "Okay, Sreya, that\u2019s how you spell it, and August 20th at 4 PM\u2014sounds booked.", "elapsed_seconds": 113.1}
+{"speaker": "bot", "text": "No, thanks. That\u2019s all.", "elapsed_seconds": 127.5}

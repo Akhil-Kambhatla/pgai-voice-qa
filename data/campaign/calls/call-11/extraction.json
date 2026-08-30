@@ -1,0 +1,109 @@
+{
+  "call_id": "campaign/call-11",
+  "extracted_at": "2026-08-26T04:11:08.328394+00:00",
+  "model": "gpt-5.4-mini",
+  "returned_counts": {
+    "facts": 0,
+    "capabilities": 5,
+    "claims": 0,
+    "promises": 4,
+    "entities": 2
+  },
+  "raw": {
+    "facts": [],
+    "capabilities": [
+      {
+        "text": "I can help with your follow-up.",
+        "ability": "help with follow-up",
+        "can": true,
+        "at": "0:24"
+      },
+      {
+        "text": "I still can't access your record.",
+        "ability": "access record",
+        "can": false,
+        "at": "2:11"
+      },
+      {
+        "text": "Can't proceed further right now, but I can make sure our clinic support team follows up with you.",
+        "ability": "clinic follow-up",
+        "can": true,
+        "at": "2:13"
+      },
+      {
+        "text": "I'm not able to see which phone number is on file for you.",
+        "ability": "see phone number",
+        "can": false,
+        "at": "2:35"
+      },
+      {
+        "text": "I'll connect you to our patient support team so they can help you directly.",
+        "ability": "connect to support",
+        "can": true,
+        "at": "2:35"
+      }
+    ],
+    "claims": [],
+    "promises": [
+      {
+        "text": "I'll have your information shortly.",
+        "action": "have information shortly",
+        "at": "1:14"
+      },
+      {
+        "text": "I'll let you know as soon as I have your details.",
+        "action": "let you know",
+        "at": "1:24"
+      },
+      {
+        "text": "I'll connect you to our patient support team so they can help you directly.",
+        "action": "connect to patient support team",
+        "at": "2:35"
+      },
+      {
+        "text": "Transferring you now.",
+        "action": "transfer call",
+        "at": "2:42"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Pivot Point Orthopaedics",
+        "kind": "location"
+      },
+      {
+        "name": "Pretty Good AI",
+        "kind": "other"
+      }
+    ]
+  },
+  "applied": [
+    "promise: promise-17 at 1:14 (have information shortly)",
+    "promise: promise-18 at 1:24 (let you know)",
+    "promise: promise-19 at 2:35 (connect to patient support team)",
+    "promise: promise-20 at 2:42 (transfer call)",
+    "capability: cap-22 help with follow-up can=True",
+    "capability: cap-23 access record can=False",
+    "capability: cap-24 clinic follow-up can=True",
+    "capability: cap-25 see phone number can=False",
+    "capability: cap-26 connect to support can=True"
+  ],
+  "skipped": [
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pivot Point Orthopaedics",
+        "kind": "location"
+      }
+    },
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pretty Good AI",
+        "kind": "other"
+      }
+    }
+  ]
+}

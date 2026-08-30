@@ -1,0 +1,194 @@
+[
+  {
+    "id": "promise-01",
+    "text": "I'll help you with that.",
+    "action": "help with hours lookup",
+    "identity": "akhil",
+    "call_id": "campaign/call-01",
+    "at": "0:42"
+  },
+  {
+    "id": "promise-02",
+    "text": "I'll provide the information.",
+    "action": "provide hours information",
+    "identity": "akhil",
+    "call_id": "campaign/call-01",
+    "at": "1:06"
+  },
+  {
+    "id": "promise-03",
+    "text": "If you'd like, I can let them know you need this information and have them follow-up with you.",
+    "action": "notify staff and follow up",
+    "identity": "akhil",
+    "call_id": "campaign/call-01",
+    "at": "1:45"
+  },
+  {
+    "id": "promise-04",
+    "text": "I'll connect you to our clinic support team so they can help confirm the schedule for August 18.",
+    "action": "connect to clinic support",
+    "identity": "akhil",
+    "call_id": "campaign/call-01",
+    "at": "2:03"
+  },
+  {
+    "id": "promise-05",
+    "text": "I can make sure our clinic support team follows up with you.",
+    "action": "have support team follow up",
+    "identity": "elena",
+    "call_id": "campaign/call-05",
+    "at": "1:33"
+  },
+  {
+    "id": "promise-06",
+    "text": "If you'd like, I could have the support team reach out to help fix this.",
+    "action": "have support team reach out",
+    "identity": "elena",
+    "call_id": "campaign/call-05",
+    "at": "2:11"
+  },
+  {
+    "id": "promise-07",
+    "text": "The clinic support team will need to look into it and help you update or confirm your details.",
+    "action": "connect support team for follow-up",
+    "identity": "elena",
+    "call_id": "campaign/call-05",
+    "at": "2:36"
+  },
+  {
+    "id": "promise-08",
+    "text": "Would you like me to connect you to them now?",
+    "action": "connect to support team",
+    "identity": "elena",
+    "call_id": "campaign/call-05",
+    "at": "2:46"
+  },
+  {
+    "id": "promise-09",
+    "text": "Transfer you now. Thank you.",
+    "action": "transfer to support team",
+    "identity": "elena",
+    "call_id": "campaign/call-05",
+    "at": "2:54"
+  },
+  {
+    "id": "promise-10",
+    "text": "Transferring you now.",
+    "action": "transfer to patient support",
+    "identity": "robert",
+    "call_id": "campaign/call-06",
+    "at": "2:12"
+  },
+  {
+    "id": "promise-11",
+    "text": "I'll connect you to our patient support team now",
+    "action": "connect to patient support",
+    "identity": "dana",
+    "call_id": "campaign/call-08",
+    "at": "2:22"
+  },
+  {
+    "id": "promise-12",
+    "text": "I can make sure our clinic support team follows up with you.",
+    "action": "make sure clinic support follows up",
+    "identity": "dana",
+    "call_id": "campaign/call-09",
+    "at": "1:59"
+  },
+  {
+    "id": "promise-13",
+    "text": "Would you like me to connect you to our patient support team?",
+    "action": "connect to patient support team",
+    "identity": "dana",
+    "call_id": "campaign/call-09",
+    "at": "1:59"
+  },
+  {
+    "id": "promise-14",
+    "text": "Transferring you now.",
+    "action": "transfer call",
+    "identity": "dana",
+    "call_id": "campaign/call-09",
+    "at": "2:11"
+  },
+  {
+    "id": "promise-15",
+    "text": "I can make sure our clinic support team follows up with you.",
+    "action": "clinic support follow-up",
+    "identity": "dana",
+    "call_id": "campaign/call-10",
+    "at": "1:39"
+  },
+  {
+    "id": "promise-16",
+    "text": "Transferring you now.",
+    "action": "transfer",
+    "identity": "dana",
+    "call_id": "campaign/call-10",
+    "at": "2:04"
+  },
+  {
+    "id": "promise-17",
+    "text": "I'll have your information shortly.",
+    "action": "have information shortly",
+    "identity": "dana",
+    "call_id": "campaign/call-11",
+    "at": "1:14"
+  },
+  {
+    "id": "promise-18",
+    "text": "I'll let you know as soon as I have your details.",
+    "action": "let you know",
+    "identity": "dana",
+    "call_id": "campaign/call-11",
+    "at": "1:24"
+  },
+  {
+    "id": "promise-19",
+    "text": "I'll connect you to our patient support team so they can help you directly.",
+    "action": "connect to patient support team",
+    "identity": "dana",
+    "call_id": "campaign/call-11",
+    "at": "2:35"
+  },
+  {
+    "id": "promise-20",
+    "text": "Transferring you now.",
+    "action": "transfer call",
+    "identity": "dana",
+    "call_id": "campaign/call-11",
+    "at": "2:42"
+  },
+  {
+    "id": "promise-21",
+    "text": "I'll connect you to our patient support team so they can help with your prescription issue.",
+    "action": "connect to patient support team",
+    "identity": "robert",
+    "call_id": "campaign/call-12",
+    "at": "1:53"
+  },
+  {
+    "id": "promise-22",
+    "text": "Transferring you now.",
+    "action": "transfer call",
+    "identity": "robert",
+    "call_id": "campaign/call-12",
+    "at": "2:03"
+  },
+  {
+    "id": "promise-23",
+    "text": "I'll send you a text with a link to upload your insurance card when you have it ready.",
+    "action": "send insurance upload link",
+    "identity": "akhil",
+    "call_id": "campaign/call-13",
+    "at": "3:06"
+  },
+  {
+    "id": "promise-24",
+    "text": "One moment while I connect you to our insurance support workflow.",
+    "action": "connect to insurance support workflow",
+    "identity": "akhil",
+    "call_id": "campaign/call-13",
+    "at": "2:48"
+  }
+]

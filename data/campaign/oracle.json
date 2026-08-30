@@ -1,0 +1,62 @@
+{
+  "hours": {
+    "value": null,
+    "stated_in": null,
+    "at": null,
+    "times_stated": 0
+  },
+  "closed_days": {
+    "value": null,
+    "stated_in": null,
+    "at": null,
+    "times_stated": 0
+  },
+  "locations": {
+    "value": "Pivot Point Orthopaedics is a clinic location.",
+    "stated_in": "campaign/call-01",
+    "at": "0:08",
+    "times_stated": 6
+  },
+  "providers": {
+    "value": "Dugie Hauser sees new patient appointments this coming Tuesday.",
+    "stated_in": "campaign/call-04",
+    "at": "1:17",
+    "times_stated": 5
+  },
+  "services": {
+    "value": "To cancel an appointment, a patient profile is needed.",
+    "stated_in": "campaign/call-02",
+    "at": "0:38",
+    "times_stated": 3
+  },
+  "insurers": {
+    "value": "Many Aetna plans are accepted.",
+    "stated_in": "campaign/call-07",
+    "at": "2:30",
+    "times_stated": 1
+  },
+  "refill_policy": {
+    "value": null,
+    "stated_in": null,
+    "at": null,
+    "times_stated": 0
+  },
+  "cancel_window": {
+    "value": null,
+    "stated_in": null,
+    "at": null,
+    "times_stated": 0
+  },
+  "appointment_length": {
+    "value": null,
+    "stated_in": null,
+    "at": null,
+    "times_stated": 0
+  },
+  "holiday_schedule": {
+    "value": null,
+    "stated_in": null,
+    "at": null,
+    "times_stated": 0
+  }
+}

@@ -1,0 +1,6 @@
+{"speaker": "tool", "text": "{\"name\": \"silent_compare\", \"arguments\": {\"claim\": \"Thank you for calling Retail Screening, how can I help you?\"}, \"result\": {\"status\": \"unknown\"}}", "elapsed_seconds": 14.3}
+{"speaker": "bot", "text": "Okay, let me share what I\u2019m dealing with and ask about availability.", "elapsed_seconds": 14.3}
+{"speaker": "bot", "text": "Yeah, I need help with my knee. I\u2019ve got swelling and pain after playing football, and stairs are the worst.", "elapsed_seconds": 32.6}
+{"speaker": "bot", "text": "Yes, I want an appointment. What days and times are available this week?", "elapsed_seconds": 46.6}
+{"speaker": "tool", "text": "{\"name\": \"silent_compare\", \"arguments\": {\"claim\": \"Before we go ahead, I would like to know your name, date of birth, and phone number.\"}, \"result\": {\"status\": \"unknown\"}}", "elapsed_seconds": 62.1}
+{"speaker": "bot", "text": "Sure, I can share the identifying details you asked for, but let me think this through.", "elapsed_seconds": 62.1}

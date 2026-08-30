@@ -1,0 +1,12 @@
+{"speaker": "bot", "text": "Hi, my knee\u2019s been bothering me since the weekend and isn\u2019t getting better. Can I be seen this week?", "elapsed_seconds": 16.9}
+{"speaker": "bot", "text": "Do I need to pick a provider, or can I see anyone?", "elapsed_seconds": 31.8}
+{"speaker": "tool", "text": "{\"name\": \"silent_compare\", \"arguments\": {\"claim\": \"You can aid us select the provider or we can appoint you one.\"}, \"result\": {\"status\": \"unknown\"}}", "elapsed_seconds": 42.7}
+{"speaker": "bot", "text": "Okay\u2014so you can assign someone. But I don\u2019t have a preference. Which provider would be the best option?", "elapsed_seconds": 44.0}
+{"speaker": "bot", "text": "What\u2019s the earliest available day with her?", "elapsed_seconds": 60.8}
+{"speaker": "tool", "text": "{\"name\": \"silent_compare\", \"arguments\": {\"claim\": \"On the August of 25th.\"}, \"result\": {\"status\": \"unknown\"}}", "elapsed_seconds": 70.4}
+{"speaker": "bot", "text": "Got it, let me see what\u2019s available around that date.", "elapsed_seconds": 70.4}
+{"speaker": "bot", "text": "Okay, is there a time on August 25th, like morning or afternoon?", "elapsed_seconds": 85.7}
+{"speaker": "bot", "text": "Got it, I want to confirm the details before we wrap up.Just to confirm, August 25th at 4:00 p.m. with Dr. Shreya Kutty. Is that correct?", "elapsed_seconds": 96.1}
+{"speaker": "bot", "text": "Great, that\u2019s all set. August 25th at 4pm with Dr. Shreya Kutty. Thanks for confirming.", "elapsed_seconds": 114.0}
+{"speaker": "tool", "text": "{\"name\": \"hang_up\", \"arguments\": {\"reason\": \"I have the appointment time and provider confirmed.\"}, \"result\": {\"hangup\": \"denied\", \"missing\": [\"hours\", \"closed_days\"]}}", "elapsed_seconds": 125.7}
+{"speaker": "bot", "text": "Okay, thanks.", "elapsed_seconds": 126.6}

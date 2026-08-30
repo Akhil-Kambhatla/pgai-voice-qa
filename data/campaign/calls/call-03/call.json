@@ -1,0 +1,58 @@
+{
+  "call_id": "call-03",
+  "scenario_id": "03-holiday-reschedule-bob",
+  "axes": {
+    "intent": "reschedule",
+    "identity": "robert",
+    "temporal": "holiday",
+    "cooperation": "distracted",
+    "delivery": "interrupting",
+    "register": "rushed",
+    "continuity": "references_prior",
+    "curveball": "second_intent"
+  },
+  "identity": "robert",
+  "telnyx_sid": "v3:G3_evu7mhoRD0L3DcquuxvknKzorYYy-nI8XfazZ7DnKqoVsMJ1BeA",
+  "to": "+18054398008",
+  "from": "+12078048142",
+  "placed_at": "2026-08-22T19:39:00.515134+00:00",
+  "session_config": {
+    "type": "semantic_vad",
+    "eagerness": "high"
+  },
+  "status_events": [
+    {
+      "AccountSid": "cefd9136-3dd7-42eb-8685-3a4739851770",
+      "AnsweredTime": "2026-08-22T19:39:05.576920Z",
+      "CallControlId": "v3:G3_evu7mhoRD0L3DcquuxvknKzorYYy-nI8XfazZ7DnKqoVsMJ1BeA",
+      "CallDuration": "35",
+      "CallLegId": "1fe3c602-9e61-11f1-a200-02420a0de820",
+      "CallQualityStats": "{\"inbound\":{\"jitter_max_variance\":\"2.45\",\"jitter_packet_count\":\"0\",\"mos\":\"4.50\",\"packet_count\":\"1896\",\"skip_packet_count\":\"13\"},\"outbound\":{\"packet_count\":\"1683\",\"skip_packet_count\":\"0\"}}",
+      "CallSessionId": "1fe18978-9e61-11f1-aefc-02420a0de820",
+      "CallSid": "v3:G3_evu7mhoRD0L3DcquuxvknKzorYYy-nI8XfazZ7DnKqoVsMJ1BeA",
+      "CallSidLegacy": "v3:G3_evu7mhoRD0L3DcquuxvknKzorYYy-nI8XfazZ7DnKqoVsMJ1BeA",
+      "CallStatus": "completed",
+      "CallbackSource": "call-progress-events",
+      "ConnectionId": "3028585572957422853",
+      "EndTime": "2026-08-22T19:39:40.276921Z",
+      "From": "+12078048142",
+      "HangupCause": "normal_clearing",
+      "HangupSource": "callee",
+      "OccurredAt": "2026-08-22T19:39:40.276921Z",
+      "OrganizationId": "",
+      "SequenceNumber": "0",
+      "SipHangupCause": "200",
+      "StartTime": "2026-08-22T19:39:05.576920Z",
+      "Timestamp": "2026-08-22 19:39:40.468590Z",
+      "To": "+18054398008",
+      "UserId": "cefd9136-3dd7-42eb-8685-3a4739851770",
+      "received_at": "2026-08-22T19:39:40.474959+00:00"
+    }
+  ],
+  "recording": {
+    "sid": "76e6fc80-4610-40d1-b69f-3e85474eb90f",
+    "start_time": "Sat, 22 Aug 2026 19:39:05 +0000",
+    "duration": 35,
+    "channels": 2
+  }
+}

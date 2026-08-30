@@ -1,6 +1,5 @@
 .env
 .venv/
-data/
 scenarios/
 __pycache__/
 *.pyc

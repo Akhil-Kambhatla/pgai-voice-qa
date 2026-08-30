@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Pivot Point Orthopaedics",
+    "kind": "location",
+    "mentioned_in": "campaign/call-01",
+    "probed": false
+  },
+  {
+    "name": "clinic support team",
+    "kind": "other",
+    "mentioned_in": "campaign/call-01",
+    "probed": false
+  },
+  {
+    "name": "Pivot Point Orthopedic",
+    "kind": "location",
+    "mentioned_in": "campaign/call-02",
+    "probed": false
+  },
+  {
+    "name": "Pivot Point Orthopedics",
+    "kind": "location",
+    "mentioned_in": "campaign/call-04",
+    "probed": false
+  },
+  {
+    "name": "Dugie Hauser",
+    "kind": "provider",
+    "mentioned_in": "campaign/call-04",
+    "probed": false
+  },
+  {
+    "name": "Judy Hauser",
+    "kind": "provider",
+    "mentioned_in": "campaign/call-04",
+    "probed": false
+  },
+  {
+    "name": "Pretty Good AI",
+    "kind": "other",
+    "mentioned_in": "campaign/call-05",
+    "probed": false
+  },
+  {
+    "name": "Aetna",
+    "kind": "insurer",
+    "mentioned_in": "campaign/call-07",
+    "probed": false
+  },
+  {
+    "name": "Dr. Judy Hauser",
+    "kind": "provider",
+    "mentioned_in": "campaign/call-13",
+    "probed": false
+  },
+  {
+    "name": "Dr. Dugi Hauser",
+    "kind": "provider",
+    "mentioned_in": "campaign/call-13",
+    "probed": false
+  }
+]

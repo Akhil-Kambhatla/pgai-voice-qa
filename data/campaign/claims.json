@@ -1,0 +1,38 @@
+[
+  {
+    "id": "claim-01",
+    "text": "Your patient profile is set up, and your date of birth is 07/04/2000 for demo purposes.",
+    "action": "set up patient profile",
+    "identity": "dana",
+    "call_id": "campaign/call-04",
+    "at": "0:42",
+    "status": "unverified"
+  },
+  {
+    "id": "claim-02",
+    "text": "You're booked for Tuesday, August 25 at 11:15AM with Judy Hauser at Pivot Point Orthopedic.",
+    "action": "booked appointment",
+    "identity": "dana",
+    "call_id": "campaign/call-04",
+    "at": "1:37",
+    "status": "unverified"
+  },
+  {
+    "id": "claim-03",
+    "text": "Yes. Your appointment is set for Tuesday, September 1 at 10:30AM with doctor Dugi Hauser at Pivot Point Orthopedics.",
+    "action": "booked appointment",
+    "identity": "akhil",
+    "call_id": "campaign/call-13",
+    "at": "2:13",
+    "status": "unverified"
+  },
+  {
+    "id": "claim-04",
+    "text": "I sent a text link to your number ending in 8142.",
+    "action": "sent text link",
+    "identity": "akhil",
+    "call_id": "campaign/call-13",
+    "at": "3:39",
+    "status": "unverified"
+  }
+]

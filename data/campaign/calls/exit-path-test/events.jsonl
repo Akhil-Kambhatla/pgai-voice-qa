@@ -1,0 +1,336 @@
+{"t": 0.0002, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0006, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0009, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0011, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0012, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0003, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0012, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0014, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0016, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0016, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0017, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0002, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.001, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0012, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0013, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0014, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0015, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0003, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.002, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0022, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0024, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0025, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0026, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0013, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0014, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0015, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0016, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0017, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0003, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0024, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0026, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0028, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0029, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.003, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.001, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0011, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0012, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0013, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0014, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0012, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0013, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0014, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0015, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0015, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0003, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0028, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0031, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0033, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0035, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0036, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0004, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0006, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0007, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0007, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0008, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0002, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0013, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0016, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0018, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0019, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.002, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0004, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0006, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0006, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0007, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0007, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0015, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0016, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0017, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0018, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0019, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0002, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0012, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0015, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0017, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0018, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.002, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0015, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0015, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0016, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0017, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0017, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0006, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0007, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0007, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0008, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0008, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0013, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0014, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0014, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0015, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0016, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0002, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0028, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.003, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0032, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0034, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0035, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0003, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0014, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0017, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.002, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0021, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0022, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0008, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0009, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.001, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.001, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0004, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0004, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0005, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0005, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0005, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0009, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.001, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0011, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0011, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0012, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0013, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0014, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0014, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0015, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.001, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0011, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0011, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0012, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0012, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0002, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.002, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0024, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0026, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0028, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0029, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0003, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0031, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0034, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0036, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0037, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0038, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0003, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0032, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0035, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0037, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0039, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.004, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0002, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0037, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0039, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.004, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0041, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0042, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0009, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0011, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0012, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0013, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0014, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0003, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0024, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0026, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0029, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.003, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0031, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0016, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0017, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0018, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0018, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0019, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0002, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0033, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0035, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0037, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0038, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0039, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0003, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.004, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0043, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0046, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0048, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0049, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0034, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0035, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0036, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0037, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0037, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0002, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0008, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0009, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0011, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0012, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.003, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0031, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0032, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0032, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0033, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0016, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0016, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0017, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0017, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0018, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.038, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0434, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0435, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0435, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0436, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0437, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0005, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0005, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0006, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0006, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0007, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0006, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0021, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0021, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0022, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0022, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0023, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0003, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0004, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0005, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0005, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0006, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0019, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0019, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.002, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0021, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0021, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0002, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0011, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0014, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0016, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0017, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0018, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0012, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0013, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0014, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0014, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0015, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0003, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0016, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0019, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0022, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0023, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0025, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0002, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0032, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0037, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0039, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0041, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0042, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0009, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.001, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0012, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0013, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0014, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0021, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0023, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0024, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0025, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0026, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0007, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0009, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0011, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0012, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0033, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0036, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0037, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0039, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0039, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0002, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0031, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0034, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0036, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0038, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0039, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0003, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0013, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0016, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0018, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0019, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0021, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0017, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0018, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0019, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.002, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0021, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0002, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0008, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0011, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0012, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0013, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0015, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0003, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0017, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0019, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0021, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0022, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0023, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0001, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "EndFrame", "hangup_already_attempted": false}}
+{"t": 0.0003, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0004, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}
+{"t": 0.0004, "source": "lifecycle", "type": "exit.frame_reached_serializer", "event": {"type": "exit.frame_reached_serializer", "frame": "CancelFrame", "hangup_already_attempted": false}}
+{"t": 0.0005, "source": "lifecycle", "type": "exit.telnyx_hangup_requested", "event": {"type": "exit.telnyx_hangup_requested"}}
+{"t": 0.0005, "source": "lifecycle", "type": "exit.telnyx_hangup_returned", "event": {"type": "exit.telnyx_hangup_returned", "seconds": 0.0}}

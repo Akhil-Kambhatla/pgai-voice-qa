@@ -1,0 +1,70 @@
+{
+  "call_id": "v3:rgfpc_2NfJAvN6_d_X7jLLan2Hciq3t19oeEbGzGwEJtjYsPYoZc2Q",
+  "to": "+17325939363",
+  "from": "+12078048142",
+  "placed_at": "2026-08-17T20:44:24.557643+00:00",
+  "telnyx_response": {
+    "status": "queued",
+    "uri": "/v2/texml/Accounts/cefd9136-3dd7-42eb-8685-3a4739851770/Calls/v3:rgfpc_2NfJAvN6_d_X7jLLan2Hciq3t19oeEbGzGwEJtjYsPYoZc2Q.json",
+    "from": "+12078048142",
+    "start_time": null,
+    "to": "+17325939363",
+    "direction": "outbound-api",
+    "duration": null,
+    "end_time": null,
+    "queue_time": "0",
+    "answered_by": null,
+    "account_sid": "cefd9136-3dd7-42eb-8685-3a4739851770",
+    "date_created": null,
+    "date_updated": null,
+    "sid": "v3:rgfpc_2NfJAvN6_d_X7jLLan2Hciq3t19oeEbGzGwEJtjYsPYoZc2Q",
+    "subresource_uris": {
+      "recordings": "/v2/texml/Accounts/cefd9136-3dd7-42eb-8685-3a4739851770/Calls/v3:rgfpc_2NfJAvN6_d_X7jLLan2Hciq3t19oeEbGzGwEJtjYsPYoZc2Q/Recordings.json"
+    },
+    "api_version": "2010-04-01",
+    "caller_name": null,
+    "forwarded_from": null,
+    "from_formatted": "(207) 804-8142",
+    "parent_call_sid": null,
+    "price": null,
+    "price_unit": null,
+    "to_formatted": "(732) 593-9363"
+  },
+  "status_events": [
+    {
+      "AccountSid": "cefd9136-3dd7-42eb-8685-3a4739851770",
+      "AnsweredTime": "2026-08-17T20:44:33.882279Z",
+      "CallControlId": "v3:rgfpc_2NfJAvN6_d_X7jLLan2Hciq3t19oeEbGzGwEJtjYsPYoZc2Q",
+      "CallDuration": "24",
+      "CallLegId": "6ec3ff82-9a7c-11f1-ad39-fe8b9504f587",
+      "CallQualityStats": "{\"inbound\":{\"jitter_max_variance\":\"2.30\",\"jitter_packet_count\":\"0\",\"mos\":\"4.50\",\"packet_count\":\"1171\",\"skip_packet_count\":\"34\"},\"outbound\":{\"packet_count\":\"1141\",\"skip_packet_count\":\"0\"}}",
+      "CallSessionId": "6ec116f0-9a7c-11f1-9626-fe8b9504f587",
+      "CallSid": "v3:rgfpc_2NfJAvN6_d_X7jLLan2Hciq3t19oeEbGzGwEJtjYsPYoZc2Q",
+      "CallSidLegacy": "v3:rgfpc_2NfJAvN6_d_X7jLLan2Hciq3t19oeEbGzGwEJtjYsPYoZc2Q",
+      "CallStatus": "completed",
+      "CallbackSource": "call-progress-events",
+      "ConnectionId": "3028585572957422853",
+      "EndTime": "2026-08-17T20:44:57.942319Z",
+      "From": "+12078048142",
+      "HangupCause": "normal_clearing",
+      "HangupSource": "callee",
+      "OccurredAt": "2026-08-17T20:44:57.942319Z",
+      "OrganizationId": "",
+      "SequenceNumber": "0",
+      "SipHangupCause": "200",
+      "SipHeader_P-Mav-Extension-Correlation-ID": "18079de370210972",
+      "SipHeader_P-Visited-Network-ID": "ims.mnc260.mcc310.3gppnetwork.org",
+      "StartTime": "2026-08-17T20:44:33.882279Z",
+      "Timestamp": "2026-08-17 20:44:58.105203Z",
+      "To": "+17325939363",
+      "UserId": "cefd9136-3dd7-42eb-8685-3a4739851770",
+      "received_at": "2026-08-17T20:44:58.095944+00:00"
+    }
+  ],
+  "recording": {
+    "sid": "244e7c9c-5dac-45f8-bebb-10db661ec31f",
+    "start_time": "Mon, 17 Aug 2026 20:44:33 +0000",
+    "duration": 24,
+    "channels": 2
+  }
+}

@@ -1,0 +1,29 @@
+[00:02] AGENT: Hi. My name is Akil.
+[00:04] AGENT: I will be assisting you today. How can I help you?
+[00:16] BOT: Hi.
+[00:17] BOT: My knee has been bothering me since the weekend and isn't getting better.
+[00:22] BOT: Can I be seen this week?
+[00:26] AGENT: Sure.
+[00:27] AGENT: Absolutely.
+[00:29] AGENT: Who do you want to visit?
+[00:31] BOT: Do I need to take the provider, or can I see anyone?
+[00:37] AGENT: You
+[00:38] AGENT: can either select the provider or we can appoint you one.
+[00:44] BOT: Okay. So you can assign someone,
+[00:46] BOT: but I don't have a preference.
+[00:48] BOT: Which provider would be the best option?
+[00:53] AGENT: Doctor is
+[00:56] AGENT: good for your problem.
+[00:58] AGENT: I can assign you to her.
+[01:01] BOT: What's the earliest available day with her?
+[01:06] AGENT: On the August of twenty fifth.
+[01:10] BOT: Got it. Let me see what's available around that date.
+[01:23] AGENT: Okay for them?
+[01:25] BOT: Okay.
+[01:26] BOT: Is there a time on August 25, like morning or afternoon?
+[01:31] AGENT: I can schedule for for 4PM.
+[01:35] BOT: Got it. I want to confirm the details before we wrap up. Just to confirm, August 25 at 4PM with doctor Shreya Cuddy. Is that correct?
+[01:45] AGENT: Yes.
+[01:53] BOT: Great. That's all set. August 25 at 4PM with doctor Shreya Cuddy. Thanks for confirming.
+[02:04] AGENT: Okay. Thank you.
+[02:07] BOT: Okay. Thanks.

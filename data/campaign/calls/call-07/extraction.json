@@ -1,0 +1,82 @@
+{
+  "call_id": "campaign/call-07",
+  "extracted_at": "2026-08-23T17:48:05.383949+00:00",
+  "model": "gpt-5.4-mini",
+  "returned_counts": {
+    "facts": 1,
+    "capabilities": 3,
+    "claims": 0,
+    "promises": 0,
+    "entities": 3
+  },
+  "raw": {
+    "facts": [
+      {
+        "slot": "insurers",
+        "value": "Many Aetna plans are accepted.",
+        "at": "2:30"
+      }
+    ],
+    "capabilities": [
+      {
+        "text": "Let me check on Aetna insurance for you.",
+        "ability": "check insurance",
+        "can": true,
+        "at": "0:43"
+      },
+      {
+        "text": "To accurately confirm if your specific Aetna plan is accepted, I do need the member ID or more details from your card.",
+        "ability": "confirm coverage",
+        "can": false,
+        "at": "2:30"
+      },
+      {
+        "text": "When you have your card, I can check for you right away.",
+        "ability": "check coverage",
+        "can": true,
+        "at": "2:30"
+      }
+    ],
+    "claims": [],
+    "promises": [],
+    "entities": [
+      {
+        "name": "Pivot Point Orthopaedics",
+        "kind": "location"
+      },
+      {
+        "name": "Pretty Good AI",
+        "kind": "other"
+      },
+      {
+        "name": "Aetna",
+        "kind": "insurer"
+      }
+    ]
+  },
+  "applied": [
+    "oracle: insurers filled from campaign/call-07 at 2:30",
+    "capability: cap-12 check insurance can=True",
+    "capability: cap-13 confirm coverage can=False",
+    "capability: cap-14 check coverage can=True",
+    "frontier: Aetna (insurer) unprobed"
+  ],
+  "skipped": [
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pivot Point Orthopaedics",
+        "kind": "location"
+      }
+    },
+    {
+      "bucket": "entities",
+      "reason": "already on the frontier",
+      "item": {
+        "name": "Pretty Good AI",
+        "kind": "other"
+      }
+    }
+  ]
+}

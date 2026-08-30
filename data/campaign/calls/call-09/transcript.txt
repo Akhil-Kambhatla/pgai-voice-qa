@@ -1,0 +1,32 @@
+[00:00] AGENT: This call may be recorded for quality and training purposes.
+[00:03] AGENT: Thanks
+[00:07] AGENT: for calling Pivot Point Orthopaedics,
+[00:09] AGENT: part of Pretty Good AI. How may I help you today?
+[00:14] BOT: I'm calling about a Tuesday visit at 11:15AM
+[00:18] BOT: with Judy Houser.
+[00:19] BOT: Will my Aetna plan work for it?
+[00:24] AGENT: Can you please provide your full name and date of birth?
+[00:28] BOT: Dana Whitfield,
+[00:29] BOT: born 03/14/1988.
+[00:36] AGENT: Just to confirm, I have your name as Dana Whitfield and your date of birth as 03/14/1988.
+[00:42] AGENT: Is that correct? If so, please spell your first and last name for me.
+[00:49] BOT: Dana Whitfield,
+[00:51] BOT: d a n a w h I t f I e l d.
+[00:58] AGENT: Thanks for spelling that. Could you please confirm your date of birth one more time?
+[01:04] BOT: 03/14/1988.
+[01:10] AGENT: I have your name as Dana Whitfield. Date of birth, 03/14/1988,
+[01:15] AGENT: and your phone number as (207)
+[01:17] AGENT: 804-8142.
+[01:20] AGENT: Is all of that correct?
+[01:24] BOT: I didn't give a phone number. I'm calling from my personal phone. If you need to update it, I can do that if you ask.
+[01:33] AGENT: Thank you for clarifying.
+[01:35] AGENT: Would you like to use your current phone number, (207)
+[01:38] AGENT: 804-8142,
+[01:42] AGENT: to look up your record, or would you prefer to provide a different number you may have on file with us?
+[01:50] BOT: Use the number I'm calling from. I don't want to say anything else yet.
+[01:59] AGENT: I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to connect you to our patient support team?
+[02:07] BOT: Yes.
+[02:08] BOT: Please connect me. I'm on my lunch break, so I'd like to sort
+[02:11] AGENT: Transferring you now. Thank you.
+[02:14] AGENT: Hello.
+[02:15] AGENT: You've reached the Pretty Good AI test line. Goodbye.

@@ -1,0 +1,9 @@
+[00:00] AGENT: This call may be recorded for quality and training purposes.
+[00:03] AGENT: Thank
+[00:07] AGENT: you for calling Pivot Point Orthopaedics.
+[00:10] AGENT: Would you like to create a demo patient profile?
+[00:12] AGENT: I just need your first and last name to get started.
+[00:15] BOT: No. Thanks. I'm Bob. I need to reschedule.
+[00:21] AGENT: No problem, Bob. If you'd like to reschedule in the future, you can scan the QR code at the booth to create your profile.
+[00:29] AGENT: Have a great day.
+[00:33] BOT: I need to change

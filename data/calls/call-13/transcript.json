@@ -1,0 +1,226 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "01a01f72-e097-7c13-8af7-b9d230fc4c20",
+    "sha256": "5d527f70a814ac75aefa1f51c620c0cbcbd51fb6935c66a989977a57ef10e7e7",
+    "created": "2026-08-20 13:53:37.569000+00:00",
+    "duration": 4.4559374,
+    "channels": 2,
+    "models": [
+      "2187e11a-3532-4498-b076-81fa530bdd49"
+    ],
+    "model_info": {
+      "2187e11a-3532-4498-b076-81fa530bdd49": {
+        "name": "general-nova-3",
+        "version": "2025-07-31.0",
+        "arch": "nova-3"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "",
+            "confidence": 0.0,
+            "words": [],
+            "paragraphs": {
+              "transcript": "\n",
+              "paragraphs": []
+            }
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "transcript": "We're sorry. An application error has occurred. Goodbye.",
+            "confidence": 0.9995117,
+            "words": [
+              {
+                "word": "we're",
+                "start": 0.24,
+                "end": 0.79999995,
+                "confidence": 0.9995117,
+                "punctuated_word": "We're"
+              },
+              {
+                "word": "sorry",
+                "start": 0.79999995,
+                "end": 1.36,
+                "confidence": 0.9797363,
+                "punctuated_word": "sorry."
+              },
+              {
+                "word": "an",
+                "start": 1.36,
+                "end": 1.5999999,
+                "confidence": 0.9980469,
+                "punctuated_word": "An"
+              },
+              {
+                "word": "application",
+                "start": 1.5999999,
+                "end": 2.1599998,
+                "confidence": 1.0,
+                "punctuated_word": "application"
+              },
+              {
+                "word": "error",
+                "start": 2.1599998,
+                "end": 2.56,
+                "confidence": 0.9970703,
+                "punctuated_word": "error"
+              },
+              {
+                "word": "has",
+                "start": 2.56,
+                "end": 2.8,
+                "confidence": 0.9970703,
+                "punctuated_word": "has"
+              },
+              {
+                "word": "occurred",
+                "start": 2.8,
+                "end": 3.28,
+                "confidence": 1.0,
+                "punctuated_word": "occurred."
+              },
+              {
+                "word": "goodbye",
+                "start": 3.28,
+                "end": 3.6,
+                "confidence": 0.9995117,
+                "punctuated_word": "Goodbye."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nWe're sorry. An application error has occurred. Goodbye.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "We're sorry.",
+                      "start": 0.24,
+                      "end": 1.36
+                    },
+                    {
+                      "text": "An application error has occurred.",
+                      "start": 1.36,
+                      "end": 3.28
+                    },
+                    {
+                      "text": "Goodbye.",
+                      "start": 3.28,
+                      "end": 3.6
+                    }
+                  ],
+                  "num_words": 8,
+                  "start": 0.24,
+                  "end": 3.6
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "utterances": [
+      {
+        "start": 0.24,
+        "end": 3.6,
+        "confidence": 0.9963684,
+        "channel": 1,
+        "transcript": "We're sorry. An application error has occurred. Goodbye.",
+        "words": [
+          {
+            "word": "we're",
+            "start": 0.24,
+            "end": 0.79999995,
+            "confidence": 0.9995117,
+            "punctuated_word": "We're"
+          },
+          {
+            "word": "sorry",
+            "start": 0.79999995,
+            "end": 1.36,
+            "confidence": 0.9797363,
+            "punctuated_word": "sorry."
+          },
+          {
+            "word": "an",
+            "start": 1.36,
+            "end": 1.5999999,
+            "confidence": 0.9980469,
+            "punctuated_word": "An"
+          },
+          {
+            "word": "application",
+            "start": 1.5999999,
+            "end": 2.1599998,
+            "confidence": 1.0,
+            "punctuated_word": "application"
+          },
+          {
+            "word": "error",
+            "start": 2.1599998,
+            "end": 2.56,
+            "confidence": 0.9970703,
+            "punctuated_word": "error"
+          },
+          {
+            "word": "has",
+            "start": 2.56,
+            "end": 2.8,
+            "confidence": 0.9970703,
+            "punctuated_word": "has"
+          },
+          {
+            "word": "occurred",
+            "start": 2.8,
+            "end": 3.28,
+            "confidence": 1.0,
+            "punctuated_word": "occurred."
+          },
+          {
+            "word": "goodbye",
+            "start": 3.28,
+            "end": 3.6,
+            "confidence": 0.9995117,
+            "punctuated_word": "Goodbye."
+          }
+        ],
+        "id": "fd52e88f-bdb1-4b56-8bb6-605c41a2e2eb"
+      }
+    ],
+    "paragraphs": {
+      "transcript": "\nChannel 1: We're sorry. An application error has occurred. Goodbye.",
+      "paragraphs": [
+        {
+          "sentences": [
+            {
+              "text": "We're sorry.",
+              "start": 0.24,
+              "end": 1.36
+            },
+            {
+              "text": "An application error has occurred.",
+              "start": 1.36,
+              "end": 3.28
+            },
+            {
+              "text": "Goodbye.",
+              "start": 3.28,
+              "end": 3.6
+            }
+          ],
+          "channel": 1,
+          "num_words": 8,
+          "start": 0.24,
+          "end": 3.6
+        }
+      ]
+    }
+  }
+}

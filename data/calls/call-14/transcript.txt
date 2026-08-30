@@ -1,0 +1,44 @@
+[00:00] AGENT: Hi. If you record your name and reason for calling, I'll see if this person is available.
+[00:06] BOT: My name is Elena Vasquez Moreau.
+[00:09] BOT: I'm calling to cancel an appointment because a holiday trip changed.
+[00:13] BOT: That's all I need for now.
+[00:18] AGENT: Hi.
+[00:19] AGENT: Welcome to clinic care where taking care of our patients is our top priority.
+[00:23] AGENT: How may I assist you today?
+[00:28] BOT: Hi. I need
+[00:29] AGENT: Sure.
+[00:31] BOT: hi. I want to cancel an appointment. I'm not sure what day it's on.
+[00:38] AGENT: May I know what the name on the record is?
+[00:41] BOT: Alina Vasquez Moreau.
+[00:45] AGENT: And which doctor do you take your appointment with?
+[00:57] BOT: That wasn't mentioned to me. I only know I'm canceling an appointment. Is it for tomorrow or the week after?
+[01:05] AGENT: Sure. Let me take a look into our system.
+[01:09] AGENT: I see that you have an appointment scheduled in two days. Would you like me to reschedule your appointment with doctor Akhil?
+[01:24] BOT: No. I just need to cancel it. It's the appointment in two days. Can you cancel it now?
+[01:31] AGENT: Sure.
+[01:32] AGENT: I'll go ahead and cancel your appointment.
+[01:34] AGENT: Just to let you know, we do charge a cancellation fee of $50.
+[01:39] AGENT: Is that fine?
+[01:50] BOT: Okay.
+[01:50] BOT: That's fine. Can you confirm the exact date and time that was canceled?
+[01:57] AGENT: Sure.
+[01:58] AGENT: It is August 22 at 4PM.
+[02:10] BOT: Okay.
+[02:11] BOT: August 22 at 4PM is canceled.
+[02:14] BOT: Anything else you need to do before you head out?
+[02:21] AGENT: No. We'll go ahead and process your credit card that's on file.
+[02:25] AGENT: Please let us know or give us a callback if you want us to reschedule your appointment, and we'll give you the available dates of our of the doctor.
+[02:40] BOT: Okay.
+[02:41] BOT: Thanks.
+[02:42] BOT: I'll assume it's fully canceled now.
+[02:44] BOT: Are you open for the holiday period?
+[02:48] AGENT: Unfortunately,
+[02:50] AGENT: the hospital is closed during the holiday period. We'll be back again during work working days.
+[03:02] BOT: Got it. So the hospital's closed over the holidays.
+[03:02] AGENT: Alright.
+[03:05] BOT: That's fine. There's nothing else I need to do now.
+[03:12] AGENT: Your cancellation has been placed,
+[03:15] AGENT: and you'll be charged a $50 cancellation fee.
+[03:19] AGENT: Give us a callback once you wanna reschedule it. Thank you.
+[03:31] BOT: Thanks. That's good. I won't reschedule right now.
+[03:37] AGENT: Have a nice day.
