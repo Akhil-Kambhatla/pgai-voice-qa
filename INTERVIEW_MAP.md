@@ -1019,8 +1019,8 @@ Two parallel call trees plus shared inputs.
   `data/oracle.json` and `data/frontier.json` exist next to the shared inputs.
 - **`data/calls_scaffold/`** holds four early call records from 2026-08-17, named by
   Telnyx call session id rather than by call number, from before the call id scheme
-  existed. They were infrastructure tests to a personal number. It is untracked and
-  is not part of the system.
+  existed. They were infrastructure tests to a personal number. Thirteen of its files
+  are committed, but no code reads this directory.
 
 A note on the split: the state file naming is the one place where the two trees are
 asymmetric, and it is why `src/store.py` has to know which files are shared and which
@@ -1384,5 +1384,7 @@ Stated rather than guessed:
   inflating the call index. Nothing in the code reads this directory.
 - **`data/campaign/calls/smoke/` and `data/campaign/calls/exit-path-test/`.** Test
   artifacts written into the campaign tree by smoke checks that use real call ids.
-  Harmless, and `campaign_call_ids()` filters them out by regex, but whether leaving
-  them on disk is intentional is not clear.
+  `smoke/` is an empty directory and is not in git. `exit-path-test/` has two
+  committed files, `events.jsonl` and `turns.jsonl`. Both are harmless, because
+  `campaign_call_ids()` filters them out by regex, but whether committing the second
+  one was intentional is not clear.
